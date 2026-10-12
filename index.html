@@ -923,7 +923,7 @@ button.dfield{padding:0 12px;color:var(--ink)}
       <p>The <b>language</b> comes from the country in your profile. Tap <b>Change</b> if you're learning a different one. It decides what the pronunciation box is called, like <b>Pinyin</b> for Chinese.</p>
       <p>Each word stays with the language you saved it in. Changing language shows that language's words only; the others are kept and come back when you switch back.</p>
       <p>Words are grouped by topic. Pick one when you add a word, or make your own with <b>+ New topic</b>. Tap a topic box under the search to see only that topic, or <b>All</b> for everything. Use the search box to find a word by itself, its meaning or a note.</p>
-      <p><b>Match game</b>: first pick a topic (or all topics at random) and what to match — the word with its pronunciation (like Pinyin), the pronunciation with its meaning, or the word with its meaning. For word and meaning you can show the pronunciation under each word, to help you read it.</p>
+      <p><b>Match game</b>: first tick one or more topics (or all topics at random) and what to match — the word with its pronunciation (like Pinyin), the pronunciation with its meaning, or the word with its meaning. For word and meaning you can show the pronunciation under each word, to help you read it.</p>
       <p>Choose how many words to play, from 5 to 10 (5 to start with). The game picks them at random and mixes up the other side. Tap one from each side that go together. Wrong pairs flash red; try to finish with no mistakes.</p>
       <p>To change or delete a word, tap <b>Edit</b>, then tap it.</p>
       <p><b>Download</b> saves this language's words to a file. Send it to a friend, or keep it as a copy. <b>Add from file</b> adds the words from such a file (or from a full backup). <b>Word lists</b> opens a page of lists you can download, like 210 basic Chinese words. Words you already have are skipped, never changed, and you'll see a list of what was skipped.</p>`,
@@ -2791,40 +2791,48 @@ button.dfield{padding:0 12px;color:var(--ink)}
     {id:"pm", left:"pron", right:"meaning", needsPron:true},
     {id:"wm", left:"text", right:"meaning", needsPron:false}
   ];
-  let gameOpts = {topic:null, mode:"wm", hint:true, count:5};   // remembered while the app is open; count is 5–10 pairs
+  // topics: the topics ticked in the setup; empty = all topics. Remembered while the app is open; count is 5–10 pairs
+  let gameOpts = {topics:[], mode:"wm", hint:true, count:5};
   const modeOf = id=> GAME_MODES.find(m=>m.id===id) || GAME_MODES[2];
   function modeName(m){ const p = wordLang().pron; return {text:"Word", pron:p, meaning:"Meaning"}[m.left]+" ↔ "+{text:"Word", pron:p, meaning:"Meaning"}[m.right]; }
-  // words usable for a topic (null = all topics) and mode: pronunciation modes only use words that have one
-  function gamePool(topic, mode){ return langWords().filter(w=>(!topic || topicOf(w)===topic) && (!modeOf(mode).needsPron || w.pron)); }
+  // words usable for some topics (empty = all topics) and a mode: pronunciation modes only use words that have one
+  function gamePool(topics, mode){ return langWords().filter(w=>(!topics.length || topics.includes(topicOf(w))) && (!modeOf(mode).needsPron || w.pron)); }
+  // "Body", "Body and Fruit", "Body, Fruit and Colours"
+  const andList = a=> a.length<2 ? (a[0]||"") : a.slice(0,-1).join(", ")+" and "+a[a.length-1];
   function shuffle(a){ for (let i=a.length-1; i>0; i--){ const j = Math.floor(Math.random()*(i+1)); [a[i],a[j]] = [a[j],a[i]]; } return a; }
   function openGameSetup(){
     if (!wordLang().pron) gameOpts.mode = "wm";
-    gameOpts.topic = wordTopic;   // start from the topic being viewed
+    if (wordTopic) gameOpts.topics = [wordTopic];   // viewing one topic: start from it; otherwise keep the topics ticked last time
     game = {phase:"setup"}; renderGame(); $("gameCard").scrollIntoView({block:"start"});
   }
   function startGame(){
-    const pool = shuffle(gamePool(gameOpts.topic, gameOpts.mode)).slice(0, gameOpts.count);
+    const pool = shuffle(gamePool(gameOpts.topics, gameOpts.mode)).slice(0, gameOpts.count);
     if (pool.length < 3) return;
-    game = {phase:"play", topic:gameOpts.topic, mode:modeOf(gameOpts.mode), hint:gameOpts.hint, pool, left:shuffle(pool.map(w=>w.id)), right:shuffle(pool.map(w=>w.id)),
+    game = {phase:"play", topics:gameOpts.topics.slice(), mode:modeOf(gameOpts.mode), hint:gameOpts.hint, pool, left:shuffle(pool.map(w=>w.id)), right:shuffle(pool.map(w=>w.id)),
       sel:null, done:new Set(), wrong:0, start:Date.now(), end:0, flash:null};
     renderGame(); $("gameCard").scrollIntoView({block:"start"});
   }
   function renderGameSetup(body){
     const L = wordLang();
     $("gameTitle").textContent = "Match game";
-    body.innerHTML = '<div class="subl" style="margin-top:0">Topic</div><div class="tchips" id="gTopics" role="group" aria-label="Topic to play"></div>'+
+    body.innerHTML = '<div class="subl" style="margin-top:0">Topics <span style="font-weight:400">· tick one or more</span></div><div class="tchips" id="gTopics" role="group" aria-label="Topics to play"></div>'+
       '<div data-modes><div class="subl">What to match</div><div class="tchips" id="gModes" role="group" aria-label="What to match"></div></div>'+
       '<label class="check" id="gHintWrap"><input type="checkbox" id="gHint"></label>'+
       '<div class="subl">How many words</div><div class="tchips" id="gCount" role="group" aria-label="How many words"></div>'+
       '<p class="sectionnote" id="gNote" style="margin-top:10px"></p>'+
       '<div class="btns" style="display:flex;gap:8px;margin-top:6px"><button class="btn-yes" id="gStart">Start</button><button class="secondary" id="gCancel">Cancel</button></div>';
     const used = topicList().filter(t=>langWords().some(w=>topicOf(w)===t));
-    if (gameOpts.topic && !used.includes(gameOpts.topic)) gameOpts.topic = null;
+    gameOpts.topics = gameOpts.topics.filter(t=>used.includes(t));
+    // "All topics" clears the ticks; each topic toggles on and off, so several can be played together
     [[null,"All topics (random)"]].concat(used.map(t=>[t,t])).forEach(([t,name])=>{
       const b = document.createElement("button"); b.innerHTML = "<b></b><span></span>"; b.dataset.topic = t || "";
-      b.querySelector("b").textContent = name; b.querySelector("span").textContent = gamePool(t, gameOpts.mode).length;
-      b.setAttribute("aria-pressed", gameOpts.topic===t);
-      b.onclick = ()=>{ gameOpts.topic = t; renderGame(); };
+      b.querySelector("b").textContent = name; b.querySelector("span").textContent = gamePool(t ? [t] : [], gameOpts.mode).length;
+      b.setAttribute("aria-pressed", t ? gameOpts.topics.includes(t) : !gameOpts.topics.length);
+      b.onclick = ()=>{
+        if (!t) gameOpts.topics = [];
+        else gameOpts.topics = gameOpts.topics.includes(t) ? gameOpts.topics.filter(x=>x!==t) : gameOpts.topics.concat(t);
+        renderGame();
+      };
       $("gTopics").appendChild(b);
     });
     body.querySelector("[data-modes]").hidden = !L.pron;   // without a pronunciation box there's only Word ↔ Meaning
@@ -2843,7 +2851,7 @@ button.dfield{padding:0 12px;color:var(--ink)}
       b.onclick = ()=>{ gameOpts.count = k; renderGame(); };
       $("gCount").appendChild(b);
     });
-    const n = gamePool(gameOpts.topic, gameOpts.mode).length, where = gameOpts.topic ? " in "+gameOpts.topic : "";
+    const n = gamePool(gameOpts.topics, gameOpts.mode).length, where = gameOpts.topics.length ? " from "+andList(gameOpts.topics) : "";
     $("gStart").disabled = n < 3;
     $("gNote").textContent = n >= gameOpts.count ? "You'll match "+gameOpts.count+" random words"+where+"."
       : n >= 3 ? "Only "+n+" words"+where+" can be used, so you'll match those "+n+"."
@@ -2858,7 +2866,7 @@ button.dfield{padding:0 12px;color:var(--ink)}
     const body = $("gameBody"); body.innerHTML = "";
     if (game.phase==="setup") return renderGameSetup(body);
     const n = game.pool.length, got = game.done.size;
-    $("gameTitle").textContent = "Match game · "+(game.topic || "All topics");
+    $("gameTitle").textContent = "Match game · "+(game.topics.length ? game.topics.join(", ") : "All topics");
     if (got===n){
       const secs = Math.max(1, Math.round((game.end-game.start)/1000));
       body.innerHTML = '<div class="gamedone"><h3></h3><p class="gamestat"></p><div class="btns"><button class="btn-yes" id="gameAgain">Play again</button><button class="secondary" id="gameChange">Change</button><button class="secondary" id="gameDone">Close</button></div></div>';

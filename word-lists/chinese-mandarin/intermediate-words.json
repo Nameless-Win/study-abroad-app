@@ -1,0 +1,2409 @@
+{
+ "app": "study-abroad-words",
+ "version": 1,
+ "lang": "zh",
+ "language": "Chinese (Mandarin)",
+ "exportedAt": "2026-10-12T15:36:17+00:00",
+ "words": [
+  {
+   "lang": "zh",
+   "text": "起床",
+   "pron": "qǐchuáng",
+   "meaning": "Get up",
+   "topic": "Daily life",
+   "note": "ตื่นนอน"
+  },
+  {
+   "lang": "zh",
+   "text": "睡觉",
+   "pron": "shuìjiào",
+   "meaning": "Sleep / go to bed",
+   "topic": "Daily life",
+   "note": "นอนหลับ"
+  },
+  {
+   "lang": "zh",
+   "text": "洗澡",
+   "pron": "xǐzǎo",
+   "meaning": "Take a shower / bath",
+   "topic": "Daily life",
+   "note": "อาบน้ำ"
+  },
+  {
+   "lang": "zh",
+   "text": "刷牙",
+   "pron": "shuāyá",
+   "meaning": "Brush your teeth",
+   "topic": "Daily life",
+   "note": "แปรงฟัน"
+  },
+  {
+   "lang": "zh",
+   "text": "做饭",
+   "pron": "zuòfàn",
+   "meaning": "Cook (a meal)",
+   "topic": "Daily life",
+   "note": "ทำอาหาร"
+  },
+  {
+   "lang": "zh",
+   "text": "打扫",
+   "pron": "dǎsǎo",
+   "meaning": "Clean (up)",
+   "topic": "Daily life",
+   "note": "ทำความสะอาด"
+  },
+  {
+   "lang": "zh",
+   "text": "洗衣服",
+   "pron": "xǐ yīfu",
+   "meaning": "Do the laundry",
+   "topic": "Daily life",
+   "note": "ซักผ้า"
+  },
+  {
+   "lang": "zh",
+   "text": "回家",
+   "pron": "huíjiā",
+   "meaning": "Go home",
+   "topic": "Daily life",
+   "note": "กลับบ้าน"
+  },
+  {
+   "lang": "zh",
+   "text": "上班",
+   "pron": "shàngbān",
+   "meaning": "Go to work",
+   "topic": "Daily life",
+   "note": "ไปทำงาน"
+  },
+  {
+   "lang": "zh",
+   "text": "下班",
+   "pron": "xiàbān",
+   "meaning": "Finish work",
+   "topic": "Daily life",
+   "note": "เลิกงาน"
+  },
+  {
+   "lang": "zh",
+   "text": "休息",
+   "pron": "xiūxi",
+   "meaning": "Rest",
+   "topic": "Daily life",
+   "note": "พักผ่อน"
+  },
+  {
+   "lang": "zh",
+   "text": "等",
+   "pron": "děng",
+   "meaning": "Wait",
+   "topic": "Daily life",
+   "note": "รอ"
+  },
+  {
+   "lang": "zh",
+   "text": "找",
+   "pron": "zhǎo",
+   "meaning": "Look for",
+   "topic": "Daily life",
+   "note": "หา"
+  },
+  {
+   "lang": "zh",
+   "text": "借",
+   "pron": "jiè",
+   "meaning": "Borrow / lend",
+   "topic": "Daily life",
+   "note": "ยืม, ให้ยืม"
+  },
+  {
+   "lang": "zh",
+   "text": "还",
+   "pron": "huán",
+   "meaning": "Give back / return",
+   "topic": "Daily life",
+   "note": "คืน"
+  },
+  {
+   "lang": "zh",
+   "text": "帮助",
+   "pron": "bāngzhù",
+   "meaning": "Help",
+   "topic": "Daily life",
+   "note": "ช่วยเหลือ"
+  },
+  {
+   "lang": "zh",
+   "text": "告诉",
+   "pron": "gàosu",
+   "meaning": "Tell",
+   "topic": "Daily life",
+   "note": "บอก"
+  },
+  {
+   "lang": "zh",
+   "text": "记得",
+   "pron": "jìde",
+   "meaning": "Remember",
+   "topic": "Daily life",
+   "note": "จำได้"
+  },
+  {
+   "lang": "zh",
+   "text": "忘记",
+   "pron": "wàngjì",
+   "meaning": "Forget",
+   "topic": "Daily life",
+   "note": "ลืม"
+  },
+  {
+   "lang": "zh",
+   "text": "学习",
+   "pron": "xuéxí",
+   "meaning": "Study / learn",
+   "topic": "School",
+   "note": "เรียน, ศึกษา"
+  },
+  {
+   "lang": "zh",
+   "text": "复习",
+   "pron": "fùxí",
+   "meaning": "Review (lessons)",
+   "topic": "School",
+   "note": "ทบทวนบทเรียน"
+  },
+  {
+   "lang": "zh",
+   "text": "预习",
+   "pron": "yùxí",
+   "meaning": "Prepare a lesson before class",
+   "topic": "School",
+   "note": "เตรียมบทเรียนล่วงหน้า"
+  },
+  {
+   "lang": "zh",
+   "text": "练习",
+   "pron": "liànxí",
+   "meaning": "Practise / exercise",
+   "topic": "School",
+   "note": "ฝึกฝน, แบบฝึกหัด"
+  },
+  {
+   "lang": "zh",
+   "text": "回答",
+   "pron": "huídá",
+   "meaning": "Answer",
+   "topic": "School",
+   "note": "ตอบ"
+  },
+  {
+   "lang": "zh",
+   "text": "问题",
+   "pron": "wèntí",
+   "meaning": "Question / problem",
+   "topic": "School",
+   "note": "คำถาม, ปัญหา"
+  },
+  {
+   "lang": "zh",
+   "text": "上课",
+   "pron": "shàngkè",
+   "meaning": "Attend class / class starts",
+   "topic": "School",
+   "note": "เข้าเรียน"
+  },
+  {
+   "lang": "zh",
+   "text": "下课",
+   "pron": "xiàkè",
+   "meaning": "Class is over",
+   "topic": "School",
+   "note": "เลิกเรียน"
+  },
+  {
+   "lang": "zh",
+   "text": "请假",
+   "pron": "qǐngjià",
+   "meaning": "Ask for leave",
+   "topic": "School",
+   "note": "ลา (ลาป่วย, ลากิจ)"
+  },
+  {
+   "lang": "zh",
+   "text": "迟到",
+   "pron": "chídào",
+   "meaning": "Be late",
+   "topic": "School",
+   "note": "มาสาย"
+  },
+  {
+   "lang": "zh",
+   "text": "成绩",
+   "pron": "chéngjì",
+   "meaning": "Grades / results",
+   "topic": "School",
+   "note": "ผลการเรียน, เกรด"
+  },
+  {
+   "lang": "zh",
+   "text": "留学生",
+   "pron": "liúxuéshēng",
+   "meaning": "International student",
+   "topic": "School",
+   "note": "นักศึกษาต่างชาติ"
+  },
+  {
+   "lang": "zh",
+   "text": "专业",
+   "pron": "zhuānyè",
+   "meaning": "Major (subject)",
+   "topic": "School",
+   "note": "สาขาวิชา, วิชาเอก"
+  },
+  {
+   "lang": "zh",
+   "text": "毕业",
+   "pron": "bìyè",
+   "meaning": "Graduate",
+   "topic": "School",
+   "note": "เรียนจบ"
+  },
+  {
+   "lang": "zh",
+   "text": "奖学金",
+   "pron": "jiǎngxuéjīn",
+   "meaning": "Scholarship",
+   "topic": "School",
+   "note": "ทุนการศึกษา"
+  },
+  {
+   "lang": "zh",
+   "text": "论文",
+   "pron": "lùnwén",
+   "meaning": "Thesis / paper",
+   "topic": "School",
+   "note": "วิทยานิพนธ์, รายงาน"
+  },
+  {
+   "lang": "zh",
+   "text": "词典",
+   "pron": "cídiǎn",
+   "meaning": "Dictionary",
+   "topic": "School",
+   "note": "พจนานุกรม"
+  },
+  {
+   "lang": "zh",
+   "text": "语法",
+   "pron": "yǔfǎ",
+   "meaning": "Grammar",
+   "topic": "School",
+   "note": "ไวยากรณ์"
+  },
+  {
+   "lang": "zh",
+   "text": "句子",
+   "pron": "jùzi",
+   "meaning": "Sentence",
+   "topic": "School",
+   "note": "ประโยค"
+  },
+  {
+   "lang": "zh",
+   "text": "意思",
+   "pron": "yìsi",
+   "meaning": "Meaning",
+   "topic": "School",
+   "note": "ความหมาย"
+  },
+  {
+   "lang": "zh",
+   "text": "工作",
+   "pron": "gōngzuò",
+   "meaning": "Job / to work",
+   "topic": "Work",
+   "note": "งาน, ทำงาน"
+  },
+  {
+   "lang": "zh",
+   "text": "公司",
+   "pron": "gōngsī",
+   "meaning": "Company",
+   "topic": "Work",
+   "note": "บริษัท"
+  },
+  {
+   "lang": "zh",
+   "text": "经理",
+   "pron": "jīnglǐ",
+   "meaning": "Manager",
+   "topic": "Work",
+   "note": "ผู้จัดการ"
+  },
+  {
+   "lang": "zh",
+   "text": "同事",
+   "pron": "tóngshì",
+   "meaning": "Colleague",
+   "topic": "Work",
+   "note": "เพื่อนร่วมงาน"
+  },
+  {
+   "lang": "zh",
+   "text": "会议",
+   "pron": "huìyì",
+   "meaning": "Meeting",
+   "topic": "Work",
+   "note": "การประชุม"
+  },
+  {
+   "lang": "zh",
+   "text": "办公室",
+   "pron": "bàngōngshì",
+   "meaning": "Office",
+   "topic": "Work",
+   "note": "สำนักงาน"
+  },
+  {
+   "lang": "zh",
+   "text": "工资",
+   "pron": "gōngzī",
+   "meaning": "Salary / wages",
+   "topic": "Work",
+   "note": "เงินเดือน, ค่าจ้าง"
+  },
+  {
+   "lang": "zh",
+   "text": "面试",
+   "pron": "miànshì",
+   "meaning": "Job interview",
+   "topic": "Work",
+   "note": "สัมภาษณ์งาน"
+  },
+  {
+   "lang": "zh",
+   "text": "简历",
+   "pron": "jiǎnlì",
+   "meaning": "CV / résumé",
+   "topic": "Work",
+   "note": "เรซูเม่, ประวัติย่อ"
+  },
+  {
+   "lang": "zh",
+   "text": "打工",
+   "pron": "dǎgōng",
+   "meaning": "Part-time job",
+   "topic": "Work",
+   "note": "ทำงานพิเศษ, พาร์ทไทม์"
+  },
+  {
+   "lang": "zh",
+   "text": "加班",
+   "pron": "jiābān",
+   "meaning": "Work overtime",
+   "topic": "Work",
+   "note": "ทำงานล่วงเวลา"
+  },
+  {
+   "lang": "zh",
+   "text": "经验",
+   "pron": "jīngyàn",
+   "meaning": "Experience",
+   "topic": "Work",
+   "note": "ประสบการณ์"
+  },
+  {
+   "lang": "zh",
+   "text": "能力",
+   "pron": "nénglì",
+   "meaning": "Ability",
+   "topic": "Work",
+   "note": "ความสามารถ"
+  },
+  {
+   "lang": "zh",
+   "text": "机会",
+   "pron": "jīhuì",
+   "meaning": "Opportunity / chance",
+   "topic": "Work",
+   "note": "โอกาส"
+  },
+  {
+   "lang": "zh",
+   "text": "职业",
+   "pron": "zhíyè",
+   "meaning": "Occupation",
+   "topic": "Work",
+   "note": "อาชีพ"
+  },
+  {
+   "lang": "zh",
+   "text": "医生",
+   "pron": "yīshēng",
+   "meaning": "Doctor",
+   "topic": "Work",
+   "note": "แพทย์, หมอ"
+  },
+  {
+   "lang": "zh",
+   "text": "护士",
+   "pron": "hùshi",
+   "meaning": "Nurse",
+   "topic": "Work",
+   "note": "พยาบาล"
+  },
+  {
+   "lang": "zh",
+   "text": "警察",
+   "pron": "jǐngchá",
+   "meaning": "Police officer",
+   "topic": "Work",
+   "note": "ตำรวจ"
+  },
+  {
+   "lang": "zh",
+   "text": "司机",
+   "pron": "sījī",
+   "meaning": "Driver",
+   "topic": "Work",
+   "note": "คนขับรถ"
+  },
+  {
+   "lang": "zh",
+   "text": "服务员",
+   "pron": "fúwùyuán",
+   "meaning": "Waiter / staff",
+   "topic": "Work",
+   "note": "พนักงานบริการ, พนักงานเสิร์ฟ"
+  },
+  {
+   "lang": "zh",
+   "text": "高兴",
+   "pron": "gāoxìng",
+   "meaning": "Happy",
+   "topic": "Feelings",
+   "note": "ดีใจ"
+  },
+  {
+   "lang": "zh",
+   "text": "难过",
+   "pron": "nánguò",
+   "meaning": "Sad",
+   "topic": "Feelings",
+   "note": "เสียใจ"
+  },
+  {
+   "lang": "zh",
+   "text": "生气",
+   "pron": "shēngqì",
+   "meaning": "Angry",
+   "topic": "Feelings",
+   "note": "โกรธ"
+  },
+  {
+   "lang": "zh",
+   "text": "担心",
+   "pron": "dānxīn",
+   "meaning": "Worried",
+   "topic": "Feelings",
+   "note": "กังวล, เป็นห่วง"
+  },
+  {
+   "lang": "zh",
+   "text": "害怕",
+   "pron": "hàipà",
+   "meaning": "Afraid",
+   "topic": "Feelings",
+   "note": "กลัว"
+  },
+  {
+   "lang": "zh",
+   "text": "紧张",
+   "pron": "jǐnzhāng",
+   "meaning": "Nervous",
+   "topic": "Feelings",
+   "note": "ตื่นเต้น, ประหม่า"
+  },
+  {
+   "lang": "zh",
+   "text": "放心",
+   "pron": "fàngxīn",
+   "meaning": "Feel at ease / don't worry",
+   "topic": "Feelings",
+   "note": "วางใจ, สบายใจ"
+  },
+  {
+   "lang": "zh",
+   "text": "满意",
+   "pron": "mǎnyì",
+   "meaning": "Satisfied",
+   "topic": "Feelings",
+   "note": "พอใจ"
+  },
+  {
+   "lang": "zh",
+   "text": "失望",
+   "pron": "shīwàng",
+   "meaning": "Disappointed",
+   "topic": "Feelings",
+   "note": "ผิดหวัง"
+  },
+  {
+   "lang": "zh",
+   "text": "无聊",
+   "pron": "wúliáo",
+   "meaning": "Bored / boring",
+   "topic": "Feelings",
+   "note": "เบื่อ, น่าเบื่อ"
+  },
+  {
+   "lang": "zh",
+   "text": "累",
+   "pron": "lèi",
+   "meaning": "Tired",
+   "topic": "Feelings",
+   "note": "เหนื่อย"
+  },
+  {
+   "lang": "zh",
+   "text": "感动",
+   "pron": "gǎndòng",
+   "meaning": "Moved (emotionally)",
+   "topic": "Feelings",
+   "note": "ซาบซึ้ง, ประทับใจ"
+  },
+  {
+   "lang": "zh",
+   "text": "想家",
+   "pron": "xiǎngjiā",
+   "meaning": "Homesick",
+   "topic": "Feelings",
+   "note": "คิดถึงบ้าน"
+  },
+  {
+   "lang": "zh",
+   "text": "孤独",
+   "pron": "gūdú",
+   "meaning": "Lonely",
+   "topic": "Feelings",
+   "note": "โดดเดี่ยว, เหงา"
+  },
+  {
+   "lang": "zh",
+   "text": "友好",
+   "pron": "yǒuhǎo",
+   "meaning": "Friendly",
+   "topic": "Feelings",
+   "note": "เป็นมิตร"
+  },
+  {
+   "lang": "zh",
+   "text": "热情",
+   "pron": "rèqíng",
+   "meaning": "Warm and welcoming",
+   "topic": "Feelings",
+   "note": "อัธยาศัยดี, กระตือรือร้น"
+  },
+  {
+   "lang": "zh",
+   "text": "认真",
+   "pron": "rènzhēn",
+   "meaning": "Conscientious / serious",
+   "topic": "Feelings",
+   "note": "ตั้งใจ, จริงจัง"
+  },
+  {
+   "lang": "zh",
+   "text": "聪明",
+   "pron": "cōngming",
+   "meaning": "Clever",
+   "topic": "Feelings",
+   "note": "ฉลาด"
+  },
+  {
+   "lang": "zh",
+   "text": "努力",
+   "pron": "nǔlì",
+   "meaning": "Hard-working / make an effort",
+   "topic": "Feelings",
+   "note": "ขยัน, พยายาม"
+  },
+  {
+   "lang": "zh",
+   "text": "害羞",
+   "pron": "hàixiū",
+   "meaning": "Shy",
+   "topic": "Feelings",
+   "note": "ขี้อาย"
+  },
+  {
+   "lang": "zh",
+   "text": "舒服",
+   "pron": "shūfu",
+   "meaning": "Comfortable",
+   "topic": "Describing",
+   "note": "สบาย"
+  },
+  {
+   "lang": "zh",
+   "text": "奇怪",
+   "pron": "qíguài",
+   "meaning": "Strange",
+   "topic": "Describing",
+   "note": "แปลก"
+  },
+  {
+   "lang": "zh",
+   "text": "特别",
+   "pron": "tèbié",
+   "meaning": "Special / especially",
+   "topic": "Describing",
+   "note": "พิเศษ, เป็นพิเศษ"
+  },
+  {
+   "lang": "zh",
+   "text": "正常",
+   "pron": "zhèngcháng",
+   "meaning": "Normal",
+   "topic": "Describing",
+   "note": "ปกติ"
+  },
+  {
+   "lang": "zh",
+   "text": "贵",
+   "pron": "guì",
+   "meaning": "Expensive",
+   "topic": "Describing",
+   "note": "แพง"
+  },
+  {
+   "lang": "zh",
+   "text": "便宜",
+   "pron": "piányi",
+   "meaning": "Cheap",
+   "topic": "Describing",
+   "note": "ถูก (ราคา)"
+  },
+  {
+   "lang": "zh",
+   "text": "干净",
+   "pron": "gānjìng",
+   "meaning": "Clean",
+   "topic": "Describing",
+   "note": "สะอาด"
+  },
+  {
+   "lang": "zh",
+   "text": "脏",
+   "pron": "zāng",
+   "meaning": "Dirty",
+   "topic": "Describing",
+   "note": "สกปรก"
+  },
+  {
+   "lang": "zh",
+   "text": "安静",
+   "pron": "ānjìng",
+   "meaning": "Quiet",
+   "topic": "Describing",
+   "note": "เงียบ"
+  },
+  {
+   "lang": "zh",
+   "text": "热闹",
+   "pron": "rènao",
+   "meaning": "Lively / busy",
+   "topic": "Describing",
+   "note": "คึกคัก"
+  },
+  {
+   "lang": "zh",
+   "text": "方便",
+   "pron": "fāngbiàn",
+   "meaning": "Convenient",
+   "topic": "Describing",
+   "note": "สะดวก"
+  },
+  {
+   "lang": "zh",
+   "text": "重要",
+   "pron": "zhòngyào",
+   "meaning": "Important",
+   "topic": "Describing",
+   "note": "สำคัญ"
+  },
+  {
+   "lang": "zh",
+   "text": "简单",
+   "pron": "jiǎndān",
+   "meaning": "Simple",
+   "topic": "Describing",
+   "note": "ง่าย, ไม่ซับซ้อน"
+  },
+  {
+   "lang": "zh",
+   "text": "复杂",
+   "pron": "fùzá",
+   "meaning": "Complicated",
+   "topic": "Describing",
+   "note": "ซับซ้อน"
+  },
+  {
+   "lang": "zh",
+   "text": "容易",
+   "pron": "róngyì",
+   "meaning": "Easy",
+   "topic": "Describing",
+   "note": "ง่าย"
+  },
+  {
+   "lang": "zh",
+   "text": "难",
+   "pron": "nán",
+   "meaning": "Difficult",
+   "topic": "Describing",
+   "note": "ยาก"
+  },
+  {
+   "lang": "zh",
+   "text": "漂亮",
+   "pron": "piàoliang",
+   "meaning": "Beautiful / pretty",
+   "topic": "Describing",
+   "note": "สวย"
+  },
+  {
+   "lang": "zh",
+   "text": "有意思",
+   "pron": "yǒu yìsi",
+   "meaning": "Interesting / fun",
+   "topic": "Describing",
+   "note": "น่าสนใจ, สนุก"
+  },
+  {
+   "lang": "zh",
+   "text": "身体",
+   "pron": "shēntǐ",
+   "meaning": "Body / health",
+   "topic": "Health & emergency",
+   "note": "ร่างกาย, สุขภาพ"
+  },
+  {
+   "lang": "zh",
+   "text": "健康",
+   "pron": "jiànkāng",
+   "meaning": "Healthy / health",
+   "topic": "Health & emergency",
+   "note": "สุขภาพดี"
+  },
+  {
+   "lang": "zh",
+   "text": "生病",
+   "pron": "shēngbìng",
+   "meaning": "Get sick",
+   "topic": "Health & emergency",
+   "note": "ป่วย"
+  },
+  {
+   "lang": "zh",
+   "text": "感冒",
+   "pron": "gǎnmào",
+   "meaning": "Cold / catch a cold",
+   "topic": "Health & emergency",
+   "note": "ไข้หวัด, เป็นหวัด"
+  },
+  {
+   "lang": "zh",
+   "text": "发烧",
+   "pron": "fāshāo",
+   "meaning": "Have a fever",
+   "topic": "Health & emergency",
+   "note": "มีไข้"
+  },
+  {
+   "lang": "zh",
+   "text": "咳嗽",
+   "pron": "késou",
+   "meaning": "Cough",
+   "topic": "Health & emergency",
+   "note": "ไอ"
+  },
+  {
+   "lang": "zh",
+   "text": "头疼",
+   "pron": "tóuténg",
+   "meaning": "Headache",
+   "topic": "Health & emergency",
+   "note": "ปวดหัว"
+  },
+  {
+   "lang": "zh",
+   "text": "肚子疼",
+   "pron": "dùzi téng",
+   "meaning": "Stomach ache",
+   "topic": "Health & emergency",
+   "note": "ปวดท้อง"
+  },
+  {
+   "lang": "zh",
+   "text": "过敏",
+   "pron": "guòmǐn",
+   "meaning": "Allergy / be allergic",
+   "topic": "Health & emergency",
+   "note": "แพ้"
+  },
+  {
+   "lang": "zh",
+   "text": "药",
+   "pron": "yào",
+   "meaning": "Medicine",
+   "topic": "Health & emergency",
+   "note": "ยา"
+  },
+  {
+   "lang": "zh",
+   "text": "吃药",
+   "pron": "chī yào",
+   "meaning": "Take medicine",
+   "topic": "Health & emergency",
+   "note": "กินยา"
+  },
+  {
+   "lang": "zh",
+   "text": "看病",
+   "pron": "kànbìng",
+   "meaning": "See a doctor",
+   "topic": "Health & emergency",
+   "note": "ไปหาหมอ"
+  },
+  {
+   "lang": "zh",
+   "text": "挂号",
+   "pron": "guàhào",
+   "meaning": "Register (at a hospital)",
+   "topic": "Health & emergency",
+   "note": "ลงทะเบียน (ที่โรงพยาบาล)"
+  },
+  {
+   "lang": "zh",
+   "text": "打针",
+   "pron": "dǎzhēn",
+   "meaning": "Get an injection",
+   "topic": "Health & emergency",
+   "note": "ฉีดยา"
+  },
+  {
+   "lang": "zh",
+   "text": "检查",
+   "pron": "jiǎnchá",
+   "meaning": "Check-up / examine",
+   "topic": "Health & emergency",
+   "note": "ตรวจ"
+  },
+  {
+   "lang": "zh",
+   "text": "受伤",
+   "pron": "shòushāng",
+   "meaning": "Get injured",
+   "topic": "Health & emergency",
+   "note": "บาดเจ็บ"
+  },
+  {
+   "lang": "zh",
+   "text": "急诊",
+   "pron": "jízhěn",
+   "meaning": "Emergency room",
+   "topic": "Health & emergency",
+   "note": "ห้องฉุกเฉิน"
+  },
+  {
+   "lang": "zh",
+   "text": "保险",
+   "pron": "bǎoxiǎn",
+   "meaning": "Insurance",
+   "topic": "Health & emergency",
+   "note": "ประกัน"
+  },
+  {
+   "lang": "zh",
+   "text": "买",
+   "pron": "mǎi",
+   "meaning": "Buy",
+   "topic": "Shopping",
+   "note": "ซื้อ"
+  },
+  {
+   "lang": "zh",
+   "text": "卖",
+   "pron": "mài",
+   "meaning": "Sell",
+   "topic": "Shopping",
+   "note": "ขาย"
+  },
+  {
+   "lang": "zh",
+   "text": "价格",
+   "pron": "jiàgé",
+   "meaning": "Price",
+   "topic": "Shopping",
+   "note": "ราคา"
+  },
+  {
+   "lang": "zh",
+   "text": "打折",
+   "pron": "dǎzhé",
+   "meaning": "Discount / on sale",
+   "topic": "Shopping",
+   "note": "ลดราคา"
+  },
+  {
+   "lang": "zh",
+   "text": "付钱",
+   "pron": "fùqián",
+   "meaning": "Pay",
+   "topic": "Shopping",
+   "note": "จ่ายเงิน"
+  },
+  {
+   "lang": "zh",
+   "text": "现金",
+   "pron": "xiànjīn",
+   "meaning": "Cash",
+   "topic": "Shopping",
+   "note": "เงินสด"
+  },
+  {
+   "lang": "zh",
+   "text": "刷卡",
+   "pron": "shuākǎ",
+   "meaning": "Pay by card",
+   "topic": "Shopping",
+   "note": "รูดบัตร"
+  },
+  {
+   "lang": "zh",
+   "text": "扫码",
+   "pron": "sǎomǎ",
+   "meaning": "Scan a QR code",
+   "topic": "Shopping",
+   "note": "สแกนคิวอาร์โค้ด"
+  },
+  {
+   "lang": "zh",
+   "text": "支付宝",
+   "pron": "Zhīfùbǎo",
+   "meaning": "Alipay",
+   "topic": "Shopping",
+   "note": "อาลีเพย์"
+  },
+  {
+   "lang": "zh",
+   "text": "微信",
+   "pron": "Wēixìn",
+   "meaning": "WeChat",
+   "topic": "Shopping",
+   "note": "วีแชท"
+  },
+  {
+   "lang": "zh",
+   "text": "找钱",
+   "pron": "zhǎoqián",
+   "meaning": "Give change",
+   "topic": "Shopping",
+   "note": "ทอนเงิน"
+  },
+  {
+   "lang": "zh",
+   "text": "发票",
+   "pron": "fāpiào",
+   "meaning": "Receipt / invoice",
+   "topic": "Shopping",
+   "note": "ใบเสร็จ, ใบกำกับภาษี"
+  },
+  {
+   "lang": "zh",
+   "text": "退货",
+   "pron": "tuìhuò",
+   "meaning": "Return goods",
+   "topic": "Shopping",
+   "note": "คืนสินค้า"
+  },
+  {
+   "lang": "zh",
+   "text": "网购",
+   "pron": "wǎnggòu",
+   "meaning": "Online shopping",
+   "topic": "Shopping",
+   "note": "ซื้อของออนไลน์"
+  },
+  {
+   "lang": "zh",
+   "text": "快递",
+   "pron": "kuàidì",
+   "meaning": "Parcel delivery / courier",
+   "topic": "Shopping",
+   "note": "พัสดุ, ส่งด่วน"
+  },
+  {
+   "lang": "zh",
+   "text": "外卖",
+   "pron": "wàimài",
+   "meaning": "Food delivery / takeaway",
+   "topic": "Shopping",
+   "note": "อาหารเดลิเวอรี"
+  },
+  {
+   "lang": "zh",
+   "text": "尺寸",
+   "pron": "chǐcùn",
+   "meaning": "Size",
+   "topic": "Shopping",
+   "note": "ขนาด, ไซซ์"
+  },
+  {
+   "lang": "zh",
+   "text": "试",
+   "pron": "shì",
+   "meaning": "Try (on)",
+   "topic": "Shopping",
+   "note": "ลอง"
+  },
+  {
+   "lang": "zh",
+   "text": "衣服",
+   "pron": "yīfu",
+   "meaning": "Clothes",
+   "topic": "Clothes",
+   "note": "เสื้อผ้า"
+  },
+  {
+   "lang": "zh",
+   "text": "衬衫",
+   "pron": "chènshān",
+   "meaning": "Shirt",
+   "topic": "Clothes",
+   "note": "เสื้อเชิ้ต"
+  },
+  {
+   "lang": "zh",
+   "text": "T恤",
+   "pron": "T xù",
+   "meaning": "T-shirt",
+   "topic": "Clothes",
+   "note": "เสื้อยืด"
+  },
+  {
+   "lang": "zh",
+   "text": "裤子",
+   "pron": "kùzi",
+   "meaning": "Trousers",
+   "topic": "Clothes",
+   "note": "กางเกง"
+  },
+  {
+   "lang": "zh",
+   "text": "裙子",
+   "pron": "qúnzi",
+   "meaning": "Skirt / dress",
+   "topic": "Clothes",
+   "note": "กระโปรง"
+  },
+  {
+   "lang": "zh",
+   "text": "外套",
+   "pron": "wàitào",
+   "meaning": "Coat / jacket",
+   "topic": "Clothes",
+   "note": "เสื้อคลุม, แจ็กเก็ต"
+  },
+  {
+   "lang": "zh",
+   "text": "鞋",
+   "pron": "xié",
+   "meaning": "Shoes",
+   "topic": "Clothes",
+   "note": "รองเท้า"
+  },
+  {
+   "lang": "zh",
+   "text": "袜子",
+   "pron": "wàzi",
+   "meaning": "Socks",
+   "topic": "Clothes",
+   "note": "ถุงเท้า"
+  },
+  {
+   "lang": "zh",
+   "text": "帽子",
+   "pron": "màozi",
+   "meaning": "Hat",
+   "topic": "Clothes",
+   "note": "หมวก"
+  },
+  {
+   "lang": "zh",
+   "text": "眼镜",
+   "pron": "yǎnjìng",
+   "meaning": "Glasses",
+   "topic": "Clothes",
+   "note": "แว่นตา"
+  },
+  {
+   "lang": "zh",
+   "text": "手表",
+   "pron": "shǒubiǎo",
+   "meaning": "Watch",
+   "topic": "Clothes",
+   "note": "นาฬิกาข้อมือ"
+  },
+  {
+   "lang": "zh",
+   "text": "穿",
+   "pron": "chuān",
+   "meaning": "Wear (clothes, shoes)",
+   "topic": "Clothes",
+   "note": "สวม, ใส่"
+  },
+  {
+   "lang": "zh",
+   "text": "房间",
+   "pron": "fángjiān",
+   "meaning": "Room",
+   "topic": "Home",
+   "note": "ห้อง"
+  },
+  {
+   "lang": "zh",
+   "text": "客厅",
+   "pron": "kètīng",
+   "meaning": "Living room",
+   "topic": "Home",
+   "note": "ห้องนั่งเล่น"
+  },
+  {
+   "lang": "zh",
+   "text": "厨房",
+   "pron": "chúfáng",
+   "meaning": "Kitchen",
+   "topic": "Home",
+   "note": "ห้องครัว"
+  },
+  {
+   "lang": "zh",
+   "text": "卧室",
+   "pron": "wòshì",
+   "meaning": "Bedroom",
+   "topic": "Home",
+   "note": "ห้องนอน"
+  },
+  {
+   "lang": "zh",
+   "text": "床",
+   "pron": "chuáng",
+   "meaning": "Bed",
+   "topic": "Home",
+   "note": "เตียง"
+  },
+  {
+   "lang": "zh",
+   "text": "桌子",
+   "pron": "zhuōzi",
+   "meaning": "Table / desk",
+   "topic": "Home",
+   "note": "โต๊ะ"
+  },
+  {
+   "lang": "zh",
+   "text": "椅子",
+   "pron": "yǐzi",
+   "meaning": "Chair",
+   "topic": "Home",
+   "note": "เก้าอี้"
+  },
+  {
+   "lang": "zh",
+   "text": "窗户",
+   "pron": "chuānghu",
+   "meaning": "Window",
+   "topic": "Home",
+   "note": "หน้าต่าง"
+  },
+  {
+   "lang": "zh",
+   "text": "钥匙",
+   "pron": "yàoshi",
+   "meaning": "Key",
+   "topic": "Home",
+   "note": "กุญแจ"
+  },
+  {
+   "lang": "zh",
+   "text": "冰箱",
+   "pron": "bīngxiāng",
+   "meaning": "Fridge",
+   "topic": "Home",
+   "note": "ตู้เย็น"
+  },
+  {
+   "lang": "zh",
+   "text": "空调",
+   "pron": "kōngtiáo",
+   "meaning": "Air conditioner",
+   "topic": "Home",
+   "note": "เครื่องปรับอากาศ, แอร์"
+  },
+  {
+   "lang": "zh",
+   "text": "洗衣机",
+   "pron": "xǐyījī",
+   "meaning": "Washing machine",
+   "topic": "Home",
+   "note": "เครื่องซักผ้า"
+  },
+  {
+   "lang": "zh",
+   "text": "房租",
+   "pron": "fángzū",
+   "meaning": "Rent",
+   "topic": "Home",
+   "note": "ค่าเช่าห้อง"
+  },
+  {
+   "lang": "zh",
+   "text": "房东",
+   "pron": "fángdōng",
+   "meaning": "Landlord",
+   "topic": "Home",
+   "note": "เจ้าของห้องเช่า"
+  },
+  {
+   "lang": "zh",
+   "text": "邻居",
+   "pron": "línjū",
+   "meaning": "Neighbour",
+   "topic": "Home",
+   "note": "เพื่อนบ้าน"
+  },
+  {
+   "lang": "zh",
+   "text": "搬家",
+   "pron": "bānjiā",
+   "meaning": "Move house",
+   "topic": "Home",
+   "note": "ย้ายบ้าน"
+  },
+  {
+   "lang": "zh",
+   "text": "垃圾",
+   "pron": "lājī",
+   "meaning": "Rubbish",
+   "topic": "Home",
+   "note": "ขยะ"
+  },
+  {
+   "lang": "zh",
+   "text": "电费",
+   "pron": "diànfèi",
+   "meaning": "Electricity bill",
+   "topic": "Home",
+   "note": "ค่าไฟ"
+  },
+  {
+   "lang": "zh",
+   "text": "旅游",
+   "pron": "lǚyóu",
+   "meaning": "Travel / tourism",
+   "topic": "Travel",
+   "note": "ท่องเที่ยว"
+  },
+  {
+   "lang": "zh",
+   "text": "护照",
+   "pron": "hùzhào",
+   "meaning": "Passport",
+   "topic": "Travel",
+   "note": "หนังสือเดินทาง"
+  },
+  {
+   "lang": "zh",
+   "text": "签证",
+   "pron": "qiānzhèng",
+   "meaning": "Visa",
+   "topic": "Travel",
+   "note": "วีซ่า"
+  },
+  {
+   "lang": "zh",
+   "text": "行李",
+   "pron": "xíngli",
+   "meaning": "Luggage",
+   "topic": "Travel",
+   "note": "กระเป๋าเดินทาง, สัมภาระ"
+  },
+  {
+   "lang": "zh",
+   "text": "机票",
+   "pron": "jīpiào",
+   "meaning": "Plane ticket",
+   "topic": "Travel",
+   "note": "ตั๋วเครื่องบิน"
+  },
+  {
+   "lang": "zh",
+   "text": "酒店",
+   "pron": "jiǔdiàn",
+   "meaning": "Hotel",
+   "topic": "Travel",
+   "note": "โรงแรม"
+  },
+  {
+   "lang": "zh",
+   "text": "预订",
+   "pron": "yùdìng",
+   "meaning": "Book / reserve",
+   "topic": "Travel",
+   "note": "จอง"
+  },
+  {
+   "lang": "zh",
+   "text": "地图",
+   "pron": "dìtú",
+   "meaning": "Map",
+   "topic": "Travel",
+   "note": "แผนที่"
+  },
+  {
+   "lang": "zh",
+   "text": "导航",
+   "pron": "dǎoháng",
+   "meaning": "Navigation (GPS)",
+   "topic": "Travel",
+   "note": "การนำทาง (GPS)"
+  },
+  {
+   "lang": "zh",
+   "text": "左边",
+   "pron": "zuǒbian",
+   "meaning": "Left side",
+   "topic": "Travel",
+   "note": "ทางซ้าย"
+  },
+  {
+   "lang": "zh",
+   "text": "右边",
+   "pron": "yòubian",
+   "meaning": "Right side",
+   "topic": "Travel",
+   "note": "ทางขวา"
+  },
+  {
+   "lang": "zh",
+   "text": "旁边",
+   "pron": "pángbiān",
+   "meaning": "Next to / beside",
+   "topic": "Travel",
+   "note": "ข้าง ๆ"
+  },
+  {
+   "lang": "zh",
+   "text": "对面",
+   "pron": "duìmiàn",
+   "meaning": "Opposite",
+   "topic": "Travel",
+   "note": "ฝั่งตรงข้าม"
+  },
+  {
+   "lang": "zh",
+   "text": "一直走",
+   "pron": "yìzhí zǒu",
+   "meaning": "Go straight ahead",
+   "topic": "Travel",
+   "note": "เดินตรงไป"
+  },
+  {
+   "lang": "zh",
+   "text": "拐",
+   "pron": "guǎi",
+   "meaning": "Turn (a corner)",
+   "topic": "Travel",
+   "note": "เลี้ยว"
+  },
+  {
+   "lang": "zh",
+   "text": "路口",
+   "pron": "lùkǒu",
+   "meaning": "Junction / crossroads",
+   "topic": "Travel",
+   "note": "ทางแยก, สี่แยก"
+  },
+  {
+   "lang": "zh",
+   "text": "附近",
+   "pron": "fùjìn",
+   "meaning": "Nearby",
+   "topic": "Travel",
+   "note": "แถวนี้, ใกล้ ๆ"
+  },
+  {
+   "lang": "zh",
+   "text": "远",
+   "pron": "yuǎn",
+   "meaning": "Far",
+   "topic": "Travel",
+   "note": "ไกล"
+  },
+  {
+   "lang": "zh",
+   "text": "城市",
+   "pron": "chéngshì",
+   "meaning": "City",
+   "topic": "City",
+   "note": "เมือง"
+  },
+  {
+   "lang": "zh",
+   "text": "公园",
+   "pron": "gōngyuán",
+   "meaning": "Park",
+   "topic": "City",
+   "note": "สวนสาธารณะ"
+  },
+  {
+   "lang": "zh",
+   "text": "博物馆",
+   "pron": "bówùguǎn",
+   "meaning": "Museum",
+   "topic": "City",
+   "note": "พิพิธภัณฑ์"
+  },
+  {
+   "lang": "zh",
+   "text": "电影院",
+   "pron": "diànyǐngyuàn",
+   "meaning": "Cinema",
+   "topic": "City",
+   "note": "โรงภาพยนตร์"
+  },
+  {
+   "lang": "zh",
+   "text": "健身房",
+   "pron": "jiànshēnfáng",
+   "meaning": "Gym",
+   "topic": "City",
+   "note": "ฟิตเนส, ยิม"
+  },
+  {
+   "lang": "zh",
+   "text": "咖啡馆",
+   "pron": "kāfēiguǎn",
+   "meaning": "Café",
+   "topic": "City",
+   "note": "ร้านกาแฟ"
+  },
+  {
+   "lang": "zh",
+   "text": "邮局",
+   "pron": "yóujú",
+   "meaning": "Post office",
+   "topic": "City",
+   "note": "ไปรษณีย์"
+  },
+  {
+   "lang": "zh",
+   "text": "派出所",
+   "pron": "pàichūsuǒ",
+   "meaning": "Police station",
+   "topic": "City",
+   "note": "สถานีตำรวจ"
+  },
+  {
+   "lang": "zh",
+   "text": "大使馆",
+   "pron": "dàshǐguǎn",
+   "meaning": "Embassy",
+   "topic": "City",
+   "note": "สถานทูต"
+  },
+  {
+   "lang": "zh",
+   "text": "商场",
+   "pron": "shāngchǎng",
+   "meaning": "Shopping mall",
+   "topic": "City",
+   "note": "ห้างสรรพสินค้า"
+  },
+  {
+   "lang": "zh",
+   "text": "菜市场",
+   "pron": "càishìchǎng",
+   "meaning": "Food market",
+   "topic": "City",
+   "note": "ตลาดสด"
+  },
+  {
+   "lang": "zh",
+   "text": "电梯",
+   "pron": "diàntī",
+   "meaning": "Lift / elevator",
+   "topic": "City",
+   "note": "ลิฟต์"
+  },
+  {
+   "lang": "zh",
+   "text": "入口",
+   "pron": "rùkǒu",
+   "meaning": "Entrance",
+   "topic": "City",
+   "note": "ทางเข้า"
+  },
+  {
+   "lang": "zh",
+   "text": "出口",
+   "pron": "chūkǒu",
+   "meaning": "Exit",
+   "topic": "City",
+   "note": "ทางออก"
+  },
+  {
+   "lang": "zh",
+   "text": "菜单",
+   "pron": "càidān",
+   "meaning": "Menu",
+   "topic": "Food & ordering",
+   "note": "เมนู"
+  },
+  {
+   "lang": "zh",
+   "text": "点菜",
+   "pron": "diǎncài",
+   "meaning": "Order food",
+   "topic": "Food & ordering",
+   "note": "สั่งอาหาร"
+  },
+  {
+   "lang": "zh",
+   "text": "好吃",
+   "pron": "hǎochī",
+   "meaning": "Tasty",
+   "topic": "Food & ordering",
+   "note": "อร่อย"
+  },
+  {
+   "lang": "zh",
+   "text": "辣",
+   "pron": "là",
+   "meaning": "Spicy",
+   "topic": "Food & ordering",
+   "note": "เผ็ด"
+  },
+  {
+   "lang": "zh",
+   "text": "甜",
+   "pron": "tián",
+   "meaning": "Sweet",
+   "topic": "Food & ordering",
+   "note": "หวาน"
+  },
+  {
+   "lang": "zh",
+   "text": "酸",
+   "pron": "suān",
+   "meaning": "Sour",
+   "topic": "Food & ordering",
+   "note": "เปรี้ยว"
+  },
+  {
+   "lang": "zh",
+   "text": "咸",
+   "pron": "xián",
+   "meaning": "Salty",
+   "topic": "Food & ordering",
+   "note": "เค็ม"
+  },
+  {
+   "lang": "zh",
+   "text": "油",
+   "pron": "yóu",
+   "meaning": "Oil",
+   "topic": "Food & ordering",
+   "note": "น้ำมัน"
+  },
+  {
+   "lang": "zh",
+   "text": "酱油",
+   "pron": "jiàngyóu",
+   "meaning": "Soy sauce",
+   "topic": "Food & ordering",
+   "note": "ซีอิ๊ว"
+  },
+  {
+   "lang": "zh",
+   "text": "炒",
+   "pron": "chǎo",
+   "meaning": "Stir-fry",
+   "topic": "Food & ordering",
+   "note": "ผัด"
+  },
+  {
+   "lang": "zh",
+   "text": "煮",
+   "pron": "zhǔ",
+   "meaning": "Boil",
+   "topic": "Food & ordering",
+   "note": "ต้ม"
+  },
+  {
+   "lang": "zh",
+   "text": "烤",
+   "pron": "kǎo",
+   "meaning": "Roast / grill",
+   "topic": "Food & ordering",
+   "note": "ย่าง, อบ"
+  },
+  {
+   "lang": "zh",
+   "text": "蒸",
+   "pron": "zhēng",
+   "meaning": "Steam",
+   "topic": "Food & ordering",
+   "note": "นึ่ง"
+  },
+  {
+   "lang": "zh",
+   "text": "筷子",
+   "pron": "kuàizi",
+   "meaning": "Chopsticks",
+   "topic": "Food & ordering",
+   "note": "ตะเกียบ"
+  },
+  {
+   "lang": "zh",
+   "text": "勺子",
+   "pron": "sháozi",
+   "meaning": "Spoon",
+   "topic": "Food & ordering",
+   "note": "ช้อน"
+  },
+  {
+   "lang": "zh",
+   "text": "碗",
+   "pron": "wǎn",
+   "meaning": "Bowl",
+   "topic": "Food & ordering",
+   "note": "ชาม"
+  },
+  {
+   "lang": "zh",
+   "text": "盘子",
+   "pron": "pánzi",
+   "meaning": "Plate",
+   "topic": "Food & ordering",
+   "note": "จาน"
+  },
+  {
+   "lang": "zh",
+   "text": "打包",
+   "pron": "dǎbāo",
+   "meaning": "Take away (pack up food)",
+   "topic": "Food & ordering",
+   "note": "ห่อกลับบ้าน"
+  },
+  {
+   "lang": "zh",
+   "text": "山",
+   "pron": "shān",
+   "meaning": "Mountain",
+   "topic": "Nature",
+   "note": "ภูเขา"
+  },
+  {
+   "lang": "zh",
+   "text": "河",
+   "pron": "hé",
+   "meaning": "River",
+   "topic": "Nature",
+   "note": "แม่น้ำ"
+  },
+  {
+   "lang": "zh",
+   "text": "海",
+   "pron": "hǎi",
+   "meaning": "Sea",
+   "topic": "Nature",
+   "note": "ทะเล"
+  },
+  {
+   "lang": "zh",
+   "text": "树",
+   "pron": "shù",
+   "meaning": "Tree",
+   "topic": "Nature",
+   "note": "ต้นไม้"
+  },
+  {
+   "lang": "zh",
+   "text": "花",
+   "pron": "huā",
+   "meaning": "Flower",
+   "topic": "Nature",
+   "note": "ดอกไม้"
+  },
+  {
+   "lang": "zh",
+   "text": "天空",
+   "pron": "tiānkōng",
+   "meaning": "Sky",
+   "topic": "Nature",
+   "note": "ท้องฟ้า"
+  },
+  {
+   "lang": "zh",
+   "text": "月亮",
+   "pron": "yuèliang",
+   "meaning": "Moon",
+   "topic": "Nature",
+   "note": "ดวงจันทร์"
+  },
+  {
+   "lang": "zh",
+   "text": "环境",
+   "pron": "huánjìng",
+   "meaning": "Environment",
+   "topic": "Nature",
+   "note": "สิ่งแวดล้อม"
+  },
+  {
+   "lang": "zh",
+   "text": "空气",
+   "pron": "kōngqì",
+   "meaning": "Air",
+   "topic": "Nature",
+   "note": "อากาศ (ที่หายใจ)"
+  },
+  {
+   "lang": "zh",
+   "text": "季节",
+   "pron": "jìjié",
+   "meaning": "Season",
+   "topic": "Nature",
+   "note": "ฤดู"
+  },
+  {
+   "lang": "zh",
+   "text": "春天",
+   "pron": "chūntiān",
+   "meaning": "Spring",
+   "topic": "Nature",
+   "note": "ฤดูใบไม้ผลิ"
+  },
+  {
+   "lang": "zh",
+   "text": "夏天",
+   "pron": "xiàtiān",
+   "meaning": "Summer",
+   "topic": "Nature",
+   "note": "ฤดูร้อน"
+  },
+  {
+   "lang": "zh",
+   "text": "秋天",
+   "pron": "qiūtiān",
+   "meaning": "Autumn",
+   "topic": "Nature",
+   "note": "ฤดูใบไม้ร่วง"
+  },
+  {
+   "lang": "zh",
+   "text": "冬天",
+   "pron": "dōngtiān",
+   "meaning": "Winter",
+   "topic": "Nature",
+   "note": "ฤดูหนาว"
+  },
+  {
+   "lang": "zh",
+   "text": "网络",
+   "pron": "wǎngluò",
+   "meaning": "Internet / network",
+   "topic": "Technology",
+   "note": "อินเทอร์เน็ต, เครือข่าย"
+  },
+  {
+   "lang": "zh",
+   "text": "密码",
+   "pron": "mìmǎ",
+   "meaning": "Password",
+   "topic": "Technology",
+   "note": "รหัสผ่าน"
+  },
+  {
+   "lang": "zh",
+   "text": "下载",
+   "pron": "xiàzài",
+   "meaning": "Download",
+   "topic": "Technology",
+   "note": "ดาวน์โหลด"
+  },
+  {
+   "lang": "zh",
+   "text": "上网",
+   "pron": "shàngwǎng",
+   "meaning": "Go online",
+   "topic": "Technology",
+   "note": "เล่นอินเทอร์เน็ต"
+  },
+  {
+   "lang": "zh",
+   "text": "充电",
+   "pron": "chōngdiàn",
+   "meaning": "Charge (a battery)",
+   "topic": "Technology",
+   "note": "ชาร์จแบต"
+  },
+  {
+   "lang": "zh",
+   "text": "充电器",
+   "pron": "chōngdiànqì",
+   "meaning": "Charger",
+   "topic": "Technology",
+   "note": "ที่ชาร์จ"
+  },
+  {
+   "lang": "zh",
+   "text": "号码",
+   "pron": "hàomǎ",
+   "meaning": "Number (phone, room…)",
+   "topic": "Technology",
+   "note": "หมายเลข"
+  },
+  {
+   "lang": "zh",
+   "text": "打电话",
+   "pron": "dǎ diànhuà",
+   "meaning": "Make a phone call",
+   "topic": "Technology",
+   "note": "โทรศัพท์"
+  },
+  {
+   "lang": "zh",
+   "text": "照片",
+   "pron": "zhàopiàn",
+   "meaning": "Photo",
+   "topic": "Technology",
+   "note": "รูปภาพ"
+  },
+  {
+   "lang": "zh",
+   "text": "拍照",
+   "pron": "pāizhào",
+   "meaning": "Take a photo",
+   "topic": "Technology",
+   "note": "ถ่ายรูป"
+  },
+  {
+   "lang": "zh",
+   "text": "视频",
+   "pron": "shìpín",
+   "meaning": "Video",
+   "topic": "Technology",
+   "note": "วิดีโอ"
+  },
+  {
+   "lang": "zh",
+   "text": "软件",
+   "pron": "ruǎnjiàn",
+   "meaning": "App / software",
+   "topic": "Technology",
+   "note": "แอป, ซอฟต์แวร์"
+  },
+  {
+   "lang": "zh",
+   "text": "账号",
+   "pron": "zhànghào",
+   "meaning": "Account (online)",
+   "topic": "Technology",
+   "note": "บัญชีผู้ใช้"
+  },
+  {
+   "lang": "zh",
+   "text": "二维码",
+   "pron": "èrwéimǎ",
+   "meaning": "QR code",
+   "topic": "Technology",
+   "note": "คิวอาร์โค้ด"
+  },
+  {
+   "lang": "zh",
+   "text": "爱好",
+   "pron": "àihào",
+   "meaning": "Hobby",
+   "topic": "Hobbies",
+   "note": "งานอดิเรก"
+  },
+  {
+   "lang": "zh",
+   "text": "跑步",
+   "pron": "pǎobù",
+   "meaning": "Run / jogging",
+   "topic": "Hobbies",
+   "note": "วิ่ง"
+  },
+  {
+   "lang": "zh",
+   "text": "游泳",
+   "pron": "yóuyǒng",
+   "meaning": "Swim",
+   "topic": "Hobbies",
+   "note": "ว่ายน้ำ"
+  },
+  {
+   "lang": "zh",
+   "text": "踢足球",
+   "pron": "tī zúqiú",
+   "meaning": "Play football",
+   "topic": "Hobbies",
+   "note": "เล่นฟุตบอล"
+  },
+  {
+   "lang": "zh",
+   "text": "打篮球",
+   "pron": "dǎ lánqiú",
+   "meaning": "Play basketball",
+   "topic": "Hobbies",
+   "note": "เล่นบาสเกตบอล"
+  },
+  {
+   "lang": "zh",
+   "text": "唱歌",
+   "pron": "chànggē",
+   "meaning": "Sing",
+   "topic": "Hobbies",
+   "note": "ร้องเพลง"
+  },
+  {
+   "lang": "zh",
+   "text": "跳舞",
+   "pron": "tiàowǔ",
+   "meaning": "Dance",
+   "topic": "Hobbies",
+   "note": "เต้นรำ"
+  },
+  {
+   "lang": "zh",
+   "text": "画画",
+   "pron": "huàhuà",
+   "meaning": "Draw / paint",
+   "topic": "Hobbies",
+   "note": "วาดรูป"
+  },
+  {
+   "lang": "zh",
+   "text": "看电影",
+   "pron": "kàn diànyǐng",
+   "meaning": "Watch a film",
+   "topic": "Hobbies",
+   "note": "ดูหนัง"
+  },
+  {
+   "lang": "zh",
+   "text": "听音乐",
+   "pron": "tīng yīnyuè",
+   "meaning": "Listen to music",
+   "topic": "Hobbies",
+   "note": "ฟังเพลง"
+  },
+  {
+   "lang": "zh",
+   "text": "玩游戏",
+   "pron": "wán yóuxì",
+   "meaning": "Play games",
+   "topic": "Hobbies",
+   "note": "เล่นเกม"
+  },
+  {
+   "lang": "zh",
+   "text": "爬山",
+   "pron": "páshān",
+   "meaning": "Hike / climb a mountain",
+   "topic": "Hobbies",
+   "note": "ปีนเขา, เดินป่า"
+  },
+  {
+   "lang": "zh",
+   "text": "逛街",
+   "pron": "guàngjiē",
+   "meaning": "Go shopping (stroll around)",
+   "topic": "Hobbies",
+   "note": "เดินเล่นช็อปปิ้ง"
+  },
+  {
+   "lang": "zh",
+   "text": "比赛",
+   "pron": "bǐsài",
+   "meaning": "Competition / match",
+   "topic": "Hobbies",
+   "note": "การแข่งขัน"
+  },
+  {
+   "lang": "zh",
+   "text": "以前",
+   "pron": "yǐqián",
+   "meaning": "Before / in the past",
+   "topic": "Time",
+   "note": "ก่อนหน้านี้, เมื่อก่อน"
+  },
+  {
+   "lang": "zh",
+   "text": "以后",
+   "pron": "yǐhòu",
+   "meaning": "After / later",
+   "topic": "Time",
+   "note": "หลังจากนี้, ต่อไป"
+  },
+  {
+   "lang": "zh",
+   "text": "刚才",
+   "pron": "gāngcái",
+   "meaning": "Just now",
+   "topic": "Time",
+   "note": "เมื่อกี้"
+  },
+  {
+   "lang": "zh",
+   "text": "马上",
+   "pron": "mǎshàng",
+   "meaning": "Right away",
+   "topic": "Time",
+   "note": "ทันที"
+  },
+  {
+   "lang": "zh",
+   "text": "已经",
+   "pron": "yǐjīng",
+   "meaning": "Already",
+   "topic": "Time",
+   "note": "แล้ว"
+  },
+  {
+   "lang": "zh",
+   "text": "还没",
+   "pron": "hái méi",
+   "meaning": "Not yet",
+   "topic": "Time",
+   "note": "ยังไม่"
+  },
+  {
+   "lang": "zh",
+   "text": "经常",
+   "pron": "jīngcháng",
+   "meaning": "Often",
+   "topic": "Time",
+   "note": "บ่อย ๆ"
+  },
+  {
+   "lang": "zh",
+   "text": "有时候",
+   "pron": "yǒushíhou",
+   "meaning": "Sometimes",
+   "topic": "Time",
+   "note": "บางครั้ง"
+  },
+  {
+   "lang": "zh",
+   "text": "总是",
+   "pron": "zǒngshì",
+   "meaning": "Always",
+   "topic": "Time",
+   "note": "เสมอ"
+  },
+  {
+   "lang": "zh",
+   "text": "从来",
+   "pron": "cónglái",
+   "meaning": "Ever (with 不/没: never)",
+   "topic": "Time",
+   "note": "ไม่เคยเลย (ใช้กับ 不/没)"
+  },
+  {
+   "lang": "zh",
+   "text": "最近",
+   "pron": "zuìjìn",
+   "meaning": "Recently",
+   "topic": "Time",
+   "note": "ช่วงนี้"
+  },
+  {
+   "lang": "zh",
+   "text": "将来",
+   "pron": "jiānglái",
+   "meaning": "The future",
+   "topic": "Time",
+   "note": "อนาคต"
+  },
+  {
+   "lang": "zh",
+   "text": "上个月",
+   "pron": "shàng ge yuè",
+   "meaning": "Last month",
+   "topic": "Time",
+   "note": "เดือนที่แล้ว"
+  },
+  {
+   "lang": "zh",
+   "text": "下个星期",
+   "pron": "xià ge xīngqī",
+   "meaning": "Next week",
+   "topic": "Time",
+   "note": "สัปดาห์หน้า"
+  },
+  {
+   "lang": "zh",
+   "text": "每天",
+   "pron": "měitiān",
+   "meaning": "Every day",
+   "topic": "Time",
+   "note": "ทุกวัน"
+  },
+  {
+   "lang": "zh",
+   "text": "半天",
+   "pron": "bàntiān",
+   "meaning": "Half a day / a long time",
+   "topic": "Time",
+   "note": "ครึ่งวัน, ตั้งนาน"
+  },
+  {
+   "lang": "zh",
+   "text": "一会儿",
+   "pron": "yíhuìr",
+   "meaning": "A moment",
+   "topic": "Time",
+   "note": "สักครู่"
+  },
+  {
+   "lang": "zh",
+   "text": "准时",
+   "pron": "zhǔnshí",
+   "meaning": "On time",
+   "topic": "Time",
+   "note": "ตรงเวลา"
+  },
+  {
+   "lang": "zh",
+   "text": "因为",
+   "pron": "yīnwèi",
+   "meaning": "Because",
+   "topic": "Linking words",
+   "note": "เพราะว่า"
+  },
+  {
+   "lang": "zh",
+   "text": "所以",
+   "pron": "suǒyǐ",
+   "meaning": "So / therefore",
+   "topic": "Linking words",
+   "note": "ดังนั้น"
+  },
+  {
+   "lang": "zh",
+   "text": "但是",
+   "pron": "dànshì",
+   "meaning": "But",
+   "topic": "Linking words",
+   "note": "แต่"
+  },
+  {
+   "lang": "zh",
+   "text": "虽然",
+   "pron": "suīrán",
+   "meaning": "Although",
+   "topic": "Linking words",
+   "note": "ถึงแม้ว่า"
+  },
+  {
+   "lang": "zh",
+   "text": "如果",
+   "pron": "rúguǒ",
+   "meaning": "If",
+   "topic": "Linking words",
+   "note": "ถ้า"
+  },
+  {
+   "lang": "zh",
+   "text": "或者",
+   "pron": "huòzhě",
+   "meaning": "Or (in statements)",
+   "topic": "Linking words",
+   "note": "หรือ"
+  },
+  {
+   "lang": "zh",
+   "text": "还是",
+   "pron": "háishi",
+   "meaning": "Or (in questions)",
+   "topic": "Linking words",
+   "note": "หรือ (ใช้ในคำถาม)"
+  },
+  {
+   "lang": "zh",
+   "text": "而且",
+   "pron": "érqiě",
+   "meaning": "And also / moreover",
+   "topic": "Linking words",
+   "note": "นอกจากนี้ยัง, อีกทั้ง"
+  },
+  {
+   "lang": "zh",
+   "text": "然后",
+   "pron": "ránhòu",
+   "meaning": "Then / after that",
+   "topic": "Linking words",
+   "note": "จากนั้น"
+  },
+  {
+   "lang": "zh",
+   "text": "一起",
+   "pron": "yìqǐ",
+   "meaning": "Together",
+   "topic": "Linking words",
+   "note": "ด้วยกัน"
+  },
+  {
+   "lang": "zh",
+   "text": "一定",
+   "pron": "yídìng",
+   "meaning": "Definitely / must",
+   "topic": "Linking words",
+   "note": "แน่นอน"
+  },
+  {
+   "lang": "zh",
+   "text": "可能",
+   "pron": "kěnéng",
+   "meaning": "Maybe / possible",
+   "topic": "Linking words",
+   "note": "อาจจะ"
+  },
+  {
+   "lang": "zh",
+   "text": "应该",
+   "pron": "yīnggāi",
+   "meaning": "Should",
+   "topic": "Linking words",
+   "note": "ควรจะ"
+  },
+  {
+   "lang": "zh",
+   "text": "必须",
+   "pron": "bìxū",
+   "meaning": "Must",
+   "topic": "Linking words",
+   "note": "ต้อง"
+  },
+  {
+   "lang": "zh",
+   "text": "需要",
+   "pron": "xūyào",
+   "meaning": "Need",
+   "topic": "Linking words",
+   "note": "ต้องการ"
+  },
+  {
+   "lang": "zh",
+   "text": "希望",
+   "pron": "xīwàng",
+   "meaning": "Hope",
+   "topic": "Linking words",
+   "note": "หวังว่า"
+  },
+  {
+   "lang": "zh",
+   "text": "觉得",
+   "pron": "juéde",
+   "meaning": "Feel / think",
+   "topic": "Linking words",
+   "note": "รู้สึก, คิดว่า"
+  },
+  {
+   "lang": "zh",
+   "text": "决定",
+   "pron": "juédìng",
+   "meaning": "Decide",
+   "topic": "Linking words",
+   "note": "ตัดสินใจ"
+  },
+  {
+   "lang": "zh",
+   "text": "没关系",
+   "pron": "méi guānxi",
+   "meaning": "It doesn't matter / no problem",
+   "topic": "Useful phrases",
+   "note": "ไม่เป็นไร"
+  },
+  {
+   "lang": "zh",
+   "text": "不好意思",
+   "pron": "bù hǎoyìsi",
+   "meaning": "Excuse me / sorry",
+   "topic": "Useful phrases",
+   "note": "ขอโทษ, เกรงใจ"
+  },
+  {
+   "lang": "zh",
+   "text": "麻烦你",
+   "pron": "máfan nǐ",
+   "meaning": "Sorry to trouble you",
+   "topic": "Useful phrases",
+   "note": "รบกวนหน่อย"
+  },
+  {
+   "lang": "zh",
+   "text": "请问",
+   "pron": "qǐngwèn",
+   "meaning": "Excuse me, may I ask…",
+   "topic": "Useful phrases",
+   "note": "ขอถามหน่อย"
+  },
+  {
+   "lang": "zh",
+   "text": "慢一点",
+   "pron": "màn yìdiǎn",
+   "meaning": "A bit slower, please",
+   "topic": "Useful phrases",
+   "note": "ช้าลงหน่อย"
+  },
+  {
+   "lang": "zh",
+   "text": "再说一遍",
+   "pron": "zài shuō yí biàn",
+   "meaning": "Say it again, please",
+   "topic": "Useful phrases",
+   "note": "พูดอีกครั้งได้ไหม"
+  },
+  {
+   "lang": "zh",
+   "text": "听不懂",
+   "pron": "tīng bu dǒng",
+   "meaning": "I don't understand (what I hear)",
+   "topic": "Useful phrases",
+   "note": "ฟังไม่เข้าใจ"
+  },
+  {
+   "lang": "zh",
+   "text": "没问题",
+   "pron": "méi wèntí",
+   "meaning": "No problem",
+   "topic": "Useful phrases",
+   "note": "ไม่มีปัญหา"
+  },
+  {
+   "lang": "zh",
+   "text": "加油",
+   "pron": "jiāyóu",
+   "meaning": "Keep going! / You can do it!",
+   "topic": "Useful phrases",
+   "note": "สู้ ๆ"
+  }
+ ]
+}
