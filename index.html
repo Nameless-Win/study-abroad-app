@@ -566,6 +566,13 @@ button.dfield{padding:0 12px;color:var(--ink)}
       <button class="link" id="wipeBtn" style="color:var(--bad-text);margin-top:14px">Delete my data…</button>
       <div id="wipeBox"></div>
     </div>
+    <div style="margin-top:18px;padding-top:16px;border-top:1px solid var(--line)">
+      <div class="titlewrap"><span style="font-weight:600">App version</span><button class="help" data-help="update" aria-label="How do updates work?">?</button></div>
+      <div data-helpbox="update"></div>
+      <p class="note" style="margin-top:4px" id="verLine"></p>
+      <div class="pbtns" style="margin-top:10px"><button class="secondary" id="updCheck">Check for updates</button><button class="btn-yes" id="updNow" hidden>Update now</button></div>
+      <p class="note" id="updMsg" aria-live="polite"></p>
+    </div>
     <div style="margin-top:18px;padding-top:16px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap">
       <span style="font-weight:600">Appearance</span>
       <div class="theme" role="group" aria-label="Theme">
@@ -808,6 +815,8 @@ button.dfield{padding:0 12px;color:var(--ink)}
 
 <script>
 (function(){
+  // Bump on every publish (date + a letter for several in one day). "Check for updates" compares it with the website's copy.
+  const APP_VERSION = "2026-10-12b";
   // Approximate starting rates (units per 1 US dollar). Students should replace them with real rates.
   const DEF = {USD:1, CNY:7.1, THB:33.6, JPY:150, KRW:1380, TWD:31, HKD:7.8, SGD:1.3, MYR:4.3, VND:25500, IDR:16000, PHP:57, INR:85, LAK:21500, KHR:4000, MMK:2100,
     AUD:1.5, NZD:1.7, CAD:1.38, GBP:0.76, EUR:0.88, CHF:0.82, SEK:9.6, NOK:10.3, DKK:6.6, CZK:21.5, PLN:3.7, HUF:350, RUB:85, TRY:40, AED:3.67, MXN:18.5, BRL:5.5};
@@ -939,6 +948,9 @@ button.dfield{padding:0 12px;color:var(--ink)}
       <p><b>Restore backup</b> loads that file on a new phone or browser. It replaces what's currently on this device.</p>
       <p>If you clear your browser data or uninstall the browser, your spending is gone unless you have a backup.</p>
       <p><b>Delete my data</b> removes data from this device for a fresh start. You choose which parts to delete and confirm twice. Download a backup first if you might want it back.</p>`,
+    update: `<p>When the app gets an update, your phone normally picks it up by itself the next time you open the app.</p>
+      <p><b>Check for updates</b> asks the website straight away. If there's a new version, tap <b>Update now</b> to load it. Your spending, words, documents and photos are kept: only the app itself is reloaded.</p>
+      <p>The app also checks quietly a few seconds after you open it, and tells you if an update is ready.</p>`,
     study: `<p><b>Country</b> sets your local currency — the one you pay with day to day. Budgets, the daily limit and new monthly bills use it.</p>
       <p><b>Compare with</b> is the currency you also want to see your spending in, usually your home currency.</p>
       <p>The starting exchange rates are only rough. Set the real rates in <b>Exchange rates</b> on the Overview page.</p>
@@ -1146,12 +1158,15 @@ button.dfield{padding:0 12px;color:var(--ink)}
     return keys.length ? state.budgets[keys[keys.length-1]] : null;
   }
   function signed(n, cur){ n = Math.round(n*100)/100; if (Object.is(n,-0)||Math.abs(n)<0.005) n = 0; return (n<0?"−":"") + fmt(Math.abs(n), cur); }
-  function toast(level, msg){
+  // action (optional): {label, run} adds a button before OK, e.g. "Update now"
+  function toast(level, msg, action){
     const host = $("toastHost"); host.innerHTML = "";
     const t = document.createElement("div"); t.className = "toast "+level;
     const span = document.createElement("span"); span.textContent = msg;
     const b = document.createElement("button"); b.textContent = "OK"; b.onclick = ()=>host.innerHTML="";
-    t.append(span,b); host.appendChild(t);
+    t.append(span);
+    if (action){ const a = document.createElement("button"); a.id = "toastAction"; a.textContent = action.label; a.onclick = ()=>{ host.innerHTML=""; action.run(); }; t.append(a); }
+    t.append(b); host.appendChild(t);
     clearTimeout(toast._t); toast._t = setTimeout(()=>{ host.innerHTML=""; }, 9000);
   }
   function checkCrossing(month, before){
@@ -3607,7 +3622,49 @@ button.dfield{padding:0 12px;color:var(--ink)}
   setStatus("Saved on this device.");
   try{ if (navigator.storage && navigator.storage.persist) navigator.storage.persist(); }catch(e){}
   // When hosted, keep an offline copy on the phone (sw.js). Not available when index.html is opened as a file.
-  if (/^https?:$/.test(location.protocol) && "serviceWorker" in navigator) navigator.serviceWorker.register("sw.js").catch(()=>{});
+  const hosted = /^https?:$/.test(location.protocol);
+  if (hosted && "serviceWorker" in navigator) navigator.serviceWorker.register("sw.js").catch(()=>{});
+
+  // ---------- updates ----------
+  // Ask the website for its index.html, skipping every saved copy (sw.js lets "update-check" requests through).
+  // An update is ready if its APP_VERSION differs from this one, or if it differs from the copy saved for the next open.
+  async function checkUpdate(){
+    const r = await fetch("index.html?update-check="+Date.now(), {cache:"no-store"});
+    if (!r.ok) throw new Error("HTTP "+r.status);
+    const text = await r.text();
+    // pattern built from pieces so the version line at the top stays the only "APP_VERSION =" text in this file
+    const m = text.match(new RegExp("APP_" + "VERSION = \"([^\"]+)\"")), latest = m ? m[1] : null;
+    let saved = null;
+    try{ const c = await caches.match("index.html", {ignoreSearch:true}); if (c) saved = await c.text(); }catch(e){}
+    return {latest, ready: (latest && latest!==APP_VERSION) || (saved!=null && saved!==text)};
+  }
+  // Load the new version: drop the saved copy of the app's files (not the student's data, which lives in
+  // localStorage and IndexedDB), let the service worker check for a new sw.js, then reload from the website.
+  async function applyUpdate(){
+    $("updMsg").textContent = "Updating…";
+    try{ const keys = await caches.keys(); await Promise.all(keys.filter(k=>k.startsWith("study-abroad-")).map(k=>caches.delete(k))); }catch(e){}
+    try{ const reg = navigator.serviceWorker && await navigator.serviceWorker.getRegistration(); if (reg) await reg.update(); }catch(e){}
+    location.reload();
+  }
+  function renderUpdate(state, latest){
+    $("updNow").hidden = state!=="ready";
+    $("updCheck").disabled = state==="checking";
+    $("updMsg").textContent = state==="checking" ? "Checking…" : state==="latest" ? "You have the latest version." :
+      state==="ready" ? "A new version is ready"+(latest && latest!==APP_VERSION ? " ("+latest+")" : "")+". Tap Update now. Your data is kept." :
+      state==="offline" ? "Couldn't check — you seem to be offline. Try again when you have internet." : "";
+  }
+  $("verLine").textContent = "Version "+APP_VERSION+(hosted ? "" : " · opened as a file, so it updates when you replace the file");
+  $("updCheck").hidden = !hosted;
+  $("updCheck").onclick = async ()=>{
+    renderUpdate("checking");
+    try{ const u = await checkUpdate(); renderUpdate(u.ready ? "ready" : "latest", u.latest); }
+    catch(e){ renderUpdate("offline"); }
+  };
+  $("updNow").onclick = applyUpdate;
+  // a quiet check a few seconds after opening; only speaks up when an update is ready
+  if (hosted) setTimeout(async ()=>{
+    try{ const u = await checkUpdate(); if (u.ready){ renderUpdate("ready", u.latest); toast("ok", "A new version of the app is ready.", {label:"Update now", run:applyUpdate}); } }catch(e){}
+  }, 4000);
 })();
 </script>
 </body>

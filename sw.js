@@ -2,14 +2,14 @@
 // Pages are served from that copy straight away, and a fresh copy is fetched in the background,
 // so an update shows the next time the app is opened. Bump VERSION when files are added or removed
 // or when this file's logic changes.
-const VERSION = "v4";   // v4: app icon with darker edges
+const VERSION = "v5";   // v5: always ask the server for a fresh copy (GitHub Pages lets browsers reuse files for 10 min)
 const CACHE = "study-abroad-" + VERSION;
 const FILES = ["./", "./index.html", "./manifest.webmanifest",
   "./icons/icon-192.png", "./icons/icon-512.png", "./icons/icon-maskable-512.png", "./icons/apple-touch-icon.png"];
 const APP_PAGES = ["./", "./index.html"].map(p=>new URL(p, self.registration.scope).pathname);
 
 self.addEventListener("install", e=>{
-  e.waitUntil(caches.open(CACHE).then(c=>c.addAll(FILES)).then(()=>self.skipWaiting()));
+  e.waitUntil(caches.open(CACHE).then(c=>c.addAll(FILES.map(f=>new Request(f, {cache:"no-cache"})))).then(()=>self.skipWaiting()));
 });
 
 self.addEventListener("activate", e=>{
@@ -21,8 +21,11 @@ self.addEventListener("activate", e=>{
 self.addEventListener("fetch", e=>{
   const req = e.request, url = new URL(req.url);
   if (req.method!=="GET" || url.origin!==location.origin) return;   // only the site's own files
+  if (url.searchParams.has("update-check")) return;                 // "Check for updates" goes straight to the server
   e.respondWith(caches.open(CACHE).then(async cache=>{
-    const fresh = fetch(req).then(res=>{ if (res.ok) cache.put(req, res.clone()); return res; }).catch(()=>null);
+    // "no-cache" makes the browser ask the server whether the file changed (a tiny request when it hasn't),
+    // instead of reusing its own copy for up to 10 minutes, which made updates arrive late
+    const fresh = fetch(req, {cache:"no-cache"}).then(res=>{ if (res.ok) cache.put(req, res.clone()); return res; }).catch(()=>null);
     const cached = await cache.match(req, {ignoreSearch:true});
     if (cached){ e.waitUntil(fresh); return cached; }
     const res = await fresh;
