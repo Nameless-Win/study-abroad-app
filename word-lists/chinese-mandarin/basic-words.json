@@ -1,0 +1,1689 @@
+{
+ "app": "study-abroad-words",
+ "version": 1,
+ "lang": "zh",
+ "language": "Chinese (Mandarin)",
+ "exportedAt": "2026-10-12T12:32:12+00:00",
+ "words": [
+  {
+   "lang": "zh",
+   "text": "狗",
+   "pron": "gǒu",
+   "meaning": "Dog",
+   "topic": "Animals",
+   "note": "สุนัข, หมา"
+  },
+  {
+   "lang": "zh",
+   "text": "猫",
+   "pron": "māo",
+   "meaning": "Cat",
+   "topic": "Animals",
+   "note": "แมว"
+  },
+  {
+   "lang": "zh",
+   "text": "鸟",
+   "pron": "niǎo",
+   "meaning": "Bird",
+   "topic": "Animals",
+   "note": "นก"
+  },
+  {
+   "lang": "zh",
+   "text": "鱼",
+   "pron": "yú",
+   "meaning": "Fish",
+   "topic": "Animals",
+   "note": "ปลา"
+  },
+  {
+   "lang": "zh",
+   "text": "马",
+   "pron": "mǎ",
+   "meaning": "Horse",
+   "topic": "Animals",
+   "note": "ม้า"
+  },
+  {
+   "lang": "zh",
+   "text": "牛",
+   "pron": "niú",
+   "meaning": "Cow",
+   "topic": "Animals",
+   "note": "วัว"
+  },
+  {
+   "lang": "zh",
+   "text": "猪",
+   "pron": "zhū",
+   "meaning": "Pig",
+   "topic": "Animals",
+   "note": "หมู"
+  },
+  {
+   "lang": "zh",
+   "text": "羊",
+   "pron": "yáng",
+   "meaning": "Sheep / goat",
+   "topic": "Animals",
+   "note": "แกะ, แพะ"
+  },
+  {
+   "lang": "zh",
+   "text": "鸡",
+   "pron": "jī",
+   "meaning": "Chicken",
+   "topic": "Animals",
+   "note": "ไก่"
+  },
+  {
+   "lang": "zh",
+   "text": "鸭",
+   "pron": "yā",
+   "meaning": "Duck",
+   "topic": "Animals",
+   "note": "เป็ด"
+  },
+  {
+   "lang": "zh",
+   "text": "兔子",
+   "pron": "tùzi",
+   "meaning": "Rabbit",
+   "topic": "Animals",
+   "note": "กระต่าย"
+  },
+  {
+   "lang": "zh",
+   "text": "老虎",
+   "pron": "lǎohǔ",
+   "meaning": "Tiger",
+   "topic": "Animals",
+   "note": "เสือ"
+  },
+  {
+   "lang": "zh",
+   "text": "狮子",
+   "pron": "shīzi",
+   "meaning": "Lion",
+   "topic": "Animals",
+   "note": "สิงโต"
+  },
+  {
+   "lang": "zh",
+   "text": "大象",
+   "pron": "dàxiàng",
+   "meaning": "Elephant",
+   "topic": "Animals",
+   "note": "ช้าง"
+  },
+  {
+   "lang": "zh",
+   "text": "猴子",
+   "pron": "hóuzi",
+   "meaning": "Monkey",
+   "topic": "Animals",
+   "note": "ลิง"
+  },
+  {
+   "lang": "zh",
+   "text": "熊猫",
+   "pron": "xióngmāo",
+   "meaning": "Panda",
+   "topic": "Animals",
+   "note": "แพนด้า"
+  },
+  {
+   "lang": "zh",
+   "text": "熊",
+   "pron": "xióng",
+   "meaning": "Bear",
+   "topic": "Animals",
+   "note": "หมี"
+  },
+  {
+   "lang": "zh",
+   "text": "蛇",
+   "pron": "shé",
+   "meaning": "Snake",
+   "topic": "Animals",
+   "note": "งู"
+  },
+  {
+   "lang": "zh",
+   "text": "老鼠",
+   "pron": "lǎoshǔ",
+   "meaning": "Mouse / rat",
+   "topic": "Animals",
+   "note": "หนู"
+  },
+  {
+   "lang": "zh",
+   "text": "蝴蝶",
+   "pron": "húdié",
+   "meaning": "Butterfly",
+   "topic": "Animals",
+   "note": "ผีเสื้อ"
+  },
+  {
+   "lang": "zh",
+   "text": "红色",
+   "pron": "hóngsè",
+   "meaning": "Red",
+   "topic": "Colours",
+   "note": "สีแดง"
+  },
+  {
+   "lang": "zh",
+   "text": "橙色",
+   "pron": "chéngsè",
+   "meaning": "Orange (colour)",
+   "topic": "Colours",
+   "note": "สีส้ม"
+  },
+  {
+   "lang": "zh",
+   "text": "黄色",
+   "pron": "huángsè",
+   "meaning": "Yellow",
+   "topic": "Colours",
+   "note": "สีเหลือง"
+  },
+  {
+   "lang": "zh",
+   "text": "绿色",
+   "pron": "lǜsè",
+   "meaning": "Green",
+   "topic": "Colours",
+   "note": "สีเขียว"
+  },
+  {
+   "lang": "zh",
+   "text": "蓝色",
+   "pron": "lánsè",
+   "meaning": "Blue",
+   "topic": "Colours",
+   "note": "สีน้ำเงิน, สีฟ้า"
+  },
+  {
+   "lang": "zh",
+   "text": "紫色",
+   "pron": "zǐsè",
+   "meaning": "Purple",
+   "topic": "Colours",
+   "note": "สีม่วง"
+  },
+  {
+   "lang": "zh",
+   "text": "粉红色",
+   "pron": "fěnhóngsè",
+   "meaning": "Pink",
+   "topic": "Colours",
+   "note": "สีชมพู"
+  },
+  {
+   "lang": "zh",
+   "text": "黑色",
+   "pron": "hēisè",
+   "meaning": "Black",
+   "topic": "Colours",
+   "note": "สีดำ"
+  },
+  {
+   "lang": "zh",
+   "text": "白色",
+   "pron": "báisè",
+   "meaning": "White",
+   "topic": "Colours",
+   "note": "สีขาว"
+  },
+  {
+   "lang": "zh",
+   "text": "灰色",
+   "pron": "huīsè",
+   "meaning": "Grey",
+   "topic": "Colours",
+   "note": "สีเทา"
+  },
+  {
+   "lang": "zh",
+   "text": "棕色",
+   "pron": "zōngsè",
+   "meaning": "Brown",
+   "topic": "Colours",
+   "note": "สีน้ำตาล"
+  },
+  {
+   "lang": "zh",
+   "text": "金色",
+   "pron": "jīnsè",
+   "meaning": "Gold",
+   "topic": "Colours",
+   "note": "สีทอง"
+  },
+  {
+   "lang": "zh",
+   "text": "天气",
+   "pron": "tiānqì",
+   "meaning": "Weather",
+   "topic": "Weather",
+   "note": "อากาศ, สภาพอากาศ"
+  },
+  {
+   "lang": "zh",
+   "text": "晴天",
+   "pron": "qíngtiān",
+   "meaning": "Sunny day",
+   "topic": "Weather",
+   "note": "วันที่ฟ้าแจ่มใส"
+  },
+  {
+   "lang": "zh",
+   "text": "阴天",
+   "pron": "yīntiān",
+   "meaning": "Cloudy / overcast day",
+   "topic": "Weather",
+   "note": "วันที่ฟ้าครึ้ม"
+  },
+  {
+   "lang": "zh",
+   "text": "下雨",
+   "pron": "xià yǔ",
+   "meaning": "To rain",
+   "topic": "Weather",
+   "note": "ฝนตก"
+  },
+  {
+   "lang": "zh",
+   "text": "下雪",
+   "pron": "xià xuě",
+   "meaning": "To snow",
+   "topic": "Weather",
+   "note": "หิมะตก"
+  },
+  {
+   "lang": "zh",
+   "text": "风",
+   "pron": "fēng",
+   "meaning": "Wind",
+   "topic": "Weather",
+   "note": "ลม"
+  },
+  {
+   "lang": "zh",
+   "text": "云",
+   "pron": "yún",
+   "meaning": "Cloud",
+   "topic": "Weather",
+   "note": "เมฆ"
+  },
+  {
+   "lang": "zh",
+   "text": "太阳",
+   "pron": "tàiyáng",
+   "meaning": "Sun",
+   "topic": "Weather",
+   "note": "พระอาทิตย์"
+  },
+  {
+   "lang": "zh",
+   "text": "雨伞",
+   "pron": "yǔsǎn",
+   "meaning": "Umbrella",
+   "topic": "Weather",
+   "note": "ร่ม"
+  },
+  {
+   "lang": "zh",
+   "text": "热",
+   "pron": "rè",
+   "meaning": "Hot",
+   "topic": "Weather",
+   "note": "ร้อน"
+  },
+  {
+   "lang": "zh",
+   "text": "冷",
+   "pron": "lěng",
+   "meaning": "Cold",
+   "topic": "Weather",
+   "note": "หนาว"
+  },
+  {
+   "lang": "zh",
+   "text": "暖和",
+   "pron": "nuǎnhuo",
+   "meaning": "Warm",
+   "topic": "Weather",
+   "note": "อบอุ่น"
+  },
+  {
+   "lang": "zh",
+   "text": "凉快",
+   "pron": "liángkuai",
+   "meaning": "Cool (pleasant)",
+   "topic": "Weather",
+   "note": "เย็นสบาย"
+  },
+  {
+   "lang": "zh",
+   "text": "雾",
+   "pron": "wù",
+   "meaning": "Fog",
+   "topic": "Weather",
+   "note": "หมอก"
+  },
+  {
+   "lang": "zh",
+   "text": "苹果",
+   "pron": "píngguǒ",
+   "meaning": "Apple",
+   "topic": "Fruit",
+   "note": "แอปเปิล"
+  },
+  {
+   "lang": "zh",
+   "text": "香蕉",
+   "pron": "xiāngjiāo",
+   "meaning": "Banana",
+   "topic": "Fruit",
+   "note": "กล้วย"
+  },
+  {
+   "lang": "zh",
+   "text": "橙子",
+   "pron": "chéngzi",
+   "meaning": "Orange (fruit)",
+   "topic": "Fruit",
+   "note": "ส้ม"
+  },
+  {
+   "lang": "zh",
+   "text": "葡萄",
+   "pron": "pútao",
+   "meaning": "Grape",
+   "topic": "Fruit",
+   "note": "องุ่น"
+  },
+  {
+   "lang": "zh",
+   "text": "西瓜",
+   "pron": "xīguā",
+   "meaning": "Watermelon",
+   "topic": "Fruit",
+   "note": "แตงโม"
+  },
+  {
+   "lang": "zh",
+   "text": "草莓",
+   "pron": "cǎoméi",
+   "meaning": "Strawberry",
+   "topic": "Fruit",
+   "note": "สตรอว์เบอร์รี"
+  },
+  {
+   "lang": "zh",
+   "text": "芒果",
+   "pron": "mángguǒ",
+   "meaning": "Mango",
+   "topic": "Fruit",
+   "note": "มะม่วง"
+  },
+  {
+   "lang": "zh",
+   "text": "梨",
+   "pron": "lí",
+   "meaning": "Pear",
+   "topic": "Fruit",
+   "note": "สาลี่"
+  },
+  {
+   "lang": "zh",
+   "text": "桃子",
+   "pron": "táozi",
+   "meaning": "Peach",
+   "topic": "Fruit",
+   "note": "ลูกพีช"
+  },
+  {
+   "lang": "zh",
+   "text": "菠萝",
+   "pron": "bōluó",
+   "meaning": "Pineapple",
+   "topic": "Fruit",
+   "note": "สับปะรด"
+  },
+  {
+   "lang": "zh",
+   "text": "柠檬",
+   "pron": "níngméng",
+   "meaning": "Lemon",
+   "topic": "Fruit",
+   "note": "เลมอน, มะนาวเหลือง"
+  },
+  {
+   "lang": "zh",
+   "text": "椰子",
+   "pron": "yēzi",
+   "meaning": "Coconut",
+   "topic": "Fruit",
+   "note": "มะพร้าว"
+  },
+  {
+   "lang": "zh",
+   "text": "榴莲",
+   "pron": "liúlián",
+   "meaning": "Durian",
+   "topic": "Fruit",
+   "note": "ทุเรียน"
+  },
+  {
+   "lang": "zh",
+   "text": "荔枝",
+   "pron": "lìzhī",
+   "meaning": "Lychee",
+   "topic": "Fruit",
+   "note": "ลิ้นจี่"
+  },
+  {
+   "lang": "zh",
+   "text": "蔬菜",
+   "pron": "shūcài",
+   "meaning": "Vegetables",
+   "topic": "Vegetables",
+   "note": "ผัก"
+  },
+  {
+   "lang": "zh",
+   "text": "白菜",
+   "pron": "báicài",
+   "meaning": "Chinese cabbage",
+   "topic": "Vegetables",
+   "note": "ผักกาดขาว"
+  },
+  {
+   "lang": "zh",
+   "text": "土豆",
+   "pron": "tǔdòu",
+   "meaning": "Potato",
+   "topic": "Vegetables",
+   "note": "มันฝรั่ง"
+  },
+  {
+   "lang": "zh",
+   "text": "西红柿",
+   "pron": "xīhóngshì",
+   "meaning": "Tomato",
+   "topic": "Vegetables",
+   "note": "มะเขือเทศ"
+  },
+  {
+   "lang": "zh",
+   "text": "黄瓜",
+   "pron": "huángguā",
+   "meaning": "Cucumber",
+   "topic": "Vegetables",
+   "note": "แตงกวา"
+  },
+  {
+   "lang": "zh",
+   "text": "胡萝卜",
+   "pron": "húluóbo",
+   "meaning": "Carrot",
+   "topic": "Vegetables",
+   "note": "แครอท"
+  },
+  {
+   "lang": "zh",
+   "text": "洋葱",
+   "pron": "yángcōng",
+   "meaning": "Onion",
+   "topic": "Vegetables",
+   "note": "หอมหัวใหญ่"
+  },
+  {
+   "lang": "zh",
+   "text": "大蒜",
+   "pron": "dàsuàn",
+   "meaning": "Garlic",
+   "topic": "Vegetables",
+   "note": "กระเทียม"
+  },
+  {
+   "lang": "zh",
+   "text": "辣椒",
+   "pron": "làjiāo",
+   "meaning": "Chilli pepper",
+   "topic": "Vegetables",
+   "note": "พริก"
+  },
+  {
+   "lang": "zh",
+   "text": "茄子",
+   "pron": "qiézi",
+   "meaning": "Eggplant / aubergine",
+   "topic": "Vegetables",
+   "note": "มะเขือ"
+  },
+  {
+   "lang": "zh",
+   "text": "蘑菇",
+   "pron": "mógu",
+   "meaning": "Mushroom",
+   "topic": "Vegetables",
+   "note": "เห็ด"
+  },
+  {
+   "lang": "zh",
+   "text": "玉米",
+   "pron": "yùmǐ",
+   "meaning": "Corn",
+   "topic": "Vegetables",
+   "note": "ข้าวโพด"
+  },
+  {
+   "lang": "zh",
+   "text": "家人",
+   "pron": "jiārén",
+   "meaning": "Family members",
+   "topic": "Family",
+   "note": "คนในครอบครัว"
+  },
+  {
+   "lang": "zh",
+   "text": "爸爸",
+   "pron": "bàba",
+   "meaning": "Dad",
+   "topic": "Family",
+   "note": "พ่อ"
+  },
+  {
+   "lang": "zh",
+   "text": "妈妈",
+   "pron": "māma",
+   "meaning": "Mum",
+   "topic": "Family",
+   "note": "แม่"
+  },
+  {
+   "lang": "zh",
+   "text": "哥哥",
+   "pron": "gēge",
+   "meaning": "Older brother",
+   "topic": "Family",
+   "note": "พี่ชาย"
+  },
+  {
+   "lang": "zh",
+   "text": "姐姐",
+   "pron": "jiějie",
+   "meaning": "Older sister",
+   "topic": "Family",
+   "note": "พี่สาว"
+  },
+  {
+   "lang": "zh",
+   "text": "弟弟",
+   "pron": "dìdi",
+   "meaning": "Younger brother",
+   "topic": "Family",
+   "note": "น้องชาย"
+  },
+  {
+   "lang": "zh",
+   "text": "妹妹",
+   "pron": "mèimei",
+   "meaning": "Younger sister",
+   "topic": "Family",
+   "note": "น้องสาว"
+  },
+  {
+   "lang": "zh",
+   "text": "爷爷",
+   "pron": "yéye",
+   "meaning": "Grandpa (father's father)",
+   "topic": "Family",
+   "note": "ปู่"
+  },
+  {
+   "lang": "zh",
+   "text": "奶奶",
+   "pron": "nǎinai",
+   "meaning": "Grandma (father's mother)",
+   "topic": "Family",
+   "note": "ย่า"
+  },
+  {
+   "lang": "zh",
+   "text": "外公",
+   "pron": "wàigōng",
+   "meaning": "Grandpa (mother's father)",
+   "topic": "Family",
+   "note": "ตา"
+  },
+  {
+   "lang": "zh",
+   "text": "外婆",
+   "pron": "wàipó",
+   "meaning": "Grandma (mother's mother)",
+   "topic": "Family",
+   "note": "ยาย"
+  },
+  {
+   "lang": "zh",
+   "text": "儿子",
+   "pron": "érzi",
+   "meaning": "Son",
+   "topic": "Family",
+   "note": "ลูกชาย"
+  },
+  {
+   "lang": "zh",
+   "text": "女儿",
+   "pron": "nǚ'ér",
+   "meaning": "Daughter",
+   "topic": "Family",
+   "note": "ลูกสาว"
+  },
+  {
+   "lang": "zh",
+   "text": "丈夫",
+   "pron": "zhàngfu",
+   "meaning": "Husband",
+   "topic": "Family",
+   "note": "สามี"
+  },
+  {
+   "lang": "zh",
+   "text": "妻子",
+   "pron": "qīzi",
+   "meaning": "Wife",
+   "topic": "Family",
+   "note": "ภรรยา"
+  },
+  {
+   "lang": "zh",
+   "text": "朋友",
+   "pron": "péngyou",
+   "meaning": "Friend",
+   "topic": "Family",
+   "note": "เพื่อน"
+  },
+  {
+   "lang": "zh",
+   "text": "米饭",
+   "pron": "mǐfàn",
+   "meaning": "Cooked rice",
+   "topic": "Food & ordering",
+   "note": "ข้าวสวย"
+  },
+  {
+   "lang": "zh",
+   "text": "面条",
+   "pron": "miàntiáo",
+   "meaning": "Noodles",
+   "topic": "Food & ordering",
+   "note": "เส้นก๋วยเตี๋ยว, บะหมี่"
+  },
+  {
+   "lang": "zh",
+   "text": "饺子",
+   "pron": "jiǎozi",
+   "meaning": "Dumplings",
+   "topic": "Food & ordering",
+   "note": "เกี๊ยว"
+  },
+  {
+   "lang": "zh",
+   "text": "包子",
+   "pron": "bāozi",
+   "meaning": "Steamed bun",
+   "topic": "Food & ordering",
+   "note": "ซาลาเปา"
+  },
+  {
+   "lang": "zh",
+   "text": "面包",
+   "pron": "miànbāo",
+   "meaning": "Bread",
+   "topic": "Food & ordering",
+   "note": "ขนมปัง"
+  },
+  {
+   "lang": "zh",
+   "text": "鸡蛋",
+   "pron": "jīdàn",
+   "meaning": "Egg",
+   "topic": "Food & ordering",
+   "note": "ไข่ไก่"
+  },
+  {
+   "lang": "zh",
+   "text": "鸡肉",
+   "pron": "jīròu",
+   "meaning": "Chicken (meat)",
+   "topic": "Food & ordering",
+   "note": "เนื้อไก่"
+  },
+  {
+   "lang": "zh",
+   "text": "猪肉",
+   "pron": "zhūròu",
+   "meaning": "Pork",
+   "topic": "Food & ordering",
+   "note": "เนื้อหมู"
+  },
+  {
+   "lang": "zh",
+   "text": "牛肉",
+   "pron": "niúròu",
+   "meaning": "Beef",
+   "topic": "Food & ordering",
+   "note": "เนื้อวัว"
+  },
+  {
+   "lang": "zh",
+   "text": "海鲜",
+   "pron": "hǎixiān",
+   "meaning": "Seafood",
+   "topic": "Food & ordering",
+   "note": "อาหารทะเล"
+  },
+  {
+   "lang": "zh",
+   "text": "豆腐",
+   "pron": "dòufu",
+   "meaning": "Tofu",
+   "topic": "Food & ordering",
+   "note": "เต้าหู้"
+  },
+  {
+   "lang": "zh",
+   "text": "汤",
+   "pron": "tāng",
+   "meaning": "Soup",
+   "topic": "Food & ordering",
+   "note": "ซุป"
+  },
+  {
+   "lang": "zh",
+   "text": "火锅",
+   "pron": "huǒguō",
+   "meaning": "Hotpot",
+   "topic": "Food & ordering",
+   "note": "หม้อไฟ (สุกี้, ชาบู)"
+  },
+  {
+   "lang": "zh",
+   "text": "早饭",
+   "pron": "zǎofàn",
+   "meaning": "Breakfast",
+   "topic": "Food & ordering",
+   "note": "อาหารเช้า"
+  },
+  {
+   "lang": "zh",
+   "text": "午饭",
+   "pron": "wǔfàn",
+   "meaning": "Lunch",
+   "topic": "Food & ordering",
+   "note": "อาหารกลางวัน"
+  },
+  {
+   "lang": "zh",
+   "text": "晚饭",
+   "pron": "wǎnfàn",
+   "meaning": "Dinner",
+   "topic": "Food & ordering",
+   "note": "อาหารเย็น"
+  },
+  {
+   "lang": "zh",
+   "text": "水",
+   "pron": "shuǐ",
+   "meaning": "Water",
+   "topic": "Food & ordering",
+   "note": "น้ำ"
+  },
+  {
+   "lang": "zh",
+   "text": "茶",
+   "pron": "chá",
+   "meaning": "Tea",
+   "topic": "Food & ordering",
+   "note": "ชา"
+  },
+  {
+   "lang": "zh",
+   "text": "咖啡",
+   "pron": "kāfēi",
+   "meaning": "Coffee",
+   "topic": "Food & ordering",
+   "note": "กาแฟ"
+  },
+  {
+   "lang": "zh",
+   "text": "牛奶",
+   "pron": "niúnǎi",
+   "meaning": "Milk",
+   "topic": "Food & ordering",
+   "note": "นม"
+  },
+  {
+   "lang": "zh",
+   "text": "果汁",
+   "pron": "guǒzhī",
+   "meaning": "Juice",
+   "topic": "Food & ordering",
+   "note": "น้ำผลไม้"
+  },
+  {
+   "lang": "zh",
+   "text": "啤酒",
+   "pron": "píjiǔ",
+   "meaning": "Beer",
+   "topic": "Food & ordering",
+   "note": "เบียร์"
+  },
+  {
+   "lang": "zh",
+   "text": "糖",
+   "pron": "táng",
+   "meaning": "Sugar / sweets",
+   "topic": "Food & ordering",
+   "note": "น้ำตาล, ลูกอม"
+  },
+  {
+   "lang": "zh",
+   "text": "盐",
+   "pron": "yán",
+   "meaning": "Salt",
+   "topic": "Food & ordering",
+   "note": "เกลือ"
+  },
+  {
+   "lang": "zh",
+   "text": "中国",
+   "pron": "Zhōngguó",
+   "meaning": "China",
+   "topic": "Countries",
+   "note": "ประเทศจีน"
+  },
+  {
+   "lang": "zh",
+   "text": "泰国",
+   "pron": "Tàiguó",
+   "meaning": "Thailand",
+   "topic": "Countries",
+   "note": "ประเทศไทย"
+  },
+  {
+   "lang": "zh",
+   "text": "日本",
+   "pron": "Rìběn",
+   "meaning": "Japan",
+   "topic": "Countries",
+   "note": "ญี่ปุ่น"
+  },
+  {
+   "lang": "zh",
+   "text": "韩国",
+   "pron": "Hánguó",
+   "meaning": "South Korea",
+   "topic": "Countries",
+   "note": "เกาหลีใต้"
+  },
+  {
+   "lang": "zh",
+   "text": "美国",
+   "pron": "Měiguó",
+   "meaning": "United States",
+   "topic": "Countries",
+   "note": "สหรัฐอเมริกา"
+  },
+  {
+   "lang": "zh",
+   "text": "英国",
+   "pron": "Yīngguó",
+   "meaning": "United Kingdom",
+   "topic": "Countries",
+   "note": "อังกฤษ, สหราชอาณาจักร"
+  },
+  {
+   "lang": "zh",
+   "text": "法国",
+   "pron": "Fǎguó",
+   "meaning": "France",
+   "topic": "Countries",
+   "note": "ฝรั่งเศส"
+  },
+  {
+   "lang": "zh",
+   "text": "德国",
+   "pron": "Déguó",
+   "meaning": "Germany",
+   "topic": "Countries",
+   "note": "เยอรมนี"
+  },
+  {
+   "lang": "zh",
+   "text": "俄罗斯",
+   "pron": "Éluósī",
+   "meaning": "Russia",
+   "topic": "Countries",
+   "note": "รัสเซีย"
+  },
+  {
+   "lang": "zh",
+   "text": "越南",
+   "pron": "Yuènán",
+   "meaning": "Vietnam",
+   "topic": "Countries",
+   "note": "เวียดนาม"
+  },
+  {
+   "lang": "zh",
+   "text": "老挝",
+   "pron": "Lǎowō",
+   "meaning": "Laos",
+   "topic": "Countries",
+   "note": "ลาว"
+  },
+  {
+   "lang": "zh",
+   "text": "柬埔寨",
+   "pron": "Jiǎnpǔzhài",
+   "meaning": "Cambodia",
+   "topic": "Countries",
+   "note": "กัมพูชา"
+  },
+  {
+   "lang": "zh",
+   "text": "缅甸",
+   "pron": "Miǎndiàn",
+   "meaning": "Myanmar",
+   "topic": "Countries",
+   "note": "เมียนมา"
+  },
+  {
+   "lang": "zh",
+   "text": "马来西亚",
+   "pron": "Mǎláixīyà",
+   "meaning": "Malaysia",
+   "topic": "Countries",
+   "note": "มาเลเซีย"
+  },
+  {
+   "lang": "zh",
+   "text": "新加坡",
+   "pron": "Xīnjiāpō",
+   "meaning": "Singapore",
+   "topic": "Countries",
+   "note": "สิงคโปร์"
+  },
+  {
+   "lang": "zh",
+   "text": "印度尼西亚",
+   "pron": "Yìndùníxīyà",
+   "meaning": "Indonesia",
+   "topic": "Countries",
+   "note": "อินโดนีเซีย"
+  },
+  {
+   "lang": "zh",
+   "text": "印度",
+   "pron": "Yìndù",
+   "meaning": "India",
+   "topic": "Countries",
+   "note": "อินเดีย"
+  },
+  {
+   "lang": "zh",
+   "text": "澳大利亚",
+   "pron": "Àodàlìyà",
+   "meaning": "Australia",
+   "topic": "Countries",
+   "note": "ออสเตรเลีย"
+  },
+  {
+   "lang": "zh",
+   "text": "中国人",
+   "pron": "Zhōngguórén",
+   "meaning": "Chinese person",
+   "topic": "Countries",
+   "note": "คนจีน"
+  },
+  {
+   "lang": "zh",
+   "text": "泰国人",
+   "pron": "Tàiguórén",
+   "meaning": "Thai person",
+   "topic": "Countries",
+   "note": "คนไทย"
+  },
+  {
+   "lang": "zh",
+   "text": "零",
+   "pron": "líng",
+   "meaning": "Zero",
+   "topic": "Numbers",
+   "note": "ศูนย์"
+  },
+  {
+   "lang": "zh",
+   "text": "一",
+   "pron": "yī",
+   "meaning": "One",
+   "topic": "Numbers",
+   "note": "หนึ่ง"
+  },
+  {
+   "lang": "zh",
+   "text": "二",
+   "pron": "èr",
+   "meaning": "Two",
+   "topic": "Numbers",
+   "note": "สอง"
+  },
+  {
+   "lang": "zh",
+   "text": "三",
+   "pron": "sān",
+   "meaning": "Three",
+   "topic": "Numbers",
+   "note": "สาม"
+  },
+  {
+   "lang": "zh",
+   "text": "四",
+   "pron": "sì",
+   "meaning": "Four",
+   "topic": "Numbers",
+   "note": "สี่"
+  },
+  {
+   "lang": "zh",
+   "text": "五",
+   "pron": "wǔ",
+   "meaning": "Five",
+   "topic": "Numbers",
+   "note": "ห้า"
+  },
+  {
+   "lang": "zh",
+   "text": "六",
+   "pron": "liù",
+   "meaning": "Six",
+   "topic": "Numbers",
+   "note": "หก"
+  },
+  {
+   "lang": "zh",
+   "text": "七",
+   "pron": "qī",
+   "meaning": "Seven",
+   "topic": "Numbers",
+   "note": "เจ็ด"
+  },
+  {
+   "lang": "zh",
+   "text": "八",
+   "pron": "bā",
+   "meaning": "Eight",
+   "topic": "Numbers",
+   "note": "แปด"
+  },
+  {
+   "lang": "zh",
+   "text": "九",
+   "pron": "jiǔ",
+   "meaning": "Nine",
+   "topic": "Numbers",
+   "note": "เก้า"
+  },
+  {
+   "lang": "zh",
+   "text": "十",
+   "pron": "shí",
+   "meaning": "Ten",
+   "topic": "Numbers",
+   "note": "สิบ"
+  },
+  {
+   "lang": "zh",
+   "text": "百",
+   "pron": "bǎi",
+   "meaning": "Hundred",
+   "topic": "Numbers",
+   "note": "ร้อย"
+  },
+  {
+   "lang": "zh",
+   "text": "千",
+   "pron": "qiān",
+   "meaning": "Thousand",
+   "topic": "Numbers",
+   "note": "พัน"
+  },
+  {
+   "lang": "zh",
+   "text": "万",
+   "pron": "wàn",
+   "meaning": "Ten thousand",
+   "topic": "Numbers",
+   "note": "หมื่น"
+  },
+  {
+   "lang": "zh",
+   "text": "两",
+   "pron": "liǎng",
+   "meaning": "Two (of something, e.g. 两个)",
+   "topic": "Numbers",
+   "note": "สอง (ใช้หน้าลักษณนาม)"
+  },
+  {
+   "lang": "zh",
+   "text": "头",
+   "pron": "tóu",
+   "meaning": "Head",
+   "topic": "Body",
+   "note": "หัว, ศีรษะ"
+  },
+  {
+   "lang": "zh",
+   "text": "脸",
+   "pron": "liǎn",
+   "meaning": "Face",
+   "topic": "Body",
+   "note": "หน้า, ใบหน้า"
+  },
+  {
+   "lang": "zh",
+   "text": "眼睛",
+   "pron": "yǎnjing",
+   "meaning": "Eye",
+   "topic": "Body",
+   "note": "ตา"
+  },
+  {
+   "lang": "zh",
+   "text": "耳朵",
+   "pron": "ěrduo",
+   "meaning": "Ear",
+   "topic": "Body",
+   "note": "หู"
+  },
+  {
+   "lang": "zh",
+   "text": "鼻子",
+   "pron": "bízi",
+   "meaning": "Nose",
+   "topic": "Body",
+   "note": "จมูก"
+  },
+  {
+   "lang": "zh",
+   "text": "嘴",
+   "pron": "zuǐ",
+   "meaning": "Mouth",
+   "topic": "Body",
+   "note": "ปาก"
+  },
+  {
+   "lang": "zh",
+   "text": "牙齿",
+   "pron": "yáchǐ",
+   "meaning": "Tooth",
+   "topic": "Body",
+   "note": "ฟัน"
+  },
+  {
+   "lang": "zh",
+   "text": "头发",
+   "pron": "tóufa",
+   "meaning": "Hair",
+   "topic": "Body",
+   "note": "ผม"
+  },
+  {
+   "lang": "zh",
+   "text": "脖子",
+   "pron": "bózi",
+   "meaning": "Neck",
+   "topic": "Body",
+   "note": "คอ"
+  },
+  {
+   "lang": "zh",
+   "text": "手",
+   "pron": "shǒu",
+   "meaning": "Hand",
+   "topic": "Body",
+   "note": "มือ"
+  },
+  {
+   "lang": "zh",
+   "text": "腿",
+   "pron": "tuǐ",
+   "meaning": "Leg",
+   "topic": "Body",
+   "note": "ขา"
+  },
+  {
+   "lang": "zh",
+   "text": "脚",
+   "pron": "jiǎo",
+   "meaning": "Foot",
+   "topic": "Body",
+   "note": "เท้า"
+  },
+  {
+   "lang": "zh",
+   "text": "肚子",
+   "pron": "dùzi",
+   "meaning": "Belly / stomach",
+   "topic": "Body",
+   "note": "ท้อง"
+  },
+  {
+   "lang": "zh",
+   "text": "心",
+   "pron": "xīn",
+   "meaning": "Heart",
+   "topic": "Body",
+   "note": "หัวใจ"
+  },
+  {
+   "lang": "zh",
+   "text": "今天",
+   "pron": "jīntiān",
+   "meaning": "Today",
+   "topic": "Time",
+   "note": "วันนี้"
+  },
+  {
+   "lang": "zh",
+   "text": "明天",
+   "pron": "míngtiān",
+   "meaning": "Tomorrow",
+   "topic": "Time",
+   "note": "พรุ่งนี้"
+  },
+  {
+   "lang": "zh",
+   "text": "昨天",
+   "pron": "zuótiān",
+   "meaning": "Yesterday",
+   "topic": "Time",
+   "note": "เมื่อวาน"
+  },
+  {
+   "lang": "zh",
+   "text": "现在",
+   "pron": "xiànzài",
+   "meaning": "Now",
+   "topic": "Time",
+   "note": "ตอนนี้"
+  },
+  {
+   "lang": "zh",
+   "text": "早上",
+   "pron": "zǎoshang",
+   "meaning": "Morning",
+   "topic": "Time",
+   "note": "ตอนเช้า"
+  },
+  {
+   "lang": "zh",
+   "text": "中午",
+   "pron": "zhōngwǔ",
+   "meaning": "Noon",
+   "topic": "Time",
+   "note": "ตอนเที่ยง"
+  },
+  {
+   "lang": "zh",
+   "text": "下午",
+   "pron": "xiàwǔ",
+   "meaning": "Afternoon",
+   "topic": "Time",
+   "note": "ตอนบ่าย"
+  },
+  {
+   "lang": "zh",
+   "text": "晚上",
+   "pron": "wǎnshang",
+   "meaning": "Evening / night",
+   "topic": "Time",
+   "note": "ตอนเย็น, กลางคืน"
+  },
+  {
+   "lang": "zh",
+   "text": "星期",
+   "pron": "xīngqī",
+   "meaning": "Week",
+   "topic": "Time",
+   "note": "สัปดาห์"
+  },
+  {
+   "lang": "zh",
+   "text": "月",
+   "pron": "yuè",
+   "meaning": "Month",
+   "topic": "Time",
+   "note": "เดือน"
+  },
+  {
+   "lang": "zh",
+   "text": "年",
+   "pron": "nián",
+   "meaning": "Year",
+   "topic": "Time",
+   "note": "ปี"
+  },
+  {
+   "lang": "zh",
+   "text": "小时",
+   "pron": "xiǎoshí",
+   "meaning": "Hour",
+   "topic": "Time",
+   "note": "ชั่วโมง"
+  },
+  {
+   "lang": "zh",
+   "text": "分钟",
+   "pron": "fēnzhōng",
+   "meaning": "Minute",
+   "topic": "Time",
+   "note": "นาที"
+  },
+  {
+   "lang": "zh",
+   "text": "周末",
+   "pron": "zhōumò",
+   "meaning": "Weekend",
+   "topic": "Time",
+   "note": "วันหยุดสุดสัปดาห์"
+  },
+  {
+   "lang": "zh",
+   "text": "星期一",
+   "pron": "xīngqīyī",
+   "meaning": "Monday",
+   "topic": "Time",
+   "note": "วันจันทร์"
+  },
+  {
+   "lang": "zh",
+   "text": "星期天",
+   "pron": "xīngqītiān",
+   "meaning": "Sunday",
+   "topic": "Time",
+   "note": "วันอาทิตย์"
+  },
+  {
+   "lang": "zh",
+   "text": "家",
+   "pron": "jiā",
+   "meaning": "Home",
+   "topic": "Places",
+   "note": "บ้าน"
+  },
+  {
+   "lang": "zh",
+   "text": "学校",
+   "pron": "xuéxiào",
+   "meaning": "School",
+   "topic": "Places",
+   "note": "โรงเรียน"
+  },
+  {
+   "lang": "zh",
+   "text": "大学",
+   "pron": "dàxué",
+   "meaning": "University",
+   "topic": "Places",
+   "note": "มหาวิทยาลัย"
+  },
+  {
+   "lang": "zh",
+   "text": "宿舍",
+   "pron": "sùshè",
+   "meaning": "Dormitory",
+   "topic": "Places",
+   "note": "หอพัก"
+  },
+  {
+   "lang": "zh",
+   "text": "图书馆",
+   "pron": "túshūguǎn",
+   "meaning": "Library",
+   "topic": "Places",
+   "note": "ห้องสมุด"
+  },
+  {
+   "lang": "zh",
+   "text": "医院",
+   "pron": "yīyuàn",
+   "meaning": "Hospital",
+   "topic": "Places",
+   "note": "โรงพยาบาล"
+  },
+  {
+   "lang": "zh",
+   "text": "药店",
+   "pron": "yàodiàn",
+   "meaning": "Pharmacy",
+   "topic": "Places",
+   "note": "ร้านขายยา"
+  },
+  {
+   "lang": "zh",
+   "text": "银行",
+   "pron": "yínháng",
+   "meaning": "Bank",
+   "topic": "Places",
+   "note": "ธนาคาร"
+  },
+  {
+   "lang": "zh",
+   "text": "超市",
+   "pron": "chāoshì",
+   "meaning": "Supermarket",
+   "topic": "Places",
+   "note": "ซูเปอร์มาร์เก็ต"
+  },
+  {
+   "lang": "zh",
+   "text": "商店",
+   "pron": "shāngdiàn",
+   "meaning": "Shop",
+   "topic": "Places",
+   "note": "ร้านค้า"
+  },
+  {
+   "lang": "zh",
+   "text": "饭馆",
+   "pron": "fànguǎn",
+   "meaning": "Restaurant",
+   "topic": "Places",
+   "note": "ร้านอาหาร"
+  },
+  {
+   "lang": "zh",
+   "text": "厕所",
+   "pron": "cèsuǒ",
+   "meaning": "Toilet",
+   "topic": "Places",
+   "note": "ห้องน้ำ"
+  },
+  {
+   "lang": "zh",
+   "text": "机场",
+   "pron": "jīchǎng",
+   "meaning": "Airport",
+   "topic": "Places",
+   "note": "สนามบิน"
+  },
+  {
+   "lang": "zh",
+   "text": "火车站",
+   "pron": "huǒchēzhàn",
+   "meaning": "Train station",
+   "topic": "Places",
+   "note": "สถานีรถไฟ"
+  },
+  {
+   "lang": "zh",
+   "text": "地铁",
+   "pron": "dìtiě",
+   "meaning": "Metro / subway",
+   "topic": "Transport",
+   "note": "รถไฟใต้ดิน"
+  },
+  {
+   "lang": "zh",
+   "text": "公交车",
+   "pron": "gōngjiāochē",
+   "meaning": "Bus",
+   "topic": "Transport",
+   "note": "รถเมล์"
+  },
+  {
+   "lang": "zh",
+   "text": "出租车",
+   "pron": "chūzūchē",
+   "meaning": "Taxi",
+   "topic": "Transport",
+   "note": "แท็กซี่"
+  },
+  {
+   "lang": "zh",
+   "text": "火车",
+   "pron": "huǒchē",
+   "meaning": "Train",
+   "topic": "Transport",
+   "note": "รถไฟ"
+  },
+  {
+   "lang": "zh",
+   "text": "高铁",
+   "pron": "gāotiě",
+   "meaning": "High-speed train",
+   "topic": "Transport",
+   "note": "รถไฟความเร็วสูง"
+  },
+  {
+   "lang": "zh",
+   "text": "飞机",
+   "pron": "fēijī",
+   "meaning": "Plane",
+   "topic": "Transport",
+   "note": "เครื่องบิน"
+  },
+  {
+   "lang": "zh",
+   "text": "汽车",
+   "pron": "qìchē",
+   "meaning": "Car",
+   "topic": "Transport",
+   "note": "รถยนต์"
+  },
+  {
+   "lang": "zh",
+   "text": "自行车",
+   "pron": "zìxíngchē",
+   "meaning": "Bicycle",
+   "topic": "Transport",
+   "note": "จักรยาน"
+  },
+  {
+   "lang": "zh",
+   "text": "老师",
+   "pron": "lǎoshī",
+   "meaning": "Teacher",
+   "topic": "School",
+   "note": "ครู, อาจารย์"
+  },
+  {
+   "lang": "zh",
+   "text": "学生",
+   "pron": "xuésheng",
+   "meaning": "Student",
+   "topic": "School",
+   "note": "นักเรียน, นักศึกษา"
+  },
+  {
+   "lang": "zh",
+   "text": "书",
+   "pron": "shū",
+   "meaning": "Book",
+   "topic": "School",
+   "note": "หนังสือ"
+  },
+  {
+   "lang": "zh",
+   "text": "笔",
+   "pron": "bǐ",
+   "meaning": "Pen",
+   "topic": "School",
+   "note": "ปากกา"
+  },
+  {
+   "lang": "zh",
+   "text": "本子",
+   "pron": "běnzi",
+   "meaning": "Notebook",
+   "topic": "School",
+   "note": "สมุด"
+  },
+  {
+   "lang": "zh",
+   "text": "教室",
+   "pron": "jiàoshì",
+   "meaning": "Classroom",
+   "topic": "School",
+   "note": "ห้องเรียน"
+  },
+  {
+   "lang": "zh",
+   "text": "作业",
+   "pron": "zuòyè",
+   "meaning": "Homework",
+   "topic": "School",
+   "note": "การบ้าน"
+  },
+  {
+   "lang": "zh",
+   "text": "考试",
+   "pron": "kǎoshì",
+   "meaning": "Exam",
+   "topic": "School",
+   "note": "การสอบ"
+  },
+  {
+   "lang": "zh",
+   "text": "汉语",
+   "pron": "Hànyǔ",
+   "meaning": "Chinese (language)",
+   "topic": "School",
+   "note": "ภาษาจีน"
+  },
+  {
+   "lang": "zh",
+   "text": "电脑",
+   "pron": "diànnǎo",
+   "meaning": "Computer",
+   "topic": "School",
+   "note": "คอมพิวเตอร์"
+  },
+  {
+   "lang": "zh",
+   "text": "手机",
+   "pron": "shǒujī",
+   "meaning": "Mobile phone",
+   "topic": "School",
+   "note": "โทรศัพท์มือถือ"
+  }
+ ]
+}

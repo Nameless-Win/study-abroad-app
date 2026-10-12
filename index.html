@@ -308,6 +308,7 @@ input[readonly]{opacity:.85}
 .lrow.past{opacity:.5}
 .lrow.now{background:var(--field);border-radius:12px;padding-left:8px;padding-right:8px;border-top-color:transparent}
 .pill2{display:inline-block;font-size:.72rem;font-weight:700;padding:2px 8px;border-radius:999px;color:#fff}
+.pill2.none{background:var(--field);color:var(--muted);border:1px solid var(--line)}
 .pill2.ok{background:var(--ok)} .pill2.warn{background:var(--warn);color:#2A1E00} .pill2.bad{background:var(--bad)} .pill2.ink{background:var(--ink);color:var(--surface)}
 .form{background:var(--field);border-radius:14px;padding:14px;margin:10px 0}
 .form input,.form select,.form textarea{background:var(--surface)}
@@ -350,6 +351,11 @@ input[readonly]{opacity:.85}
 .tchips button span{color:var(--muted);font-weight:500;margin-left:5px}
 .tchips button[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--surface)}
 .tchips button[aria-pressed="true"] span{color:var(--surface);opacity:.75}
+.wordfile{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px;padding-top:14px;border-top:1px solid var(--line)}
+.skiplist{margin:6px 0 0;padding:0;list-style:none;max-height:220px;overflow-y:auto;font-size:.88rem;border-top:1px solid var(--line)}
+.skiplist li{display:flex;justify-content:space-between;gap:10px;padding:6px 0;border-bottom:1px solid var(--line)}
+.skiplist li b{font-weight:600}
+.skiplist li span{color:var(--muted);text-align:right;flex:none}
 .gamebar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:10px 0 4px}
 .gamebar .secondary:disabled{opacity:.45;cursor:default}
 /* Match game */
@@ -700,6 +706,13 @@ button.dfield{padding:0 12px;color:var(--ink)}
       <div class="tchips" id="wordTopics" role="group" aria-label="Show one topic" hidden></div>
       <div class="gamebar" id="gameBar" hidden><button class="secondary" id="gameBtn">▶ Match game</button><span class="sectionnote" id="gameNote" style="margin:0"></span></div>
       <div id="wordList"></div>
+      <div class="wordfile">
+        <button class="secondary" id="wordDown">Download words</button>
+        <span class="secondary filebtn" role="button">Add words from file<input id="wordFileIn" type="file" accept=".json,application/json" aria-label="Choose a words file"></span>
+        <a class="link" id="wordListsLink" href="word-lists/" target="_blank" rel="noopener" style="align-self:center">Ready-made word lists ↗</a>
+      </div>
+      <div class="err" id="wordFileErr"></div>
+      <div id="wordImport"></div>
     </div>
   </section>
 
@@ -897,6 +910,7 @@ button.dfield{padding:0 12px;color:var(--ink)}
       <p>You can add up to 4 photos to each one, for example the passport photo page and your visa page, so you have a copy if you go out without it. Tap a photo to see it full screen. A photo is a handy copy, but it doesn't replace the real document if police or a hotel ask for the original.</p>
       <p>Choose how many days before expiry you want a reminder. From then on, a reminder shows at the top of every page each time you open the app, and the Documents tab gets a red badge.</p>
       <p>When you renew something, tap <b>Renewed</b> and enter the new expiry date.</p>
+      <p>Some things never expire, like a student ID card or your local phone number. Untick <b>Has an expiry date</b> to keep them here without a date or reminder.</p>
       <p>To change other details, photos or delete a document, tap <b>Edit</b>, then tap the document. Tap <b>Done</b> when you're finished. Tapping a photo always just shows it.</p>
       <p>This app can't send phone notifications, so open it now and then — or add the dates to your phone's calendar as well.</p>`,
     words: `<p>Keep the words and sentences you need every day, with their meaning in English. Tap one to show it big — handy for showing someone in a shop or restaurant.</p>
@@ -905,7 +919,8 @@ button.dfield{padding:0 12px;color:var(--ink)}
       <p>Words are grouped by topic. Pick one when you add a word, or make your own with <b>+ New topic</b>. Tap a topic box under the search to see only that topic, or <b>All</b> for everything. Use the search box to find a word by itself, its meaning or a note.</p>
       <p><b>Match game</b>: first pick a topic (or all topics at random) and what to match — the word with its pronunciation (like Pinyin), the pronunciation with its meaning, or the word with its meaning. For word and meaning you can show the pronunciation under each word, to help you read it.</p>
       <p>Choose how many words to play, from 5 to 10 (5 to start with). The game picks them at random and mixes up the other side. Tap one from each side that go together. Wrong pairs flash red; try to finish with no mistakes.</p>
-      <p>To change or delete a word, tap <b>Edit</b>, then tap it.</p>`,
+      <p>To change or delete a word, tap <b>Edit</b>, then tap it.</p>
+      <p><b>Download words</b> saves this language's words to a file. Send it to a friend, or keep it as a copy. <b>Add words from file</b> adds the words from such a file (or from a full backup). <b>Ready-made word lists</b> opens a page of lists you can download, like 210 basic Chinese words. Words you already have are skipped, never changed, and you'll see a list of what was skipped.</p>`,
     cards: `<p>Write addresses and places in the local language — your dorm, your university gate, a favourite restaurant. Copying the address from a map app works well.</p>
       <p>Tap a card to show it full screen in big text, ready to show a taxi driver or delivery rider. Tap again to close.</p>
       <p>To change or delete a card, tap <b>Edit</b>, then tap the card.</p>`,
@@ -2325,10 +2340,11 @@ button.dfield{padding:0 12px;color:var(--ink)}
   }
 
   function taskLevel(t){ if (t.done) return "ok"; const n = daysUntil(t.due); return n<=2 ? "bad" : n<=7 ? "warn" : "ok"; }
-  function docLevel(d){ const n = daysUntil(d.expiry); if (n<0) return "bad"; if (n<=Math.min(14,d.remind||30)) return "bad"; if (n<=(d.remind||30)) return "warn"; return "ok"; }
+  // documents without an expiry date (student ID, local phone number…) have no status and never need attention
+  function docLevel(d){ if (!d.expiry) return null; const n = daysUntil(d.expiry); if (n<0) return "bad"; if (n<=Math.min(14,d.remind||30)) return "bad"; if (n<=(d.remind||30)) return "warn"; return "ok"; }
   function attention(){
     const out = [];
-    state.docs.forEach(d=>{ const n=daysUntil(d.expiry); if (n<=(d.remind||30)) out.push({tab:"docs", lvl:docLevel(d), text: d.name+(n<0?" expired "+inWords(n):" expires "+inWords(n)), sort:n}); });
+    state.docs.forEach(d=>{ if (!d.expiry) return; const n=daysUntil(d.expiry); if (n<=(d.remind||30)) out.push({tab:"docs", lvl:docLevel(d), text: d.name+(n<0?" expired "+inWords(n):" expires "+inWords(n)), sort:n}); });
     state.tasks.forEach(t=>{ if (t.done) return; const n=daysUntil(t.due); if (n<=2) out.push({tab:"classes", lvl:"bad", text:(t.type==="exam"?"Exam: ":"")+t.title+(n<0?" — overdue":" — due "+inWords(n)), sort:n}); });
     return out.sort((a,b)=>a.sort-b.sort);
   }
@@ -2682,6 +2698,8 @@ button.dfield{padding:0 12px;color:var(--ink)}
     }
     $("wordSearch").hidden = !langWords().length;
     renderTopicBoxes(); renderWordList(); renderWordForm(); renderGame();
+    $("wordDown").hidden = !langWords().length;
+    renderWordImport();
   }
   const topicOf = w=> w.topic || "Other";
   // same word if equal after trimming, joining spaces and ignoring case (and how accents were typed)
@@ -2930,11 +2948,96 @@ button.dfield{padding:0 12px;color:var(--ink)}
     $("wfText").focus();
   }
 
+  // ----- Words to and from a file: keep a copy, or share a word list with friends -----
+  // Adding from a file never changes or deletes saved words: words already saved (same text, same language) are skipped
+  // and listed in a report afterwards. A full app backup file works too (its words are read).
+  let wordImport = null;   // {phase:"preview"|"done", fileName, add:[], skipped:[{text, meaning, why}], added}
+  function downloadWords(){
+    const L = wordLang(), words = langWords();
+    if (!words.length) return;
+    const payload = {app:"study-abroad-words", version:1, lang:L.id, language:L.name, exportedAt:new Date().toISOString(),
+      words: words.map(w=>({lang:w.lang||L.id, text:w.text, pron:w.pron||"", meaning:w.meaning, topic:topicOf(w), note:w.note||""}))};
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(new Blob([JSON.stringify(payload, null, 1)], {type:"application/json"}));
+    a.download = "words-"+L.name.toLowerCase().replace(/[^a-z]+/g,"-").replace(/^-|-$/g,"")+"-"+todayISO()+".json";
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(()=>URL.revokeObjectURL(a.href), 4000);
+    toast("ok", cnt(words.length,"word","words")+" downloaded. Send the file to a friend, or keep it as a copy.");
+  }
+  async function readWordFile(f){
+    $("wordFileErr").textContent = ""; wordImport = null;
+    let j = null; try{ j = JSON.parse(await f.text()); }catch(e){}
+    let raw = null, fileLang = null;
+    if (j && j.app==="study-abroad-words" && Array.isArray(j.words)){ raw = j.words; fileLang = j.lang; }
+    else if (j && j.app==="china-spending" && j.data && Array.isArray(j.data.words)){ raw = j.data.words; fileLang = j.data.wordLang || COUNTRY_LANG[j.data.country]; }
+    if (!raw){ $("wordFileErr").textContent = "That file doesn't have words from this app. Use a file made with Download words (or Download backup)."; renderWordImport(); return; }
+    const known = id=> LANGS.some(l=>l.id===id), fallback = known(fileLang) ? fileLang : wordLang().id;
+    const str = (x, n)=> String(x==null ? "" : x).trim().slice(0, n);
+    const add = [], skipped = [];
+    raw.forEach(r=>{
+      r = r || {};
+      const w = {lang: known(r.lang) ? r.lang : fallback, text:str(r.text,150), pron:str(r.pron,150), meaning:str(r.meaning,150), topic:str(r.topic,30)||"Other", note:str(r.note,150)};
+      const why = !w.text || !w.meaning ? "missing word or meaning"
+        : state.words.some(x=>(x.lang||fallback)===w.lang && sameWord(x.text, w.text)) ? "already saved"
+        : add.some(x=>x.lang===w.lang && sameWord(x.text, w.text)) ? "twice in the file" : "";
+      if (why) skipped.push({text:w.text||"(no word)", meaning:w.meaning, why}); else add.push(w);
+    });
+    wordImport = {phase:"preview", fileName:f.name, add, skipped};
+    renderWordImport();
+    $("wordImport").scrollIntoView({block:"nearest"});
+  }
+  const langName = id=> (LANGS.find(l=>l.id===id)||{name:id}).name;
+  function renderWordImport(){
+    const box = $("wordImport"); box.innerHTML = "";
+    if (!wordImport) return;
+    const wi = wordImport, cb = document.createElement("div"); cb.className = "confirmbox";
+    const langs = [...new Set(wi.add.map(w=>w.lang))];
+    const inLangs = langs.length ? " to "+langs.map(langName).join(", ") : "";
+    if (wi.phase==="preview"){
+      cb.innerHTML = '<h3></h3><p></p><p></p><div class="btns"><button class="btn-yes" id="wiYes"></button><button class="secondary" id="wiNo">Cancel</button></div>';
+      cb.querySelector("h3").textContent = "Add words from “"+wi.fileName+"”?";
+      const ps = cb.querySelectorAll("p");
+      ps[0].textContent = wi.add.length ? cnt(wi.add.length,"new word","new words")+" will be added"+inLangs+". Words you already have are not changed." : "There's nothing new to add.";
+      ps[1].textContent = wi.skipped.length ? cnt(wi.skipped.length,"word","words")+" will be skipped — you'll see which ones after." : "";
+      const yes = cb.querySelector("#wiYes"); yes.textContent = wi.add.length ? "Add "+cnt(wi.add.length,"word","words") : "Add words"; yes.disabled = !wi.add.length;
+      yes.onclick = ()=>{
+        const now = Date.now();
+        wi.add.forEach((w,i)=>state.words.push(Object.assign({id:uid(), t:now - i}, w)));   // keep the file's order, newest first
+        wi.phase = "done"; wi.added = wi.add.length;
+        save(); render();
+        toast("ok", "Added "+cnt(wi.added,"word","words")+(wi.skipped.length ? ", skipped "+wi.skipped.length+"." : "."));
+      };
+      cb.querySelector("#wiNo").onclick = ()=>{ wordImport = null; renderWordImport(); };
+      if (!wi.add.length) appendSkipList(cb, wi.skipped);
+    } else {
+      cb.innerHTML = '<h3></h3><p></p><div class="btns"><button class="secondary" id="wiClose">Close</button></div>';
+      cb.querySelector("h3").textContent = wi.added ? "Added "+cnt(wi.added,"word","words")+inLangs : "No words added";
+      const other = langs.filter(id=>id!==wordLang().id);
+      cb.querySelector("p").textContent = (other.length ? "Some are in "+other.map(langName).join(", ")+" — tap Change to see them. " : "")+
+        (wi.skipped.length ? "Skipped "+cnt(wi.skipped.length,"word","words")+":" : "Nothing was skipped.");
+      if (wi.skipped.length) appendSkipList(cb, wi.skipped);
+      cb.querySelector("#wiClose").onclick = ()=>{ wordImport = null; renderWordImport(); };
+    }
+    box.appendChild(cb);
+  }
+  function appendSkipList(cb, skipped){
+    const ul = document.createElement("ul"); ul.className = "skiplist"; ul.id = "wiSkipped";
+    skipped.forEach(s=>{
+      const li = document.createElement("li"); li.innerHTML = "<b dir=\"auto\"></b><span></span>";
+      li.querySelector("b").textContent = s.text+(s.meaning ? " — "+s.meaning : "");
+      li.querySelector("span").textContent = s.why;
+      ul.appendChild(li);
+    });
+    cb.insertBefore(ul, cb.querySelector(".btns"));
+  }
+
   // ----- Documents -----
+  const NO_EXPIRY_TYPES = ["Student ID"];   // quick-add types that start with "Has an expiry date" unticked
   const DOC_TYPES = ["Residence permit","Visa","Passport","Health insurance","Dorm / rental contract","Student ID","Driving licence"];
   function renderDocs(){
     const host = $("docList"); host.innerHTML = "";
-    const list = [...state.docs].sort((a,b)=>a.expiry.localeCompare(b.expiry));
+    // soonest expiry first, then documents without an expiry date by name
+    const list = [...state.docs].sort((a,b)=>(!a.expiry - !b.expiry) || (a.expiry ? a.expiry.localeCompare(b.expiry) : a.name.localeCompare(b.name)));
     let quickLater = null;
     paintEdit("docEdit", "doc", list.length, host);
     if (!list.length){
@@ -2946,10 +3049,10 @@ button.dfield{padding:0 12px;color:var(--ink)}
       if (q.children.length){ if (list.length){ const l=document.createElement("p"); l.className="sectionnote"; l.style.marginTop="14px"; l.textContent="Add another:"; quickLater=[l,q]; } else host.appendChild(q); }
     }
     list.forEach(d=>{
-      const n = daysUntil(d.expiry), lv = docLevel(d);
+      const n = d.expiry ? daysUntil(d.expiry) : null, lv = docLevel(d);
       const r = document.createElement("div"); r.className="lrow"+(listEdit.doc?" ed":""); r.style.cursor="default";
-      r.innerHTML = '<span class="bar3" style="background:var(--'+lv+')"></span><div class="main"><div>'+esc(d.name)+'</div><small>Expires '+esc(prettyDate(d.expiry))+'</small>'+(d.note?'<small>'+esc(d.note)+'</small>':'')+((d.photos||[]).length?'<div class="thumbs" data-ph></div>':'')+'</div>'+
-        '<div class="side"><span class="pill2 '+lv+'">'+esc(n<0?"Expired":inWords(n))+'</span><div style="margin-top:6px"><button class="link" style="font-size:.84rem">Renewed</button></div></div>';
+      r.innerHTML = '<span class="bar3" style="background:'+(lv ? 'var(--'+lv+')' : 'var(--line)')+'"></span><div class="main"><div>'+esc(d.name)+'</div><small>'+(d.expiry ? 'Expires '+esc(prettyDate(d.expiry)) : 'No expiry date')+'</small>'+(d.note?'<small>'+esc(d.note)+'</small>':'')+((d.photos||[]).length?'<div class="thumbs" data-ph></div>':'')+'</div>'+
+        '<div class="side">'+(d.expiry ? '<span class="pill2 '+lv+'">'+esc(n<0?"Expired":inWords(n))+'</span><div style="margin-top:6px"><button class="link" style="font-size:.84rem">Renewed</button></div>' : '<span class="pill2 none">No expiry</span>')+'</div>';
       const ed = ()=>{ formOpen.doc=d.id; renderDocs(); };
       if (listEdit.doc){ const m = r.querySelector(".main"); m.setAttribute("role","button"); m.tabIndex = 0; m.style.cursor = "pointer"; m.setAttribute("aria-label","Edit "+d.name);
         m.onclick = e=>{ if (e.target.closest(".thumb")) return; ed(); }; m.onkeydown = e=>{ if (e.key==="Enter" && e.target===m) ed(); }; }
@@ -2960,7 +3063,7 @@ button.dfield{padding:0 12px;color:var(--ink)}
         t.onclick = e=>{ e.stopPropagation(); openViewer(d.name, (d.photos||[]).map(x=>photoCache[x]).filter(Boolean), k); };
         ph.appendChild(t);
       });
-      r.querySelector(".side .link").onclick = ()=>{ renewing = d.id; renderDocs(); };
+      if (d.expiry) r.querySelector(".side .link").onclick = ()=>{ renewing = d.id; renderDocs(); };
       host.appendChild(r);
       if (renewing===d.id){
         const f = document.createElement("div"); f.className="form";
@@ -2984,8 +3087,9 @@ button.dfield{padding:0 12px;color:var(--ink)}
     const d = editing || {name:preset, expiry:"", remind:30, note:""};
     const f = document.createElement("div"); f.className="form";
     f.innerHTML = '<div class="grid"><div class="full"><label for="dfName">Document</label><input id="dfName" type="text" maxlength="50" placeholder="e.g. Residence permit" value="'+esc(d.name)+'"></div>'+
-      '<div><label for="dfExp">Expiry date</label><input id="dfExp" type="date" value="'+esc(d.expiry)+'"></div>'+
-      '<div><label for="dfRem">Remind me</label><select id="dfRem"><option value="7">1 week before</option><option value="14">2 weeks before</option><option value="30">1 month before</option><option value="45">6 weeks before</option><option value="60">2 months before</option><option value="90">3 months before</option></select></div>'+
+      '<div class="full"><label class="check" style="margin:0"><input type="checkbox" id="dfHas">Has an expiry date</label></div>'+
+      '<div data-exp><label for="dfExp">Expiry date</label><input id="dfExp" type="date" value="'+esc(d.expiry)+'"></div>'+
+      '<div data-exp><label for="dfRem">Remind me</label><select id="dfRem"><option value="7">1 week before</option><option value="14">2 weeks before</option><option value="30">1 month before</option><option value="45">6 weeks before</option><option value="60">2 months before</option><option value="90">3 months before</option></select></div>'+
       '<div class="full"><label for="dfNote">Note (optional)</label><input id="dfNote" type="text" maxlength="80" placeholder="e.g. renew at the Exit-Entry office, bring photos" value="'+esc(d.note)+'"></div></div>'+
       '<div style="margin-top:12px"><label>Photos (optional)</label><div class="thumbs" id="dfPhotos"></div>'+
       '<p class="sectionnote" style="margin-top:6px">Photos stay only on this device. Anyone who can open this app on your phone can see them.</p></div>'+
@@ -2994,13 +3098,18 @@ button.dfield{padding:0 12px;color:var(--ink)}
     paintDocPhotos();
     $("dfRem").value = String(d.remind||30);
     if (preset==="Residence permit" || preset==="Visa") $("dfRem").value = "45";
+    // an existing document keeps its choice; a new Student ID usually has no expiry date
+    $("dfHas").checked = editing ? !!d.expiry : !NO_EXPIRY_TYPES.includes(preset);
+    const showExp = ()=>f.querySelectorAll("[data-exp]").forEach(x=>x.hidden = !$("dfHas").checked);
+    $("dfHas").onchange = showExp; showExp();
     $("dfCancel").onclick = ()=>{ formOpen.doc=null; delPending=null; docDraft=null; renderDocs(); };
     if (editing) $("dfDel").onclick = ()=>{ if (delPending!=="doc"+d.id){ delPending="doc"+d.id; $("dfDel").textContent="Tap again to delete"; return; }
       (d.photos||[]).forEach(id=>photoDel(id)); state.docs=state.docs.filter(x=>x.id!==d.id); formOpen.doc=null; delPending=null; docDraft=null; save(); render(); };
     $("dfSave").onclick = ()=>{
-      const n = {id: editing?d.id:uid(), name:$("dfName").value.trim(), expiry:$("dfExp").value, remind:+$("dfRem").value, note:$("dfNote").value.trim()};
+      const has = $("dfHas").checked;
+      const n = {id: editing?d.id:uid(), name:$("dfName").value.trim(), expiry: has ? $("dfExp").value : "", remind:+$("dfRem").value, note:$("dfNote").value.trim()};
       if (!n.name){ $("dfErr").textContent="Write which document it is."; return; }
-      if (!n.expiry){ $("dfErr").textContent="Pick the expiry date."; $("dfExp").focus(); return; }
+      if (has && !n.expiry){ $("dfErr").textContent="Pick the expiry date, or untick “Has an expiry date”."; $("dfExp").focus(); return; }
       const dr = docDraft || {list:[], removed:[]};
       dr.removed.forEach(id=>photoDel(id));
       dr.list.filter(p=>p.isNew).forEach(p=>photoPut(p.id, p.url));
@@ -3008,10 +3117,11 @@ button.dfield{padding:0 12px;color:var(--ink)}
       docDraft = null;
       if (editing) Object.assign(editing,n); else state.docs.push(n);
       formOpen.doc=null; save(); render();
+      if (!n.expiry){ toast("ok", n.name+" saved (no expiry date)."); return; }
       const left = daysUntil(n.expiry);
       toast(left<=n.remind?"warn":"ok", n.name+(left<0?" has expired.":" expires "+inWords(left)+"."));
     };
-    (preset ? $("dfExp") : $("dfName")).focus();
+    (preset ? ($("dfHas").checked ? $("dfExp") : $("dfNote")) : $("dfName")).focus();
   }
 
   // ----- document photos (kept in IndexedDB, which has far more room than normal storage) -----
@@ -3223,6 +3333,8 @@ button.dfield{padding:0 12px;color:var(--ink)}
   $("wordNew").onclick = ()=>{ formOpen.word="new"; renderWords(); };
   $("wordSearch").addEventListener("input", ()=>{ wordQuery = $("wordSearch").value; if ($("wordScroll")) $("wordScroll").scrollTop = 0; renderWordList(); });
   $("gameBtn").onclick = openGameSetup;
+  $("wordDown").onclick = downloadWords;
+  $("wordFileIn").addEventListener("change", ()=>{ const f = $("wordFileIn").files && $("wordFileIn").files[0]; $("wordFileIn").value = ""; if (f) readWordFile(f); });
   $("gameClose").onclick = ()=>{ game = null; renderGame(); };
   [["wordEdit","word",()=>renderWords()],["taskEdit","task",()=>renderTasks()],["breakEdit","brk",()=>renderBreaks()],["docEdit","doc",()=>renderDocs()],["cardEdit","card",()=>renderCards()],["contactEdit","contact",()=>renderContacts()]].forEach(([id,k,draw])=>{
     $(id).onclick = ()=>{ listEdit[k] = !listEdit[k]; if (!listEdit[k]){ formOpen[k]=null; delPending=null; } draw(); };
@@ -3450,7 +3562,7 @@ button.dfield{padding:0 12px;color:var(--ink)}
     wipeStep = null; wipeParts = null; profileOpen = false; profileDraft = null;
     selDay = null; pendingDelete = null; editingLimit = false; billFormOpen = false; resetEdits();
     formOpen = {}; renewing = null; delPending = null; ttEdit = false; Object.keys(listEdit).forEach(k=>listEdit[k]=false);
-    wordQuery = ""; $("wordSearch").value = ""; langPicking = false; wordTopic = null; wordsAll = false; game = null;
+    wordQuery = ""; $("wordSearch").value = ""; langPicking = false; wordTopic = null; wordsAll = false; game = null; wordImport = null;
     delete $("rateFields").dataset.key; delete $("rateFields").dataset.touched;
     render(); window.scrollTo(0,0);
     toast("ok", all ? "Everything deleted. Fresh start!" : "Deleted: "+names.join(", ")+".");
