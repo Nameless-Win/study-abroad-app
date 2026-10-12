@@ -1,0 +1,5 @@
+# Project notes and tests stay on this computer; only the app itself is published.
+CLAUDE.md
+CLAUDE.html
+tests/
+__pycache__/
