@@ -2,7 +2,7 @@
 // Pages are served from that copy straight away, and a fresh copy is fetched in the background,
 // so an update shows the next time the app is opened. Bump VERSION when files are added or removed
 // or when this file's logic changes.
-const VERSION = "v2";
+const VERSION = "v3";   // v3: new app icon
 const CACHE = "study-abroad-" + VERSION;
 const FILES = ["./", "./index.html", "./manifest.webmanifest",
   "./icons/icon-192.png", "./icons/icon-512.png", "./icons/icon-maskable-512.png", "./icons/apple-touch-icon.png"];
