@@ -245,13 +245,27 @@ input[readonly]{opacity:.85}
 .chart .cbar.sel{stroke:var(--ink);stroke-width:2}
 .chart .pt{cursor:pointer}
 .readout{font-size:.88rem;font-weight:600;font-variant-numeric:tabular-nums;color:var(--ink);min-height:1.3em;text-align:right}
-.hbar{display:grid;grid-template-columns:minmax(90px,1fr) 2fr auto;gap:10px;align-items:center;padding:6px 0;font-size:.88rem}
-.hbar .t{height:10px;border-radius:999px;background:var(--field);overflow:hidden}
-.hbar .t i{display:block;height:100%;border-radius:999px}
-.hbar .n{font-variant-numeric:tabular-nums;font-weight:600;text-align:right;white-space:nowrap}
-.hbar .n small{color:var(--muted);font-weight:500;margin-left:4px}
+/* Category pie */
+.pie{display:grid;grid-template-columns:1fr;gap:14px;align-items:center}
+.chart .pie svg{width:100%;max-width:200px;height:auto;margin:0 auto}
+.pie .ring{fill:none;stroke:var(--muted);stroke-opacity:.35;stroke-width:1;pointer-events:none}
+@media (min-width:560px){ .pie{grid-template-columns:200px 1fr;gap:20px} }
+.pie .slice{stroke:var(--surface);stroke-width:2;stroke-linejoin:round;cursor:pointer;transition:opacity .15s}
+.pie .slice.dim{opacity:.25}
+.pielist{display:flex;flex-direction:column;min-width:0}
+.pierow{display:grid;grid-template-columns:12px minmax(0,1fr) auto;gap:8px;align-items:center;border:0;border-top:1px solid var(--line);background:none;padding:7px 4px;text-align:left;cursor:pointer;color:var(--ink);font-size:.86rem;border-radius:0}
+.pierow:first-child{border-top:0}
+.pierow i{width:12px;height:12px;border-radius:3px}
+.pierow .nm{min-width:0}
+.pierow .nm b{font-weight:600;display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pierow .nm small{display:block;color:var(--muted);font-size:.74rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pierow .am{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.pierow .am b{display:block;font-weight:600}
+.pierow .am small{color:var(--muted)}
+.pierow[aria-pressed="true"]{background:var(--field);border-radius:8px}
+@media (prefers-reduced-motion:reduce){ .pie .slice{transition:none} }
 @media (max-width:480px){ .ratefields{grid-template-columns:1fr} }
-@media (max-width:420px){ .tile .v{font-size:1.15rem} .hbar{grid-template-columns:minmax(80px,1fr) 1.3fr auto} }
+@media (max-width:420px){ .tile .v{font-size:1.15rem} }
 
 /* Bottom navigation */
 .bottomnav{position:fixed;left:0;right:0;bottom:0;z-index:10;background:var(--surface);border-top:1px solid var(--line);display:flex;justify-content:center;padding:6px 6px calc(6px + env(safe-area-inset-bottom,0px))}
@@ -730,7 +744,7 @@ button.dfield{padding:0 12px;color:var(--ink)}
     </div>
     <div class="card chart"><div class="head"><h2 id="ch1Title"></h2><span class="readout" id="ch1Read"></span></div><div id="ch1"></div><div class="legend2" id="ch1Leg"></div></div>
     <div class="card chart"><div class="head"><h2 id="ch2Title"></h2><span class="readout" id="ch2Read"></span></div><div id="ch2"></div><div class="legend2" id="ch2Leg"></div></div>
-    <div class="card"><div class="head"><h2>Where the money went</h2></div><div id="ch3"></div></div>
+    <div class="card chart"><div class="head"><h2>Where the money went</h2><span class="readout" id="ch3Read"></span></div><div id="ch3"></div></div>
   </section>
 
   <section class="card pg-home" id="billsCard">
@@ -911,7 +925,8 @@ button.dfield{padding:0 12px;color:var(--ink)}
     reports: `<p><b>Month</b> shows the month selected at the top: this week's spending (for the current month), your daily average, your biggest day, how it compares with last month, and a forecast for the end of the month.</p>
       <p>The bar chart shows each day. If you've set a daily limit, the bars use the same green / yellow / red as the calendar. The line chart shows how your total grows through the month against your budget.</p>
       <p><b>Year</b> shows every month of the year side by side, so you can spot expensive months.</p>
-      <p>Tap any bar or point to see its exact amount.</p>`,
+      <p>Tap any bar or point to see its exact amount.</p>
+      <p><b>Where the money went</b> is a pie of your categories, biggest first, with the amounts and percentages listed beside it. If you used more than 6 categories, the smallest are grouped into <b>Other</b> (the list says which). Tap a slice or a row to highlight it.</p>`,
     rates: `<p>Rates are written as how much 1 unit of your local currency is worth in each other currency you show.</p>
       <p>Each purchase keeps the rate in effect on its date, so changing a rate never changes older purchases.</p>
       <p>To change it, enter the new rates and the date they start from, then tap <b>Set rate</b>. Leave “Also re-price…” ticked to update purchases you already entered from that date until the next rate change.</p>`
@@ -1844,22 +1859,54 @@ button.dfield{padding:0 12px;color:var(--ink)}
     if (cls) d.children[1].classList.add(cls);
     return d;
   }
-  function catBars(host, items, v){
-    host.innerHTML = "";
+  // "Where the money went": pie of categories. At most 6 slices (the 5 biggest categories, the rest folded into a
+  // grey "Other"), thin surface gaps between slices, and a list beside it with name, amount and % so a slice is
+  // never identified by colour alone. Tap a slice or a row to highlight it; the readout shows its numbers.
+  function catPie(host, readout, items, v){
+    host.innerHTML = ""; readout.textContent = "";
     const by = {}; let tot = 0;
     items.forEach(e=>{ const x=inCur(e,v); by[e.cat]=(by[e.cat]||0)+x; tot+=x; });
-    const list = CATS.filter(c=>by[c.id]>0).sort((a,b)=>by[b.id]-by[a.id]);
-    if (!list.length){ host.innerHTML = '<p class="empty">No spending yet.</p>'; return; }
-    const mx = by[list[0].id];
-    list.forEach(c=>{
-      const r = document.createElement("div"); r.className="hbar";
-      r.innerHTML = '<span></span><span class="t"><i></i></span><span class="n"></span>';
-      r.children[0].textContent = c.name;
-      r.querySelector("i").style.cssText = "width:"+(by[c.id]/mx*100)+"%;background:"+c.c;
-      r.children[2].textContent = fmt(by[c.id], v);
-      const sm = document.createElement("small"); sm.textContent = Math.round(by[c.id]/tot*100)+"%"; r.children[2].appendChild(sm);
-      host.appendChild(r);
+    const cats = CATS.filter(c=>by[c.id]>0).sort((a,b)=>by[b.id]-by[a.id]);
+    if (!cats.length){ host.innerHTML = '<p class="empty">No spending yet.</p>'; return; }
+    let slices = cats.map(c=>({name:c.name, color:c.c, value:by[c.id], n:1}));
+    if (slices.length > 6){
+      const keep = cats.filter(c=>c.id!=="other").slice(0,5), rest = cats.filter(c=>!keep.includes(c));
+      slices = keep.map(c=>({name:c.name, color:c.c, value:by[c.id], n:1}))
+        .concat([{name:"Other", color:catById.other.c, value:rest.reduce((s,c)=>s+by[c.id],0), n:rest.length, parts:rest.map(c=>c.name)}]);
+    }
+    const pct = s=> Math.round(s.value/tot*100);
+    const wrap = document.createElement("div"); wrap.className = "pie";
+    const svg = el("svg",{viewBox:"0 0 200 200", role:"img", "aria-label":"Spending by category: "+slices.map(s=>s.name+" "+pct(s)+"%").join(", ")});
+    const list = document.createElement("div"); list.className = "pielist";
+    let sel = -1;
+    const paths = [], rows = [];
+    const pick = i=>{
+      sel = sel===i ? -1 : i;
+      paths.forEach((p,k)=>p.classList.toggle("dim", sel>=0 && k!==sel));
+      rows.forEach((r,k)=>r.setAttribute("aria-pressed", k===sel));
+      readout.textContent = sel<0 ? "" : slices[sel].name+" · "+fmt(slices[sel].value,v)+" · "+pct(slices[sel])+"%";
+    };
+    let a0 = -Math.PI/2;   // start at 12 o'clock, go clockwise
+    slices.forEach((s,i)=>{
+      const a1 = a0 + s.value/tot*Math.PI*2, R = 96, cx = 100, cy = 100;
+      const p = slices.length===1 ? el("circle",{cx, cy, r:R}, svg)
+        : el("path",{d:"M"+cx+","+cy+" L"+(cx+R*Math.cos(a0))+","+(cy+R*Math.sin(a0))+" A"+R+","+R+" 0 "+(a1-a0>Math.PI?1:0)+" 1 "+(cx+R*Math.cos(a1))+","+(cy+R*Math.sin(a1))+" Z"}, svg);
+      p.setAttribute("class","slice"); p.style.fill = s.color;
+      el("title",{},p).textContent = s.name+" "+fmt(s.value,v)+" ("+pct(s)+"%)";
+      p.addEventListener("click", ()=>pick(i));
+      paths.push(p); a0 = a1;
+      const r = document.createElement("button"); r.className = "pierow"; r.setAttribute("aria-pressed","false");
+      r.innerHTML = '<i></i><span class="nm"><b></b><small></small></span><span class="am"></span>';
+      r.querySelector("i").style.background = s.color;
+      r.querySelector("b").textContent = s.name;
+      if (s.n>1) r.querySelector("small").textContent = s.parts.join(", "); else r.querySelector("small").remove();
+      r.querySelector(".am").innerHTML = "<b></b><small></small>";
+      r.querySelector(".am b").textContent = fmt(s.value,v); r.querySelector(".am small").textContent = pct(s)+"%";
+      r.onclick = ()=>pick(i);
+      rows.push(r); list.appendChild(r);
     });
+    el("circle",{cx:100, cy:100, r:96.5, class:"ring"}, svg);   // faint edge so dark slices stay visible on the dark card
+    wrap.append(svg, list); host.appendChild(wrap);
   }
   let _rz; window.addEventListener("resize", ()=>{ clearTimeout(_rz); _rz=setTimeout(()=>{ if (page==="reports" && state.country) renderReports(); }, 150); });
   function dayLabels(n){ const step = ($("ch1").clientWidth||600) < 420 ? 10 : 5; return i=> (i===0 || ((i+1)%step===0 && i+1<=n-3) || i===n-1) ? String(i+1) : null; }
@@ -1925,7 +1972,7 @@ button.dfield{padding:0 12px;color:var(--ink)}
         refs: bv ? [{v:bv, color:"var(--bad)"}] : [],
         onPick: i=> "By "+prettyDate(m+"-"+String(i+1).padStart(2,"0"),{day:"numeric",month:"short"})+" · "+fmt(cum[i],v)+(bv ? " ("+Math.round(cum[i]/bv*100)+"% of budget)" : "") });
       legend($("ch2Leg"), bv ? [["var(--ink)","Your total"],["var(--bad)","- - Budget "+fmt(bv,v)],["var(--muted)","··· Even pace"]] : [["var(--ink)","Your total"],["var(--muted)","Set a budget to compare"]]);
-      catBars($("ch3"), items, v);
+      catPie($("ch3"), $("ch3Read"), items, v);
     } else {
       const y = +viewMonth.slice(0,4);
       $("repTitle").textContent = String(y);
@@ -1958,7 +2005,7 @@ button.dfield{padding:0 12px;color:var(--ink)}
       chart($("ch2"), $("ch2Read"), { n:12, values: avgs, line:true, label:"Daily average by month", labels: mlab, empty: y>now.getFullYear() ? "This year hasn't started yet" : "No spending in "+y+" yet",
         onPick: i=> monthName(ms[i]).split(" ")[0]+" · "+fmt(avgs[i],v)+" a day" });
       legend($("ch2Leg"), [["var(--ink)","Average spent per day"]]);
-      catBars($("ch3"), yItems, v);
+      catPie($("ch3"), $("ch3Read"), yItems, v);
     }
   }
 
