@@ -427,6 +427,39 @@ input[readonly]{opacity:.85}
 .match button.ok small{color:#fff}
 .match button.bad{background:var(--bad);border-color:var(--bad);color:#fff}
 .match button.bad small{color:#fff}
+/* sentence games: progress bar, the sentence to translate, the answer line, the tiles, and the result */
+.sgbar{height:10px;border-radius:999px;background:var(--line);overflow:hidden;margin:4px 0 6px}
+.sgbar i{display:block;height:100%;width:0;background:var(--ok);border-radius:999px;transition:width .3s}
+.sgask{font-weight:700;font-size:1.05rem;margin:12px 0 8px}
+.sgprompt{border:1px solid var(--line);border-radius:14px;padding:12px 14px;background:var(--field)}
+.sgprompt .zh,.sgfeed .zh{font-size:1.3rem;font-weight:600;line-height:1.5;overflow-wrap:anywhere}
+.sgprompt small,.sgfeed small{display:block;color:var(--muted);font-size:.86rem}
+.sgprompt .en{font-size:1.02rem;font-weight:600}
+.sgprompt .zh + .en,.sgprompt small + .en{font-weight:400;color:var(--muted);font-size:.92rem;margin-top:6px}
+.sgblank{display:inline-block;min-width:2.4em;border-bottom:2px solid var(--ink);text-align:center;margin:0 3px;line-height:1.2}
+.sgline{min-height:62px;border-bottom:2px solid var(--line);display:flex;flex-wrap:wrap;gap:6px;align-items:flex-end;padding:12px 0 8px;margin-top:6px}
+.sghint{color:var(--muted);font-size:.85rem;padding-bottom:6px}
+.sgbank{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:14px 0 4px}
+.sgtile{border:2px solid var(--line);border-bottom-width:4px;background:var(--surface);border-radius:12px;padding:5px 11px;min-height:46px;min-width:44px;display:inline-flex;flex-direction:column;align-items:center;justify-content:center;cursor:pointer;color:var(--ink);font-weight:600;font-size:1.05rem;line-height:1.25}
+.sgtile small{font-size:.72rem;font-weight:500;color:var(--muted)}
+.sgtile:disabled{cursor:default}
+.sgtile.used{background:var(--line);border-color:var(--line);color:transparent}
+.sgtile.used small{color:transparent}
+.sgtile[aria-pressed="true"]{border-color:var(--ink);box-shadow:0 0 0 1px var(--ink) inset}
+.sgfoot{margin-top:14px}
+.sgfoot .btn-yes{width:100%}
+.sgfoot .btn-yes:disabled{opacity:.45;cursor:default}
+.sgfeed{border-radius:12px;padding:10px 14px;margin-bottom:10px;border:1px solid var(--line);background:var(--field)}
+.sgfeed > b{display:block;margin-bottom:2px}
+.sgfeed.ok{border-color:var(--ok);background:color-mix(in srgb, var(--ok) 12%, var(--surface))}
+.sgfeed.ok > b{color:var(--ok-text)}
+.sgfeed.bad{border-color:var(--bad);background:color-mix(in srgb, var(--bad) 10%, var(--surface))}
+.sgfeed.bad > b{color:var(--bad-text)}
+.gamebar #gameNote[hidden]{display:none}
+.gamebar.sent{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.gamebar.sent #gameBuildBtn{grid-column:1/-1;order:-1}
+.gamebar.sent button{width:100%}
+.gamebar.sent #gameNote{grid-column:1/-1}
 .gamedone{text-align:center;padding:10px 0 4px}
 .gamedone h3{margin:0 0 4px;font-size:1.15rem}
 .gamedone .btns{display:flex;gap:8px;justify-content:center;margin-top:14px;flex-wrap:wrap}
@@ -802,7 +835,7 @@ button.dfield{padding:0 12px;color:var(--ink)}
       <input id="wordSearch" type="search" placeholder="Search words, meanings, notes…" aria-label="Search words" autocomplete="off" hidden>
       <div class="tchips" id="wordTopics" role="group" aria-label="Show one topic" hidden></div>
       <div id="topicManager"></div>
-      <div class="gamebar" id="gameBar" hidden><button class="secondary" id="gameBtn">▶ Match game</button><span class="sectionnote" id="gameNote" style="margin:0"></span></div>
+      <div class="gamebar" id="gameBar" hidden><button class="secondary" id="gameBtn">▶ Match game</button><button class="secondary" id="gameBuildBtn" hidden>▶ Build the sentence</button><button class="secondary" id="gameGapBtn" hidden>▶ Fill the gap</button><span class="sectionnote" id="gameNote" style="margin:0"></span></div>
       <div id="wordSelBar"></div>
       <div id="wordList"></div>
       <div class="wordfile">
@@ -902,7 +935,7 @@ button.dfield{padding:0 12px;color:var(--ink)}
 <script>
 (function(){
   // Bump on every publish (date + a letter for several in one day). "Check for updates" compares it with the website's copy.
-  const APP_VERSION = "2026-10-17b";
+  const APP_VERSION = "2026-10-17c";
   // Approximate starting rates (units per 1 US dollar). Students should replace them with real rates.
   const DEF = {USD:1, CNY:7.1, THB:33.6, JPY:150, KRW:1380, TWD:31, HKD:7.8, SGD:1.3, MYR:4.3, VND:25500, IDR:16000, PHP:57, INR:85, LAK:21500, KHR:4000, MMK:2100,
     AUD:1.5, NZD:1.7, CAD:1.38, GBP:0.76, EUR:0.88, CHF:0.82, SEK:9.6, NOK:10.3, DKK:6.6, CZK:21.5, PLN:3.7, HUF:350, RUB:85, TRY:40, AED:3.67, MXN:18.5, BRL:5.5};
@@ -1028,6 +1061,7 @@ button.dfield{padding:0 12px;color:var(--ink)}
       <p>Words are grouped by topic. Pick one when you add a word, or make your own with <b>+ New topic</b>. Tap a topic box under the search to see only that topic, or <b>All</b> for everything. Use the search box to find a word by itself, its meaning or a note.</p>
       <p><b>Match game</b>: first tick one or more topics (or all topics at random) and what to match — the word with its pronunciation (like Pinyin), the pronunciation with its meaning, or the word with its meaning. For word and meaning you can show the pronunciation under each word, to help you read it.</p>
       <p>Choose how many words to play, from 5 to 10 (5 to start with). The game picks them at random and mixes up the other side. Tap one from each side that go together. Wrong pairs flash red; try to finish with no mistakes.</p>
+      <p>Sentences have two more games. <b>Build the sentence</b>: see a sentence and tap the tiles in the right order to translate it — from English into the language you're learning, or the other way. A few extra tiles are mixed in to make you think. <b>Fill the gap</b>: one word is missing from a sentence; pick it from four choices. Tap <b>Check</b> to see if you're right. A sentence you get wrong comes back at the end of the game and goes to <b>Needs practice</b>.</p>
       <p>The page opens on <b>Words</b> and <b>Sentences</b>. Tap one to see its topics and list; the <b>↩</b> button takes you back. Each entry is a word or a sentence: you choose when you add it, and it stays that way.</p>
       <p>To change or delete an entry, tap <b>Edit</b>, then tap it. In Edit mode you can also tick several entries and move them to another topic together.</p>
       <p><b>Manage topics</b> lets you rename a topic, move everything in it to another topic (to merge topics), or delete it. If a topic still has entries, you're asked to move them first; deleting the topic anyway deletes them too.</p>
@@ -3217,8 +3251,12 @@ button.dfield{padding:0 12px;color:var(--ink)}
     });
     // the match game picks its own topic in its setup; it just needs 3 words to start
     $("gameBar").hidden = !words.length;
-    $("gameBtn").disabled = words.length < 3;
-    $("gameNote").textContent = words.length < 3 ? "Add at least 3 "+KIND[wordKind].many+" to play." : "Pick topics and what to match.";
+    const sent = wordKind==="sentence";
+    ["gameBtn","gameBuildBtn","gameGapBtn"].forEach(id=>{ $(id).disabled = words.length < 3; });
+    $("gameBuildBtn").hidden = $("gameGapBtn").hidden = !sent;
+    $("gameBar").classList.toggle("sent", sent);
+    $("gameNote").textContent = words.length < 3 ? "Add at least 3 "+KIND[wordKind].many+" to play." : sent ? "" : "Pick topics and what to match.";
+    $("gameNote").hidden = !$("gameNote").textContent;
   }
   // ---- Manage topics: rename, move everything to another topic (merge), or delete ----
   function topicSelect(id, except){
@@ -3408,19 +3446,27 @@ button.dfield{padding:0 12px;color:var(--ink)}
   ];
   // topics: the topics ticked in the setup; empty = all topics. Remembered while the app is open; count is 5–10 pairs
   // kind: play Words or Sentences (whichever is open); practice: play the "Needs practice" list instead of topics
-  let gameOpts = {topics:[], mode:"wm", hint:true, count:5, kind:null, practice:false};
+  // type: "match", or the sentence games "build" (put the tiles in order) and "gap" (pick the missing word);
+  // dir (build only): "mt" = meaning → sentence tiles, "tm" = sentence → English tiles
+  let gameOpts = {topics:[], mode:"wm", hint:true, count:5, kind:null, practice:false, type:"match", dir:"mt"};
+  const GAME_NAMES = {match:"Match game", build:"Build the sentence", gap:"Fill the gap"};
+  const sentGame = ()=> gameOpts.type==="build" || gameOpts.type==="gap";
   const modeOf = id=> GAME_MODES.find(m=>m.id===id) || GAME_MODES[2];
   function modeName(m){ const p = wordLang().pron; return {text:"Word", pron:p, meaning:"Meaning"}[m.left]+" ↔ "+{text:"Word", pron:p, meaning:"Meaning"}[m.right]; }
+  // a sentence game needs a sentence of at least 2 tiles, with a meaning
+  const sentOK = w=> kindOf(w)==="sentence" && w.meaning && sentTokens(w).length>=2 && (gameOpts.type!=="build" || gameOpts.dir!=="tm" || meaningWords(w).length>=2);
   // entries usable for some topics (empty = all topics) and a mode: pronunciation modes only use entries that have one
   function gamePool(topics, mode, practice){
-    const base = practice ? practiceWords() : langWords().filter(w=>!gameOpts.kind || kindOf(w)===gameOpts.kind);
-    return base.filter(w=>(practice || !topics.length || topics.includes(topicOf(w))) && (!modeOf(mode).needsPron || w.pron));
+    const sg = sentGame();
+    const base = practice ? practiceWords() : langWords().filter(w=>sg || !gameOpts.kind || kindOf(w)===gameOpts.kind);
+    return base.filter(w=>(practice || !topics.length || topics.includes(topicOf(w))) && (sg ? sentOK(w) : !modeOf(mode).needsPron || w.pron));
   }
   // "Body", "Body and Fruit", "Body, Fruit and Colours"
   const andList = a=> a.length<2 ? (a[0]||"") : a.slice(0,-1).join(", ")+" and "+a[a.length-1];
   function shuffle(a){ for (let i=a.length-1; i>0; i--){ const j = Math.floor(Math.random()*(i+1)); [a[i],a[j]] = [a[j],a[i]]; } return a; }
-  function openGameSetup(practice){
+  function openGameSetup(practice, type){
     if (!wordLang().pron) gameOpts.mode = "wm";
+    gameOpts.type = type || "match";
     gameOpts.practice = practice===true;
     if (!gameOpts.practice){
       if (wordKind && gameOpts.kind!==wordKind) gameOpts.topics = [];   // topics ticked for the other parent don't carry over
@@ -3432,32 +3478,35 @@ button.dfield{padding:0 12px;color:var(--ink)}
   // Practice with only a few missed words still works: they're mixed with other entries of the same type
   // (any type if needed) until there are enough to play. Missed words always come first.
   function practiceFill(practice, mode, count){
-    const ids = new Set(practice.map(w=>w.id)), kinds = new Set(practice.map(kindOf)), ok = w=>!ids.has(w.id) && (!modeOf(mode).needsPron || w.pron);
-    const same = shuffle(langWords().filter(w=>ok(w) && kinds.has(kindOf(w)))), any = shuffle(langWords().filter(w=>ok(w) && !kinds.has(kindOf(w))));
+    const sg = sentGame(), ids = new Set(practice.map(w=>w.id)), kinds = new Set(practice.map(kindOf)), ok = w=>!ids.has(w.id) && (sg ? sentOK(w) : !modeOf(mode).needsPron || w.pron);
+    const same = shuffle(langWords().filter(w=>ok(w) && kinds.has(kindOf(w)))), any = sg ? [] : shuffle(langWords().filter(w=>ok(w) && !kinds.has(kindOf(w))));
     return same.concat(any).slice(0, Math.max(0, count - practice.length));
   }
   function startGame(){
     let pool = shuffle(gamePool(gameOpts.topics, gameOpts.mode, gameOpts.practice)).slice(0, gameOpts.count);
     if (gameOpts.practice && pool.length) pool = shuffle(pool.concat(practiceFill(pool, gameOpts.mode, gameOpts.count)));
     if (pool.length < 3) return;
-    game = {phase:"play", topics:gameOpts.topics.slice(), practice:gameOpts.practice, mode:modeOf(gameOpts.mode), hint:gameOpts.hint, pool, left:shuffle(pool.map(w=>w.id)), right:shuffle(pool.map(w=>w.id)),
+    if (sentGame()) return startSentGame(pool);
+    game = {phase:"play", type:"match", topics:gameOpts.topics.slice(), practice:gameOpts.practice, mode:modeOf(gameOpts.mode), hint:gameOpts.hint, pool, left:shuffle(pool.map(w=>w.id)), right:shuffle(pool.map(w=>w.id)),
       sel:null, done:new Set(), missed:new Set(), wrong:0, start:Date.now(), end:0, flash:null};
     renderGame(); $("gameCard").scrollIntoView({block:"start"});
   }
   function renderGameSetup(body){
     const L = wordLang();
-    $("gameTitle").textContent = "Match game";
+    const sg = sentGame(), lname = L.name.replace(/ \(.*\)$/, "");
+    $("gameTitle").textContent = GAME_NAMES[gameOpts.type];
     body.innerHTML = '<div class="subl" style="margin-top:0">Topics <span style="font-weight:400">· tick one or more</span></div><div class="tchips" id="gTopics" role="group" aria-label="Topics to play"></div>'+
       '<div data-modes><div class="subl">What to match</div><div class="tchips" id="gModes" role="group" aria-label="What to match"></div></div>'+
+      '<div data-dirs hidden><div class="subl">Translate</div><div class="tchips" id="gDirs" role="group" aria-label="Which way to translate"></div></div>'+
       '<label class="check" id="gHintWrap"><input type="checkbox" id="gHint"></label>'+
-      '<div class="subl">How many words</div><div class="tchips" id="gCount" role="group" aria-label="How many words"></div>'+
+      '<div class="subl">How many '+(sg ? "sentences" : "words")+'</div><div class="tchips" id="gCount" role="group" aria-label="How many '+(sg ? "sentences" : "words")+'"></div>'+
       '<p class="sectionnote" id="gNote" style="margin-top:10px"></p>'+
       '<div class="btns" style="display:flex;gap:8px;margin-top:6px"><button class="btn-yes" id="gStart">Start</button><button class="secondary" id="gCancel">Cancel</button></div>';
-    const pool0 = langWords().filter(w=>!gameOpts.kind || kindOf(w)===gameOpts.kind);
+    const pool0 = sg ? langWords().filter(sentOK) : langWords().filter(w=>!gameOpts.kind || kindOf(w)===gameOpts.kind);
     const used = topicList().filter(t=>pool0.some(w=>topicOf(w)===t));
     gameOpts.topics = gameOpts.topics.filter(t=>used.includes(t));
     // "Needs practice" plays the words got wrong before; "All topics" clears the ticks; each topic toggles on and off
-    const nPractice = practiceWords().length;
+    const nPractice = sg ? gamePool([], gameOpts.mode, true).length : practiceWords().length;
     if (nPractice){
       const b = document.createElement("button"); b.innerHTML = "<b>Needs practice</b><span></span>"; b.dataset.topic = "__practice";
       b.querySelector("span").textContent = gamePool([], gameOpts.mode, true).length;
@@ -3477,15 +3526,22 @@ button.dfield{padding:0 12px;color:var(--ink)}
       };
       $("gTopics").appendChild(b);
     });
-    body.querySelector("[data-modes]").hidden = !L.pron;   // without a pronunciation box there's only Word ↔ Meaning
+    body.querySelector("[data-modes]").hidden = !L.pron || sg;   // without a pronunciation box there's only Word ↔ Meaning
     GAME_MODES.forEach(m=>{
       const b = document.createElement("button"); b.textContent = modeName(m); b.dataset.mode = m.id;
       b.setAttribute("aria-pressed", gameOpts.mode===m.id);
       b.onclick = ()=>{ gameOpts.mode = m.id; renderGame(); };
       $("gModes").appendChild(b);
     });
-    $("gHintWrap").hidden = !L.pron || gameOpts.mode!=="wm";
-    $("gHintWrap").append(L.pron+" under the word, to help you read it");
+    body.querySelector("[data-dirs]").hidden = gameOpts.type!=="build";
+    [["mt","English → "+lname], ["tm",lname+" → English"]].forEach(([d,t])=>{
+      const b = document.createElement("button"); b.textContent = t; b.dataset.dir = d; b.setAttribute("aria-pressed", gameOpts.dir===d);
+      b.onclick = ()=>{ gameOpts.dir = d; renderGame(); };
+      $("gDirs").appendChild(b);
+    });
+    $("gHintWrap").hidden = !L.pron || (!sg && gameOpts.mode!=="wm");
+    $("gHintWrap").append(!sg ? L.pron+" under the word, to help you read it"
+      : gameOpts.type==="build" && gameOpts.dir==="mt" ? "Show "+L.pron+" on the tiles" : "Show "+L.pron+" under the sentence");
     $("gHint").checked = gameOpts.hint;
     $("gHint").onchange = ()=>{ gameOpts.hint = $("gHint").checked; };
     [5,6,7,8,9,10].forEach(k=>{
@@ -3495,6 +3551,18 @@ button.dfield{padding:0 12px;color:var(--ink)}
     });
     const n = gamePool(gameOpts.topics, gameOpts.mode, gameOpts.practice).length,
       where = gameOpts.practice ? " that need practice" : gameOpts.topics.length ? " from "+andList(gameOpts.topics) : "";
+    if (sg){
+      const take = gameOpts.practice ? Math.min(n, gameOpts.count) : 0,
+        fill = gameOpts.practice && n ? practiceFill(gamePool([], gameOpts.mode, true).slice(0, take), gameOpts.mode, gameOpts.count).length : 0,
+        total = gameOpts.practice ? take + fill : n;
+      $("gStart").disabled = total < 3;
+      $("gNote").textContent = gameOpts.practice && !n ? "No sentences need practice yet."
+        : total < 3 ? "You need at least 3 sentences"+where+" to play — add a few more or pick another topic."
+        : gameOpts.practice ? "You'll practise "+cnt(take,"sentence","sentences")+" you got wrong"+(fill ? ", mixed with "+fill+" other"+(fill===1?"":"s") : "")+"."
+        : "You'll do "+Math.min(n, gameOpts.count)+" random sentences"+where+". One you get wrong comes back at the end.";
+      $("gStart").onclick = startGame; $("gCancel").onclick = ()=>{ game = null; renderGame(); };
+      return;
+    }
     if (gameOpts.practice){
       // practice: every missed word plays, topped up with others so there's always enough
       const take = Math.min(n, gameOpts.count), fill = n ? practiceFill(gamePool([], gameOpts.mode, true).slice(0, take), gameOpts.mode, gameOpts.count).length : 0;
@@ -3518,6 +3586,7 @@ button.dfield{padding:0 12px;color:var(--ink)}
     if (!game) return;
     const body = $("gameBody"); body.innerHTML = "";
     if (game.phase==="setup") return renderGameSetup(body);
+    if (game.type!=="match") return renderSentGame(body);
     const n = game.pool.length, got = game.done.size;
     $("gameTitle").textContent = "Match game · "+(game.practice ? "Needs practice" : game.topics.length ? game.topics.join(", ") : "All topics");
     if (got===n){
@@ -3580,6 +3649,190 @@ button.dfield{padding:0 12px;color:var(--ink)}
     const days = state.wordStats.days, k = todayISO(), d = days[k] = days[k] || {games:0, pairs:0, mistakes:0, secs:0};
     d.games++; d.pairs += game.pool.length; d.mistakes += game.wrong; d.secs += Math.max(1, Math.round((game.end-game.start)/1000));
     save(); renderWordHome();   // the results below update straight away
+  }
+
+  // ----- Sentence games (owner's idea, like Duolingo): build the sentence from tiles, or fill the missing word -----
+  const HAN = /\p{Script=Han}/u, WORDCH = /[\p{L}\p{N}]/u;
+  const trimP = s=> s.replace(/^[^\p{L}\p{N}]+|[^\p{L}\p{N}]+$/gu, "");
+  const plainP = s=> String(s).normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
+  // the English tiles: first meaning only ("A / B"), without notes in brackets
+  const cleanMeaning = s=> String(s||"").split(" / ")[0].replace(/\s*\([^)]*\)/g, "").trim();
+  const meaningWords = w=> cleanMeaning(w.meaning).split(/\s+/).map(trimP).filter(Boolean);
+  // how many characters one pinyin word stands for: one per syllable, plus 儿 for an -r ending (nàr 那儿, yìdiǎnr 一点儿)
+  function sylCount(p){
+    const s = plainP(p).replace(/[^a-z']/g, "");
+    let n = s.split("'").reduce((k, part)=>k + (part.match(/[aeiou]+/g)||[]).length, 0);
+    if (/[aeioung]r$/.test(s) && !/(^|')er$/.test(s)) n++;
+    return n;
+  }
+  // a sentence as tiles [{t, p}]: words for languages written with spaces; for Chinese, pinyin written word by word
+  // (as in the ready-made lists) groups the characters. Otherwise the longest saved word that fits, else one character.
+  function splitSentence(text, pron){
+    if (!HAN.test(text)){ const ws = text.split(/\s+/).map(trimP).filter(Boolean); if (ws.length >= 2) return ws.map(t=>({t, p:""})); }
+    const u = []; let run = "";
+    for (const ch of text){
+      if (/[A-Za-z0-9]/.test(ch)){ run += ch; continue; }   // HSK, 10 stay one tile
+      if (run){ u.push(run); run = ""; }
+      if (WORDCH.test(ch)) u.push(ch);   // punctuation is left out
+    }
+    if (run) u.push(run);
+    const pw = String(pron||"").split(/\s+/).map(trimP).filter(Boolean);
+    if (pw.length && HAN.test(text)){
+      const out = []; let i = 0, ok = true;
+      for (const p of pw){
+        if (i < u.length && !HAN.test(u[i])){ if (plainP(u[i])!==plainP(p)){ ok = false; break; } out.push({t:u[i], p}); i++; continue; }
+        const n = sylCount(p);
+        if (!n || i + n > u.length || u.slice(i, i+n).some(c=>!HAN.test(c))){ ok = false; break; }
+        out.push({t:u.slice(i, i+n).join(""), p}); i += n;
+      }
+      if (ok && i===u.length) return out;
+    }
+    const known = new Map(); langWords().forEach(x=>{ if (kindOf(x)==="word") known.set(x.text.trim(), x.pron||""); });
+    const out = [];
+    for (let i = 0; i < u.length; ){
+      let k = Math.min(4, u.length - i);
+      while (k > 1 && !known.has(u.slice(i, i+k).join(""))) k--;
+      const t = u.slice(i, i+k).join(""); out.push({t, p:known.get(t)||""}); i += k;
+    }
+    return out;
+  }
+  let tokCache = new Map(), tokFor = -1;
+  function sentTokens(w){
+    if (tokFor!==state.words.length){ tokCache = new Map(); tokFor = state.words.length; }   // saved words changed: split again
+    const key = w.text+"\u0001"+(w.pron||"");
+    if (!tokCache.has(key)) tokCache.set(key, splitSentence(w.text, w.pron));
+    return tokCache.get(key);
+  }
+  function startSentGame(pool){
+    game = {phase:"play", type:gameOpts.type, dir:gameOpts.dir, hint:gameOpts.hint && !!wordLang().pron, topics:gameOpts.topics.slice(), practice:gameOpts.practice,
+      pool, queue:pool.map(w=>w.id), right:0, wrong:0, missed:new Set(), start:Date.now(), end:0, round:null};
+    nextRound(); renderGame(); $("gameCard").scrollIntoView({block:"start"});
+  }
+  function nextRound(){
+    const id = game.queue.shift();
+    if (!id){ game.round = null; return; }
+    const w = game.pool.find(x=>x.id===id), others = shuffle(langWords().filter(x=>x.id!==id && kindOf(x)==="sentence"));
+    const spaced = !HAN.test(w.text);
+    if (game.type==="build"){
+      const en = game.dir==="tm", norm = t=> en ? t.toLowerCase() : t;
+      const tilesOf = x=> en ? meaningWords(x).map(t=>({t, p:""})) : sentTokens(x);
+      const ans = tilesOf(w), have = new Set(ans.map(x=>norm(x.t))), extra = new Map();
+      // a few tiles from other sentences that aren't in this one
+      for (const o of others){ tilesOf(o).forEach(x=>{ const k = norm(x.t); if (!have.has(k) && !extra.has(k)) extra.set(k, x); }); if (extra.size >= 30) break; }
+      const bank = shuffle(ans.concat(shuffle([...extra.values()]).slice(0, ans.length > 8 ? 2 : 3))).map((x,k)=>({t:x.t, p:x.p, k}));
+      game.round = {id, w, en, ans, bank, picked:[], spaced: en || spaced, result:null};
+    } else {
+      // the missing tile: a real word (2+ characters, or 3+ letters) rather than a little one like 吗 or 了
+      const toks = sentTokens(w), big = x=> [...x.t].length >= (HAN.test(x.t) ? 2 : 3);
+      const cands = toks.map((x,i)=>big(x) ? i : -1).filter(i=>i>=0), from = cands.length ? cands : toks.map((_,i)=>i);
+      const gi = from[Math.floor(Math.random()*from.length)], ansT = toks[gi].t, len = [...ansT].length, inSent = new Set(toks.map(x=>x.t));
+      // the other choices: tiles from other sentences and saved words, the same length when possible
+      const pool = new Map();
+      for (const o of others){ sentTokens(o).forEach(x=>{ if (!inSent.has(x.t) && !pool.has(x.t)) pool.set(x.t, x); }); if (pool.size >= 200) break; }
+      langWords().forEach(x=>{ const t = x.text.trim(); if (kindOf(x)==="word" && t && !inSent.has(t) && !pool.has(t) && [...t].length <= 6) pool.set(t, {t, p:x.pron||""}); });
+      const all = shuffle([...pool.values()]), sameLen = all.filter(x=>[...x.t].length===len), rest = all.filter(x=>[...x.t].length!==len);
+      const opts = shuffle([toks[gi]].concat(sameLen.concat(rest).slice(0, 3)));
+      game.round = {id, w, toks, gi, opts, pick:null, spaced, result:null};
+    }
+  }
+  function checkRound(){
+    const r = game.round; if (!r || r.result) return;
+    const ok = game.type==="build"
+      ? (s=> r.en ? s.toLowerCase() : s)(r.picked.map(k=>r.bank[k].t).join(r.spaced ? " " : "")) === (s=> r.en ? s.toLowerCase() : s)(r.ans.map(x=>x.t).join(r.spaced ? " " : ""))
+      : r.pick!=null && r.opts[r.pick].t===r.toks[r.gi].t;
+    r.result = ok ? "ok" : "bad";
+    const miss = state.wordStats.miss;
+    if (ok){ game.right++; if (!game.missed.has(r.id) && miss[r.id]){ miss[r.id]--; if (!miss[r.id]) delete miss[r.id]; } }
+    else {
+      game.wrong++; game.queue.push(r.id);   // it comes back at the end of the game
+      if (!game.missed.has(r.id)){ miss[r.id] = Math.min(3, (miss[r.id]||0) + 1); game.missed.add(r.id); }
+    }
+    save(); renderGame();
+    const f = $("sgNext"); if (f) f.focus();
+  }
+  // where each tile sits in the sentence (and in its pinyin), so the gap can be shown in the real sentence with its punctuation
+  function gapParts(full, parts, gi){
+    let pos = 0;
+    for (let i = 0; i < parts.length; i++){
+      const at = parts[i] ? full.indexOf(parts[i], pos) : -1;
+      if (at < 0) return null;
+      if (i===gi) return [full.slice(0, at), full.slice(at + parts[i].length)];
+      pos = at + parts[i].length;
+    }
+    return null;
+  }
+  function renderSentGame(body){
+    const n = game.pool.length, L = wordLang(), tag = L.tag, r = game.round;
+    $("gameTitle").textContent = GAME_NAMES[game.type]+" · "+(game.practice ? "Needs practice" : game.topics.length ? game.topics.join(", ") : "All topics");
+    if (!r){
+      const secs = Math.max(1, Math.round((game.end-game.start)/1000));
+      body.innerHTML = '<div class="gamedone"><h3></h3><p class="gamestat"></p><div class="btns"><button class="btn-yes" id="gameAgain">Play again</button><button class="secondary" id="gameChange">Change</button><button class="secondary" id="gameDone">Close</button></div></div>';
+      body.querySelector("h3").textContent = game.wrong ? "All done!" : "Perfect! No mistakes.";
+      body.querySelector(".gamestat").textContent = cnt(n,"sentence","sentences")+" · "+(game.wrong===1 ? "1 mistake" : game.wrong+" mistakes")+" · "+secs+" s";
+      $("gameAgain").onclick = startGame;
+      $("gameChange").onclick = ()=>{ game = {phase:"setup"}; renderGame(); };
+      $("gameDone").onclick = ()=>{ game = null; renderWords(); };
+      $("gameAgain").focus();
+      return;
+    }
+    const w = r.w, done = !!r.result, el = (t, c)=>{ const e = document.createElement(t); if (c) e.className = c; return e; };
+    const zh = (text, cls)=>{ const d = el("div", cls||"zh"); d.lang = tag; d.dir = "auto"; d.textContent = text; return d; };
+    const sm = t=>{ const s = el("small"); s.textContent = t; return s; };
+    const bar = el("div", "sgbar"); bar.setAttribute("role","progressbar"); bar.setAttribute("aria-label","Sentences done");
+    bar.setAttribute("aria-valuemin", 0); bar.setAttribute("aria-valuemax", n); bar.setAttribute("aria-valuenow", game.right);
+    bar.innerHTML = "<i></i>"; bar.firstChild.style.width = (game.right/n*100)+"%";
+    const stat = el("p", "gamestat"); stat.textContent = game.right+" of "+n+" done"+(game.wrong ? " · "+(game.wrong===1 ? "1 mistake" : game.wrong+" mistakes") : "");
+    const ask = el("p", "sgask"), prompt = el("div", "sgprompt");
+    // one tile; pinyin above the characters when asked for (like Duolingo)
+    const tile = (x, pin)=>{ const b = el("button", "sgtile"); if (pin && x.p) b.appendChild(sm(x.p)); const s = el("span"); s.textContent = x.t; if (!r.en) s.lang = tag; b.appendChild(s); b.disabled = done; return b; };
+    body.append(bar, stat, ask, prompt);
+    if (game.type==="build"){
+      ask.textContent = "Translate this sentence";
+      if (r.en){ prompt.appendChild(zh(w.text)); if (game.hint && w.pron) prompt.appendChild(sm(w.pron)); }
+      else { const m = el("div", "en"); m.textContent = w.meaning; prompt.appendChild(m); }
+      const line = el("div", "sgline"); line.setAttribute("aria-label", "Your answer");
+      r.picked.forEach(k=>{ const b = tile(r.bank[k], !r.en && game.hint); b.setAttribute("aria-label", "Remove "+r.bank[k].t); b.onclick = ()=>{ r.picked = r.picked.filter(x=>x!==k); renderGame(); }; line.appendChild(b); });
+      if (!r.picked.length){ const h = el("span", "sghint"); h.textContent = "Tap the tiles below in the right order"; line.appendChild(h); }
+      const bank = el("div", "sgbank");
+      r.bank.forEach(x=>{
+        const b = tile(x, !r.en && game.hint);
+        if (r.picked.includes(x.k)){ b.classList.add("used"); b.disabled = true; b.setAttribute("aria-hidden","true"); }
+        else b.onclick = ()=>{ r.picked.push(x.k); renderGame(); };
+        bank.appendChild(b);
+      });
+      body.append(line, bank);
+    } else {
+      ask.textContent = "Fill in the missing word";
+      const tk = r.toks, cut = gapParts(w.text, tk.map(x=>x.t), r.gi);
+      const s = el("div", "zh"); s.lang = tag; s.dir = "auto";
+      const blank = el("span", "sgblank"); blank.textContent = r.pick!=null ? r.opts[r.pick].t : " ";
+      if (cut) s.append(cut[0], blank, cut[1]);
+      else tk.forEach((x,i)=>{ if (i && r.spaced) s.append(" "); s.append(i===r.gi ? blank : x.t); });
+      prompt.appendChild(s);
+      if (game.hint && w.pron){
+        const pc = tk.every(x=>x.p) ? gapParts(w.pron, tk.map(x=>x.p), r.gi) : null;
+        if (pc) prompt.appendChild(sm(pc[0]+"____"+pc[1]));
+      }
+      const m = el("div", "en"); m.textContent = w.meaning; prompt.appendChild(m);
+      const opts = el("div", "sgbank");
+      r.opts.forEach((x,i)=>{ const b = tile(x, false); b.setAttribute("aria-pressed", r.pick===i); b.onclick = ()=>{ r.pick = r.pick===i ? null : i; renderGame(); }; opts.appendChild(b); });
+      body.appendChild(opts);
+    }
+    const foot = el("div", "sgfoot");
+    if (!done){
+      const c = el("button", "btn-yes"); c.id = "sgCheck"; c.textContent = "Check";
+      c.disabled = game.type==="build" ? !r.picked.length : r.pick==null;
+      c.onclick = checkRound; foot.appendChild(c);
+    } else {
+      const fb = el("div", "sgfeed "+r.result); fb.setAttribute("role","status");
+      const h = el("b"); h.textContent = r.result==="ok" ? "✓ Correct!" : "✗ Not quite. The answer is:"; fb.appendChild(h);
+      if (game.type==="build" && r.en){ const a = el("div", "en"); a.textContent = w.meaning; fb.appendChild(a); }
+      else { if (w.pron) fb.appendChild(sm(w.pron)); fb.appendChild(zh(w.text)); }   // the meaning is already above
+      const c = el("button", "btn-yes"); c.id = "sgNext"; c.textContent = "Continue";
+      c.onclick = ()=>{ nextRound(); if (!game.round){ game.end = Date.now(); recordGame(); } renderGame(); };
+      foot.append(fb, c);
+    }
+    body.appendChild(foot);
   }
   function showWordBig(w){
     const h = $("bigHost"); h.innerHTML = "";
@@ -4023,7 +4276,9 @@ button.dfield{padding:0 12px;color:var(--ink)}
   $("contactNew").onclick = ()=>{ formOpen.contact="new:"; renderContacts(); };
   $("wordNew").onclick = ()=>{ formOpen.word="new"; renderWords(); };
   $("wordSearch").addEventListener("input", ()=>{ wordQuery = $("wordSearch").value; if ($("wordScroll")) $("wordScroll").scrollTop = 0; renderWordList(); });
-  $("gameBtn").onclick = ()=>openGameSetup(false);
+  $("gameBtn").onclick = ()=>openGameSetup(false, "match");
+  $("gameBuildBtn").onclick = ()=>openGameSetup(false, "build");
+  $("gameGapBtn").onclick = ()=>openGameSetup(false, "gap");
   $("wordBack").onclick = ()=>{ wordKind = null; wordTopic = null; manageOpen = false; topicAct = null; listEdit.word = false; wordSel.clear(); formOpen.word = null;
     wordQuery = ""; $("wordSearch").value = ""; renderWords(); $("pgWords").scrollIntoView({block:"start"}); };
   $("topicManageBtn").onclick = ()=>{ manageOpen = !manageOpen; topicAct = null; renderWords(); };
