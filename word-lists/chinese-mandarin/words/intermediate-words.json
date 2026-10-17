@@ -3,10 +3,11 @@
  "version": 1,
  "lang": "zh",
  "language": "Chinese (Mandarin)",
- "exportedAt": "2026-10-12T15:36:17+00:00",
+ "exportedAt": "2026-10-17T03:36:45+00:00",
  "words": [
   {
    "lang": "zh",
+   "kind": "word",
    "text": "起床",
    "pron": "qǐchuáng",
    "meaning": "Get up",
@@ -15,6 +16,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "睡觉",
    "pron": "shuìjiào",
    "meaning": "Sleep / go to bed",
@@ -23,6 +25,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "洗澡",
    "pron": "xǐzǎo",
    "meaning": "Take a shower / bath",
@@ -31,6 +34,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "刷牙",
    "pron": "shuāyá",
    "meaning": "Brush your teeth",
@@ -39,6 +43,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "做饭",
    "pron": "zuòfàn",
    "meaning": "Cook (a meal)",
@@ -47,6 +52,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "打扫",
    "pron": "dǎsǎo",
    "meaning": "Clean (up)",
@@ -55,6 +61,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "洗衣服",
    "pron": "xǐ yīfu",
    "meaning": "Do the laundry",
@@ -63,6 +70,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "回家",
    "pron": "huíjiā",
    "meaning": "Go home",
@@ -71,6 +79,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "上班",
    "pron": "shàngbān",
    "meaning": "Go to work",
@@ -79,6 +88,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "下班",
    "pron": "xiàbān",
    "meaning": "Finish work",
@@ -87,6 +97,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "休息",
    "pron": "xiūxi",
    "meaning": "Rest",
@@ -95,6 +106,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "等",
    "pron": "děng",
    "meaning": "Wait",
@@ -103,6 +115,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "找",
    "pron": "zhǎo",
    "meaning": "Look for",
@@ -111,6 +124,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "借",
    "pron": "jiè",
    "meaning": "Borrow / lend",
@@ -119,6 +133,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "还",
    "pron": "huán",
    "meaning": "Give back / return",
@@ -127,6 +142,25 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
+   "text": "身份证",
+   "pron": "shēnfènzhèng",
+   "meaning": "ID card",
+   "topic": "Daily life",
+   "note": "บัตรประชาชน"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "排队",
+   "pron": "páiduì",
+   "meaning": "Queue / line up",
+   "topic": "Daily life",
+   "note": "เข้าแถว, ต่อคิว"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
    "text": "帮助",
    "pron": "bāngzhù",
    "meaning": "Help",
@@ -135,6 +169,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "告诉",
    "pron": "gàosu",
    "meaning": "Tell",
@@ -143,6 +178,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "记得",
    "pron": "jìde",
    "meaning": "Remember",
@@ -151,6 +187,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "忘记",
    "pron": "wàngjì",
    "meaning": "Forget",
@@ -159,6 +196,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "学习",
    "pron": "xuéxí",
    "meaning": "Study / learn",
@@ -167,6 +205,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "复习",
    "pron": "fùxí",
    "meaning": "Review (lessons)",
@@ -175,6 +214,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "预习",
    "pron": "yùxí",
    "meaning": "Prepare a lesson before class",
@@ -183,6 +223,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "练习",
    "pron": "liànxí",
    "meaning": "Practise / exercise",
@@ -191,6 +232,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "回答",
    "pron": "huídá",
    "meaning": "Answer",
@@ -199,6 +241,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "问题",
    "pron": "wèntí",
    "meaning": "Question / problem",
@@ -207,6 +250,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "上课",
    "pron": "shàngkè",
    "meaning": "Attend class / class starts",
@@ -215,6 +259,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "下课",
    "pron": "xiàkè",
    "meaning": "Class is over",
@@ -223,6 +268,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "请假",
    "pron": "qǐngjià",
    "meaning": "Ask for leave",
@@ -231,6 +277,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "迟到",
    "pron": "chídào",
    "meaning": "Be late",
@@ -239,6 +286,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "成绩",
    "pron": "chéngjì",
    "meaning": "Grades / results",
@@ -247,6 +295,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "留学生",
    "pron": "liúxuéshēng",
    "meaning": "International student",
@@ -255,6 +304,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "专业",
    "pron": "zhuānyè",
    "meaning": "Major (subject)",
@@ -263,6 +313,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "毕业",
    "pron": "bìyè",
    "meaning": "Graduate",
@@ -271,6 +322,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "奖学金",
    "pron": "jiǎngxuéjīn",
    "meaning": "Scholarship",
@@ -279,6 +331,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "论文",
    "pron": "lùnwén",
    "meaning": "Thesis / paper",
@@ -287,6 +340,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "词典",
    "pron": "cídiǎn",
    "meaning": "Dictionary",
@@ -295,6 +349,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "语法",
    "pron": "yǔfǎ",
    "meaning": "Grammar",
@@ -303,6 +358,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "句子",
    "pron": "jùzi",
    "meaning": "Sentence",
@@ -311,6 +367,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "意思",
    "pron": "yìsi",
    "meaning": "Meaning",
@@ -319,6 +376,25 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
+   "text": "学期",
+   "pron": "xuéqī",
+   "meaning": "Semester / term",
+   "topic": "School",
+   "note": "ภาคเรียน, เทอม"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "课本",
+   "pron": "kèběn",
+   "meaning": "Textbook",
+   "topic": "School",
+   "note": "หนังสือเรียน"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
    "text": "工作",
    "pron": "gōngzuò",
    "meaning": "Job / to work",
@@ -327,6 +403,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "公司",
    "pron": "gōngsī",
    "meaning": "Company",
@@ -335,6 +412,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "经理",
    "pron": "jīnglǐ",
    "meaning": "Manager",
@@ -343,6 +421,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "同事",
    "pron": "tóngshì",
    "meaning": "Colleague",
@@ -351,6 +430,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "会议",
    "pron": "huìyì",
    "meaning": "Meeting",
@@ -359,6 +439,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "办公室",
    "pron": "bàngōngshì",
    "meaning": "Office",
@@ -367,6 +448,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "工资",
    "pron": "gōngzī",
    "meaning": "Salary / wages",
@@ -375,6 +457,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "面试",
    "pron": "miànshì",
    "meaning": "Job interview",
@@ -383,6 +466,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "简历",
    "pron": "jiǎnlì",
    "meaning": "CV / résumé",
@@ -391,6 +475,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "打工",
    "pron": "dǎgōng",
    "meaning": "Part-time job",
@@ -399,6 +484,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "加班",
    "pron": "jiābān",
    "meaning": "Work overtime",
@@ -407,6 +493,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "经验",
    "pron": "jīngyàn",
    "meaning": "Experience",
@@ -415,6 +502,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "能力",
    "pron": "nénglì",
    "meaning": "Ability",
@@ -423,6 +511,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "机会",
    "pron": "jīhuì",
    "meaning": "Opportunity / chance",
@@ -431,6 +520,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "职业",
    "pron": "zhíyè",
    "meaning": "Occupation",
@@ -439,6 +529,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "医生",
    "pron": "yīshēng",
    "meaning": "Doctor",
@@ -447,6 +538,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "护士",
    "pron": "hùshi",
    "meaning": "Nurse",
@@ -455,6 +547,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "警察",
    "pron": "jǐngchá",
    "meaning": "Police officer",
@@ -463,6 +556,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "司机",
    "pron": "sījī",
    "meaning": "Driver",
@@ -471,6 +565,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "服务员",
    "pron": "fúwùyuán",
    "meaning": "Waiter / staff",
@@ -479,6 +574,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "高兴",
    "pron": "gāoxìng",
    "meaning": "Happy",
@@ -487,6 +583,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "难过",
    "pron": "nánguò",
    "meaning": "Sad",
@@ -495,6 +592,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "生气",
    "pron": "shēngqì",
    "meaning": "Angry",
@@ -503,6 +601,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "担心",
    "pron": "dānxīn",
    "meaning": "Worried",
@@ -511,6 +610,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "害怕",
    "pron": "hàipà",
    "meaning": "Afraid",
@@ -519,6 +619,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "紧张",
    "pron": "jǐnzhāng",
    "meaning": "Nervous",
@@ -527,6 +628,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "放心",
    "pron": "fàngxīn",
    "meaning": "Feel at ease / don't worry",
@@ -535,6 +637,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "满意",
    "pron": "mǎnyì",
    "meaning": "Satisfied",
@@ -543,6 +646,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "失望",
    "pron": "shīwàng",
    "meaning": "Disappointed",
@@ -551,6 +655,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "无聊",
    "pron": "wúliáo",
    "meaning": "Bored / boring",
@@ -559,6 +664,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "累",
    "pron": "lèi",
    "meaning": "Tired",
@@ -567,6 +673,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "感动",
    "pron": "gǎndòng",
    "meaning": "Moved (emotionally)",
@@ -575,6 +682,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "想家",
    "pron": "xiǎngjiā",
    "meaning": "Homesick",
@@ -583,6 +691,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "孤独",
    "pron": "gūdú",
    "meaning": "Lonely",
@@ -591,6 +700,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "友好",
    "pron": "yǒuhǎo",
    "meaning": "Friendly",
@@ -599,6 +709,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "热情",
    "pron": "rèqíng",
    "meaning": "Warm and welcoming",
@@ -607,6 +718,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "认真",
    "pron": "rènzhēn",
    "meaning": "Conscientious / serious",
@@ -615,6 +727,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "聪明",
    "pron": "cōngming",
    "meaning": "Clever",
@@ -623,6 +736,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "努力",
    "pron": "nǔlì",
    "meaning": "Hard-working / make an effort",
@@ -631,6 +745,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "害羞",
    "pron": "hàixiū",
    "meaning": "Shy",
@@ -639,6 +754,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "舒服",
    "pron": "shūfu",
    "meaning": "Comfortable",
@@ -647,6 +763,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "奇怪",
    "pron": "qíguài",
    "meaning": "Strange",
@@ -655,6 +772,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "特别",
    "pron": "tèbié",
    "meaning": "Special / especially",
@@ -663,6 +781,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "正常",
    "pron": "zhèngcháng",
    "meaning": "Normal",
@@ -671,6 +790,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "贵",
    "pron": "guì",
    "meaning": "Expensive",
@@ -679,6 +799,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "便宜",
    "pron": "piányi",
    "meaning": "Cheap",
@@ -687,6 +808,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "干净",
    "pron": "gānjìng",
    "meaning": "Clean",
@@ -695,6 +817,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "脏",
    "pron": "zāng",
    "meaning": "Dirty",
@@ -703,6 +826,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "安静",
    "pron": "ānjìng",
    "meaning": "Quiet",
@@ -711,6 +835,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "热闹",
    "pron": "rènao",
    "meaning": "Lively / busy",
@@ -719,6 +844,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "方便",
    "pron": "fāngbiàn",
    "meaning": "Convenient",
@@ -727,6 +853,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "重要",
    "pron": "zhòngyào",
    "meaning": "Important",
@@ -735,6 +862,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "简单",
    "pron": "jiǎndān",
    "meaning": "Simple",
@@ -743,6 +871,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "复杂",
    "pron": "fùzá",
    "meaning": "Complicated",
@@ -751,6 +880,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "容易",
    "pron": "róngyì",
    "meaning": "Easy",
@@ -759,6 +889,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "难",
    "pron": "nán",
    "meaning": "Difficult",
@@ -767,6 +898,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "漂亮",
    "pron": "piàoliang",
    "meaning": "Beautiful / pretty",
@@ -775,6 +907,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "有意思",
    "pron": "yǒu yìsi",
    "meaning": "Interesting / fun",
@@ -783,6 +916,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "身体",
    "pron": "shēntǐ",
    "meaning": "Body / health",
@@ -791,6 +925,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "健康",
    "pron": "jiànkāng",
    "meaning": "Healthy / health",
@@ -799,6 +934,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "生病",
    "pron": "shēngbìng",
    "meaning": "Get sick",
@@ -807,6 +943,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "感冒",
    "pron": "gǎnmào",
    "meaning": "Cold / catch a cold",
@@ -815,6 +952,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "发烧",
    "pron": "fāshāo",
    "meaning": "Have a fever",
@@ -823,6 +961,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "咳嗽",
    "pron": "késou",
    "meaning": "Cough",
@@ -831,6 +970,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "头疼",
    "pron": "tóuténg",
    "meaning": "Headache",
@@ -839,6 +979,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "肚子疼",
    "pron": "dùzi téng",
    "meaning": "Stomach ache",
@@ -847,6 +988,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "过敏",
    "pron": "guòmǐn",
    "meaning": "Allergy / be allergic",
@@ -855,6 +997,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "药",
    "pron": "yào",
    "meaning": "Medicine",
@@ -863,6 +1006,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "吃药",
    "pron": "chī yào",
    "meaning": "Take medicine",
@@ -871,6 +1015,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "看病",
    "pron": "kànbìng",
    "meaning": "See a doctor",
@@ -879,6 +1024,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "挂号",
    "pron": "guàhào",
    "meaning": "Register (at a hospital)",
@@ -887,6 +1033,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "打针",
    "pron": "dǎzhēn",
    "meaning": "Get an injection",
@@ -895,6 +1042,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "检查",
    "pron": "jiǎnchá",
    "meaning": "Check-up / examine",
@@ -903,6 +1051,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "受伤",
    "pron": "shòushāng",
    "meaning": "Get injured",
@@ -911,6 +1060,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "急诊",
    "pron": "jízhěn",
    "meaning": "Emergency room",
@@ -919,6 +1069,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "保险",
    "pron": "bǎoxiǎn",
    "meaning": "Insurance",
@@ -927,6 +1078,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "买",
    "pron": "mǎi",
    "meaning": "Buy",
@@ -935,6 +1087,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "卖",
    "pron": "mài",
    "meaning": "Sell",
@@ -943,6 +1096,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "价格",
    "pron": "jiàgé",
    "meaning": "Price",
@@ -951,6 +1105,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "打折",
    "pron": "dǎzhé",
    "meaning": "Discount / on sale",
@@ -959,6 +1114,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "付钱",
    "pron": "fùqián",
    "meaning": "Pay",
@@ -967,6 +1123,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "现金",
    "pron": "xiànjīn",
    "meaning": "Cash",
@@ -975,6 +1132,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "刷卡",
    "pron": "shuākǎ",
    "meaning": "Pay by card",
@@ -983,6 +1141,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "扫码",
    "pron": "sǎomǎ",
    "meaning": "Scan a QR code",
@@ -991,6 +1150,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "支付宝",
    "pron": "Zhīfùbǎo",
    "meaning": "Alipay",
@@ -999,6 +1159,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "微信",
    "pron": "Wēixìn",
    "meaning": "WeChat",
@@ -1007,6 +1168,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "找钱",
    "pron": "zhǎoqián",
    "meaning": "Give change",
@@ -1015,6 +1177,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "发票",
    "pron": "fāpiào",
    "meaning": "Receipt / invoice",
@@ -1023,6 +1186,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "退货",
    "pron": "tuìhuò",
    "meaning": "Return goods",
@@ -1031,6 +1195,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "网购",
    "pron": "wǎnggòu",
    "meaning": "Online shopping",
@@ -1039,6 +1204,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "快递",
    "pron": "kuàidì",
    "meaning": "Parcel delivery / courier",
@@ -1047,6 +1213,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "外卖",
    "pron": "wàimài",
    "meaning": "Food delivery / takeaway",
@@ -1055,6 +1222,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "尺寸",
    "pron": "chǐcùn",
    "meaning": "Size",
@@ -1063,6 +1231,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "试",
    "pron": "shì",
    "meaning": "Try (on)",
@@ -1071,6 +1240,25 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
+   "text": "银行卡",
+   "pron": "yínhángkǎ",
+   "meaning": "Bank card",
+   "topic": "Shopping",
+   "note": "บัตรธนาคาร"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "信用卡",
+   "pron": "xìnyòngkǎ",
+   "meaning": "Credit card",
+   "topic": "Shopping",
+   "note": "บัตรเครดิต"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
    "text": "衣服",
    "pron": "yīfu",
    "meaning": "Clothes",
@@ -1079,6 +1267,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "衬衫",
    "pron": "chènshān",
    "meaning": "Shirt",
@@ -1087,6 +1276,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "T恤",
    "pron": "T xù",
    "meaning": "T-shirt",
@@ -1095,6 +1285,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "裤子",
    "pron": "kùzi",
    "meaning": "Trousers",
@@ -1103,6 +1294,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "裙子",
    "pron": "qúnzi",
    "meaning": "Skirt / dress",
@@ -1111,6 +1303,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "外套",
    "pron": "wàitào",
    "meaning": "Coat / jacket",
@@ -1119,6 +1312,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "鞋",
    "pron": "xié",
    "meaning": "Shoes",
@@ -1127,6 +1321,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "袜子",
    "pron": "wàzi",
    "meaning": "Socks",
@@ -1135,6 +1330,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "帽子",
    "pron": "màozi",
    "meaning": "Hat",
@@ -1143,6 +1339,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "眼镜",
    "pron": "yǎnjìng",
    "meaning": "Glasses",
@@ -1151,6 +1348,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "手表",
    "pron": "shǒubiǎo",
    "meaning": "Watch",
@@ -1159,6 +1357,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "穿",
    "pron": "chuān",
    "meaning": "Wear (clothes, shoes)",
@@ -1167,6 +1366,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "房间",
    "pron": "fángjiān",
    "meaning": "Room",
@@ -1175,6 +1375,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "客厅",
    "pron": "kètīng",
    "meaning": "Living room",
@@ -1183,6 +1384,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "厨房",
    "pron": "chúfáng",
    "meaning": "Kitchen",
@@ -1191,6 +1393,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "卧室",
    "pron": "wòshì",
    "meaning": "Bedroom",
@@ -1199,6 +1402,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "床",
    "pron": "chuáng",
    "meaning": "Bed",
@@ -1207,6 +1411,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "桌子",
    "pron": "zhuōzi",
    "meaning": "Table / desk",
@@ -1215,6 +1420,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "椅子",
    "pron": "yǐzi",
    "meaning": "Chair",
@@ -1223,6 +1429,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "窗户",
    "pron": "chuānghu",
    "meaning": "Window",
@@ -1231,6 +1438,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "钥匙",
    "pron": "yàoshi",
    "meaning": "Key",
@@ -1239,6 +1447,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "冰箱",
    "pron": "bīngxiāng",
    "meaning": "Fridge",
@@ -1247,6 +1456,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "空调",
    "pron": "kōngtiáo",
    "meaning": "Air conditioner",
@@ -1255,6 +1465,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "洗衣机",
    "pron": "xǐyījī",
    "meaning": "Washing machine",
@@ -1263,6 +1474,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "房租",
    "pron": "fángzū",
    "meaning": "Rent",
@@ -1271,6 +1483,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "房东",
    "pron": "fángdōng",
    "meaning": "Landlord",
@@ -1279,6 +1492,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "邻居",
    "pron": "línjū",
    "meaning": "Neighbour",
@@ -1287,6 +1501,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "搬家",
    "pron": "bānjiā",
    "meaning": "Move house",
@@ -1295,6 +1510,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "垃圾",
    "pron": "lājī",
    "meaning": "Rubbish",
@@ -1303,6 +1519,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "电费",
    "pron": "diànfèi",
    "meaning": "Electricity bill",
@@ -1311,6 +1528,16 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
+   "text": "地址",
+   "pron": "dìzhǐ",
+   "meaning": "Address",
+   "topic": "Home",
+   "note": "ที่อยู่"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
    "text": "旅游",
    "pron": "lǚyóu",
    "meaning": "Travel / tourism",
@@ -1319,6 +1546,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "护照",
    "pron": "hùzhào",
    "meaning": "Passport",
@@ -1327,6 +1555,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "签证",
    "pron": "qiānzhèng",
    "meaning": "Visa",
@@ -1335,6 +1564,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "行李",
    "pron": "xíngli",
    "meaning": "Luggage",
@@ -1343,6 +1573,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "机票",
    "pron": "jīpiào",
    "meaning": "Plane ticket",
@@ -1351,6 +1582,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "酒店",
    "pron": "jiǔdiàn",
    "meaning": "Hotel",
@@ -1359,6 +1591,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "预订",
    "pron": "yùdìng",
    "meaning": "Book / reserve",
@@ -1367,6 +1600,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "地图",
    "pron": "dìtú",
    "meaning": "Map",
@@ -1375,6 +1609,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "导航",
    "pron": "dǎoháng",
    "meaning": "Navigation (GPS)",
@@ -1383,6 +1618,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "左边",
    "pron": "zuǒbian",
    "meaning": "Left side",
@@ -1391,6 +1627,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "右边",
    "pron": "yòubian",
    "meaning": "Right side",
@@ -1399,6 +1636,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "旁边",
    "pron": "pángbiān",
    "meaning": "Next to / beside",
@@ -1407,6 +1645,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "对面",
    "pron": "duìmiàn",
    "meaning": "Opposite",
@@ -1415,6 +1654,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "一直走",
    "pron": "yìzhí zǒu",
    "meaning": "Go straight ahead",
@@ -1423,6 +1663,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "拐",
    "pron": "guǎi",
    "meaning": "Turn (a corner)",
@@ -1431,6 +1672,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "路口",
    "pron": "lùkǒu",
    "meaning": "Junction / crossroads",
@@ -1439,6 +1681,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "附近",
    "pron": "fùjìn",
    "meaning": "Nearby",
@@ -1447,6 +1690,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "远",
    "pron": "yuǎn",
    "meaning": "Far",
@@ -1455,6 +1699,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "城市",
    "pron": "chéngshì",
    "meaning": "City",
@@ -1463,6 +1708,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "公园",
    "pron": "gōngyuán",
    "meaning": "Park",
@@ -1471,6 +1717,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "博物馆",
    "pron": "bówùguǎn",
    "meaning": "Museum",
@@ -1479,6 +1726,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "电影院",
    "pron": "diànyǐngyuàn",
    "meaning": "Cinema",
@@ -1487,6 +1735,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "健身房",
    "pron": "jiànshēnfáng",
    "meaning": "Gym",
@@ -1495,6 +1744,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "咖啡馆",
    "pron": "kāfēiguǎn",
    "meaning": "Café",
@@ -1503,6 +1753,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "邮局",
    "pron": "yóujú",
    "meaning": "Post office",
@@ -1511,6 +1762,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "派出所",
    "pron": "pàichūsuǒ",
    "meaning": "Police station",
@@ -1519,6 +1771,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "大使馆",
    "pron": "dàshǐguǎn",
    "meaning": "Embassy",
@@ -1527,6 +1780,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "商场",
    "pron": "shāngchǎng",
    "meaning": "Shopping mall",
@@ -1535,6 +1789,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "菜市场",
    "pron": "càishìchǎng",
    "meaning": "Food market",
@@ -1543,6 +1798,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "电梯",
    "pron": "diàntī",
    "meaning": "Lift / elevator",
@@ -1551,6 +1807,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "入口",
    "pron": "rùkǒu",
    "meaning": "Entrance",
@@ -1559,6 +1816,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "出口",
    "pron": "chūkǒu",
    "meaning": "Exit",
@@ -1567,6 +1825,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "菜单",
    "pron": "càidān",
    "meaning": "Menu",
@@ -1575,6 +1834,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "点菜",
    "pron": "diǎncài",
    "meaning": "Order food",
@@ -1583,6 +1843,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "好吃",
    "pron": "hǎochī",
    "meaning": "Tasty",
@@ -1591,6 +1852,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "辣",
    "pron": "là",
    "meaning": "Spicy",
@@ -1599,6 +1861,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "甜",
    "pron": "tián",
    "meaning": "Sweet",
@@ -1607,6 +1870,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "酸",
    "pron": "suān",
    "meaning": "Sour",
@@ -1615,6 +1879,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "咸",
    "pron": "xián",
    "meaning": "Salty",
@@ -1623,6 +1888,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "油",
    "pron": "yóu",
    "meaning": "Oil",
@@ -1631,6 +1897,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "酱油",
    "pron": "jiàngyóu",
    "meaning": "Soy sauce",
@@ -1639,6 +1906,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "炒",
    "pron": "chǎo",
    "meaning": "Stir-fry",
@@ -1647,6 +1915,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "煮",
    "pron": "zhǔ",
    "meaning": "Boil",
@@ -1655,6 +1924,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "烤",
    "pron": "kǎo",
    "meaning": "Roast / grill",
@@ -1663,6 +1933,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "蒸",
    "pron": "zhēng",
    "meaning": "Steam",
@@ -1671,6 +1942,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "筷子",
    "pron": "kuàizi",
    "meaning": "Chopsticks",
@@ -1679,6 +1951,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "勺子",
    "pron": "sháozi",
    "meaning": "Spoon",
@@ -1687,6 +1960,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "碗",
    "pron": "wǎn",
    "meaning": "Bowl",
@@ -1695,6 +1969,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "盘子",
    "pron": "pánzi",
    "meaning": "Plate",
@@ -1703,6 +1978,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "打包",
    "pron": "dǎbāo",
    "meaning": "Take away (pack up food)",
@@ -1711,6 +1987,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "山",
    "pron": "shān",
    "meaning": "Mountain",
@@ -1719,6 +1996,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "河",
    "pron": "hé",
    "meaning": "River",
@@ -1727,6 +2005,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "海",
    "pron": "hǎi",
    "meaning": "Sea",
@@ -1735,6 +2014,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "树",
    "pron": "shù",
    "meaning": "Tree",
@@ -1743,6 +2023,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "花",
    "pron": "huā",
    "meaning": "Flower",
@@ -1751,6 +2032,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "天空",
    "pron": "tiānkōng",
    "meaning": "Sky",
@@ -1759,6 +2041,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "月亮",
    "pron": "yuèliang",
    "meaning": "Moon",
@@ -1767,6 +2050,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "环境",
    "pron": "huánjìng",
    "meaning": "Environment",
@@ -1775,6 +2059,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "空气",
    "pron": "kōngqì",
    "meaning": "Air",
@@ -1783,6 +2068,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "季节",
    "pron": "jìjié",
    "meaning": "Season",
@@ -1791,6 +2077,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "春天",
    "pron": "chūntiān",
    "meaning": "Spring",
@@ -1799,6 +2086,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "夏天",
    "pron": "xiàtiān",
    "meaning": "Summer",
@@ -1807,6 +2095,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "秋天",
    "pron": "qiūtiān",
    "meaning": "Autumn",
@@ -1815,6 +2104,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "冬天",
    "pron": "dōngtiān",
    "meaning": "Winter",
@@ -1823,6 +2113,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "网络",
    "pron": "wǎngluò",
    "meaning": "Internet / network",
@@ -1831,6 +2122,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "密码",
    "pron": "mìmǎ",
    "meaning": "Password",
@@ -1839,6 +2131,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "下载",
    "pron": "xiàzài",
    "meaning": "Download",
@@ -1847,6 +2140,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "上网",
    "pron": "shàngwǎng",
    "meaning": "Go online",
@@ -1855,6 +2149,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "充电",
    "pron": "chōngdiàn",
    "meaning": "Charge (a battery)",
@@ -1863,6 +2158,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "充电器",
    "pron": "chōngdiànqì",
    "meaning": "Charger",
@@ -1871,6 +2167,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "号码",
    "pron": "hàomǎ",
    "meaning": "Number (phone, room…)",
@@ -1879,6 +2176,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "打电话",
    "pron": "dǎ diànhuà",
    "meaning": "Make a phone call",
@@ -1887,6 +2185,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "照片",
    "pron": "zhàopiàn",
    "meaning": "Photo",
@@ -1895,6 +2194,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "拍照",
    "pron": "pāizhào",
    "meaning": "Take a photo",
@@ -1903,6 +2203,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "视频",
    "pron": "shìpín",
    "meaning": "Video",
@@ -1911,6 +2212,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "软件",
    "pron": "ruǎnjiàn",
    "meaning": "App / software",
@@ -1919,6 +2221,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "账号",
    "pron": "zhànghào",
    "meaning": "Account (online)",
@@ -1927,6 +2230,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "二维码",
    "pron": "èrwéimǎ",
    "meaning": "QR code",
@@ -1935,6 +2239,25 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
+   "text": "打印",
+   "pron": "dǎyìn",
+   "meaning": "Print",
+   "topic": "Technology",
+   "note": "พิมพ์ (เอกสาร)"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "复印",
+   "pron": "fùyìn",
+   "meaning": "Photocopy",
+   "topic": "Technology",
+   "note": "ถ่ายเอกสาร"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
    "text": "爱好",
    "pron": "àihào",
    "meaning": "Hobby",
@@ -1943,6 +2266,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "跑步",
    "pron": "pǎobù",
    "meaning": "Run / jogging",
@@ -1951,6 +2275,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "游泳",
    "pron": "yóuyǒng",
    "meaning": "Swim",
@@ -1959,6 +2284,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "踢足球",
    "pron": "tī zúqiú",
    "meaning": "Play football",
@@ -1967,6 +2293,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "打篮球",
    "pron": "dǎ lánqiú",
    "meaning": "Play basketball",
@@ -1975,6 +2302,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "唱歌",
    "pron": "chànggē",
    "meaning": "Sing",
@@ -1983,6 +2311,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "跳舞",
    "pron": "tiàowǔ",
    "meaning": "Dance",
@@ -1991,6 +2320,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "画画",
    "pron": "huàhuà",
    "meaning": "Draw / paint",
@@ -1999,6 +2329,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "看电影",
    "pron": "kàn diànyǐng",
    "meaning": "Watch a film",
@@ -2007,6 +2338,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "听音乐",
    "pron": "tīng yīnyuè",
    "meaning": "Listen to music",
@@ -2015,6 +2347,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "玩游戏",
    "pron": "wán yóuxì",
    "meaning": "Play games",
@@ -2023,6 +2356,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "爬山",
    "pron": "páshān",
    "meaning": "Hike / climb a mountain",
@@ -2031,6 +2365,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "逛街",
    "pron": "guàngjiē",
    "meaning": "Go shopping (stroll around)",
@@ -2039,6 +2374,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "比赛",
    "pron": "bǐsài",
    "meaning": "Competition / match",
@@ -2047,6 +2383,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "以前",
    "pron": "yǐqián",
    "meaning": "Before / in the past",
@@ -2055,6 +2392,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "以后",
    "pron": "yǐhòu",
    "meaning": "After / later",
@@ -2063,6 +2401,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "刚才",
    "pron": "gāngcái",
    "meaning": "Just now",
@@ -2071,6 +2410,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "马上",
    "pron": "mǎshàng",
    "meaning": "Right away",
@@ -2079,6 +2419,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "已经",
    "pron": "yǐjīng",
    "meaning": "Already",
@@ -2087,6 +2428,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "还没",
    "pron": "hái méi",
    "meaning": "Not yet",
@@ -2095,6 +2437,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "经常",
    "pron": "jīngcháng",
    "meaning": "Often",
@@ -2103,6 +2446,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "有时候",
    "pron": "yǒushíhou",
    "meaning": "Sometimes",
@@ -2111,6 +2455,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "总是",
    "pron": "zǒngshì",
    "meaning": "Always",
@@ -2119,6 +2464,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "从来",
    "pron": "cónglái",
    "meaning": "Ever (with 不/没: never)",
@@ -2127,6 +2473,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "最近",
    "pron": "zuìjìn",
    "meaning": "Recently",
@@ -2135,6 +2482,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "将来",
    "pron": "jiānglái",
    "meaning": "The future",
@@ -2143,6 +2491,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "上个月",
    "pron": "shàng ge yuè",
    "meaning": "Last month",
@@ -2151,6 +2500,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "下个星期",
    "pron": "xià ge xīngqī",
    "meaning": "Next week",
@@ -2159,6 +2509,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "每天",
    "pron": "měitiān",
    "meaning": "Every day",
@@ -2167,6 +2518,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "半天",
    "pron": "bàntiān",
    "meaning": "Half a day / a long time",
@@ -2175,6 +2527,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "一会儿",
    "pron": "yíhuìr",
    "meaning": "A moment",
@@ -2183,6 +2536,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "准时",
    "pron": "zhǔnshí",
    "meaning": "On time",
@@ -2191,6 +2545,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "因为",
    "pron": "yīnwèi",
    "meaning": "Because",
@@ -2199,6 +2554,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "所以",
    "pron": "suǒyǐ",
    "meaning": "So / therefore",
@@ -2207,6 +2563,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "但是",
    "pron": "dànshì",
    "meaning": "But",
@@ -2215,6 +2572,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "虽然",
    "pron": "suīrán",
    "meaning": "Although",
@@ -2223,6 +2581,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "如果",
    "pron": "rúguǒ",
    "meaning": "If",
@@ -2231,6 +2590,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "或者",
    "pron": "huòzhě",
    "meaning": "Or (in statements)",
@@ -2239,6 +2599,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "还是",
    "pron": "háishi",
    "meaning": "Or (in questions)",
@@ -2247,6 +2608,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "而且",
    "pron": "érqiě",
    "meaning": "And also / moreover",
@@ -2255,6 +2617,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "然后",
    "pron": "ránhòu",
    "meaning": "Then / after that",
@@ -2263,6 +2626,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "一起",
    "pron": "yìqǐ",
    "meaning": "Together",
@@ -2271,6 +2635,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "一定",
    "pron": "yídìng",
    "meaning": "Definitely / must",
@@ -2279,6 +2644,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "可能",
    "pron": "kěnéng",
    "meaning": "Maybe / possible",
@@ -2287,6 +2653,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "应该",
    "pron": "yīnggāi",
    "meaning": "Should",
@@ -2295,6 +2662,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "必须",
    "pron": "bìxū",
    "meaning": "Must",
@@ -2303,6 +2671,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "需要",
    "pron": "xūyào",
    "meaning": "Need",
@@ -2311,6 +2680,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "希望",
    "pron": "xīwàng",
    "meaning": "Hope",
@@ -2319,6 +2689,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "觉得",
    "pron": "juéde",
    "meaning": "Feel / think",
@@ -2327,83 +2698,12 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "决定",
    "pron": "juédìng",
    "meaning": "Decide",
    "topic": "Linking words",
    "note": "ตัดสินใจ"
-  },
-  {
-   "lang": "zh",
-   "text": "没关系",
-   "pron": "méi guānxi",
-   "meaning": "It doesn't matter / no problem",
-   "topic": "Useful phrases",
-   "note": "ไม่เป็นไร"
-  },
-  {
-   "lang": "zh",
-   "text": "不好意思",
-   "pron": "bù hǎoyìsi",
-   "meaning": "Excuse me / sorry",
-   "topic": "Useful phrases",
-   "note": "ขอโทษ, เกรงใจ"
-  },
-  {
-   "lang": "zh",
-   "text": "麻烦你",
-   "pron": "máfan nǐ",
-   "meaning": "Sorry to trouble you",
-   "topic": "Useful phrases",
-   "note": "รบกวนหน่อย"
-  },
-  {
-   "lang": "zh",
-   "text": "请问",
-   "pron": "qǐngwèn",
-   "meaning": "Excuse me, may I ask…",
-   "topic": "Useful phrases",
-   "note": "ขอถามหน่อย"
-  },
-  {
-   "lang": "zh",
-   "text": "慢一点",
-   "pron": "màn yìdiǎn",
-   "meaning": "A bit slower, please",
-   "topic": "Useful phrases",
-   "note": "ช้าลงหน่อย"
-  },
-  {
-   "lang": "zh",
-   "text": "再说一遍",
-   "pron": "zài shuō yí biàn",
-   "meaning": "Say it again, please",
-   "topic": "Useful phrases",
-   "note": "พูดอีกครั้งได้ไหม"
-  },
-  {
-   "lang": "zh",
-   "text": "听不懂",
-   "pron": "tīng bu dǒng",
-   "meaning": "I don't understand (what I hear)",
-   "topic": "Useful phrases",
-   "note": "ฟังไม่เข้าใจ"
-  },
-  {
-   "lang": "zh",
-   "text": "没问题",
-   "pron": "méi wèntí",
-   "meaning": "No problem",
-   "topic": "Useful phrases",
-   "note": "ไม่มีปัญหา"
-  },
-  {
-   "lang": "zh",
-   "text": "加油",
-   "pron": "jiāyóu",
-   "meaning": "Keep going! / You can do it!",
-   "topic": "Useful phrases",
-   "note": "สู้ ๆ"
   }
  ]
 }

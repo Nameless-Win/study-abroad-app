@@ -3,10 +3,11 @@
  "version": 1,
  "lang": "zh",
  "language": "Chinese (Mandarin)",
- "exportedAt": "2026-10-12T12:32:12+00:00",
+ "exportedAt": "2026-10-17T03:36:44+00:00",
  "words": [
   {
    "lang": "zh",
+   "kind": "word",
    "text": "狗",
    "pron": "gǒu",
    "meaning": "Dog",
@@ -15,6 +16,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "猫",
    "pron": "māo",
    "meaning": "Cat",
@@ -23,6 +25,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "鸟",
    "pron": "niǎo",
    "meaning": "Bird",
@@ -31,6 +34,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "鱼",
    "pron": "yú",
    "meaning": "Fish",
@@ -39,6 +43,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "马",
    "pron": "mǎ",
    "meaning": "Horse",
@@ -47,6 +52,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "牛",
    "pron": "niú",
    "meaning": "Cow",
@@ -55,6 +61,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "猪",
    "pron": "zhū",
    "meaning": "Pig",
@@ -63,6 +70,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "羊",
    "pron": "yáng",
    "meaning": "Sheep / goat",
@@ -71,6 +79,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "鸡",
    "pron": "jī",
    "meaning": "Chicken",
@@ -79,6 +88,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "鸭",
    "pron": "yā",
    "meaning": "Duck",
@@ -87,6 +97,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "兔子",
    "pron": "tùzi",
    "meaning": "Rabbit",
@@ -95,6 +106,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "老虎",
    "pron": "lǎohǔ",
    "meaning": "Tiger",
@@ -103,6 +115,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "狮子",
    "pron": "shīzi",
    "meaning": "Lion",
@@ -111,6 +124,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "大象",
    "pron": "dàxiàng",
    "meaning": "Elephant",
@@ -119,6 +133,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "猴子",
    "pron": "hóuzi",
    "meaning": "Monkey",
@@ -127,6 +142,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "熊猫",
    "pron": "xióngmāo",
    "meaning": "Panda",
@@ -135,6 +151,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "熊",
    "pron": "xióng",
    "meaning": "Bear",
@@ -143,6 +160,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "蛇",
    "pron": "shé",
    "meaning": "Snake",
@@ -151,6 +169,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "老鼠",
    "pron": "lǎoshǔ",
    "meaning": "Mouse / rat",
@@ -159,6 +178,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "蝴蝶",
    "pron": "húdié",
    "meaning": "Butterfly",
@@ -167,6 +187,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "红色",
    "pron": "hóngsè",
    "meaning": "Red",
@@ -175,6 +196,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "橙色",
    "pron": "chéngsè",
    "meaning": "Orange (colour)",
@@ -183,6 +205,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "黄色",
    "pron": "huángsè",
    "meaning": "Yellow",
@@ -191,6 +214,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "绿色",
    "pron": "lǜsè",
    "meaning": "Green",
@@ -199,6 +223,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "蓝色",
    "pron": "lánsè",
    "meaning": "Blue",
@@ -207,6 +232,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "紫色",
    "pron": "zǐsè",
    "meaning": "Purple",
@@ -215,6 +241,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "粉红色",
    "pron": "fěnhóngsè",
    "meaning": "Pink",
@@ -223,6 +250,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "黑色",
    "pron": "hēisè",
    "meaning": "Black",
@@ -231,6 +259,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "白色",
    "pron": "báisè",
    "meaning": "White",
@@ -239,6 +268,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "灰色",
    "pron": "huīsè",
    "meaning": "Grey",
@@ -247,6 +277,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "棕色",
    "pron": "zōngsè",
    "meaning": "Brown",
@@ -255,6 +286,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "金色",
    "pron": "jīnsè",
    "meaning": "Gold",
@@ -263,6 +295,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "天气",
    "pron": "tiānqì",
    "meaning": "Weather",
@@ -271,6 +304,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "晴天",
    "pron": "qíngtiān",
    "meaning": "Sunny day",
@@ -279,6 +313,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "阴天",
    "pron": "yīntiān",
    "meaning": "Cloudy / overcast day",
@@ -287,6 +322,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "下雨",
    "pron": "xià yǔ",
    "meaning": "To rain",
@@ -295,6 +331,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "下雪",
    "pron": "xià xuě",
    "meaning": "To snow",
@@ -303,6 +340,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "风",
    "pron": "fēng",
    "meaning": "Wind",
@@ -311,6 +349,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "云",
    "pron": "yún",
    "meaning": "Cloud",
@@ -319,6 +358,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "太阳",
    "pron": "tàiyáng",
    "meaning": "Sun",
@@ -327,6 +367,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "雨伞",
    "pron": "yǔsǎn",
    "meaning": "Umbrella",
@@ -335,6 +376,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "热",
    "pron": "rè",
    "meaning": "Hot",
@@ -343,6 +385,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "冷",
    "pron": "lěng",
    "meaning": "Cold",
@@ -351,6 +394,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "暖和",
    "pron": "nuǎnhuo",
    "meaning": "Warm",
@@ -359,6 +403,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "凉快",
    "pron": "liángkuai",
    "meaning": "Cool (pleasant)",
@@ -367,6 +412,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "雾",
    "pron": "wù",
    "meaning": "Fog",
@@ -375,6 +421,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "苹果",
    "pron": "píngguǒ",
    "meaning": "Apple",
@@ -383,6 +430,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "香蕉",
    "pron": "xiāngjiāo",
    "meaning": "Banana",
@@ -391,6 +439,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "橙子",
    "pron": "chéngzi",
    "meaning": "Orange (fruit)",
@@ -399,6 +448,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "葡萄",
    "pron": "pútao",
    "meaning": "Grape",
@@ -407,6 +457,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "西瓜",
    "pron": "xīguā",
    "meaning": "Watermelon",
@@ -415,6 +466,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "草莓",
    "pron": "cǎoméi",
    "meaning": "Strawberry",
@@ -423,6 +475,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "芒果",
    "pron": "mángguǒ",
    "meaning": "Mango",
@@ -431,6 +484,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "梨",
    "pron": "lí",
    "meaning": "Pear",
@@ -439,6 +493,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "桃子",
    "pron": "táozi",
    "meaning": "Peach",
@@ -447,6 +502,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "菠萝",
    "pron": "bōluó",
    "meaning": "Pineapple",
@@ -455,6 +511,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "柠檬",
    "pron": "níngméng",
    "meaning": "Lemon",
@@ -463,6 +520,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "椰子",
    "pron": "yēzi",
    "meaning": "Coconut",
@@ -471,6 +529,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "榴莲",
    "pron": "liúlián",
    "meaning": "Durian",
@@ -479,6 +538,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "荔枝",
    "pron": "lìzhī",
    "meaning": "Lychee",
@@ -487,6 +547,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "蔬菜",
    "pron": "shūcài",
    "meaning": "Vegetables",
@@ -495,6 +556,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "白菜",
    "pron": "báicài",
    "meaning": "Chinese cabbage",
@@ -503,6 +565,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "土豆",
    "pron": "tǔdòu",
    "meaning": "Potato",
@@ -511,6 +574,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "西红柿",
    "pron": "xīhóngshì",
    "meaning": "Tomato",
@@ -519,6 +583,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "黄瓜",
    "pron": "huángguā",
    "meaning": "Cucumber",
@@ -527,6 +592,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "胡萝卜",
    "pron": "húluóbo",
    "meaning": "Carrot",
@@ -535,6 +601,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "洋葱",
    "pron": "yángcōng",
    "meaning": "Onion",
@@ -543,6 +610,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "大蒜",
    "pron": "dàsuàn",
    "meaning": "Garlic",
@@ -551,6 +619,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "辣椒",
    "pron": "làjiāo",
    "meaning": "Chilli pepper",
@@ -559,6 +628,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "茄子",
    "pron": "qiézi",
    "meaning": "Eggplant / aubergine",
@@ -567,6 +637,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "蘑菇",
    "pron": "mógu",
    "meaning": "Mushroom",
@@ -575,6 +646,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "玉米",
    "pron": "yùmǐ",
    "meaning": "Corn",
@@ -583,6 +655,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "家人",
    "pron": "jiārén",
    "meaning": "Family members",
@@ -591,6 +664,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "爸爸",
    "pron": "bàba",
    "meaning": "Dad",
@@ -599,6 +673,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "妈妈",
    "pron": "māma",
    "meaning": "Mum",
@@ -607,6 +682,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "哥哥",
    "pron": "gēge",
    "meaning": "Older brother",
@@ -615,6 +691,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "姐姐",
    "pron": "jiějie",
    "meaning": "Older sister",
@@ -623,6 +700,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "弟弟",
    "pron": "dìdi",
    "meaning": "Younger brother",
@@ -631,6 +709,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "妹妹",
    "pron": "mèimei",
    "meaning": "Younger sister",
@@ -639,6 +718,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "爷爷",
    "pron": "yéye",
    "meaning": "Grandpa (father's father)",
@@ -647,6 +727,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "奶奶",
    "pron": "nǎinai",
    "meaning": "Grandma (father's mother)",
@@ -655,6 +736,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "外公",
    "pron": "wàigōng",
    "meaning": "Grandpa (mother's father)",
@@ -663,6 +745,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "外婆",
    "pron": "wàipó",
    "meaning": "Grandma (mother's mother)",
@@ -671,6 +754,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "儿子",
    "pron": "érzi",
    "meaning": "Son",
@@ -679,6 +763,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "女儿",
    "pron": "nǚ'ér",
    "meaning": "Daughter",
@@ -687,6 +772,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "丈夫",
    "pron": "zhàngfu",
    "meaning": "Husband",
@@ -695,6 +781,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "妻子",
    "pron": "qīzi",
    "meaning": "Wife",
@@ -703,6 +790,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "朋友",
    "pron": "péngyou",
    "meaning": "Friend",
@@ -711,6 +799,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "米饭",
    "pron": "mǐfàn",
    "meaning": "Cooked rice",
@@ -719,6 +808,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "面条",
    "pron": "miàntiáo",
    "meaning": "Noodles",
@@ -727,6 +817,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "饺子",
    "pron": "jiǎozi",
    "meaning": "Dumplings",
@@ -735,6 +826,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "包子",
    "pron": "bāozi",
    "meaning": "Steamed bun",
@@ -743,6 +835,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "面包",
    "pron": "miànbāo",
    "meaning": "Bread",
@@ -751,6 +844,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "鸡蛋",
    "pron": "jīdàn",
    "meaning": "Egg",
@@ -759,6 +853,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "鸡肉",
    "pron": "jīròu",
    "meaning": "Chicken (meat)",
@@ -767,6 +862,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "猪肉",
    "pron": "zhūròu",
    "meaning": "Pork",
@@ -775,6 +871,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "牛肉",
    "pron": "niúròu",
    "meaning": "Beef",
@@ -783,6 +880,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "海鲜",
    "pron": "hǎixiān",
    "meaning": "Seafood",
@@ -791,6 +889,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "豆腐",
    "pron": "dòufu",
    "meaning": "Tofu",
@@ -799,6 +898,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "汤",
    "pron": "tāng",
    "meaning": "Soup",
@@ -807,6 +907,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "火锅",
    "pron": "huǒguō",
    "meaning": "Hotpot",
@@ -815,6 +916,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "早饭",
    "pron": "zǎofàn",
    "meaning": "Breakfast",
@@ -823,6 +925,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "午饭",
    "pron": "wǔfàn",
    "meaning": "Lunch",
@@ -831,6 +934,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "晚饭",
    "pron": "wǎnfàn",
    "meaning": "Dinner",
@@ -839,6 +943,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "水",
    "pron": "shuǐ",
    "meaning": "Water",
@@ -847,6 +952,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "茶",
    "pron": "chá",
    "meaning": "Tea",
@@ -855,6 +961,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "咖啡",
    "pron": "kāfēi",
    "meaning": "Coffee",
@@ -863,6 +970,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "牛奶",
    "pron": "niúnǎi",
    "meaning": "Milk",
@@ -871,6 +979,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "果汁",
    "pron": "guǒzhī",
    "meaning": "Juice",
@@ -879,6 +988,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "啤酒",
    "pron": "píjiǔ",
    "meaning": "Beer",
@@ -887,6 +997,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "糖",
    "pron": "táng",
    "meaning": "Sugar / sweets",
@@ -895,6 +1006,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "盐",
    "pron": "yán",
    "meaning": "Salt",
@@ -903,6 +1015,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "中国",
    "pron": "Zhōngguó",
    "meaning": "China",
@@ -911,6 +1024,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "泰国",
    "pron": "Tàiguó",
    "meaning": "Thailand",
@@ -919,6 +1033,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "日本",
    "pron": "Rìběn",
    "meaning": "Japan",
@@ -927,6 +1042,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "韩国",
    "pron": "Hánguó",
    "meaning": "South Korea",
@@ -935,6 +1051,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "美国",
    "pron": "Měiguó",
    "meaning": "United States",
@@ -943,6 +1060,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "英国",
    "pron": "Yīngguó",
    "meaning": "United Kingdom",
@@ -951,6 +1069,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "法国",
    "pron": "Fǎguó",
    "meaning": "France",
@@ -959,6 +1078,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "德国",
    "pron": "Déguó",
    "meaning": "Germany",
@@ -967,6 +1087,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "俄罗斯",
    "pron": "Éluósī",
    "meaning": "Russia",
@@ -975,6 +1096,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "越南",
    "pron": "Yuènán",
    "meaning": "Vietnam",
@@ -983,6 +1105,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "老挝",
    "pron": "Lǎowō",
    "meaning": "Laos",
@@ -991,6 +1114,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "柬埔寨",
    "pron": "Jiǎnpǔzhài",
    "meaning": "Cambodia",
@@ -999,6 +1123,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "缅甸",
    "pron": "Miǎndiàn",
    "meaning": "Myanmar",
@@ -1007,6 +1132,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "马来西亚",
    "pron": "Mǎláixīyà",
    "meaning": "Malaysia",
@@ -1015,6 +1141,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "新加坡",
    "pron": "Xīnjiāpō",
    "meaning": "Singapore",
@@ -1023,6 +1150,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "印度尼西亚",
    "pron": "Yìndùníxīyà",
    "meaning": "Indonesia",
@@ -1031,6 +1159,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "印度",
    "pron": "Yìndù",
    "meaning": "India",
@@ -1039,6 +1168,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "澳大利亚",
    "pron": "Àodàlìyà",
    "meaning": "Australia",
@@ -1047,6 +1177,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "中国人",
    "pron": "Zhōngguórén",
    "meaning": "Chinese person",
@@ -1055,6 +1186,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "泰国人",
    "pron": "Tàiguórén",
    "meaning": "Thai person",
@@ -1063,6 +1195,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "零",
    "pron": "líng",
    "meaning": "Zero",
@@ -1071,6 +1204,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "一",
    "pron": "yī",
    "meaning": "One",
@@ -1079,6 +1213,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "二",
    "pron": "èr",
    "meaning": "Two",
@@ -1087,6 +1222,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "三",
    "pron": "sān",
    "meaning": "Three",
@@ -1095,6 +1231,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "四",
    "pron": "sì",
    "meaning": "Four",
@@ -1103,6 +1240,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "五",
    "pron": "wǔ",
    "meaning": "Five",
@@ -1111,6 +1249,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "六",
    "pron": "liù",
    "meaning": "Six",
@@ -1119,6 +1258,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "七",
    "pron": "qī",
    "meaning": "Seven",
@@ -1127,6 +1267,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "八",
    "pron": "bā",
    "meaning": "Eight",
@@ -1135,6 +1276,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "九",
    "pron": "jiǔ",
    "meaning": "Nine",
@@ -1143,6 +1285,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "十",
    "pron": "shí",
    "meaning": "Ten",
@@ -1151,6 +1294,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "百",
    "pron": "bǎi",
    "meaning": "Hundred",
@@ -1159,6 +1303,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "千",
    "pron": "qiān",
    "meaning": "Thousand",
@@ -1167,6 +1312,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "万",
    "pron": "wàn",
    "meaning": "Ten thousand",
@@ -1175,6 +1321,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "两",
    "pron": "liǎng",
    "meaning": "Two (of something, e.g. 两个)",
@@ -1183,6 +1330,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "头",
    "pron": "tóu",
    "meaning": "Head",
@@ -1191,6 +1339,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "脸",
    "pron": "liǎn",
    "meaning": "Face",
@@ -1199,6 +1348,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "眼睛",
    "pron": "yǎnjing",
    "meaning": "Eye",
@@ -1207,6 +1357,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "耳朵",
    "pron": "ěrduo",
    "meaning": "Ear",
@@ -1215,6 +1366,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "鼻子",
    "pron": "bízi",
    "meaning": "Nose",
@@ -1223,6 +1375,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "嘴",
    "pron": "zuǐ",
    "meaning": "Mouth",
@@ -1231,6 +1384,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "牙齿",
    "pron": "yáchǐ",
    "meaning": "Tooth",
@@ -1239,6 +1393,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "头发",
    "pron": "tóufa",
    "meaning": "Hair",
@@ -1247,6 +1402,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "脖子",
    "pron": "bózi",
    "meaning": "Neck",
@@ -1255,6 +1411,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "手",
    "pron": "shǒu",
    "meaning": "Hand",
@@ -1263,6 +1420,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "腿",
    "pron": "tuǐ",
    "meaning": "Leg",
@@ -1271,6 +1429,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "脚",
    "pron": "jiǎo",
    "meaning": "Foot",
@@ -1279,6 +1438,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "肚子",
    "pron": "dùzi",
    "meaning": "Belly / stomach",
@@ -1287,6 +1447,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "心",
    "pron": "xīn",
    "meaning": "Heart",
@@ -1295,6 +1456,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "今天",
    "pron": "jīntiān",
    "meaning": "Today",
@@ -1303,6 +1465,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "明天",
    "pron": "míngtiān",
    "meaning": "Tomorrow",
@@ -1311,6 +1474,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "昨天",
    "pron": "zuótiān",
    "meaning": "Yesterday",
@@ -1319,6 +1483,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "现在",
    "pron": "xiànzài",
    "meaning": "Now",
@@ -1327,6 +1492,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "早上",
    "pron": "zǎoshang",
    "meaning": "Morning",
@@ -1335,6 +1501,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "中午",
    "pron": "zhōngwǔ",
    "meaning": "Noon",
@@ -1343,6 +1510,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "下午",
    "pron": "xiàwǔ",
    "meaning": "Afternoon",
@@ -1351,6 +1519,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "晚上",
    "pron": "wǎnshang",
    "meaning": "Evening / night",
@@ -1359,6 +1528,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "星期",
    "pron": "xīngqī",
    "meaning": "Week",
@@ -1367,6 +1537,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "月",
    "pron": "yuè",
    "meaning": "Month",
@@ -1375,6 +1546,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "年",
    "pron": "nián",
    "meaning": "Year",
@@ -1383,6 +1555,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "小时",
    "pron": "xiǎoshí",
    "meaning": "Hour",
@@ -1391,6 +1564,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "分钟",
    "pron": "fēnzhōng",
    "meaning": "Minute",
@@ -1399,6 +1573,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "周末",
    "pron": "zhōumò",
    "meaning": "Weekend",
@@ -1407,6 +1582,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "星期一",
    "pron": "xīngqīyī",
    "meaning": "Monday",
@@ -1415,6 +1591,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "星期天",
    "pron": "xīngqītiān",
    "meaning": "Sunday",
@@ -1423,6 +1600,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "家",
    "pron": "jiā",
    "meaning": "Home",
@@ -1431,6 +1609,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "学校",
    "pron": "xuéxiào",
    "meaning": "School",
@@ -1439,6 +1618,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "大学",
    "pron": "dàxué",
    "meaning": "University",
@@ -1447,6 +1627,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "宿舍",
    "pron": "sùshè",
    "meaning": "Dormitory",
@@ -1455,6 +1636,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "图书馆",
    "pron": "túshūguǎn",
    "meaning": "Library",
@@ -1463,6 +1645,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "医院",
    "pron": "yīyuàn",
    "meaning": "Hospital",
@@ -1471,6 +1654,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "药店",
    "pron": "yàodiàn",
    "meaning": "Pharmacy",
@@ -1479,6 +1663,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "银行",
    "pron": "yínháng",
    "meaning": "Bank",
@@ -1487,6 +1672,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "超市",
    "pron": "chāoshì",
    "meaning": "Supermarket",
@@ -1495,6 +1681,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "商店",
    "pron": "shāngdiàn",
    "meaning": "Shop",
@@ -1503,6 +1690,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "饭馆",
    "pron": "fànguǎn",
    "meaning": "Restaurant",
@@ -1511,6 +1699,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "厕所",
    "pron": "cèsuǒ",
    "meaning": "Toilet",
@@ -1519,6 +1708,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "机场",
    "pron": "jīchǎng",
    "meaning": "Airport",
@@ -1527,6 +1717,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "火车站",
    "pron": "huǒchēzhàn",
    "meaning": "Train station",
@@ -1535,6 +1726,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "地铁",
    "pron": "dìtiě",
    "meaning": "Metro / subway",
@@ -1543,6 +1735,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "公交车",
    "pron": "gōngjiāochē",
    "meaning": "Bus",
@@ -1551,6 +1744,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "出租车",
    "pron": "chūzūchē",
    "meaning": "Taxi",
@@ -1559,6 +1753,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "火车",
    "pron": "huǒchē",
    "meaning": "Train",
@@ -1567,6 +1762,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "高铁",
    "pron": "gāotiě",
    "meaning": "High-speed train",
@@ -1575,6 +1771,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "飞机",
    "pron": "fēijī",
    "meaning": "Plane",
@@ -1583,6 +1780,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "汽车",
    "pron": "qìchē",
    "meaning": "Car",
@@ -1591,6 +1789,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "自行车",
    "pron": "zìxíngchē",
    "meaning": "Bicycle",
@@ -1599,6 +1798,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "老师",
    "pron": "lǎoshī",
    "meaning": "Teacher",
@@ -1607,6 +1807,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "学生",
    "pron": "xuésheng",
    "meaning": "Student",
@@ -1615,6 +1816,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "书",
    "pron": "shū",
    "meaning": "Book",
@@ -1623,6 +1825,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "笔",
    "pron": "bǐ",
    "meaning": "Pen",
@@ -1631,6 +1834,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "本子",
    "pron": "běnzi",
    "meaning": "Notebook",
@@ -1639,6 +1843,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "教室",
    "pron": "jiàoshì",
    "meaning": "Classroom",
@@ -1647,6 +1852,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "作业",
    "pron": "zuòyè",
    "meaning": "Homework",
@@ -1655,6 +1861,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "考试",
    "pron": "kǎoshì",
    "meaning": "Exam",
@@ -1663,6 +1870,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "汉语",
    "pron": "Hànyǔ",
    "meaning": "Chinese (language)",
@@ -1671,6 +1879,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "电脑",
    "pron": "diànnǎo",
    "meaning": "Computer",
@@ -1679,6 +1888,7 @@
   },
   {
    "lang": "zh",
+   "kind": "word",
    "text": "手机",
    "pron": "shǒujī",
    "meaning": "Mobile phone",

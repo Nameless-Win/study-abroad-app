@@ -145,6 +145,8 @@ input[aria-invalid="true"]{border-color:var(--bad)}
 .modes{display:inline-flex;background:var(--field);border-radius:999px;padding:3px;gap:2px;margin-top:10px}
 .modes button{border:0;background:transparent;padding:6px 14px;border-radius:999px;cursor:pointer;font-weight:600;color:var(--muted);font-size:.9rem}
 .modes button[aria-pressed="true"]{background:var(--ink);color:var(--surface)}
+.modes button:disabled{cursor:default;opacity:.6}
+.modes button[aria-pressed="true"]:disabled{opacity:1}
 .confirmbox{margin-top:12px;border:2px solid var(--ink);border-radius:14px;padding:14px}
 .confirmbox h3{margin:0 0 6px;font-size:1rem}
 .confirmbox p{margin:0 0 4px;font-size:.92rem;color:var(--muted);font-variant-numeric:tabular-nums}
@@ -350,6 +352,52 @@ input[readonly]{opacity:.85}
 .lrow .main .wtext{font-size:1.15rem}
 .lrow .main .wsub{display:block;color:var(--muted);font-size:.84rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .lrow .main .wpron{color:var(--ink);opacity:.85}
+/* Words home: the two parents, then progress and practice */
+.kindcards{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:4px 0 6px}
+.kindcard{display:flex;flex-direction:column;align-items:flex-start;gap:6px;min-height:118px;padding:16px;border:1px solid var(--line);border-radius:16px;background:var(--field);color:var(--ink);text-align:left;cursor:pointer}
+.kindcard:hover{border-color:var(--muted)}
+.kindcard svg{width:30px;height:30px;color:var(--jade)}
+.kindcard b{font-family:"Bricolage Grotesque",Figtree,sans-serif;font-size:1.25rem}
+.kindcard span{font-size:.85rem;color:var(--muted)}
+.wordnav{display:flex;align-items:center;gap:10px;margin:2px 0 6px}
+.wordnav h3{margin:0;font-size:1.05rem;flex:1}
+.uturn{flex:none;width:44px;height:44px;border-radius:12px;border:1px solid var(--line);background:var(--field);color:var(--ink);display:grid;place-items:center;cursor:pointer}
+.uturn svg{width:22px;height:22px}
+.homesec{margin-top:16px;padding-top:14px;border-top:1px solid var(--line)}
+.homesec h3{margin:0 0 4px;font-size:1rem;display:flex;justify-content:space-between;align-items:center;gap:8px}
+.daybars{display:grid;grid-template-columns:repeat(14,1fr);gap:4px;align-items:end;height:96px;margin-top:10px}
+.daybars button{position:relative;height:100%;border:0;background:none;padding:0;cursor:pointer;display:flex;align-items:flex-end}
+.daybars button i{display:block;width:100%;border-radius:4px 4px 0 0;background:var(--ink);min-height:2px}
+.daybars button.zero i{background:var(--line)}
+.daybars button[aria-pressed="true"] i{background:var(--jade)}
+.daylabels{display:flex;justify-content:space-between;font-size:.72rem;color:var(--muted);margin-top:4px}
+.homesec .tiles{grid-template-columns:repeat(3,minmax(0,1fr))}
+.homesec .tile{padding:10px 10px}
+.homesec .tile .v{font-size:1.05rem}
+.homesec .tile .s{font-size:.74rem}
+.missdots{display:inline-flex;gap:3px;margin-left:6px;vertical-align:middle}
+.missdots i{width:7px;height:7px;border-radius:50%;background:var(--line)}
+.missdots i.on{background:var(--warn)}
+/* Words list: select several in Edit mode, then move them */
+.lrow .wsel{flex:none;width:26px;height:26px;border-radius:8px;border:2px solid var(--line);background:var(--surface);display:grid;place-items:center;color:var(--surface);cursor:pointer;padding:0}
+.lrow .wsel[aria-checked="true"]{background:var(--ink);border-color:var(--ink)}
+.lrow .wsel svg{width:15px;height:15px}
+.selbar{position:sticky;top:8px;z-index:3;display:flex;flex-wrap:wrap;align-items:center;gap:8px;background:var(--ink);color:var(--surface);border-radius:14px;padding:10px 12px;margin:8px 0}
+.selbar b{flex:1 0 100%}
+.selbar select{flex:1;min-width:140px;width:auto;padding:8px 10px;background:var(--surface);color:var(--ink)}
+.selbar button{border:0;border-radius:10px;padding:8px 12px;font-weight:600;cursor:pointer;background:var(--surface);color:var(--ink)}
+.selbar .link{background:none;color:var(--surface)}
+/* Manage topics */
+.tmgr{background:var(--field);border-radius:14px;padding:6px 12px 10px;margin:8px 0}
+.tmrow{display:flex;align-items:center;gap:8px;padding:9px 0;border-top:1px solid var(--line);flex-wrap:wrap}
+.tmrow:first-of-type{border-top:0}
+.tmrow .tn{flex:1;min-width:120px;font-weight:600}
+.tmrow .tn small{color:var(--muted);font-weight:500;margin-left:6px}
+.tmrow .acts{display:flex;gap:12px}
+.tmrow .acts .link{font-size:.86rem}
+.tmact{flex:1 0 100%;display:flex;flex-direction:column;gap:8px;background:var(--surface);border-radius:12px;padding:10px 12px;margin-top:4px}
+.tmact p{margin:0;font-size:.88rem}
+.tmact .btns{display:flex;gap:8px;flex-wrap:wrap}
 .tchips{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 2px}
 .tchips button{border:1px solid var(--line);background:var(--field);border-radius:999px;padding:6px 12px;font-size:.85rem;font-weight:600;cursor:pointer;color:var(--ink)}
 .tchips button span{color:var(--muted);font-weight:500;margin-left:5px}
@@ -436,7 +484,7 @@ button.dfield{padding:0 12px;color:var(--ink)}
 .wk:not(.editing) .blk{cursor:default}
 .editbtn[aria-pressed="true"]{background:var(--ink);color:var(--surface);border-color:var(--ink)}
 .headbtns{display:flex;align-items:center;gap:14px}
-.ed .main > div:first-child::after{content:" ✎";color:var(--muted);font-weight:400}
+.ed .main > div:first-child::after,.row.ed .what > div:first-child::after{content:" ✎";color:var(--muted);font-weight:400}
 .wk{display:grid;gap:3px;margin-top:8px}
 .wk .wh{text-align:center;font-size:.78rem;font-weight:700;padding:6px 0;border-radius:10px}
 .wk .wh small{display:block;font-weight:500;color:var(--muted);font-size:.72rem}
@@ -623,9 +671,21 @@ button.dfield{padding:0 12px;color:var(--ink)}
   </section>
 
   <section class="card pg-home" id="listCard">
-    <div class="head"><h2 id="listTitle">This month</h2><button class="link" id="allMonth" hidden>Whole month</button></div>
+    <div class="head"><h2 id="listTitle">This month</h2><div class="headbtns"><button class="link" id="allMonth" hidden>Whole month</button><button class="secondary editbtn" id="spendEdit" style="padding:7px 14px">Edit</button></div></div>
     <div class="daytotal" id="dayTotal" hidden></div>
     <div id="list"></div>
+  </section>
+
+  <section class="card pg-home" id="iouCard" hidden>
+    <div class="head"><div class="titlewrap"><h2>You owe friends</h2><button class="help" data-help="iou" aria-label="How does owing a friend work?">?</button></div><b class="num" id="iouTotal"></b></div>
+    <div data-helpbox="iou"></div>
+    <div id="iouList"></div>
+  </section>
+
+  <section class="card pg-home" id="oweCard" hidden>
+    <div class="head"><div class="titlewrap"><h2>Friends owe you</h2><button class="help" data-help="owe" aria-label="How does paying back work?">?</button></div><b class="num" id="oweTotal"></b></div>
+    <div data-helpbox="owe"></div>
+    <div id="oweList"></div>
   </section>
 
   <section class="card pg-home">
@@ -717,10 +777,18 @@ button.dfield{padding:0 12px;color:var(--ink)}
       <div class="head"><div class="titlewrap"><h2>Words &amp; phrases</h2><button class="help" data-help="words" aria-label="How do words work?">?</button></div><div class="headbtns"><button class="secondary editbtn" id="wordEdit" style="padding:7px 14px">Edit</button><button class="link" id="wordNew">+ Add</button></div></div>
       <div data-helpbox="words"></div>
       <div class="langline" id="wordLangLine"></div>
+      <div class="wordnav" id="wordNav" hidden>
+        <button class="uturn" id="wordBack" aria-label="Back to Words and Sentences"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 14 4 9l5-5"/><path d="M4 9h10.5a5.5 5.5 0 0 1 0 11H11"/></svg></button>
+        <h3 id="wordKindTitle"></h3>
+        <button class="link" id="topicManageBtn" aria-expanded="false">Manage topics</button>
+      </div>
       <div id="wordForm"></div>
+      <div id="wordHome"></div>
       <input id="wordSearch" type="search" placeholder="Search words, meanings, notes…" aria-label="Search words" autocomplete="off" hidden>
       <div class="tchips" id="wordTopics" role="group" aria-label="Show one topic" hidden></div>
+      <div id="topicManager"></div>
       <div class="gamebar" id="gameBar" hidden><button class="secondary" id="gameBtn">▶ Match game</button><span class="sectionnote" id="gameNote" style="margin:0"></span></div>
+      <div id="wordSelBar"></div>
       <div id="wordList"></div>
       <div class="wordfile">
         <button class="wfbtn" id="wordDown" aria-label="Download words to a file"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5v11M7.5 10l4.5 4.5 4.5-4.5M4.5 19.5h15"/></svg>Download</button>
@@ -819,7 +887,7 @@ button.dfield{padding:0 12px;color:var(--ink)}
 <script>
 (function(){
   // Bump on every publish (date + a letter for several in one day). "Check for updates" compares it with the website's copy.
-  const APP_VERSION = "2026-10-12c";
+  const APP_VERSION = "2026-10-17a";
   // Approximate starting rates (units per 1 US dollar). Students should replace them with real rates.
   const DEF = {USD:1, CNY:7.1, THB:33.6, JPY:150, KRW:1380, TWD:31, HKD:7.8, SGD:1.3, MYR:4.3, VND:25500, IDR:16000, PHP:57, INR:85, LAK:21500, KHR:4000, MMK:2100,
     AUD:1.5, NZD:1.7, CAD:1.38, GBP:0.76, EUR:0.88, CHF:0.82, SEK:9.6, NOK:10.3, DKK:6.6, CZK:21.5, PLN:3.7, HUF:350, RUB:85, TRY:40, AED:3.67, MXN:18.5, BRL:5.5};
@@ -858,7 +926,7 @@ button.dfield{padding:0 12px;color:var(--ink)}
   const catById = Object.fromEntries(CATS.map(c=>[c.id,c]));
 
   // rateLog: [{from:"YYYY-MM-DD", CNY, THB}] (per 1 USD), sorted by from
-  function blankState(){ return { rateLog:[{from:"2000-01-01", CNY:7.10, THB:33.6}], expenses:[], view:"CNY", lastCur:"CNY", budgets:{}, theme:"auto", dailyLimit:null, recurring:[], country:null, local:"CNY", home:"THB", showUSD:true, classes:[], breaks:[], tasks:[], docs:[], cards:[], contacts:[], words:[], wordLang:null, alertsHiddenOn:null }; }
+  function blankState(){ return { rateLog:[{from:"2000-01-01", CNY:7.10, THB:33.6}], expenses:[], view:"CNY", lastCur:"CNY", budgets:{}, theme:"auto", dailyLimit:null, recurring:[], country:null, local:"CNY", home:"THB", showUSD:true, classes:[], breaks:[], tasks:[], docs:[], cards:[], contacts:[], words:[], wordLang:null, wordStats:{days:{}, miss:{}}, hiddenTopics:[], iou:[], alertsHiddenOn:null }; }
   let state = blankState();
   let mainTab = "money";
   let page = "home", repScope = "month";
@@ -909,7 +977,14 @@ button.dfield{padding:0 12px;color:var(--ink)}
     split: `<p><b>Just me</b> is a normal purchase.</p>
       <p><b>Split bill</b> is for when you buy things together with friends, like a market trip. Add each item with its price, then set how many people share it. Leave it at <b>Just me</b> for your own stuff.</p>
       <p>Example: your snacks 30 (just me), rice 40 (2 people), meat 60 (3 people). Your share is 30 + 20 + 20 = <b>70</b>, the bill is 130.</p>
-      <p>Only your share counts as your spending. If you paid the whole bill, the app shows how much your friends owe you. If a friend paid, it shows how much you owe them.</p>`,
+      <p>Only your share counts as your spending. If you paid the whole bill, the app shows how much your friends owe you, and the bill waits in <b>Friends owe you</b> until they pay you back.</p>
+      <p>If a friend paid, your share isn't taken from your balance yet: it waits in <b>You owe friends</b>, and counts as spending on the day you tap <b>I paid them back</b>.</p>`,
+    iou: `<p>When a friend pays the whole bill and you choose <b>A friend paid</b>, your share waits here. It isn't taken from your balance yet, because you haven't paid anything.</p>
+      <p>When you give your friend the money, tap <b>I paid them back</b>. Your share then counts as spending on that day (today, unless you pick another date) and comes off that month's balance.</p>
+      <p><b>Remove</b> deletes one you saved by mistake.</p>`,
+    owe: `<p>When you pay a whole bill and split it with friends, their part shows here until they pay you back.</p>
+      <p>Tap <b>Paid back</b> when they do. You can enter a smaller amount if only some of them have paid. The money you get back is added to <b>this month's budget</b>, because it's money you can spend again.</p>
+      <p>If you haven't set a budget for this month, the bill is only marked as paid back.</p>`,
     bills: `<p>Use this for things you pay every month, like rent, water, gas, electricity or mobile data.</p>
       <p>Enter the amount, the day of the month you pay, the month it starts and how many months it lasts — for example 12 months from January to December. Tick <b>No end date</b> if it just keeps going.</p>
       <p>On each payment day the app adds the bill to your spending by itself, using that day's exchange rate. Months that have already passed are added straight away.</p>
@@ -937,7 +1012,9 @@ button.dfield{padding:0 12px;color:var(--ink)}
       <p>Words are grouped by topic. Pick one when you add a word, or make your own with <b>+ New topic</b>. Tap a topic box under the search to see only that topic, or <b>All</b> for everything. Use the search box to find a word by itself, its meaning or a note.</p>
       <p><b>Match game</b>: first tick one or more topics (or all topics at random) and what to match — the word with its pronunciation (like Pinyin), the pronunciation with its meaning, or the word with its meaning. For word and meaning you can show the pronunciation under each word, to help you read it.</p>
       <p>Choose how many words to play, from 5 to 10 (5 to start with). The game picks them at random and mixes up the other side. Tap one from each side that go together. Wrong pairs flash red; try to finish with no mistakes.</p>
-      <p>To change or delete a word, tap <b>Edit</b>, then tap it.</p>
+      <p>The page opens on <b>Words</b> and <b>Sentences</b>. Tap one to see its topics and list; the <b>↩</b> button takes you back. Each entry is a word or a sentence: you choose when you add it, and it stays that way.</p>
+      <p>To change or delete an entry, tap <b>Edit</b>, then tap it. In Edit mode you can also tick several entries and move them to another topic together.</p>
+      <p><b>Manage topics</b> lets you rename a topic, move everything in it to another topic (to merge topics), or delete it. If a topic still has entries, you're asked to move them first; deleting the topic anyway deletes them too.</p>
       <p><b>Download</b> saves this language's words to a file. Send it to a friend, or keep it as a copy. <b>Add from file</b> adds the words from such a file (or from a full backup). <b>Word lists</b> opens a page of lists you can download, like 210 basic Chinese words. Words you already have are skipped, never changed, and you'll see a list of what was skipped.</p>`,
     cards: `<p>Write addresses and places in the local language — your dorm, your university gate, a favourite restaurant. Copying the address from a map app works well.</p>
       <p>Tap a card to show it full screen in big text, ready to show a taxi driver or delivery rider. Tap again to close.</p>
@@ -951,6 +1028,9 @@ button.dfield{padding:0 12px;color:var(--ink)}
       <p><b>Restore backup</b> loads that file on a new phone or browser. It replaces what's currently on this device.</p>
       <p>If you clear your browser data or uninstall the browser, your spending is gone unless you have a backup.</p>
       <p><b>Delete my data</b> removes data from this device for a fresh start. You choose which parts to delete and confirm twice. Download a backup first if you might want it back.</p>`,
+    progress: `<p>Every match game you finish is saved for that day: how many games, how many words you matched, and how many you got right first time.</p>
+      <p><b>Streak</b> counts the days in a row you played. The bars show the words you matched on each of the last 14 days; tap a bar to see that day.</p>
+      <p><b>Needs practice</b> lists words you got wrong. Each wrong match adds a dot (up to 3); each time you match it right first time takes one away, and at zero it leaves the list. <b>Practise these</b> starts a game with just those words.</p>`,
     update: `<p>When the app gets an update, your phone normally picks it up by itself the next time you open the app.</p>
       <p><b>Check for updates</b> asks the website straight away. If there's a new version, tap <b>Update now</b> to load it. Your spending, words, documents and photos are kept: only the app itself is reloaded.</p>
       <p>The app also checks quietly a few seconds after you open it, and tells you if an update is ready.</p>`,
@@ -1040,7 +1120,7 @@ button.dfield{padding:0 12px;color:var(--ink)}
 
   // ---------- storage ----------
   let colRef = null;
-  function settings(){ return {v:2, updatedAt:state.updatedAt||0, rateLog:state.rateLog, view:state.view, lastCur:state.lastCur, budgets:state.budgets, theme:state.theme, dailyLimit:state.dailyLimit, recurring:state.recurring, classes:state.classes, breaks:state.breaks, tasks:state.tasks, docs:state.docs, cards:state.cards, contacts:state.contacts, words:state.words, wordLang:state.wordLang, alertsHiddenOn:state.alertsHiddenOn, country:state.country, local:state.local, home:state.home, showUSD:state.showUSD}; }
+  function settings(){ return {v:2, updatedAt:state.updatedAt||0, rateLog:state.rateLog, view:state.view, lastCur:state.lastCur, budgets:state.budgets, theme:state.theme, dailyLimit:state.dailyLimit, recurring:state.recurring, classes:state.classes, breaks:state.breaks, tasks:state.tasks, docs:state.docs, cards:state.cards, contacts:state.contacts, words:state.words, wordLang:state.wordLang, wordStats:state.wordStats, hiddenTopics:state.hiddenTopics, iou:state.iou, alertsHiddenOn:state.alertsHiddenOn, country:state.country, local:state.local, home:state.home, showUSD:state.showUSD}; }
   function snapshot(){ return Object.assign(settings(), {expenses:state.expenses}); }
   function monthDoc(m){ return {month:m, expenses:state.expenses.filter(e=>e.date && e.date.slice(0,7)===m)}; }
   // months: list of "YYYY-MM" whose spending changed
@@ -1129,10 +1209,13 @@ button.dfield{padding:0 12px;color:var(--ink)}
     if (["auto","light","dark"].includes(d.theme)) state.theme = d.theme;
     if (d.dailyLimit>0) state.dailyLimit = +d.dailyLimit;
     if (Array.isArray(d.recurring)) state.recurring = JSON.parse(JSON.stringify(d.recurring));
-    ["classes","breaks","tasks","docs","cards","contacts","words"].forEach(k=>{ if (Array.isArray(d[k])) state[k] = JSON.parse(JSON.stringify(d[k])); });
+    ["classes","breaks","tasks","docs","cards","contacts","words","iou"].forEach(k=>{ if (Array.isArray(d[k])) state[k] = JSON.parse(JSON.stringify(d[k])); });
     if (typeof d.wordLang==="string") state.wordLang = d.wordLang;
-    // words saved before each word kept its language belong to the language in use then
-    { const wl = wordLang().id; state.words.forEach(w=>{ if (!w.lang) w.lang = wl; }); }
+    // words saved before each word kept its language belong to the language in use then;
+    // entries saved before Words/Sentences existed are sorted by their text (they can be changed)
+    { const wl = wordLang().id; state.words.forEach(w=>{ if (!w.lang) w.lang = wl; if (w.kind!=="word" && w.kind!=="sentence") w.kind = guessKind(w.text); }); }
+    if (d.wordStats && typeof d.wordStats==="object") state.wordStats = {days:Object.assign({}, d.wordStats.days), miss:Object.assign({}, d.wordStats.miss)};
+    if (Array.isArray(d.hiddenTopics)) state.hiddenTopics = d.hiddenTopics.filter(t=>typeof t==="string");
     if (typeof d.alertsHiddenOn==="string") state.alertsHiddenOn = d.alertsHiddenOn;
     if (d.updatedAt) state.updatedAt = d.updatedAt;
     applyTheme();
@@ -1288,6 +1371,8 @@ button.dfield{padding:0 12px;color:var(--ink)}
     renderBudget();
     renderCalendar(items);
     renderList(items);
+    renderIou();
+    renderOwe();
     renderRates();
     renderAddMode();
     updateSplit();
@@ -1508,9 +1593,10 @@ button.dfield{padding:0 12px;color:var(--ink)}
     if (e.split){ const t=document.createElement("span"); t.className="tag"; t.textContent="Split"; sub.appendChild(t); }
     sub.appendChild(document.createTextNode(cat.name + (selDay && curs().length>1 ? " · "+rateText(rate) : "")));
     if (e.split){
-      const sp = e.split, owe = Math.round((sp.total-e.amount)*100)/100;
+      const sp = e.split, owe = owedOf(e), share = Math.round((sp.total-e.amount)*100)/100;
       const l = document.createElement("small");
-      l.textContent = "Bill "+fmt(sp.total,e.cur)+" · "+(sp.paidBy==="me" ? (owe>0 ? "friends owe you "+fmt(owe,e.cur) : "all yours") : "you owe "+fmt(e.amount,e.cur));
+      l.textContent = "Bill "+fmt(sp.total,e.cur)+" · "+(sp.paidBy==="me" ? (owe>0 ? "friends owe you "+fmt(owe,e.cur) : share>0 ? "friends paid you back ✓" : "all yours")
+        : sp.billDate ? "a friend paid on "+prettyDate(sp.billDate,{day:"numeric",month:"short"})+", you paid them back ✓" : "a friend paid");
       r.querySelector(".what").appendChild(l);
       if (selDay && Array.isArray(sp.items)){
         const l2 = document.createElement("small");
@@ -1535,7 +1621,152 @@ button.dfield{padding:0 12px;color:var(--ink)}
     } else {
       del.onclick = ()=>{ pendingDelete=e.id; render(); };
     }
+    // Edit mode: tapping a purchase opens its form right under it
+    if (listEdit.spend){
+      r.classList.add("ed");
+      const w = r.querySelector(".what"); w.setAttribute("role","button"); w.tabIndex = 0; w.style.cursor = "pointer";
+      w.setAttribute("aria-label", "Edit "+(e.desc || cat.name));
+      const open = ()=>{ formOpen.spend = e.id; render(); const f = $("spendForm"); if (f) f.scrollIntoView({block:"nearest"}); };
+      w.onclick = open; w.onkeydown = ev=>{ if (ev.key==="Enter") open(); };
+    }
+    if (formOpen.spend===e.id){ const frag = document.createDocumentFragment(); frag.append(r, spendForm(e)); return frag; }
     return r;
+  }
+  // Change a purchase already added: amount, currency, description, category or date.
+  // A new date takes that date's exchange rate; a split bill keeps its amount (it comes from the items).
+  function spendForm(e){
+    const split = !!e.split, cs = curs().includes(e.cur) ? curs() : curs().concat(e.cur);
+    const f = document.createElement("div"); f.className = "form"; f.id = "spendForm";
+    f.innerHTML = '<div class="grid">'+
+      '<div><label for="sfAmt">'+(split ? "Your share" : "Amount")+'</label><input id="sfAmt" type="text" inputmode="decimal" autocomplete="off" data-calc="1"></div>'+
+      '<div><label for="sfCur">Currency</label><select id="sfCur">'+cs.map(c=>'<option value="'+c+'">'+sym(c).trim()+' '+c+'</option>').join("")+'</select></div>'+
+      '<div class="full"><label for="sfDesc">What was it?</label><input id="sfDesc" type="text" maxlength="80"></div>'+
+      '<div><label for="sfCat">Category</label><select id="sfCat">'+CATS.map(c=>'<option value="'+c.id+'">'+c.name+'</option>').join("")+'</select></div>'+
+      '<div><label for="sfDate">Date</label><input id="sfDate" type="date" value="'+esc(e.date)+'"></div></div>'+
+      (split ? '<p class="sectionnote" style="margin-top:8px">Your share comes from the bill’s items. To change the items, delete this and add the bill again.</p>' : '')+
+      '<div class="err" id="sfErr"></div><div class="btns"><button class="btn-yes" id="sfSave">Save changes</button><button class="secondary" id="sfCancel">Cancel</button></div>';
+    const q = s=>f.querySelector(s);
+    q("#sfAmt").value = e.amount; q("#sfAmt").readOnly = split; q("#sfCur").value = e.cur; q("#sfCur").disabled = split;
+    q("#sfDesc").value = e.desc || ""; q("#sfCat").value = e.cat;
+    q("#sfCancel").onclick = ()=>{ formOpen.spend = null; render(); };
+    q("#sfSave").onclick = ()=>{
+      const amt = split ? e.amount : parseNum(q("#sfAmt").value), date = q("#sfDate").value;
+      if (!(amt>0)){ q("#sfErr").textContent = "Enter an amount above 0."; q("#sfAmt").focus(); return; }
+      if (!date){ q("#sfErr").textContent = "Pick the date."; return; }
+      const oldM = e.date.slice(0,7), newM = date.slice(0,7);
+      if (date!==e.date) e.r = rateFor(date);
+      Object.assign(e, {amount:Math.round(amt*100)/100, cur: split ? e.cur : q("#sfCur").value, desc:q("#sfDesc").value.trim(), cat:q("#sfCat").value, date});
+      formOpen.spend = null; save([oldM, newM]); render();
+      toast("ok", "Purchase updated"+(newM!==oldM ? " and moved to "+monthName(newM)+"." : "."));
+    };
+    return f;
+  }
+
+  // ---------- friends owe you: split bills you paid for everyone ----------
+  const round2 = n=> Math.round(n*100)/100;
+  const repaidOf = e=> e.split && Array.isArray(e.split.repaid) ? e.split.repaid.reduce((s,x)=>s+(+x.amount||0),0) : 0;
+  // what friends still owe on a bill you paid: the bill minus your share minus what they've paid back
+  function owedOf(e){ return e.split && e.split.paidBy==="me" ? Math.max(0, round2(e.split.total - e.amount - repaidOf(e))) : 0; }
+  // ---------- you owe friends: bills a friend paid, waiting until you pay them back ----------
+  let iouOpen = null, iouDel = null;   // the bill whose "I paid them back" step is open; the one asking "Remove?"
+  function renderIou(){
+    const list = state.iou || [];
+    if (!list.length){ $("iouCard").hidden = true; iouOpen = null; return; }
+    const L = LOC();
+    $("iouTotal").textContent = fmt(list.reduce((s,e)=>s+conv(e.amount, e.cur, L, e.r||rateFor(e.date)),0), L);
+    const host = $("iouList"); host.innerHTML = "";
+    [...list].sort((a,b)=>b.date.localeCompare(a.date) || b.t-a.t).forEach(e=>{
+      const r = document.createElement("div"); r.className = "row";
+      r.innerHTML = '<span class="dot"></span><div class="what"><div></div><small></small></div><div class="money"><div></div><span class="iouacts"></span></div>';
+      r.querySelector(".dot").style.background = (catById[e.cat]||catById.other).c;
+      r.querySelector(".what div").textContent = e.desc || "Shared bill";
+      r.querySelector(".what small").textContent = "friend paid "+prettyDate(e.date,{day:"numeric",month:"short"})+" · bill "+fmt(e.split.total,e.cur);
+      r.querySelector(".money div").textContent = fmt(e.amount, e.cur);
+      const acts = r.querySelector(".iouacts");
+      const paid = document.createElement("button"); paid.className = "link"; paid.style.fontSize = ".86rem"; paid.textContent = "I paid them back";
+      paid.onclick = ()=>{ iouOpen = iouOpen===e.id ? null : e.id; iouDel = null; renderIou(); };
+      const rm = document.createElement("button"); rm.className = "link"; rm.style.cssText = "font-size:.8rem;color:var(--bad-text);margin-left:10px";
+      rm.textContent = iouDel===e.id ? "Tap again to remove" : "Remove";
+      rm.onclick = ()=>{ if (iouDel!==e.id){ iouDel = e.id; renderIou(); return; } state.iou = state.iou.filter(x=>x.id!==e.id); iouDel = null; save(); render(); toast("ok", "Removed."); };
+      acts.append(paid, rm);
+      host.appendChild(r);
+      if (iouOpen===e.id) host.appendChild(iouForm(e));
+    });
+  }
+  // second step: on which day you paid; your share then becomes spending on that day
+  function iouForm(e){
+    const f = document.createElement("div"); f.className = "form";
+    f.innerHTML = '<label for="iouDate">When did you pay your friend back?</label><input id="iouDate" type="date">'+
+      '<p class="sectionnote" id="iouNote" style="margin-top:8px"></p><div class="err" id="iouErr"></div>'+
+      '<div class="btns"><button class="btn-yes" id="iouYes">Yes, I paid them</button><button class="secondary" id="iouNo">Cancel</button></div>';
+    const q = s=>f.querySelector(s);
+    q("#iouDate").value = todayISO();
+    const paint = ()=>{ const d = q("#iouDate").value || todayISO();
+      q("#iouNote").textContent = "Your share, "+fmt(e.amount,e.cur)+", becomes spending on "+prettyDate(d,{day:"numeric",month:"short"})+" and comes off your "+monthName(d.slice(0,7)).split(" ")[0]+" balance."; };
+    q("#iouDate").addEventListener("change", paint); paint();
+    q("#iouNo").onclick = ()=>{ iouOpen = null; renderIou(); };
+    q("#iouYes").onclick = ()=>{
+      const d = q("#iouDate").value;
+      if (!d){ q("#iouErr").textContent = "Pick the date you paid."; return; }
+      const m = d.slice(0,7), before = spentLocal(m);
+      const x = JSON.parse(JSON.stringify(e));
+      x.split.billDate = e.date; x.split.paidBackOn = d;
+      Object.assign(x, {t:Date.now(), date:d, r:rateFor(d)});
+      state.iou = state.iou.filter(y=>y.id!==e.id); state.expenses.push(x);
+      iouOpen = null; save([m]); render();
+      toast("ok", "Paid back: "+fmt(e.amount,e.cur)+" added to your spending on "+prettyDate(d,{day:"numeric",month:"short"})+".");
+      setTimeout(()=>checkCrossing(m, before), 2500);   // budget warnings after the confirmation
+    };
+    return f;
+  }
+
+  let payback = null;   // the bill whose "Paid back" form is open
+  function renderOwe(){
+    const open = state.expenses.filter(e=>owedOf(e)>0.004).sort((a,b)=>b.date.localeCompare(a.date) || b.t-a.t);
+    if (!open.length){ $("oweCard").hidden = true; payback = null; return; }
+    const L = LOC();
+    $("oweTotal").textContent = fmt(open.reduce((s,e)=>s+conv(owedOf(e), e.cur, L, e.r||rateFor(e.date)),0), L);
+    const host = $("oweList"); host.innerHTML = "";
+    open.forEach(e=>{
+      const owed = owedOf(e), back = repaidOf(e);
+      const r = document.createElement("div"); r.className = "row";
+      r.innerHTML = '<span class="dot"></span><div class="what"><div></div><small></small></div><div class="money"><div></div><button class="link" style="font-size:.86rem">Paid back</button></div>';
+      r.querySelector(".dot").style.background = (catById[e.cat]||catById.other).c;
+      r.querySelector(".what div").textContent = e.desc || "Shared bill";
+      r.querySelector(".what small").textContent = prettyDate(e.date,{day:"numeric",month:"short"})+" · bill "+fmt(e.split.total,e.cur)+(back>0 ? " · "+fmt(back,e.cur)+" paid back so far" : "");
+      r.querySelector(".money div").textContent = fmt(owed, e.cur);
+      r.querySelector(".money .link").onclick = ()=>{ payback = payback===e.id ? null : e.id; renderOwe(); if (payback) $("pbAmt").focus(); };
+      host.appendChild(r);
+      if (payback===e.id) host.appendChild(paybackForm(e, owed));
+    });
+  }
+  // second step: how much came back, and what it does to this month's budget
+  function paybackForm(e, owed){
+    const m = ym(new Date()), mName = monthName(m).split(" ")[0];
+    const f = document.createElement("div"); f.className = "form";
+    f.innerHTML = '<label for="pbAmt">How much did they pay back? ('+e.cur+')</label><input id="pbAmt" type="text" inputmode="decimal" autocomplete="off" data-calc="1">'+
+      '<p class="sectionnote" id="pbNote" style="margin-top:8px"></p><div class="err" id="pbErr"></div>'+
+      '<div class="btns"><button class="btn-yes" id="pbYes"></button><button class="secondary" id="pbNo">Cancel</button></div>';
+    const q = s=>f.querySelector(s), inp = q("#pbAmt");
+    inp.value = owed;
+    const paint = ()=>{
+      const a = parseNum(inp.value), bud = state.budgets[m], add = a>0 ? round2(conv(a, e.cur, LOC(), rateFor(todayISO()))) : 0;
+      q("#pbNote").textContent = bud>0 ? (a>0 ? "This adds "+fmt(add,LOC())+" to your "+mName+" budget ("+fmt(bud,LOC())+" → "+fmt(bud+add,LOC())+")." : "")
+        : "You haven’t set a budget for "+mName+", so this is only marked as paid back.";
+      q("#pbYes").textContent = bud>0 ? "Yes, add to budget" : "Yes, mark as paid back";
+    };
+    inp.addEventListener("input", ()=>{ q("#pbErr").textContent = ""; paint(); }); paint();
+    q("#pbNo").onclick = ()=>{ payback = null; renderOwe(); };
+    q("#pbYes").onclick = ()=>{
+      const a = parseNum(inp.value);
+      if (!(a>0) || a > owed + 0.005){ q("#pbErr").textContent = "Enter an amount from 0 up to "+fmt(owed,e.cur)+"."; inp.focus(); return; }
+      e.split.repaid = (Array.isArray(e.split.repaid) ? e.split.repaid : []).concat({date:todayISO(), amount:round2(a)});
+      const bud = state.budgets[m];
+      let msg = "Paid back "+fmt(a,e.cur)+".";
+      if (bud>0){ const add = round2(conv(a, e.cur, LOC(), rateFor(todayISO()))); state.budgets[m] = round2(bud + add); msg += " "+mName+" budget is now "+fmt(state.budgets[m],LOC())+"."; }
+      payback = null; save([e.date.slice(0,7)]); render(); toast("ok", msg);
+    };
+    return f;
   }
 
   function renderList(items){
@@ -1547,6 +1778,8 @@ button.dfield{padding:0 12px;color:var(--ink)}
     $("allMonth").hidden = !selDay;
     $("dayTotal").hidden = !selDay;
     $("calHint").textContent = selDay ? "Tap the day again to see the whole month" : "Tap a day to see its spending";
+    if (formOpen.spend && !state.expenses.some(e=>e.id===formOpen.spend)) formOpen.spend = null;
+    paintEdit("spendEdit", "spend", (selDay ? items.filter(e=>e.date===selDay) : items).length, list);
 
     if (selDay){
       const di = items.filter(e=>e.date===selDay).sort((a,b)=>b.t-a.t);
@@ -1565,7 +1798,7 @@ button.dfield{padding:0 12px;color:var(--ink)}
         sp.textContent = "Balance after this day: "+signed(bud-upto,LOC());
         $("dayTotal").appendChild(sp);
       }
-      if (!di.length){ list.innerHTML = '<p class="empty">Nothing spent on this day. The add form below is set to this date.</p>'; return; }
+      if (!di.length){ list.insertAdjacentHTML("beforeend", '<p class="empty">Nothing spent on this day. The add form below is set to this date.</p>'); return; }
       const g = document.createElement("div"); g.className="day"; g.style.marginTop="6px";
       di.forEach(e=>g.appendChild(entryRow(e)));
       list.appendChild(g);
@@ -1573,11 +1806,11 @@ button.dfield{padding:0 12px;color:var(--ink)}
     }
 
     $("listTitle").textContent = monthName(viewMonth);
-    if (!items.length){ list.innerHTML = '<p class="empty">No spending for this month yet. Add your first one below.</p>'; return; }
+    if (!items.length){ list.insertAdjacentHTML("beforeend", '<p class="empty">No spending for this month yet. Add your first one below.</p>'); return; }
     // A box about LIST_MAX purchases tall that scrolls inside, so the add form below stays close.
-    // "Show all" opens it into a plain full list. Expanding is per month.
+    // "Show all" opens it into a plain full list. Expanding is per month. While a purchase is being edited, the full list shows.
     const recent = [...items].sort((a,b)=>b.date.localeCompare(a.date) || b.t-a.t);
-    const all = listAllFor===viewMonth || recent.length<=LIST_MAX;
+    const all = listAllFor===viewMonth || recent.length<=LIST_MAX || !!formOpen.spend;
     const days = {};
     recent.forEach(e=>{ (days[e.date]=days[e.date]||[]).push(e); });
     const box = all ? list : document.createElement("div");
@@ -1694,6 +1927,15 @@ button.dfield{padding:0 12px;color:var(--ink)}
       if (!entry.desc) entry.desc = "Shared bill";
       splitItems = [newItem(), newItem(2)];
       renderItems();
+    }
+    if (entry.split && entry.split.paidBy==="other"){
+      // a friend paid the whole bill: nothing leaves your balance yet. It waits in "You owe friends" and
+      // becomes spending on the day you tap "I paid them back".
+      state.iou.push(entry);
+      $("amount").value = ""; $("desc").value = "";
+      save(); render(); document.querySelector("#items .nm").focus();
+      toast("ok", "Saved: you owe "+fmt(entry.amount, entry.cur)+". It's taken from your balance when you pay your friend back.");
+      return;
     }
     state.expenses.push(entry);
     state.lastCur = entryCur;
@@ -2089,7 +2331,10 @@ button.dfield{padding:0 12px;color:var(--ink)}
     r[0].children[1].textContent = fmt(total, entryCur);
     r[1].children[1].textContent = fmt(mine, entryCur);
     if (paidBy==="me"){ r[2].className = others>0 ? "owe" : ""; r[2].children[0].textContent = "Friends owe you"; r[2].children[1].textContent = fmt(others, entryCur); }
-    else { r[2].className = mine>0 ? "oweme" : ""; r[2].children[0].textContent = "You owe the friend who paid"; r[2].children[1].textContent = fmt(mine, entryCur); }
+    else {
+      r[2].className = mine>0 ? "oweme" : ""; r[2].children[0].textContent = "You owe the friend who paid"; r[2].children[1].textContent = fmt(mine, entryCur);
+      box.insertAdjacentHTML("beforeend", '<p class="sectionnote" style="margin:6px 0 0">Not taken from your balance until you pay your friend back.</p>');
+    }
     updatePreview();
   }
   function renderAddMode(){
@@ -2099,7 +2344,7 @@ button.dfield{padding:0 12px;color:var(--ink)}
     $("splitBox").hidden = !split;
     $("amount").readOnly = split;
     $("amountLbl").textContent = split ? "Your share (worked out from the items)" : "Amount";
-    $("add").textContent = split ? "Add my share" : "Add spending";
+    $("add").textContent = split ? (paidBy==="other" ? "Save what I owe" : "Add my share") : "Add spending";
     $("desc").placeholder = split ? "Market trip with friends, dinner…" : "Hotpot dinner, metro card, rent…";
   }
 
@@ -2360,7 +2605,7 @@ button.dfield{padding:0 12px;color:var(--ink)}
   function paintEdit(btnId, key, count, host){
     if (!count) listEdit[key] = false;
     const b = $(btnId); b.hidden = !count; b.textContent = listEdit[key] ? "Done" : "Edit"; b.setAttribute("aria-pressed", !!listEdit[key]);
-    if (listEdit[key] && !formOpen[key]){ const e=document.createElement("div"); e.className="editbar"; e.textContent="Editing — tap an item to change or delete it."; host.appendChild(e); }
+    if (listEdit[key] && !formOpen[key]){ const e=document.createElement("div"); e.className="editbar"; e.textContent="Editing — tap an item to change or delete it."+(key==="word" ? " Tick several to move them together." : ""); host.appendChild(e); }
   }
 
   function taskLevel(t){ if (t.done) return "ok"; const n = daysUntil(t.due); return n<=2 ? "bad" : n<=7 ? "warn" : "ok"; }
@@ -2700,11 +2945,34 @@ button.dfield{padding:0 12px;color:var(--ink)}
   let wordQuery = "", langPicking = false, lastTopic = "Words";
   let wordTopic = null;  // topic box selected (null = All)
   let wordsAll = false;  // list expanded with "Show all"
+  // The page opens on two parents, Words and Sentences; tapping one shows its topics and list, with a ↩ back button.
+  let wordKind = null;                       // null = the two parents; "word" or "sentence" = inside one
+  let manageOpen = false, topicAct = null;   // Manage topics panel, and the action open on one topic: {topic, act}
+  const wordSel = new Set();                 // entries ticked in Edit mode, to move together
+  const KIND = {word:{one:"word", many:"words", title:"Words"}, sentence:{one:"sentence", many:"sentences", title:"Sentences"}};
+  const kindOf = w=> w.kind==="sentence" ? "sentence" : "word";
+  // best guess for entries saved without a type: sentence punctuation, 3+ words, or 6+ characters in scripts without spaces
+  function guessKind(text){
+    const t = String(text||"").trim();
+    if (/[。？！，?!,;；]/.test(t)) return "sentence";
+    return /\s/.test(t) ? (t.split(/\s+/).length>=3 ? "sentence" : "word") : ([...t].length>=6 ? "sentence" : "word");
+  }
+  function kindWords(){ return wordKind ? langWords().filter(w=>kindOf(w)===wordKind) : langWords(); }
+  // "3 words and 2 sentences"
+  function itemsText(list){
+    const s = list.filter(w=>kindOf(w)==="sentence").length, w = list.length - s;
+    return [w ? cnt(w,"word","words") : "", s ? cnt(s,"sentence","sentences") : ""].filter(Boolean).join(" and ") || "nothing";
+  }
   function wordLang(){ const id = state.wordLang || COUNTRY_LANG[state.country] || "en"; return LANGS.find(l=>l.id===id) || LANGS.find(l=>l.id==="en"); }
   // the built-in topics, then the student's own, then Other
   // each word belongs to the language it was saved in; the page only shows the chosen language's words
   function langWords(){ const id = wordLang().id; return state.words.filter(w=>(w.lang||id)===id); }
-  function topicList(){ const own = [...new Set(langWords().map(w=>w.topic))].filter(t=>t && !TOPICS.includes(t) && t!=="Other").sort(); return TOPICS.concat(own, ["Other"]); }
+  // built-in topics the student deleted (state.hiddenTopics) are left out unless something is still in them
+  function topicList(){
+    const used = new Set(langWords().map(w=>w.topic||"Other")), hidden = state.hiddenTopics||[];
+    const own = [...used].filter(t=>t && !TOPICS.includes(t) && t!=="Other").sort();
+    return TOPICS.filter(t=>!hidden.includes(t) || used.has(t)).concat(own, ["Other"]);
+  }
   function renderWords(){
     const L = wordLang(), ll = $("wordLangLine"); ll.innerHTML = "";
     if (langPicking){
@@ -2720,10 +2988,101 @@ button.dfield{padding:0 12px;color:var(--ink)}
       b.onclick = ()=>{ langPicking = true; renderWords(); $("wlSel").focus(); };
       ll.append(s, b);
     }
-    $("wordSearch").hidden = !langWords().length;
-    renderTopicBoxes(); renderWordList(); renderWordForm(); renderGame();
+    const home = !wordKind;
+    $("wordNav").hidden = home;
+    if (!home){
+      $("wordKindTitle").textContent = KIND[wordKind].title+" · "+kindWords().length;
+      $("topicManageBtn").hidden = !langWords().length; $("topicManageBtn").setAttribute("aria-expanded", manageOpen);
+      $("topicManageBtn").textContent = manageOpen ? "Done" : "Manage topics";
+    } else { manageOpen = false; topicAct = null; }
+    $("wordSearch").hidden = home || !kindWords().length;
+    renderWordHome(); renderTopicBoxes(); renderTopicManager(); renderSelBar(); renderWordList(); renderWordForm(); renderGame();
     $("wordDown").hidden = !langWords().length;
     renderWordImport();
+    renderHelp();
+  }
+  // ---- the two parents, then progress and words to practise ----
+  const KIND_ICON = {
+    word: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18 8.5 6 13 18M5.8 14h5.4M15 10.5c.8-.9 1.8-1.3 3-1.3 1.8 0 3 1 3 2.9V18M21 14.5c-1-.4-2-.5-3-.4-1.6.2-2.8 1-2.8 2.2 0 1.2 1 1.9 2.3 1.9 1.6 0 2.9-.9 3.5-2.2"/></svg>',
+    sentence: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6a2.5 2.5 0 0 1 2.5-2.5h11A2.5 2.5 0 0 1 20 6v8a2.5 2.5 0 0 1-2.5 2.5H10L5.5 20v-3.5H6.5A2.5 2.5 0 0 1 4 14z"/><path d="M8 8.5h8M8 12h5"/></svg>'
+  };
+  function practiceWords(){ const m = state.wordStats.miss||{}; return langWords().filter(w=>m[w.id]>0).sort((a,b)=>m[b.id]-m[a.id] || (b.t||0)-(a.t||0)); }
+  function renderWordHome(){
+    const host = $("wordHome"); host.innerHTML = "";
+    if (wordKind) return;
+    const words = langWords();
+    const cards = document.createElement("div"); cards.className = "kindcards";
+    ["word","sentence"].forEach(k=>{
+      const n = words.filter(w=>kindOf(w)===k).length;
+      const b = document.createElement("button"); b.className = "kindcard"; b.dataset.kind = k;
+      b.innerHTML = KIND_ICON[k]+"<b></b><span></span>";
+      b.querySelector("b").textContent = KIND[k].title; b.querySelector("span").textContent = cnt(n, KIND[k].one, KIND[k].many);
+      b.onclick = ()=>{ wordKind = k; wordTopic = null; wordsAll = false; wordQuery = ""; $("wordSearch").value = ""; wordSel.clear(); renderWords(); $("wordNav").scrollIntoView({block:"nearest"}); };
+      cards.appendChild(b);
+    });
+    host.appendChild(cards);
+    if (!words.length) return;
+    host.appendChild(progressSection());
+    host.appendChild(practiceSection());
+  }
+  // daily results of the match game: tiles, then the last 14 days as bars (words matched); tap a bar to read it
+  function progressSection(){
+    const sec = document.createElement("div"); sec.className = "homesec"; sec.id = "wordProgress";
+    sec.innerHTML = '<h3><span class="titlewrap">Your progress<button class="help" data-help="progress" aria-label="About your progress">?</button></span></h3><div data-helpbox="progress"></div>';
+    const days = state.wordStats.days || {};
+    if (!Object.keys(days).length){ sec.insertAdjacentHTML("beforeend", '<p class="sectionnote">Play the match game and your results for each day show up here.</p>'); return sec; }
+    const pct = d=> d && (d.pairs+d.mistakes) ? Math.round(d.pairs/(d.pairs+d.mistakes)*100) : null;
+    const dayISO = k=>{ const x = new Date(); x.setDate(x.getDate()-k); return iso(x); };
+    const today = days[todayISO()];
+    let streak = 0; for (let k = today && today.games ? 0 : 1; k < 400 && days[dayISO(k)] && days[dayISO(k)].games; k++) streak++;
+    const last = Array.from({length:14}, (_,i)=>dayISO(13-i)), sum = last.reduce((s,k)=>{ const d = days[k]; if (d){ s.pairs += d.pairs; s.mistakes += d.mistakes; s.games += d.games; } return s; }, {pairs:0, mistakes:0, games:0});
+    const tiles = document.createElement("div"); tiles.className = "tiles";
+    tiles.append(tile("Today", today ? cnt(today.games,"game","games") : "—", today ? pct(today)+"% right · "+cnt(today.pairs,"word","words") : "not played yet"),
+                 tile("Streak", cnt(streak,"day","days"), streak ? "played in a row" : "play today to start one"),
+                 tile("Last 14 days", cnt(sum.pairs,"word","words"), sum.games ? pct(sum)+"% right · "+cnt(sum.games,"game","games") : ""));
+    sec.appendChild(tiles);
+    const mx = Math.max(1, ...last.map(k=>days[k] ? days[k].pairs : 0));
+    const bars = document.createElement("div"); bars.className = "daybars"; bars.setAttribute("role","group"); bars.setAttribute("aria-label","Words matched each day, last 14 days");
+    const read = document.createElement("p"); read.className = "readout"; read.style.textAlign = "left"; read.id = "progRead";
+    const describe = k=>{ const d = days[k]; return prettyDate(k,{weekday:"short",day:"numeric",month:"short"})+" · "+(d && d.games ? cnt(d.games,"game","games")+", "+cnt(d.pairs,"word","words")+", "+pct(d)+"% right" : "not played"); };
+    last.forEach(k=>{
+      const d = days[k], v = d ? d.pairs : 0, b = document.createElement("button");
+      b.className = v ? "" : "zero"; b.innerHTML = "<i></i>"; b.querySelector("i").style.height = Math.max(3, v/mx*100)+"%";
+      b.setAttribute("aria-label", describe(k)); b.setAttribute("aria-pressed", k===todayISO());
+      b.onclick = ()=>{ bars.querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed", x===b)); read.textContent = describe(k); };
+      bars.appendChild(b);
+    });
+    const labels = document.createElement("div"); labels.className = "daylabels";
+    [last[0], last[7]].forEach(k=>{ const s = document.createElement("span"); s.textContent = prettyDate(k,{day:"numeric",month:"short"}); labels.appendChild(s); });
+    labels.insertAdjacentHTML("beforeend", "<span>Today</span>");
+    read.textContent = describe(todayISO());
+    sec.append(bars, labels, read);
+    return sec;
+  }
+  // words got wrong in the game; each wrong match adds a dot (up to 3), each clean right match takes one away
+  function practiceSection(){
+    const sec = document.createElement("div"); sec.className = "homesec"; sec.id = "wordPractice";
+    const list = practiceWords(), m = state.wordStats.miss || {};
+    sec.innerHTML = '<h3><span>Needs practice</span><span class="sectionnote" style="margin:0">'+(list.length ? list.length : "")+'</span></h3>';
+    if (!list.length){ sec.insertAdjacentHTML("beforeend", '<p class="sectionnote">Words you get wrong in the match game show up here. They leave again once you match them right.</p>'); return sec; }
+    const tag = wordLang().tag;
+    list.slice(0, 6).forEach(w=>{
+      const r = document.createElement("button"); r.className = "lrow";
+      r.innerHTML = '<div class="main"><div class="wtext" dir="auto"></div><small class="wsub"></small></div><span class="missdots" aria-hidden="true"><i></i><i></i><i></i></span>';
+      r.querySelector(".wtext").textContent = w.text; r.querySelector(".wtext").lang = tag;
+      r.querySelector(".wsub").textContent = [w.pron, w.meaning].filter(Boolean).join(" · ");
+      r.querySelectorAll(".missdots i").forEach((d,i)=>{ if (i < m[w.id]) d.classList.add("on"); });
+      r.setAttribute("aria-label", w.text+", "+w.meaning+", missed "+cnt(m[w.id],"time","times")+". Tap to show big");
+      r.onclick = ()=>showWordBig(w);
+      sec.appendChild(r);
+    });
+    if (list.length > 6) sec.insertAdjacentHTML("beforeend", '<p class="sectionnote">and '+(list.length-6)+' more</p>');
+    const b = document.createElement("button"); b.className = "secondary"; b.id = "practiceBtn"; b.style.marginTop = "8px";
+    b.textContent = "▶ Practise "+(list.length===1 ? "it" : "these"); b.disabled = langWords().length < 3;
+    b.onclick = ()=>openGameSetup(true);
+    sec.appendChild(b);
+    if (list.length < 3) sec.insertAdjacentHTML("beforeend", '<p class="sectionnote">'+(list.length===1 ? "It's" : "They're")+' mixed with a few other words so there’s enough to play.</p>');
+    return sec;
   }
   const topicOf = w=> w.topic || "Other";
   // same word if equal after trimming, joining spaces and ignoring case (and how accents were typed)
@@ -2732,7 +3091,8 @@ button.dfield{padding:0 12px;color:var(--ink)}
   // "All" plus every topic that has words; tapping one shows only that topic
   function renderTopicBoxes(){
     const box = $("wordTopics"); box.innerHTML = "";
-    const words = langWords();
+    if (!wordKind){ box.hidden = true; $("gameBar").hidden = true; return; }
+    const words = kindWords();
     const used = topicList().filter(t=>words.some(w=>topicOf(w)===t));
     if (wordTopic && !used.includes(wordTopic)) wordTopic = null;
     box.hidden = !words.length;
@@ -2746,14 +3106,126 @@ button.dfield{padding:0 12px;color:var(--ink)}
     // the match game picks its own topic in its setup; it just needs 3 words to start
     $("gameBar").hidden = !words.length;
     $("gameBtn").disabled = words.length < 3;
-    $("gameNote").textContent = words.length < 3 ? "Add at least 3 words to play." : "Pick a topic and what to match.";
+    $("gameNote").textContent = words.length < 3 ? "Add at least 3 "+KIND[wordKind].many+" to play." : "Pick topics and what to match.";
+  }
+  // ---- Manage topics: rename, move everything to another topic (merge), or delete ----
+  function topicSelect(id, except){
+    return '<select id="'+id+'">'+topicList().filter(t=>t!==except).map(t=>'<option>'+esc(t)+'</option>').join("")+'<option value="__new">+ New topic…</option></select>'+
+      '<input id="'+id+'New" type="text" maxlength="30" placeholder="New topic name" hidden>';
+  }
+  function wireTopicSelect(root, id){
+    const s = root.querySelector("#"+id), n = root.querySelector("#"+id+"New");
+    s.onchange = ()=>{ n.hidden = s.value!=="__new"; if (!n.hidden) n.focus(); };
+    return ()=> s.value==="__new" ? (n.value.trim() || "") : s.value;
+  }
+  // put every entry of topic `from` (this language, both Words and Sentences) into topic `to`
+  function moveTopic(from, to){
+    const L = wordLang().id; let n = 0;
+    state.words.forEach(w=>{ if ((w.lang||L)===L && topicOf(w)===from){ w.topic = to; n++; } });
+    if (TOPICS.includes(from) && !state.hiddenTopics.includes(from)) state.hiddenTopics.push(from);   // a built-in topic emptied this way goes away
+    state.hiddenTopics = state.hiddenTopics.filter(t=>t!==to);
+    if (wordTopic===from) wordTopic = to;
+    gameOpts.topics = [...new Set(gameOpts.topics.map(t=>t===from ? to : t))];
+    if (lastTopic===from) lastTopic = to;
+    return n;
+  }
+  function renderTopicManager(){
+    const host = $("topicManager"); host.innerHTML = "";
+    if (!manageOpen || !wordKind) return;
+    const words = langWords(), inTopic = t=>words.filter(w=>topicOf(w)===t);
+    const box = document.createElement("div"); box.className = "tmgr";
+    box.innerHTML = '<p class="sectionnote" style="margin:6px 0 4px">Rename a topic, move all of it into another topic to merge them, or delete it. This changes topics in both Words and Sentences.</p>';
+    topicList().filter(t=>t!=="Other" || inTopic(t).length).forEach(t=>{
+      const items = inTopic(t), n = items.length;
+      const row = document.createElement("div"); row.className = "tmrow"; row.dataset.topic = t;
+      row.innerHTML = '<span class="tn"></span><span class="acts"></span>';
+      row.querySelector(".tn").textContent = t;
+      row.querySelector(".tn").insertAdjacentHTML("beforeend", "<small>"+n+"</small>");
+      const acts = row.querySelector(".acts");
+      const act = (label, a, danger)=>{ const b = document.createElement("button"); b.className = "link"; b.textContent = label; b.dataset.act = a; if (danger) b.style.color = "var(--bad-text)";
+        b.onclick = ()=>{ topicAct = topicAct && topicAct.topic===t && topicAct.act===a ? null : {topic:t, act:a}; renderTopicManager(); }; acts.appendChild(b); };
+      if (t!=="Other") act("Rename", "rename");
+      if (n) act("Move all", "move");
+      if (t!=="Other") act("Delete", "delete", true);
+      if (topicAct && topicAct.topic===t) row.appendChild(topicPanel(t, items));
+      box.appendChild(row);
+    });
+    host.appendChild(box);
+  }
+  function topicPanel(t, items){
+    const n = items.length, p = document.createElement("div"); p.className = "tmact";
+    const done = msg=>{ topicAct = null; save(); renderWords(); toast("ok", msg); };
+    if (topicAct.act==="rename"){
+      p.innerHTML = '<label for="tmName" style="margin:0">New name for “'+esc(t)+'”</label><input id="tmName" type="text" maxlength="30"><div class="err" id="tmErr"></div>'+
+        '<div class="btns"><button class="btn-yes" id="tmGo">Rename</button><button class="secondary" id="tmNo">Cancel</button></div>';
+      const inp = p.querySelector("#tmName"); inp.value = t;
+      p.querySelector("#tmGo").onclick = ()=>{
+        const name = inp.value.trim();
+        if (!name){ p.querySelector("#tmErr").textContent = "Write a name."; return; }
+        if (name===t){ topicAct = null; renderTopicManager(); return; }
+        const merge = topicList().includes(name) && items.length;
+        moveTopic(t, name);
+        done(merge ? "“"+t+"” merged into “"+name+"”." : "Renamed to “"+name+"”.");
+      };
+    } else if (topicAct.act==="move"){
+      p.innerHTML = '<p>Move all '+esc(itemsText(items))+' from “'+esc(t)+'” to:</p>'+topicSelect("tmTo", t)+'<div class="err" id="tmErr"></div>'+
+        '<div class="btns"><button class="btn-yes" id="tmGo">Move</button><button class="secondary" id="tmNo">Cancel</button></div>';
+      const pick = wireTopicSelect(p, "tmTo");
+      p.querySelector("#tmGo").onclick = ()=>{
+        const to = pick();
+        if (!to){ p.querySelector("#tmErr").textContent = "Write the new topic's name."; return; }
+        const k = moveTopic(t, to);
+        done("Moved "+cnt(k,"item","items")+" from “"+t+"” to “"+to+"”.");
+      };
+    } else {
+      // delete: warn when something is still inside, and suggest moving it first
+      p.innerHTML = n
+        ? '<p><b>'+esc(itemsText(items))+' '+(n===1?"is":"are")+' still in “'+esc(t)+'”.</b> Move '+(n===1?"it":"them")+' to another topic first if you want to keep '+(n===1?"it":"them")+'. Deleting the topic deletes '+(n===1?"it":"them")+' too.</p>'+
+          '<div class="btns"><button class="secondary" id="tmMove">Move '+(n===1?"it":"them")+' first</button><button class="btn-danger" id="tmGo">Delete topic and '+esc(itemsText(items))+'</button><button class="link" id="tmNo">Cancel</button></div>'
+        : '<p>Delete the empty topic “'+esc(t)+'”?</p><div class="btns"><button class="btn-danger" id="tmGo">Delete topic</button><button class="secondary" id="tmNo">Cancel</button></div>';
+      if (n) p.querySelector("#tmMove").onclick = ()=>{ topicAct = {topic:t, act:"move"}; renderTopicManager(); };
+      p.querySelector("#tmGo").onclick = ()=>{
+        const ids = new Set(items.map(w=>w.id));
+        state.words = state.words.filter(w=>!ids.has(w.id));
+        ids.forEach(id=>{ delete state.wordStats.miss[id]; wordSel.delete(id); });
+        if (TOPICS.includes(t) && !state.hiddenTopics.includes(t)) state.hiddenTopics.push(t);
+        if (wordTopic===t) wordTopic = null;
+        gameOpts.topics = gameOpts.topics.filter(x=>x!==t);
+        done(n ? "Deleted “"+t+"” and "+cnt(n,"item","items")+"." : "Deleted “"+t+"”.");
+      };
+    }
+    p.querySelector("#tmNo").onclick = ()=>{ topicAct = null; renderTopicManager(); };
+    return p;
+  }
+  // ---- Edit mode: tick several entries, then move them to a topic or to the other parent ----
+  function renderSelBar(){
+    const host = $("wordSelBar"); host.innerHTML = "";
+    if (!listEdit.word || !wordKind){ wordSel.clear(); return; }
+    [...wordSel].forEach(id=>{ if (!state.words.some(w=>w.id===id && kindOf(w)===wordKind)) wordSel.delete(id); });
+    if (!wordSel.size) return;
+    const n = wordSel.size;   // entries stay a word or a sentence for good (owner's rule), so only topics can change here
+    const bar = document.createElement("div"); bar.className = "selbar"; bar.setAttribute("role","region"); bar.setAttribute("aria-label","Selected items");
+    bar.innerHTML = '<b></b>'+topicSelect("selTopic")+
+      '<button id="selMove">Move to topic</button><button class="link" id="selClear">Clear</button>';
+    bar.querySelector("b").textContent = n+" selected";
+    const pick = wireTopicSelect(bar, "selTopic");
+    const chosen = ()=> state.words.filter(w=>wordSel.has(w.id));
+    bar.querySelector("#selMove").onclick = ()=>{
+      const to = pick(); if (!to) return;
+      chosen().forEach(w=>{ w.topic = to; }); state.hiddenTopics = state.hiddenTopics.filter(t=>t!==to);
+      wordSel.clear(); save(); renderWords(); toast("ok", "Moved "+cnt(n,"item","items")+" to “"+to+"”.");
+    };
+    bar.querySelector("#selClear").onclick = ()=>{ wordSel.clear(); renderWords(); };
+    host.appendChild(bar);
   }
   function renderWordList(){
     const keepScroll = $("wordScroll") ? $("wordScroll").scrollTop : 0;
     const host = $("wordList"); host.innerHTML = "";
-    const words = langWords();
+    if (!wordKind){ paintEdit("wordEdit", "word", 0, host); host.innerHTML = ""; return; }   // the two parents show instead
+    const words = kindWords();
     paintEdit("wordEdit", "word", words.length, host);
     const empty = t=>{ const p=document.createElement("p"); p.className="empty"; p.style.padding="12px 0 4px"; p.textContent=t; host.appendChild(p); };
+    if (!words.length && langWords().length) return empty("No "+KIND[wordKind].many+" yet. Tap + Add and choose “"+KIND[wordKind].title.replace(/s$/,"")+"”.");
     if (!words.length){
       // say where the other words are, so switching language never looks like data loss
       const others = LANGS.filter(l=>l.id!==wordLang().id).map(l=>[l, state.words.filter(w=>w.lang===l.id).length]).filter(x=>x[1]);
@@ -2778,15 +3250,28 @@ button.dfield{padding:0 12px;color:var(--ink)}
       h.children[0].textContent = t; h.children[1].textContent = ws.length;
       g.appendChild(h);
       ws.forEach(w=>{
-        const r = document.createElement("button"); r.className = "lrow"+(listEdit.word?" ed":"");
+        // in Edit mode a row is a tick box (select to move) plus the word (tap to edit), so it can't itself be a button
+        const r = document.createElement(listEdit.word ? "div" : "button"); r.className = "lrow"+(listEdit.word?" ed":"");
         r.innerHTML = '<div class="main"><div class="wtext" dir="auto"></div><small class="wsub"></small></div>';
         const tx = r.querySelector(".wtext"); tx.textContent = w.text; tx.lang = tag;
         // pronunciation, meaning and note on one line, so each word takes two lines
         const sub = r.querySelector(".wsub");
         if (w.pron){ const pr = document.createElement("span"); pr.className = "wpron"; pr.textContent = w.pron; sub.append(pr, " · "); }
         sub.append(w.meaning + (w.note ? " · "+w.note : ""));
-        r.setAttribute("aria-label", w.text+", "+w.meaning+(listEdit.word ? ". Tap to edit" : ". Tap to show big"));
-        r.onclick = listEdit.word ? ()=>{ formOpen.word = w.id; renderWords(); $("wordForm").scrollIntoView({block:"nearest"}); } : ()=>showWordBig(w);
+        if (listEdit.word){
+          r.style.cursor = "default";
+          const cb = document.createElement("button"); cb.className = "wsel"; cb.setAttribute("role","checkbox");
+          cb.setAttribute("aria-checked", wordSel.has(w.id)); cb.setAttribute("aria-label", "Select "+w.text);
+          cb.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>';
+          cb.onclick = ()=>{ if (wordSel.has(w.id)) wordSel.delete(w.id); else wordSel.add(w.id); cb.setAttribute("aria-checked", wordSel.has(w.id)); renderSelBar(); };
+          r.prepend(cb);
+          const m = r.querySelector(".main"), ed = ()=>{ formOpen.word = w.id; renderWords(); $("wordForm").scrollIntoView({block:"nearest"}); };
+          m.setAttribute("role","button"); m.tabIndex = 0; m.style.cursor = "pointer"; m.setAttribute("aria-label", "Edit "+w.text+", "+w.meaning);
+          m.onclick = ed; m.onkeydown = ev=>{ if (ev.key==="Enter") ed(); };
+        } else {
+          r.setAttribute("aria-label", w.text+", "+w.meaning+". Tap to show big");
+          r.onclick = ()=>showWordBig(w);
+        }
         g.appendChild(r);
       });
       box.appendChild(g);
@@ -2794,7 +3279,7 @@ button.dfield{padding:0 12px;color:var(--ink)}
     if (box!==host){ fitBox(box, ".lrow", WORD_MAX); box.scrollTop = keepScroll; }
     if (list.length>WORD_MAX){
       const b = document.createElement("button"); b.className = "secondary showall"; b.id = "wordMore";
-      b.textContent = all ? "Show less" : "Show all "+list.length+" words";
+      b.textContent = all ? "Show less" : "Show all "+list.length+" "+KIND[wordKind].many;
       b.setAttribute("aria-expanded", all);
       b.onclick = ()=>{ wordsAll = !all; renderWordList(); if (all) $("wordList").scrollIntoView({block:"nearest"}); };
       host.appendChild(b);
@@ -2810,24 +3295,41 @@ button.dfield{padding:0 12px;color:var(--ink)}
     {id:"wm", left:"text", right:"meaning", needsPron:false}
   ];
   // topics: the topics ticked in the setup; empty = all topics. Remembered while the app is open; count is 5–10 pairs
-  let gameOpts = {topics:[], mode:"wm", hint:true, count:5};
+  // kind: play Words or Sentences (whichever is open); practice: play the "Needs practice" list instead of topics
+  let gameOpts = {topics:[], mode:"wm", hint:true, count:5, kind:null, practice:false};
   const modeOf = id=> GAME_MODES.find(m=>m.id===id) || GAME_MODES[2];
   function modeName(m){ const p = wordLang().pron; return {text:"Word", pron:p, meaning:"Meaning"}[m.left]+" ↔ "+{text:"Word", pron:p, meaning:"Meaning"}[m.right]; }
-  // words usable for some topics (empty = all topics) and a mode: pronunciation modes only use words that have one
-  function gamePool(topics, mode){ return langWords().filter(w=>(!topics.length || topics.includes(topicOf(w))) && (!modeOf(mode).needsPron || w.pron)); }
+  // entries usable for some topics (empty = all topics) and a mode: pronunciation modes only use entries that have one
+  function gamePool(topics, mode, practice){
+    const base = practice ? practiceWords() : langWords().filter(w=>!gameOpts.kind || kindOf(w)===gameOpts.kind);
+    return base.filter(w=>(practice || !topics.length || topics.includes(topicOf(w))) && (!modeOf(mode).needsPron || w.pron));
+  }
   // "Body", "Body and Fruit", "Body, Fruit and Colours"
   const andList = a=> a.length<2 ? (a[0]||"") : a.slice(0,-1).join(", ")+" and "+a[a.length-1];
   function shuffle(a){ for (let i=a.length-1; i>0; i--){ const j = Math.floor(Math.random()*(i+1)); [a[i],a[j]] = [a[j],a[i]]; } return a; }
-  function openGameSetup(){
+  function openGameSetup(practice){
     if (!wordLang().pron) gameOpts.mode = "wm";
-    if (wordTopic) gameOpts.topics = [wordTopic];   // viewing one topic: start from it; otherwise keep the topics ticked last time
+    gameOpts.practice = practice===true;
+    if (!gameOpts.practice){
+      if (wordKind && gameOpts.kind!==wordKind) gameOpts.topics = [];   // topics ticked for the other parent don't carry over
+      gameOpts.kind = wordKind;
+      if (wordTopic) gameOpts.topics = [wordTopic];   // viewing one topic: start from it; otherwise keep the topics ticked last time
+    }
     game = {phase:"setup"}; renderGame(); $("gameCard").scrollIntoView({block:"start"});
   }
+  // Practice with only a few missed words still works: they're mixed with other entries of the same type
+  // (any type if needed) until there are enough to play. Missed words always come first.
+  function practiceFill(practice, mode, count){
+    const ids = new Set(practice.map(w=>w.id)), kinds = new Set(practice.map(kindOf)), ok = w=>!ids.has(w.id) && (!modeOf(mode).needsPron || w.pron);
+    const same = shuffle(langWords().filter(w=>ok(w) && kinds.has(kindOf(w)))), any = shuffle(langWords().filter(w=>ok(w) && !kinds.has(kindOf(w))));
+    return same.concat(any).slice(0, Math.max(0, count - practice.length));
+  }
   function startGame(){
-    const pool = shuffle(gamePool(gameOpts.topics, gameOpts.mode)).slice(0, gameOpts.count);
+    let pool = shuffle(gamePool(gameOpts.topics, gameOpts.mode, gameOpts.practice)).slice(0, gameOpts.count);
+    if (gameOpts.practice && pool.length) pool = shuffle(pool.concat(practiceFill(pool, gameOpts.mode, gameOpts.count)));
     if (pool.length < 3) return;
-    game = {phase:"play", topics:gameOpts.topics.slice(), mode:modeOf(gameOpts.mode), hint:gameOpts.hint, pool, left:shuffle(pool.map(w=>w.id)), right:shuffle(pool.map(w=>w.id)),
-      sel:null, done:new Set(), wrong:0, start:Date.now(), end:0, flash:null};
+    game = {phase:"play", topics:gameOpts.topics.slice(), practice:gameOpts.practice, mode:modeOf(gameOpts.mode), hint:gameOpts.hint, pool, left:shuffle(pool.map(w=>w.id)), right:shuffle(pool.map(w=>w.id)),
+      sel:null, done:new Set(), missed:new Set(), wrong:0, start:Date.now(), end:0, flash:null};
     renderGame(); $("gameCard").scrollIntoView({block:"start"});
   }
   function renderGameSetup(body){
@@ -2839,14 +3341,24 @@ button.dfield{padding:0 12px;color:var(--ink)}
       '<div class="subl">How many words</div><div class="tchips" id="gCount" role="group" aria-label="How many words"></div>'+
       '<p class="sectionnote" id="gNote" style="margin-top:10px"></p>'+
       '<div class="btns" style="display:flex;gap:8px;margin-top:6px"><button class="btn-yes" id="gStart">Start</button><button class="secondary" id="gCancel">Cancel</button></div>';
-    const used = topicList().filter(t=>langWords().some(w=>topicOf(w)===t));
+    const pool0 = langWords().filter(w=>!gameOpts.kind || kindOf(w)===gameOpts.kind);
+    const used = topicList().filter(t=>pool0.some(w=>topicOf(w)===t));
     gameOpts.topics = gameOpts.topics.filter(t=>used.includes(t));
-    // "All topics" clears the ticks; each topic toggles on and off, so several can be played together
+    // "Needs practice" plays the words got wrong before; "All topics" clears the ticks; each topic toggles on and off
+    const nPractice = practiceWords().length;
+    if (nPractice){
+      const b = document.createElement("button"); b.innerHTML = "<b>Needs practice</b><span></span>"; b.dataset.topic = "__practice";
+      b.querySelector("span").textContent = gamePool([], gameOpts.mode, true).length;
+      b.setAttribute("aria-pressed", gameOpts.practice);
+      b.onclick = ()=>{ gameOpts.practice = !gameOpts.practice; renderGame(); };
+      $("gTopics").appendChild(b);
+    } else gameOpts.practice = false;
     [[null,"All topics (random)"]].concat(used.map(t=>[t,t])).forEach(([t,name])=>{
       const b = document.createElement("button"); b.innerHTML = "<b></b><span></span>"; b.dataset.topic = t || "";
       b.querySelector("b").textContent = name; b.querySelector("span").textContent = gamePool(t ? [t] : [], gameOpts.mode).length;
-      b.setAttribute("aria-pressed", t ? gameOpts.topics.includes(t) : !gameOpts.topics.length);
+      b.setAttribute("aria-pressed", !gameOpts.practice && (t ? gameOpts.topics.includes(t) : !gameOpts.topics.length));
       b.onclick = ()=>{
+        gameOpts.practice = false;
         if (!t) gameOpts.topics = [];
         else gameOpts.topics = gameOpts.topics.includes(t) ? gameOpts.topics.filter(x=>x!==t) : gameOpts.topics.concat(t);
         renderGame();
@@ -2869,7 +3381,18 @@ button.dfield{padding:0 12px;color:var(--ink)}
       b.onclick = ()=>{ gameOpts.count = k; renderGame(); };
       $("gCount").appendChild(b);
     });
-    const n = gamePool(gameOpts.topics, gameOpts.mode).length, where = gameOpts.topics.length ? " from "+andList(gameOpts.topics) : "";
+    const n = gamePool(gameOpts.topics, gameOpts.mode, gameOpts.practice).length,
+      where = gameOpts.practice ? " that need practice" : gameOpts.topics.length ? " from "+andList(gameOpts.topics) : "";
+    if (gameOpts.practice){
+      // practice: every missed word plays, topped up with others so there's always enough
+      const take = Math.min(n, gameOpts.count), fill = n ? practiceFill(gamePool([], gameOpts.mode, true).slice(0, take), gameOpts.mode, gameOpts.count).length : 0;
+      $("gStart").disabled = !n || take + fill < 3;
+      $("gNote").textContent = !n ? "None of the words that need practice have "+L.pron+". Pick another way to match."
+        : take + fill < 3 ? "You need at least 3 entries in all to play — add a few more words."
+        : "You'll practise "+cnt(take,"word","words")+" you got wrong"+(fill ? ", mixed with "+fill+" other"+(fill===1?"":"s") : "")+".";
+      $("gStart").onclick = startGame; $("gCancel").onclick = ()=>{ game = null; renderGame(); };
+      return;
+    }
     $("gStart").disabled = n < 3;
     $("gNote").textContent = n >= gameOpts.count ? "You'll match "+gameOpts.count+" random words"+where+"."
       : n >= 3 ? "Only "+n+" words"+where+" can be used, so you'll match those "+n+"."
@@ -2884,7 +3407,7 @@ button.dfield{padding:0 12px;color:var(--ink)}
     const body = $("gameBody"); body.innerHTML = "";
     if (game.phase==="setup") return renderGameSetup(body);
     const n = game.pool.length, got = game.done.size;
-    $("gameTitle").textContent = "Match game · "+(game.topics.length ? game.topics.join(", ") : "All topics");
+    $("gameTitle").textContent = "Match game · "+(game.practice ? "Needs practice" : game.topics.length ? game.topics.join(", ") : "All topics");
     if (got===n){
       const secs = Math.max(1, Math.round((game.end-game.start)/1000));
       body.innerHTML = '<div class="gamedone"><h3></h3><p class="gamestat"></p><div class="btns"><button class="btn-yes" id="gameAgain">Play again</button><button class="secondary" id="gameChange">Change</button><button class="secondary" id="gameDone">Close</button></div></div>';
@@ -2892,7 +3415,7 @@ button.dfield{padding:0 12px;color:var(--ink)}
       body.querySelector(".gamestat").textContent = modeName(game.mode)+" · "+n+" pairs · "+(game.wrong===1 ? "1 mistake" : game.wrong+" mistakes")+" · "+secs+" s";
       $("gameAgain").onclick = startGame;
       $("gameChange").onclick = ()=>{ game = {phase:"setup"}; renderGame(); };
-      $("gameDone").onclick = ()=>{ game = null; renderGame(); };
+      $("gameDone").onclick = ()=>{ game = null; renderWords(); };   // refreshes progress and Needs practice too
       $("gameAgain").focus();
       return;
     }
@@ -2925,13 +3448,26 @@ button.dfield{padding:0 12px;color:var(--ink)}
       game.sel = game.sel && game.sel.id===id && game.sel.side===side ? null : {side, id};   // tap again to unselect
       return renderGame();
     }
+    const miss = state.wordStats.miss;
     if (game.sel.id===id){
       game.done.add(id); game.sel = null;
-      if (game.done.size===game.pool.length) game.end = Date.now();
+      // matched without a mistake on it this game: one step closer to leaving "Needs practice"
+      if (!game.missed.has(id) && miss[id]){ miss[id]--; if (!miss[id]) delete miss[id]; }
+      if (game.done.size===game.pool.length){ game.end = Date.now(); recordGame(); }
       return renderGame();
     }
+    // a wrong pair: the entry being matched (the one tapped first) needs practice, up to 3 dots
+    const tried = game.sel.id;
+    if (!game.missed.has(tried)){ miss[tried] = Math.min(3, (miss[tried]||0) + 1); game.missed.add(tried); }
+    save();
     game.wrong++; game.flash = {[game.sel.side]:game.sel.id, [side]:id}; game.sel = null; renderGame();
     setTimeout(()=>{ if (game){ game.flash = null; renderGame(); } }, 650);
+  }
+  // one finished game added to today's results (for Your progress)
+  function recordGame(){
+    const days = state.wordStats.days, k = todayISO(), d = days[k] = days[k] || {games:0, pairs:0, mistakes:0, secs:0};
+    d.games++; d.pairs += game.pool.length; d.mistakes += game.wrong; d.secs += Math.max(1, Math.round((game.end-game.start)/1000));
+    save(); renderWordHome();   // the results below update straight away
   }
   function showWordBig(w){
     const h = $("bigHost"); h.innerHTML = "";
@@ -2949,10 +3485,11 @@ button.dfield{padding:0 12px;color:var(--ink)}
     if (!formOpen.word) return;
     const editing = state.words.find(w=>w.id===formOpen.word);
     const L = wordLang();
-    const w = editing || {text:"", pron:"", meaning:"", topic:wordTopic||lastTopic, note:""};
+    const w = editing || {text:"", pron:"", meaning:"", topic:wordTopic||lastTopic, note:"", kind:wordKind||"word"};
     const showPron = L.pron || w.pron;
     const f = document.createElement("div"); f.className = "form";
     f.innerHTML = '<div class="grid">'+
+      '<div class="full"><label>This is a</label><div class="modes" id="wfKind" role="group" aria-label="Word or sentence" style="margin-top:0"><button type="button" data-k="word">Word</button><button type="button" data-k="sentence">Sentence</button></div></div>'+
       '<div class="full"><label for="wfText">Word or sentence in '+esc(L.name)+'</label><input id="wfText" type="text" maxlength="150" dir="auto" lang="'+esc(L.tag)+'" value="'+esc(w.text)+'"></div>'+
       (showPron ? '<div class="full"><label for="wfPron">'+esc(L.pron||"How to say it")+' (optional)</label><input id="wfPron" type="text" maxlength="150" value="'+esc(w.pron)+'"></div>' : '')+
       '<div class="full"><label for="wfMean">Meaning in English</label><input id="wfMean" type="text" maxlength="150" placeholder="e.g. Thank you" value="'+esc(w.meaning)+'"></div>'+
@@ -2961,6 +3498,11 @@ button.dfield{padding:0 12px;color:var(--ink)}
       '<div class="full"><label for="wfNote">Note or example (optional)</label><input id="wfNote" type="text" maxlength="150" placeholder="e.g. say it when you pay at the counter" value="'+esc(w.note)+'"></div>'+
       '</div><div class="err" id="wfErr"></div><div class="btns"><button class="btn-yes" id="wfSave">'+(editing?"Save changes":"Add")+'</button><button class="secondary" id="wfCancel">Cancel</button>'+(editing?'<button class="link" id="wfDel" style="color:var(--bad-text);margin-left:auto">Delete</button>':'')+'</div>';
     host.appendChild(f);
+    // the type is chosen when adding and never changes afterwards (to fix it: delete and add again)
+    let kind = kindOf(w);
+    const paintKind = ()=>f.querySelectorAll("#wfKind button").forEach(b=>{ b.setAttribute("aria-pressed", b.dataset.k===kind); b.disabled = !!editing; });
+    f.querySelectorAll("#wfKind button").forEach(b=>b.onclick = ()=>{ if (editing) return; kind = b.dataset.k; paintKind(); }); paintKind();
+    if (editing) f.querySelector("#wfKind").insertAdjacentHTML("afterend", '<p class="sectionnote" style="margin:4px 0 0">This can’t be changed. To make it a '+(kind==="word" ? "sentence" : "word")+', delete it and add it again.</p>');
     $("wfTopic").value = w.topic && topicList().includes(w.topic) ? w.topic : "Other";
     $("wfTopic").onchange = ()=>{ $("wfNewWrap").hidden = $("wfTopic").value!=="__new"; if (!$("wfNewWrap").hidden) $("wfNew").focus(); };
     $("wfCancel").onclick = ()=>{ formOpen.word = null; delPending = null; renderWords(); };
@@ -2969,7 +3511,7 @@ button.dfield{padding:0 12px;color:var(--ink)}
     $("wfSave").onclick = ()=>{
       const sel = $("wfTopic").value;
       const n = {id: editing ? w.id : uid(), t: editing ? (w.t||Date.now()) : Date.now(), text:$("wfText").value.trim(), pron: $("wfPron") ? $("wfPron").value.trim() : "",
-        meaning:$("wfMean").value.trim(), topic: sel==="__new" ? ($("wfNew").value.trim()||"Other") : sel, note:$("wfNote").value.trim()};
+        meaning:$("wfMean").value.trim(), topic: sel==="__new" ? ($("wfNew").value.trim()||"Other") : sel, note:$("wfNote").value.trim(), kind};
       if (!n.text){ $("wfErr").textContent = "Write the word or sentence."; $("wfText").focus(); return; }
       if (!n.meaning){ $("wfErr").textContent = "Write what it means in English."; $("wfMean").focus(); return; }
       // the exact same word can only be saved once per language, whatever its topic (a longer sentence containing it is fine)
@@ -2977,8 +3519,9 @@ button.dfield{padding:0 12px;color:var(--ink)}
       const same = langWords().find(x=>x.id!==n.id && sameWord(x.text, n.text));
       if (same){ $("wfErr").textContent = "“"+same.text+"” is already saved in "+topicOf(same)+" ("+same.meaning+"). Edit that one instead."; $("wfText").focus(); return; }
       if (editing) Object.assign(editing, n); else state.words.push(n);
+      state.hiddenTopics = state.hiddenTopics.filter(t=>t!==n.topic);
       lastTopic = n.topic; formOpen.word = null; save(); render();
-      toast("ok", (editing ? "Updated: " : "Added: ")+n.text);
+      toast("ok", (editing ? "Updated: " : "Added: ")+n.text+(wordKind && kind!==wordKind ? " (in "+KIND[kind].title+")" : ""));
     };
     $("wfText").focus();
   }
@@ -2991,7 +3534,7 @@ button.dfield{padding:0 12px;color:var(--ink)}
     const L = wordLang(), words = langWords();
     if (!words.length) return;
     const payload = {app:"study-abroad-words", version:1, lang:L.id, language:L.name, exportedAt:new Date().toISOString(),
-      words: words.map(w=>({lang:w.lang||L.id, text:w.text, pron:w.pron||"", meaning:w.meaning, topic:topicOf(w), note:w.note||""}))};
+      words: words.map(w=>({lang:w.lang||L.id, kind:kindOf(w), text:w.text, pron:w.pron||"", meaning:w.meaning, topic:topicOf(w), note:w.note||""}))};
     const a = document.createElement("a");
     a.href = URL.createObjectURL(new Blob([JSON.stringify(payload, null, 1)], {type:"application/json"}));
     a.download = "words-"+L.name.toLowerCase().replace(/[^a-z]+/g,"-").replace(/^-|-$/g,"")+"-"+todayISO()+".json";
@@ -3012,6 +3555,7 @@ button.dfield{padding:0 12px;color:var(--ink)}
     raw.forEach(r=>{
       r = r || {};
       const w = {lang: known(r.lang) ? r.lang : fallback, text:str(r.text,150), pron:str(r.pron,150), meaning:str(r.meaning,150), topic:str(r.topic,30)||"Other", note:str(r.note,150)};
+      w.kind = r.kind==="word" || r.kind==="sentence" ? r.kind : guessKind(w.text);
       const why = !w.text || !w.meaning ? "missing word or meaning"
         : state.words.some(x=>(x.lang||fallback)===w.lang && sameWord(x.text, w.text)) ? "already saved"
         : add.some(x=>x.lang===w.lang && sameWord(x.text, w.text)) ? "twice in the file" : "";
@@ -3356,7 +3900,7 @@ button.dfield{padding:0 12px;color:var(--ink)}
   }
 
   // ----- wiring -----
-  document.querySelectorAll(".bottomnav [data-tab]").forEach(b=>b.onclick=()=>{ mainTab=b.dataset.tab; formOpen={}; renewing=null; delPending=null; ttEdit=false; Object.keys(listEdit).forEach(k=>listEdit[k]=false); langPicking=false; wordsAll=false; game=null; render(); window.scrollTo(0,0); });
+  document.querySelectorAll(".bottomnav [data-tab]").forEach(b=>b.onclick=()=>{ mainTab=b.dataset.tab; formOpen={}; renewing=null; delPending=null; ttEdit=false; Object.keys(listEdit).forEach(k=>listEdit[k]=false); langPicking=false; wordsAll=false; game=null; wordKind=null; manageOpen=false; topicAct=null; wordSel.clear(); payback=null; render(); window.scrollTo(0,0); });
   $("classNew").onclick = ()=>{ formOpen.class="new"; renderClassForm(); };
   $("ttEditBtn").onclick = ()=>{ ttEdit = !ttEdit; if (!ttEdit){ formOpen.class=null; delPending=null; } renderTimetable(); if (!ttEdit) toast("ok","Timetable saved."); };
   document.querySelectorAll("[data-tt]").forEach(b=>b.onclick=()=>{ ttView=b.dataset.tt; renderTimetable(); });
@@ -3367,11 +3911,14 @@ button.dfield{padding:0 12px;color:var(--ink)}
   $("contactNew").onclick = ()=>{ formOpen.contact="new:"; renderContacts(); };
   $("wordNew").onclick = ()=>{ formOpen.word="new"; renderWords(); };
   $("wordSearch").addEventListener("input", ()=>{ wordQuery = $("wordSearch").value; if ($("wordScroll")) $("wordScroll").scrollTop = 0; renderWordList(); });
-  $("gameBtn").onclick = openGameSetup;
+  $("gameBtn").onclick = ()=>openGameSetup(false);
+  $("wordBack").onclick = ()=>{ wordKind = null; wordTopic = null; manageOpen = false; topicAct = null; listEdit.word = false; wordSel.clear(); formOpen.word = null;
+    wordQuery = ""; $("wordSearch").value = ""; renderWords(); $("pgWords").scrollIntoView({block:"start"}); };
+  $("topicManageBtn").onclick = ()=>{ manageOpen = !manageOpen; topicAct = null; renderWords(); };
   $("wordDown").onclick = downloadWords;
   $("wordFileIn").addEventListener("change", ()=>{ const f = $("wordFileIn").files && $("wordFileIn").files[0]; $("wordFileIn").value = ""; if (f) readWordFile(f); });
-  $("gameClose").onclick = ()=>{ game = null; renderGame(); };
-  [["wordEdit","word",()=>renderWords()],["taskEdit","task",()=>renderTasks()],["breakEdit","brk",()=>renderBreaks()],["docEdit","doc",()=>renderDocs()],["cardEdit","card",()=>renderCards()],["contactEdit","contact",()=>renderContacts()]].forEach(([id,k,draw])=>{
+  $("gameClose").onclick = ()=>{ game = null; renderWords(); };
+  [["spendEdit","spend",()=>render()],["wordEdit","word",()=>renderWords()],["taskEdit","task",()=>renderTasks()],["breakEdit","brk",()=>renderBreaks()],["docEdit","doc",()=>renderDocs()],["cardEdit","card",()=>renderCards()],["contactEdit","contact",()=>renderContacts()]].forEach(([id,k,draw])=>{
     $(id).onclick = ()=>{ listEdit[k] = !listEdit[k]; if (!listEdit[k]){ formOpen[k]=null; delPending=null; } draw(); };
   });
   document.addEventListener("keydown", e=>{
@@ -3582,13 +4129,13 @@ button.dfield{padding:0 12px;color:var(--ink)}
       mainTab = "money"; page = "home"; viewMonth = ym(new Date()); applyTheme();
     } else {
       if (has("money")){
-        state.expenses = []; state.budgets = {}; state.dailyLimit = null; state.recurring = [];
+        state.expenses = []; state.budgets = {}; state.dailyLimit = null; state.recurring = []; state.iou = [];
         const base = {from:"2000-01-01"}; [LOC(), HOME()].forEach(c=>{ if (c!=="USD") base[c] = DEF[c]; });
         if (Object.keys(base).length===1) base.EUR = DEF.EUR;
         state.rateLog = [base];
       }
       if (has("classes")){ state.classes = []; state.tasks = []; state.breaks = []; }
-      if (has("words")){ state.words = []; state.wordLang = null; }
+      if (has("words")){ state.words = []; state.wordLang = null; state.wordStats = {days:{}, miss:{}}; state.hiddenTopics = []; }
       if (has("docs")){ state.docs.forEach(d=>(d.photos||[]).forEach(id=>photoDel(id))); state.docs = []; }
       if (has("help")){ state.cards = []; state.contacts = []; }
       if (has("profile")){ profile = {name:"", photo:"", updatedAt:0}; saveProfile(); }

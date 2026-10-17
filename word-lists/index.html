@@ -34,13 +34,14 @@ h2{font-size:1.1rem;margin:0 0 4px}
 .sample span{color:var(--ink)}
 .dl{display:inline-block;padding:11px 18px;border-radius:12px;background:var(--ink);color:var(--surface);text-decoration:none;font-weight:600;white-space:nowrap}
 .note{font-size:.85rem;color:var(--muted)}
+.group{font-size:.95rem;margin:18px 0 0;padding-top:14px;border-top:2px solid var(--line);color:var(--jade)}
 </style>
 </head>
 <body>
 <div class="wrap">
   <a href="../">&larr; Back to the app</a>
   <h1>Word lists</h1>
-  <p class="lead">Ready-made words for the <b>Words</b> page of the Studying Abroad app. Download a list, then add it in the app.</p>
+  <p class="lead">Ready-made words and sentences for the <b>Words</b> page of the Studying Abroad app. Download a list, then add it in the app.</p>
 
   <section class="card">
     <h2>How to add a list</h2>
@@ -54,30 +55,59 @@ h2{font-size:1.1rem;margin:0 0 4px}
 
   <section class="card" id="chinese-mandarin">
     <h2>Chinese (Mandarin)</h2>
+    <p class="note" style="margin:2px 0 0">Every list has characters, pinyin, English, and Thai in the note. Words go to <b>Words</b> in the app, sentences to <b>Sentences</b>. No list repeats another.</p>
+
+    <h3 class="group">Words</h3>
     <div class="list">
       <div class="info">
         <b>Basic words</b>
-        <div class="meta">210 words · 14 topics · characters, pinyin, English, and Thai in the note</div>
+        <div class="meta">210 words · 14 topics · about HSK 1–2</div>
         <ul class="topics">
           <li>Animals 20</li><li>Colours 12</li><li>Weather 14</li><li>Fruit 14</li><li>Vegetables 12</li><li>Family 16</li><li>Food &amp; ordering 24</li>
           <li>Countries 20</li><li>Numbers 15</li><li>Body 14</li><li>Time 16</li><li>Places 14</li><li>Transport 8</li><li>School 11</li>
         </ul>
         <p class="sample">For example: <span lang="zh-CN">猫</span> māo · Cat · <span lang="th">แมว</span></p>
       </div>
-      <a class="dl" href="chinese-mandarin/basic-words.json" download="chinese-basic-words.json">Download</a>
+      <a class="dl" href="chinese-mandarin/words/basic-words.json" download="chinese-basic-words.json">Download</a>
     </div>
     <div class="list">
       <div class="info">
         <b>Intermediate words</b>
-        <div class="meta">300 words · 18 topics · about HSK 3–4 · characters, pinyin, English, and Thai in the note · no words repeated from Basic</div>
+        <div class="meta">300 words · 17 topics · about HSK 3–4</div>
         <ul class="topics">
-          <li>Daily life 19</li><li>School 20</li><li>Work 20</li><li>Feelings 20</li><li>Describing 18</li><li>Health &amp; emergency 18</li>
-          <li>Shopping 18</li><li>Clothes 12</li><li>Home 18</li><li>Travel 18</li><li>City 14</li><li>Food &amp; ordering 18</li><li>Nature 14</li>
-          <li>Technology 14</li><li>Hobbies 14</li><li>Time 18</li><li>Linking words 18</li><li>Useful phrases 9</li>
+          <li>Daily life 21</li><li>School 22</li><li>Work 20</li><li>Feelings 20</li><li>Describing 18</li><li>Health &amp; emergency 18</li>
+          <li>Shopping 20</li><li>Clothes 12</li><li>Home 19</li><li>Travel 18</li><li>City 14</li><li>Food &amp; ordering 18</li><li>Nature 14</li>
+          <li>Technology 16</li><li>Hobbies 14</li><li>Time 18</li><li>Linking words 18</li>
         </ul>
         <p class="sample">For example: <span lang="zh-CN">扫码</span> sǎomǎ · Scan a QR code · <span lang="th">สแกนคิวอาร์โค้ด</span></p>
       </div>
-      <a class="dl" href="chinese-mandarin/intermediate-words.json" download="chinese-intermediate-words.json">Download</a>
+      <a class="dl" href="chinese-mandarin/words/intermediate-words.json" download="chinese-intermediate-words.json">Download</a>
+    </div>
+
+    <h3 class="group">Sentences</h3>
+    <div class="list">
+      <div class="info">
+        <b>Basic sentences</b>
+        <div class="meta">100 sentences · 9 topics · about HSK 1–2</div>
+        <ul class="topics">
+          <li>Greetings 15</li><li>About me 12</li><li>Food &amp; ordering 14</li><li>Shopping 9</li><li>Transport 11</li>
+          <li>Time 10</li><li>School 10</li><li>Health &amp; emergency 10</li><li>Daily life 9</li>
+        </ul>
+        <p class="sample">For example: <span lang="zh-CN">请说慢一点儿。</span> qǐng shuō màn yìdiǎnr. · Please speak more slowly. · <span lang="th">กรุณาพูดช้าลงหน่อย</span></p>
+      </div>
+      <a class="dl" href="chinese-mandarin/sentences/basic-sentences.json" download="chinese-basic-sentences.json">Download</a>
+    </div>
+    <div class="list">
+      <div class="info">
+        <b>Intermediate sentences</b>
+        <div class="meta">100 sentences · 10 topics · about HSK 3–4</div>
+        <ul class="topics">
+          <li>School 12</li><li>Daily life 12</li><li>Food &amp; ordering 10</li><li>Shopping 10</li><li>Travel 12</li>
+          <li>Health &amp; emergency 10</li><li>Home 8</li><li>Work 8</li><li>Feelings 10</li><li>Technology 8</li>
+        </ul>
+        <p class="sample">For example: <span lang="zh-CN">房租包括水电费吗？</span> fángzū bāokuò shuǐdiànfèi ma? · Does the rent include water and electricity? · <span lang="th">ค่าเช่ารวมค่าน้ำค่าไฟไหม</span></p>
+      </div>
+      <a class="dl" href="chinese-mandarin/sentences/intermediate-sentences.json" download="chinese-intermediate-sentences.json">Download</a>
     </div>
   </section>
 
