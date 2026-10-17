@@ -531,6 +531,17 @@ button.dfield{padding:0 12px;color:var(--ink)}
 .row .money div{font-weight:600}
 .row .money small{color:var(--muted)}
 .del{border:0;background:transparent;color:var(--muted);cursor:pointer;font-size:1.1rem;width:32px;height:32px;border-radius:8px;flex:none}
+.eye{border:0;background:transparent;color:var(--muted);cursor:pointer;width:32px;height:32px;border-radius:8px;flex:none;display:grid;place-items:center;padding:0;margin-right:-6px}
+.eye svg{width:18px;height:18px}
+.eye:hover{color:var(--ink);background:var(--field)}
+.spendsheet{max-height:88vh;overflow-y:auto}
+.ssbig{padding:4px 0 10px}
+.ssbig .num{font-size:1.6rem;font-weight:700;font-variant-numeric:tabular-nums}
+.ssbig small{color:var(--muted);font-variant-numeric:tabular-nums}
+.ssrow{display:flex;justify-content:space-between;gap:12px;padding:8px 0;border-top:1px solid var(--line);font-size:.92rem}
+.ssrow span{color:var(--muted)}
+.ssrow b{font-weight:600;text-align:right;font-variant-numeric:tabular-nums}
+.ssimg{display:block;width:100%;max-height:280px;object-fit:cover;border-radius:12px;cursor:zoom-in;margin-top:4px}
 .del:hover{color:var(--chili);background:var(--field)}
 .empty{color:var(--muted);text-align:center;padding:22px 0}
 .showall{display:block;width:100%;margin-top:12px}
@@ -730,6 +741,10 @@ button.dfield{padding:0 12px;color:var(--ink)}
         <label for="date">Date</label>
         <input id="date" type="date">
       </div>
+      <div class="full">
+        <label>Receipt photo (optional)</label>
+        <div class="thumbs" id="rcptBox" style="margin-top:0"></div>
+      </div>
     </div>
     <p class="rateline" id="rateLine"></p>
     <button class="primary" id="add">Add spending</button>
@@ -887,7 +902,7 @@ button.dfield{padding:0 12px;color:var(--ink)}
 <script>
 (function(){
   // Bump on every publish (date + a letter for several in one day). "Check for updates" compares it with the website's copy.
-  const APP_VERSION = "2026-10-17a";
+  const APP_VERSION = "2026-10-17b";
   // Approximate starting rates (units per 1 US dollar). Students should replace them with real rates.
   const DEF = {USD:1, CNY:7.1, THB:33.6, JPY:150, KRW:1380, TWD:31, HKD:7.8, SGD:1.3, MYR:4.3, VND:25500, IDR:16000, PHP:57, INR:85, LAK:21500, KHR:4000, MMK:2100,
     AUD:1.5, NZD:1.7, CAD:1.38, GBP:0.76, EUR:0.88, CHF:0.82, SEK:9.6, NOK:10.3, DKK:6.6, CZK:21.5, PLN:3.7, HUF:350, RUB:85, TRY:40, AED:3.67, MXN:18.5, BRL:5.5};
@@ -977,12 +992,13 @@ button.dfield{padding:0 12px;color:var(--ink)}
     split: `<p><b>Just me</b> is a normal purchase.</p>
       <p><b>Split bill</b> is for when you buy things together with friends, like a market trip. Add each item with its price, then set how many people share it. Leave it at <b>Just me</b> for your own stuff.</p>
       <p>Example: your snacks 30 (just me), rice 40 (2 people), meat 60 (3 people). Your share is 30 + 20 + 20 = <b>70</b>, the bill is 130.</p>
-      <p>Only your share counts as your spending. If you paid the whole bill, the app shows how much your friends owe you, and the bill waits in <b>Friends owe you</b> until they pay you back.</p>
+      <p>Something you bought only for a friend? Tap <b>−</b> on it until it says <b>Friend's (not mine)</b>. It isn't your share, and if you paid, the friend owes you all of it.</p>
+      <p>If you paid the whole bill, the whole bill comes off your balance, because that money left your pocket. What your friends owe you waits in <b>Friends owe you</b>; when they pay you back, tap <b>Paid back</b> and it goes back into your budget. In the end you've only paid your own share.</p>
       <p>If a friend paid, your share isn't taken from your balance yet: it waits in <b>You owe friends</b>, and counts as spending on the day you tap <b>I paid them back</b>.</p>`,
     iou: `<p>When a friend pays the whole bill and you choose <b>A friend paid</b>, your share waits here. It isn't taken from your balance yet, because you haven't paid anything.</p>
       <p>When you give your friend the money, tap <b>I paid them back</b>. Your share then counts as spending on that day (today, unless you pick another date) and comes off that month's balance.</p>
       <p><b>Remove</b> deletes one you saved by mistake.</p>`,
-    owe: `<p>When you pay a whole bill and split it with friends, their part shows here until they pay you back.</p>
+    owe: `<p>When you pay a whole bill and split it with friends, their part shows here until they pay you back. The whole bill came off your balance when you paid it.</p>
       <p>Tap <b>Paid back</b> when they do. You can enter a smaller amount if only some of them have paid. The money you get back is added to <b>this month's budget</b>, because it's money you can spend again.</p>
       <p>If you haven't set a budget for this month, the bill is only marked as paid back.</p>`,
     bills: `<p>Use this for things you pay every month, like rent, water, gas, electricity or mobile data.</p>
@@ -1103,7 +1119,9 @@ button.dfield{padding:0 12px;color:var(--ink)}
   }
   function perLocal(r, c){ return upd(r,c) / upd(r, LOC()); }
   function nice(x){ return x>=100 ? +x.toFixed(2) : x>=1 ? +x.toFixed(4) : +x.toPrecision(4); }
-  function inCur(e, to){ return conv(e.amount, e.cur, to, e.r || rateFor(e.date)); }
+  // what left your pocket: the whole bill when you paid for everyone (friends' paybacks go back into the budget), else your amount
+  const paidOut = e=> e.split && e.split.paidBy==="me" && e.split.total>0 ? e.split.total : e.amount;
+  function inCur(e, to){ return conv(paidOut(e), e.cur, to, e.r || rateFor(e.date)); }
   function fmt(n, cur){
     let digits = digitsOf(cur);
     if (Math.abs(n)>=100000) digits = 0;
@@ -1584,29 +1602,32 @@ button.dfield{padding:0 12px;color:var(--ink)}
     const v = state.view;
     const cat = catById[e.cat]||catById.other;
     const r = document.createElement("div"); r.className="row";
-    r.innerHTML = '<span class="dot"></span><div class="what"><div></div><small></small></div><div class="money"><div></div><small></small></div><button class="del" aria-label="Delete">×</button>';
+    r.innerHTML = '<span class="dot"></span><div class="what"><div></div><small></small></div><div class="money"><div></div><small></small></div><button class="eye" aria-label="Details">'+EYE+'</button><button class="del" aria-label="Delete">×</button>';
+    r.querySelector(".eye").setAttribute("aria-label", "Details of "+(e.desc || cat.name));
+    r.querySelector(".eye").onclick = ()=>showSpend(e);
     r.querySelector(".dot").style.background = cat.c;
     r.querySelector(".what div").textContent = e.desc || cat.name;
     const rate = e.r || rateFor(e.date);
     const sub = r.querySelector(".what small");
     if (e.rec){ const t=document.createElement("span"); t.className="tag"; t.textContent="↻ Monthly"; sub.appendChild(t); }
     if (e.split){ const t=document.createElement("span"); t.className="tag"; t.textContent="Split"; sub.appendChild(t); }
+    if (e.photo){ const t=document.createElement("span"); t.className="tag"; t.textContent="Receipt"; sub.appendChild(t); }
     sub.appendChild(document.createTextNode(cat.name + (selDay && curs().length>1 ? " · "+rateText(rate) : "")));
     if (e.split){
       const sp = e.split, owe = owedOf(e), share = Math.round((sp.total-e.amount)*100)/100;
       const l = document.createElement("small");
-      l.textContent = "Bill "+fmt(sp.total,e.cur)+" · "+(sp.paidBy==="me" ? (owe>0 ? "friends owe you "+fmt(owe,e.cur) : share>0 ? "friends paid you back ✓" : "all yours")
-        : sp.billDate ? "a friend paid on "+prettyDate(sp.billDate,{day:"numeric",month:"short"})+", you paid them back ✓" : "a friend paid");
+      l.textContent = sp.paidBy==="me" ? "Your share "+fmt(e.amount,e.cur)+" · "+(owe>0 ? "friends owe "+fmt(owe,e.cur) : share>0 ? "friends paid you back ✓" : "all yours") :
+        "Bill "+fmt(sp.total,e.cur)+" · "+(sp.billDate ? "a friend paid on "+prettyDate(sp.billDate,{day:"numeric",month:"short"})+", you paid them back ✓" : "a friend paid");
       r.querySelector(".what").appendChild(l);
       if (selDay && Array.isArray(sp.items)){
         const l2 = document.createElement("small");
-        l2.textContent = sp.items.map(it=>(it.name||"Item")+" "+fmt(it.price,e.cur)+(it.people>1?" ÷"+it.people:"")).join(" · ");
+        l2.textContent = sp.items.map(it=>(it.name||"Item")+" "+fmt(it.price,e.cur)+(it.people>1?" ÷"+it.people:it.people===0?" (friend's)":"")).join(" · ");
         r.querySelector(".what").appendChild(l2);
       }
     }
     r.querySelector(".money div").textContent = fmt(inCur(e,v),v);
     const others = curs().filter(c=>c!==v).map(c=>fmt(inCur(e,c),c));
-    r.querySelector(".money small").textContent = (e.cur!==v ? "paid "+fmt(e.amount,e.cur)+" · " : "") + others.join(" · ");
+    r.querySelector(".money small").textContent = (e.cur!==v ? "paid "+fmt(paidOut(e),e.cur)+" · " : "") + others.join(" · ");
     const del = r.querySelector(".del");
     if (pendingDelete===e.id){
       del.classList.add("confirm"); del.textContent="Delete"; del.setAttribute("aria-label","Confirm delete");
@@ -1616,6 +1637,7 @@ button.dfield{padding:0 12px;color:var(--ink)}
       del.onclick = ()=>{
         const m = e.date.slice(0,7);
         if (e.rec){ const rb = state.recurring.find(x=>x.id===e.rec); if (rb){ rb.skip = rb.skip||{}; rb.skip[e.recM] = true; } }
+        if (e.photo) photoDel(e.photo);
         state.expenses = state.expenses.filter(x=>x.id!==e.id); deletedIds.add(e.id); pendingDelete=null; save([m]); render();
       };
     } else {
@@ -1632,6 +1654,81 @@ button.dfield{padding:0 12px;color:var(--ink)}
     if (formOpen.spend===e.id){ const frag = document.createDocumentFragment(); frag.append(r, spendForm(e)); return frag; }
     return r;
   }
+  // ---------- receipt photos: one per purchase, kept on the phone in IndexedDB with the document photos ----------
+  // draft = {id, url, isNew} or null; the photo is only saved (or deleted) when the purchase is saved
+  let rcptDraft = null;
+  function receiptPicker(host, get, set){
+    host.innerHTML = "";
+    const cur = get();
+    if (cur){
+      const t = document.createElement("div"); t.className = "thumb"; t.style.backgroundImage = 'url("'+cur.url+'")';
+      t.setAttribute("role","button"); t.tabIndex = 0; t.setAttribute("aria-label","Show the receipt");
+      t.onclick = ()=>openViewer("Receipt", [cur.url], 0);
+      const x = document.createElement("button"); x.className = "rm2"; x.textContent = "×"; x.setAttribute("aria-label","Remove the receipt photo");
+      x.onclick = ev=>{ ev.stopPropagation(); set(null); receiptPicker(host, get, set); };
+      t.appendChild(x); host.appendChild(t);
+      return;
+    }
+    const a = document.createElement("label"); a.className = "addphoto";
+    a.innerHTML = '<span>+ Add<br>receipt</span><input type="file" accept="image/*" aria-label="Add a receipt photo">';
+    a.querySelector("input").onchange = async ev=>{
+      const f = ev.target.files && ev.target.files[0]; ev.target.value = ""; if (!f) return;
+      if (!/^image\//.test(f.type)){ toast("warn","Choose a photo (JPG or PNG)."); return; }
+      try{ set({id:"rc"+uid(), url:await shrinkPhoto(f), isNew:true}); receiptPicker(host, get, set); }
+      catch(err){ toast("warn","That photo couldn't be opened. Try a JPG or PNG."); }
+    };
+    host.appendChild(a);
+  }
+  function paintAddReceipt(){ receiptPicker($("rcptBox"), ()=>rcptDraft, v=>{ rcptDraft = v; }); }
+  // photos that belong to purchases (spent, or still owed to a friend), for backups and deleting
+  const spendPhotoIds = ()=> state.expenses.concat(state.iou||[]).map(e=>e.photo).filter(Boolean);
+
+  // ---------- 👁 details of one purchase, with its receipt ----------
+  function showSpend(e){
+    const old = $("spendSheet"); if (old) old.remove();
+    const host = document.createElement("div"); host.id = "spendSheet";
+    host.innerHTML = '<div class="sheetbg"></div><div class="calc spendsheet" role="dialog" aria-label="Purchase details"><div class="bar2"><b></b><button class="link" data-x>Close</button></div><div class="ssbody"></div></div>';
+    const cat = catById[e.cat]||catById.other, body = host.querySelector(".ssbody"), sp = e.split, pending = (state.iou||[]).includes(e);
+    host.querySelector(".bar2 b").textContent = e.desc || cat.name;
+    const big = document.createElement("div"); big.className = "ssbig";
+    big.innerHTML = '<div class="num"></div><small></small>';
+    const paidAll = sp && sp.paidBy==="me";
+    big.querySelector("div").textContent = fmt(paidOut(e), e.cur) + (paidAll ? " (you paid)" : sp ? " (your share)" : "");
+    big.querySelector("small").textContent = curs().filter(c=>c!==e.cur).map(c=>fmt(inCur(e,c),c)).join(" · ");
+    body.appendChild(big);
+    const row = (k, v)=>{ const r = document.createElement("div"); r.className = "ssrow"; r.innerHTML = "<span></span><b></b>"; r.children[0].textContent = k; r.children[1].textContent = v; body.appendChild(r); };
+    row("Category", cat.name);
+    row(pending ? "Friend paid on" : "Date", prettyDate(e.date,{weekday:"short",day:"numeric",month:"short",year:"numeric"}));
+    if (curs().length>1) row("Exchange rate", rateText(e.r || rateFor(e.date)));
+    if (e.rec) row("Type", "Monthly bill");
+    if (sp){
+      row("Bill total", fmt(sp.total, e.cur));
+      row("Paid by", sp.paidBy==="me" ? "You" : "A friend");
+      row("Your share", fmt(e.amount, e.cur));
+      if (Array.isArray(sp.items) && sp.items.length){
+        const h = document.createElement("div"); h.className = "subl"; h.textContent = "Items"; body.appendChild(h);
+        sp.items.forEach(it=> row((it.name||"Item")+" · "+fmt(it.price,e.cur), it.people===0 ? "friend's" : it.people>1 ? "÷"+it.people+" = "+fmt(it.price/it.people,e.cur) : "yours"));
+      }
+      if (sp.paidBy==="me"){
+        (sp.repaid||[]).forEach(x=>row("Paid back "+prettyDate(x.date,{day:"numeric",month:"short"}), fmt(x.amount,e.cur)));
+        const o = owedOf(e); row("Friends still owe", o>0 ? fmt(o,e.cur) : "nothing ✓");
+      } else if (pending) row("You owe your friend", fmt(e.amount,e.cur));
+      else if (sp.billDate) row("You paid them back", prettyDate(sp.paidBackOn || e.date,{day:"numeric",month:"short"}));
+    }
+    const ph = document.createElement("div"); ph.className = "subl"; ph.textContent = "Receipt"; body.appendChild(ph);
+    if (e.photo && photoCache[e.photo]){
+      const img = document.createElement("img"); img.className = "ssimg"; img.src = photoCache[e.photo]; img.alt = "Receipt for "+(e.desc||cat.name);
+      img.onclick = ()=>openViewer("Receipt", [photoCache[e.photo]], 0);
+      body.appendChild(img);
+    } else body.insertAdjacentHTML("beforeend", '<p class="sectionnote" style="margin:0">No photo yet. Tap <b>Edit</b> on the list, then this purchase, to add one.</p>');
+    const close = ()=>host.remove();
+    host.querySelector(".sheetbg").onclick = close; host.querySelector("[data-x]").onclick = close;
+    host.addEventListener("keydown", ev=>{ if (ev.key==="Escape") close(); });
+    document.body.appendChild(host);
+    host.querySelector("[data-x]").focus();
+  }
+  const EYE = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>';
+
   // Change a purchase already added: amount, currency, description, category or date.
   // A new date takes that date's exchange rate; a split bill keeps its amount (it comes from the items).
   function spendForm(e){
@@ -1642,12 +1739,15 @@ button.dfield{padding:0 12px;color:var(--ink)}
       '<div><label for="sfCur">Currency</label><select id="sfCur">'+cs.map(c=>'<option value="'+c+'">'+sym(c).trim()+' '+c+'</option>').join("")+'</select></div>'+
       '<div class="full"><label for="sfDesc">What was it?</label><input id="sfDesc" type="text" maxlength="80"></div>'+
       '<div><label for="sfCat">Category</label><select id="sfCat">'+CATS.map(c=>'<option value="'+c.id+'">'+c.name+'</option>').join("")+'</select></div>'+
-      '<div><label for="sfDate">Date</label><input id="sfDate" type="date" value="'+esc(e.date)+'"></div></div>'+
+      '<div><label for="sfDate">Date</label><input id="sfDate" type="date" value="'+esc(e.date)+'"></div>'+
+      '<div class="full"><label>Receipt photo</label><div class="thumbs" id="sfRcpt" style="margin-top:0"></div></div></div>'+
       (split ? '<p class="sectionnote" style="margin-top:8px">Your share comes from the bill’s items. To change the items, delete this and add the bill again.</p>' : '')+
       '<div class="err" id="sfErr"></div><div class="btns"><button class="btn-yes" id="sfSave">Save changes</button><button class="secondary" id="sfCancel">Cancel</button></div>';
     const q = s=>f.querySelector(s);
     q("#sfAmt").value = e.amount; q("#sfAmt").readOnly = split; q("#sfCur").value = e.cur; q("#sfCur").disabled = split;
     q("#sfDesc").value = e.desc || ""; q("#sfCat").value = e.cat;
+    let draft = e.photo ? {id:e.photo, url:photoCache[e.photo]||"", isNew:false} : null;   // kept even if photos are still loading
+    receiptPicker(q("#sfRcpt"), ()=>draft, v=>{ draft = v; });
     q("#sfCancel").onclick = ()=>{ formOpen.spend = null; render(); };
     q("#sfSave").onclick = ()=>{
       const amt = split ? e.amount : parseNum(q("#sfAmt").value), date = q("#sfDate").value;
@@ -1656,6 +1756,10 @@ button.dfield{padding:0 12px;color:var(--ink)}
       const oldM = e.date.slice(0,7), newM = date.slice(0,7);
       if (date!==e.date) e.r = rateFor(date);
       Object.assign(e, {amount:Math.round(amt*100)/100, cur: split ? e.cur : q("#sfCur").value, desc:q("#sfDesc").value.trim(), cat:q("#sfCat").value, date});
+      // receipt: drop the old photo if it was removed or replaced, store a new one
+      if (e.photo && (!draft || draft.id!==e.photo)) photoDel(e.photo);
+      if (draft && draft.isNew) photoPut(draft.id, draft.url);
+      if (draft) e.photo = draft.id; else delete e.photo;
       formOpen.spend = null; save([oldM, newM]); render();
       toast("ok", "Purchase updated"+(newM!==oldM ? " and moved to "+monthName(newM)+"." : "."));
     };
@@ -1683,11 +1787,13 @@ button.dfield{padding:0 12px;color:var(--ink)}
       r.querySelector(".what small").textContent = "friend paid "+prettyDate(e.date,{day:"numeric",month:"short"})+" · bill "+fmt(e.split.total,e.cur);
       r.querySelector(".money div").textContent = fmt(e.amount, e.cur);
       const acts = r.querySelector(".iouacts");
+      const eye = document.createElement("button"); eye.className = "eye"; eye.innerHTML = EYE; eye.style.display = "inline-grid"; eye.style.verticalAlign = "middle";
+      eye.setAttribute("aria-label", "Details of "+(e.desc || "this bill")); eye.onclick = ()=>showSpend(e); acts.appendChild(eye);
       const paid = document.createElement("button"); paid.className = "link"; paid.style.fontSize = ".86rem"; paid.textContent = "I paid them back";
       paid.onclick = ()=>{ iouOpen = iouOpen===e.id ? null : e.id; iouDel = null; renderIou(); };
       const rm = document.createElement("button"); rm.className = "link"; rm.style.cssText = "font-size:.8rem;color:var(--bad-text);margin-left:10px";
       rm.textContent = iouDel===e.id ? "Tap again to remove" : "Remove";
-      rm.onclick = ()=>{ if (iouDel!==e.id){ iouDel = e.id; renderIou(); return; } state.iou = state.iou.filter(x=>x.id!==e.id); iouDel = null; save(); render(); toast("ok", "Removed."); };
+      rm.onclick = ()=>{ if (iouDel!==e.id){ iouDel = e.id; renderIou(); return; } if (e.photo) photoDel(e.photo); state.iou = state.iou.filter(x=>x.id!==e.id); iouDel = null; save(); render(); toast("ok", "Removed."); };
       acts.append(paid, rm);
       host.appendChild(r);
       if (iouOpen===e.id) host.appendChild(iouForm(e));
@@ -1916,11 +2022,14 @@ button.dfield{padding:0 12px;color:var(--ink)}
 
   $("add").onclick = ()=>{
     const a = parseNum($("amount").value);
-    if (!(a>0)){ $("preview").textContent = addMode==="split" ? "Add at least one item with a price." : "Enter an amount above 0."; (addMode==="split" ? document.querySelector("#items .pr") : $("amount")).focus(); return; }
+    // a split bill needs items; your share can be 0 when you paid only for friends' things (they owe you all of it)
+    const sc = addMode==="split" ? splitCalc() : null;
+    if (sc ? !(sc.total>0) : !(a>0)){ $("preview").textContent = sc ? "Add at least one item with a price." : "Enter an amount above 0."; (sc ? document.querySelector("#items .pr") : $("amount")).focus(); return; }
+    if (sc && !(sc.mine>0) && paidBy==="other"){ $("preview").textContent = "Nothing on this bill is yours, so there's nothing to save."; return; }
     const date = $("date").value || todayISO();
     const _before = spentLocal(date.slice(0,7));
     const entry = { id: Date.now().toString(36)+Math.random().toString(36).slice(2,6), t: Date.now(),
-      amount: Math.round(a*100)/100, cur: entryCur, desc: $("desc").value.trim(), cat: $("cat").value, date, r: rateFor(date) };
+      amount: sc ? sc.mine : Math.round(a*100)/100, cur: entryCur, desc: $("desc").value.trim(), cat: $("cat").value, date, r: rateFor(date) };
     if (addMode==="split"){
       const {total} = splitCalc();
       entry.split = { total, paidBy, items: splitItems.filter(it=>parseNum(it.price)>0).map(it=>({name:it.name.trim(), price:Math.round(parseNum(it.price)*100)/100, people:it.people})) };
@@ -1928,6 +2037,7 @@ button.dfield{padding:0 12px;color:var(--ink)}
       splitItems = [newItem(), newItem(2)];
       renderItems();
     }
+    if (rcptDraft){ photoPut(rcptDraft.id, rcptDraft.url); entry.photo = rcptDraft.id; rcptDraft = null; paintAddReceipt(); }
     if (entry.split && entry.split.paidBy==="other"){
       // a friend paid the whole bill: nothing leaves your balance yet. It waits in "You owe friends" and
       // becomes spending on the day you tap "I paid them back".
@@ -2294,10 +2404,11 @@ button.dfield{padding:0 12px;color:var(--ink)}
   function newItem(people){ return {id:Math.random().toString(36).slice(2,8), name:"", price:"", people:people||1}; }
   function splitCalc(){
     let total=0, mine=0;
-    splitItems.forEach(it=>{ const p=parseNum(it.price); if(p>0){ total+=p; mine+=p/Math.max(1,it.people); } });
+    // people 0 = a friend's item (bought for them, none of it yours): adds to the bill, not to your share
+    splitItems.forEach(it=>{ const p=parseNum(it.price); if(p>0){ total+=p; if (it.people>0) mine+=p/it.people; } });
     return {total:Math.round(total*100)/100, mine:Math.round(mine*100)/100};
   }
-  function peopleLabel(n){ return n===1 ? "Just me" : "Split "+n+" ways"; }
+  function peopleLabel(n){ return n===0 ? "Friend's (not mine)" : n===1 ? "Just me" : "Split "+n+" ways"; }
   function renderItems(){
     const box = $("items"); box.innerHTML = "";
     splitItems.forEach((it, idx)=>{
@@ -2310,12 +2421,12 @@ button.dfield{padding:0 12px;color:var(--ink)}
       nm.addEventListener("input", ()=>{ it.name = nm.value; });
       pr.addEventListener("input", ()=>{ it.price = pr.value; updateSplit(); paintPart(); });
       const st = d.querySelectorAll(".stepper button");
-      st[0].onclick = ()=>{ if(it.people>1){ it.people--; renderItems(); updateSplit(); } };
+      st[0].onclick = ()=>{ if(it.people>0){ it.people--; renderItems(); updateSplit(); } };
       st[1].onclick = ()=>{ if(it.people<20){ it.people++; renderItems(); updateSplit(); } };
       d.querySelector(".stepper span").textContent = peopleLabel(it.people);
       d.querySelector(".x").onclick = ()=>{ splitItems = splitItems.filter(x=>x!==it); if(!splitItems.length) splitItems=[newItem()]; renderItems(); updateSplit(); };
       const part = d.querySelector(".part");
-      function paintPart(){ const p=parseNum(it.price); part.textContent = p>0 ? (it.people>1 ? "your part "+fmt(p/it.people,entryCur) : "all yours") : ""; }
+      function paintPart(){ const p=parseNum(it.price); part.textContent = p>0 ? (it.people===0 ? "not yours" : it.people>1 ? "your part "+fmt(p/it.people,entryCur) : "all yours") : ""; }
       paintPart();
       box.appendChild(d);
     });
@@ -2323,14 +2434,15 @@ button.dfield{padding:0 12px;color:var(--ink)}
   function updateSplit(){
     if (addMode!=="split") return;
     const {total, mine} = splitCalc();
-    $("amount").value = mine>0 ? mine.toFixed(2) : "";
+    $("amount").value = total>0 ? mine.toFixed(2) : "";
     const others = Math.round((total-mine)*100)/100;
     const box = $("splitSum");
     box.innerHTML = '<div><span>Bill total</span><span></span></div><div class="me"><span>Your share</span><span></span></div><div><span></span><span></span></div>';
     const r = box.querySelectorAll("div");
     r[0].children[1].textContent = fmt(total, entryCur);
     r[1].children[1].textContent = fmt(mine, entryCur);
-    if (paidBy==="me"){ r[2].className = others>0 ? "owe" : ""; r[2].children[0].textContent = "Friends owe you"; r[2].children[1].textContent = fmt(others, entryCur); }
+    if (paidBy==="me"){ r[2].className = others>0 ? "owe" : ""; r[2].children[0].textContent = "Friends owe you"; r[2].children[1].textContent = fmt(others, entryCur);
+      if (others>0) box.insertAdjacentHTML("beforeend", '<p class="sectionnote" style="margin:6px 0 0">The whole bill comes off your balance. When friends pay you back, it goes back in.</p>'); }
     else {
       r[2].className = mine>0 ? "oweme" : ""; r[2].children[0].textContent = "You owe the friend who paid"; r[2].children[1].textContent = fmt(mine, entryCur);
       box.insertAdjacentHTML("beforeend", '<p class="sectionnote" style="margin:6px 0 0">Not taken from your balance until you pay your friend back.</p>');
@@ -3782,7 +3894,7 @@ button.dfield{padding:0 12px;color:var(--ink)}
     h.appendChild(v); draw();
     v.querySelector(".vtop button").focus();
   }
-  photoLoadAll().then(()=>{ if (mainTab==="docs") renderDocs(); });
+  photoLoadAll().then(()=>{ if (mainTab==="docs") renderDocs(); else if (mainTab==="money" && formOpen.spend) render(); });
 
   // ----- Driver cards -----
   function renderCards(){
@@ -4034,6 +4146,7 @@ button.dfield{padding:0 12px;color:var(--ink)}
   $("bkDown").onclick = ()=>{
     wipeBackedUp = true; if (wipeStep) renderWipe();
     const photos = {}; state.docs.forEach(d=>(d.photos||[]).forEach(id=>{ if (photoCache[id]) photos[id]=photoCache[id]; }));
+    spendPhotoIds().forEach(id=>{ if (photoCache[id]) photos[id]=photoCache[id]; });   // receipts too
     const payload = {app:"china-spending", version:2, exportedAt:new Date().toISOString(), data:snapshot(), profile, photos};
     const blob = new Blob([JSON.stringify(payload)], {type:"application/json"});
     const a = document.createElement("a");
@@ -4129,6 +4242,7 @@ button.dfield{padding:0 12px;color:var(--ink)}
       mainTab = "money"; page = "home"; viewMonth = ym(new Date()); applyTheme();
     } else {
       if (has("money")){
+        spendPhotoIds().forEach(id=>photoDel(id));
         state.expenses = []; state.budgets = {}; state.dailyLimit = null; state.recurring = []; state.iou = [];
         const base = {from:"2000-01-01"}; [LOC(), HOME()].forEach(c=>{ if (c!=="USD") base[c] = DEF[c]; });
         if (Object.keys(base).length===1) base.EUR = DEF.EUR;
@@ -4152,6 +4266,7 @@ button.dfield{padding:0 12px;color:var(--ink)}
   $("wipeBtn").onclick = ()=>{ wipeStep = 1; wipeParts = new Set(WIPE_PARTS.map(p=>p[0])); renderWipe(); };
 
   splitItems = [newItem(), newItem(2)];
+  paintAddReceipt();
   document.querySelectorAll("[data-mode]").forEach(b=>b.onclick=()=>{
     if (addMode===b.dataset.mode) return;
     addMode=b.dataset.mode; $("amount").value=""; if(addMode==="split" && $("cat").value==="other") $("cat").value="food";

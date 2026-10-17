@@ -3,7 +3,7 @@
  "version": 1,
  "lang": "zh",
  "language": "Chinese (Mandarin)",
- "exportedAt": "2026-10-17T03:38:27+00:00",
+ "exportedAt": "2026-10-17T04:17:45+00:00",
  "words": [
   {
    "lang": "zh",
@@ -116,6 +116,141 @@
   {
    "lang": "zh",
    "kind": "sentence",
+   "text": "这门课的作业特别多。",
+   "pron": "zhè mén kè de zuòyè tèbié duō.",
+   "meaning": "This course has a lot of homework.",
+   "topic": "School",
+   "note": "วิชานี้การบ้านเยอะมาก"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我把作业忘在宿舍了。",
+   "pron": "wǒ bǎ zuòyè wàng zài sùshè le.",
+   "meaning": "I left my homework in the dorm.",
+   "topic": "School",
+   "note": "ฉันลืมการบ้านไว้ที่หอ"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "你能借我看一下你的笔记吗？",
+   "pron": "nǐ néng jiè wǒ kàn yíxià nǐ de bǐjì ma?",
+   "meaning": "Could I borrow your notes for a moment?",
+   "topic": "School",
+   "note": "ขอยืมดูสมุดจดของคุณหน่อยได้ไหม"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "这个问题我还是不明白。",
+   "pron": "zhège wèntí wǒ háishi bù míngbai.",
+   "meaning": "I still don't understand this question.",
+   "topic": "School",
+   "note": "ข้อนี้ฉันยังไม่เข้าใจอยู่ดี"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "考试的时候不能用手机。",
+   "pron": "kǎoshì de shíhou bù néng yòng shǒujī.",
+   "meaning": "You can't use your phone during the exam.",
+   "topic": "School",
+   "note": "ระหว่างสอบห้ามใช้มือถือ"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我的论文还没写完。",
+   "pron": "wǒ de lùnwén hái méi xiě wán.",
+   "meaning": "I haven't finished my paper yet.",
+   "topic": "School",
+   "note": "รายงานของฉันยังเขียนไม่เสร็จ"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "下学期我想换专业。",
+   "pron": "xià xuéqī wǒ xiǎng huàn zhuānyè.",
+   "meaning": "I want to change my major next semester.",
+   "topic": "School",
+   "note": "เทอมหน้าฉันอยากเปลี่ยนสาขา"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "老师让我们每天练习写汉字。",
+   "pron": "lǎoshī ràng wǒmen měitiān liànxí xiě Hànzì.",
+   "meaning": "The teacher has us practise writing characters every day.",
+   "topic": "School",
+   "note": "อาจารย์ให้เราฝึกเขียนตัวอักษรจีนทุกวัน"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我们的口语课很有意思。",
+   "pron": "wǒmen de kǒuyǔ kè hěn yǒu yìsi.",
+   "meaning": "Our speaking class is very interesting.",
+   "topic": "School",
+   "note": "วิชาสนทนาของเราสนุกมาก"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我对中国历史很感兴趣。",
+   "pron": "wǒ duì Zhōngguó lìshǐ hěn gǎn xìngqù.",
+   "meaning": "I'm very interested in Chinese history.",
+   "topic": "School",
+   "note": "ฉันสนใจประวัติศาสตร์จีนมาก"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "HSK考试几月报名？",
+   "pron": "HSK kǎoshì jǐ yuè bàomíng?",
+   "meaning": "In which month do you register for the HSK exam?",
+   "topic": "School",
+   "note": "สมัครสอบ HSK เดือนไหน"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我这次HSK四级考过了。",
+   "pron": "wǒ zhè cì HSK sì jí kǎo guò le.",
+   "meaning": "I passed HSK level 4 this time.",
+   "topic": "School",
+   "note": "ครั้งนี้ฉันสอบ HSK ระดับ 4 ผ่านแล้ว"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "上课的时候请把手机关了。",
+   "pron": "shàngkè de shíhou qǐng bǎ shǒujī guān le.",
+   "meaning": "Please turn off your phone in class.",
+   "topic": "School",
+   "note": "ระหว่างเรียนกรุณาปิดมือถือ"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我们小组明天要做报告。",
+   "pron": "wǒmen xiǎozǔ míngtiān yào zuò bàogào.",
+   "meaning": "Our group is giving a presentation tomorrow.",
+   "topic": "School",
+   "note": "กลุ่มของเราต้องนำเสนอพรุ่งนี้"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "你觉得哪个老师讲得最清楚？",
+   "pron": "nǐ juéde nǎge lǎoshī jiǎng de zuì qīngchu?",
+   "meaning": "Which teacher do you think explains most clearly?",
+   "topic": "School",
+   "note": "คุณว่าอาจารย์คนไหนสอนเข้าใจง่ายที่สุด"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
    "text": "我每天早上七点起床。",
    "pron": "wǒ měitiān zǎoshang qī diǎn qǐchuáng.",
    "meaning": "I get up at seven every morning.",
@@ -224,6 +359,141 @@
   {
    "lang": "zh",
    "kind": "sentence",
+   "text": "我已经习惯早睡早起了。",
+   "pron": "wǒ yǐjīng xíguàn zǎo shuì zǎo qǐ le.",
+   "meaning": "I've got used to going to bed and getting up early.",
+   "topic": "Daily life",
+   "note": "ฉันชินกับการนอนเร็วตื่นเช้าแล้ว"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "周末我们去爬山怎么样？",
+   "pron": "zhōumò wǒmen qù páshān zěnmeyàng?",
+   "meaning": "How about going hiking at the weekend?",
+   "topic": "Daily life",
+   "note": "สุดสัปดาห์ไปปีนเขากันดีไหม"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我每个星期给家里打一次电话。",
+   "pron": "wǒ měi ge xīngqī gěi jiā li dǎ yí cì diànhuà.",
+   "meaning": "I call home once a week.",
+   "topic": "Daily life",
+   "note": "ฉันโทรกลับบ้านสัปดาห์ละครั้ง"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "你最近忙什么呢？",
+   "pron": "nǐ zuìjìn máng shénme ne?",
+   "meaning": "What have you been busy with lately?",
+   "topic": "Daily life",
+   "note": "ช่วงนี้ยุ่งอะไรอยู่"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我要去银行取钱。",
+   "pron": "wǒ yào qù yínháng qǔ qián.",
+   "meaning": "I need to go to the bank to take out money.",
+   "topic": "Daily life",
+   "note": "ฉันต้องไปถอนเงินที่ธนาคาร"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我的银行卡被机器吞了。",
+   "pron": "wǒ de yínhángkǎ bèi jīqì tūn le.",
+   "meaning": "The machine swallowed my bank card.",
+   "topic": "Daily life",
+   "note": "เครื่องกลืนบัตรธนาคารของฉัน"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我想办一张银行卡。",
+   "pron": "wǒ xiǎng bàn yì zhāng yínhángkǎ.",
+   "meaning": "I'd like to get a bank card.",
+   "topic": "Daily life",
+   "note": "ฉันอยากทำบัตรธนาคาร"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "去办签证需要带什么？",
+   "pron": "qù bàn qiānzhèng xūyào dài shénme?",
+   "meaning": "What do I need to bring to apply for a visa?",
+   "topic": "Daily life",
+   "note": "ไปทำวีซ่าต้องเอาอะไรไปบ้าง"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我的居留许可下个月到期。",
+   "pron": "wǒ de jūliú xǔkě xià ge yuè dàoqī.",
+   "meaning": "My residence permit expires next month.",
+   "topic": "Daily life",
+   "note": "ใบอนุญาตพำนักของฉันหมดอายุเดือนหน้า"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我们一起去逛街吧。",
+   "pron": "wǒmen yìqǐ qù guàngjiē ba.",
+   "meaning": "Let's go shopping together.",
+   "topic": "Daily life",
+   "note": "ไปเดินเล่นช็อปปิ้งด้วยกันเถอะ"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "今天我在家休息，哪儿也不去。",
+   "pron": "jīntiān wǒ zài jiā xiūxi, nǎr yě bú qù.",
+   "meaning": "Today I'm resting at home and not going anywhere.",
+   "topic": "Daily life",
+   "note": "วันนี้ฉันพักอยู่บ้าน ไม่ไปไหนเลย"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我把手机忘在出租车上了。",
+   "pron": "wǒ bǎ shǒujī wàng zài chūzūchē shang le.",
+   "meaning": "I left my phone in the taxi.",
+   "topic": "Daily life",
+   "note": "ฉันลืมมือถือไว้ในแท็กซี่"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "快递员说下午送到。",
+   "pron": "kuàidìyuán shuō xiàwǔ sòng dào.",
+   "meaning": "The courier said it'll arrive this afternoon.",
+   "topic": "Daily life",
+   "note": "คนส่งของบอกว่าจะส่งถึงตอนบ่าย"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我每天晚上都去跑步。",
+   "pron": "wǒ měitiān wǎnshang dōu qù pǎobù.",
+   "meaning": "I go running every evening.",
+   "topic": "Daily life",
+   "note": "ฉันไปวิ่งทุกเย็น"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我们约好明天下午三点见面。",
+   "pron": "wǒmen yuē hǎo míngtiān xiàwǔ sān diǎn jiànmiàn.",
+   "meaning": "We arranged to meet at 3 pm tomorrow.",
+   "topic": "Daily life",
+   "note": "เรานัดเจอกันพรุ่งนี้บ่ายสามโมง"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
    "text": "这家饭馆的菜又便宜又好吃。",
    "pron": "zhè jiā fànguǎn de cài yòu piányi yòu hǎochī.",
    "meaning": "This restaurant's food is cheap and tasty.",
@@ -314,6 +584,141 @@
   {
    "lang": "zh",
    "kind": "sentence",
+   "text": "我们要一个包间。",
+   "pron": "wǒmen yào yí ge bāojiān.",
+   "meaning": "We'd like a private room.",
+   "topic": "Food & ordering",
+   "note": "เราขอห้องส่วนตัว"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "请问几位？",
+   "pron": "qǐngwèn jǐ wèi?",
+   "meaning": "How many people, please?",
+   "topic": "Food & ordering",
+   "note": "มากี่ท่าน"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "需要等多久？",
+   "pron": "xūyào děng duō jiǔ?",
+   "meaning": "How long is the wait?",
+   "topic": "Food & ordering",
+   "note": "ต้องรอนานแค่ไหน"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "这个菜是用什么做的？",
+   "pron": "zhège cài shì yòng shénme zuò de?",
+   "meaning": "What is this dish made of?",
+   "topic": "Food & ordering",
+   "note": "อาหารจานนี้ทำจากอะไร"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我不吃牛肉，有别的推荐吗？",
+   "pron": "wǒ bù chī niúròu, yǒu bié de tuījiàn ma?",
+   "meaning": "I don't eat beef, can you recommend something else?",
+   "topic": "Food & ordering",
+   "note": "ฉันไม่กินเนื้อวัว มีเมนูอื่นแนะนำไหม"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "能不能换成鸡肉？",
+   "pron": "néng bu néng huàn chéng jīròu?",
+   "meaning": "Could you change it to chicken?",
+   "topic": "Food & ordering",
+   "note": "เปลี่ยนเป็นไก่ได้ไหม"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "汤里不要放香菜。",
+   "pron": "tāng li bú yào fàng xiāngcài.",
+   "meaning": "No coriander in the soup, please.",
+   "topic": "Food & ordering",
+   "note": "ไม่ใส่ผักชีในซุป"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "火锅要微辣的。",
+   "pron": "huǒguō yào wēilà de.",
+   "meaning": "Mildly spicy hotpot, please.",
+   "topic": "Food & ordering",
+   "note": "หม้อไฟเผ็ดน้อย"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "这家店的饺子很有名。",
+   "pron": "zhè jiā diàn de jiǎozi hěn yǒumíng.",
+   "meaning": "This shop's dumplings are famous.",
+   "topic": "Food & ordering",
+   "note": "เกี๊ยวร้านนี้มีชื่อเสียงมาก"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我们每人点一个菜吧。",
+   "pron": "wǒmen měi rén diǎn yí ge cài ba.",
+   "meaning": "Let's each order one dish.",
+   "topic": "Food & ordering",
+   "note": "เราสั่งคนละหนึ่งจานเถอะ"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "服务员，能再给我们一些纸巾吗？",
+   "pron": "fúwùyuán, néng zài gěi wǒmen yìxiē zhǐjīn ma?",
+   "meaning": "Waiter, could we have some more napkins?",
+   "topic": "Food & ordering",
+   "note": "พนักงาน ขอทิชชู่เพิ่มอีกหน่อยได้ไหม"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "这个菜跟我点的不一样。",
+   "pron": "zhège cài gēn wǒ diǎn de bù yíyàng.",
+   "meaning": "This isn't what I ordered.",
+   "topic": "Food & ordering",
+   "note": "จานนี้ไม่เหมือนที่ฉันสั่ง"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "外卖已经送到楼下了。",
+   "pron": "wàimài yǐjīng sòng dào lóuxià le.",
+   "meaning": "The delivery is already downstairs.",
+   "topic": "Food & ordering",
+   "note": "อาหารเดลิเวอรีมาถึงข้างล่างแล้ว"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我最近在减肥，少吃一点儿。",
+   "pron": "wǒ zuìjìn zài jiǎnféi, shǎo chī yìdiǎnr.",
+   "meaning": "I'm on a diet lately, so I'll eat less.",
+   "topic": "Food & ordering",
+   "note": "ช่วงนี้ฉันกำลังลดน้ำหนัก กินน้อยหน่อย"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "中国菜里我最喜欢麻婆豆腐。",
+   "pron": "Zhōngguó cài li wǒ zuì xǐhuan mápó dòufu.",
+   "meaning": "Of all Chinese dishes, I like mapo tofu best.",
+   "topic": "Food & ordering",
+   "note": "ในอาหารจีน ฉันชอบเต้าหู้หมาโผวที่สุด"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
    "text": "能便宜一点儿吗？",
    "pron": "néng piányi yìdiǎnr ma?",
    "meaning": "Could it be a bit cheaper?",
@@ -400,6 +805,141 @@
    "meaning": "I don't have enough money.",
    "topic": "Shopping",
    "note": "เงินของฉันไม่พอแล้ว"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "这个价格包括运费吗？",
+   "pron": "zhège jiàgé bāokuò yùnfèi ma?",
+   "meaning": "Does the price include shipping?",
+   "topic": "Shopping",
+   "note": "ราคานี้รวมค่าส่งไหม"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我在网上买了一件外套。",
+   "pron": "wǒ zài wǎngshang mǎi le yí jiàn wàitào.",
+   "meaning": "I bought a coat online.",
+   "topic": "Shopping",
+   "note": "ฉันซื้อเสื้อโค้ทออนไลน์"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "衣服不合适，我想退货。",
+   "pron": "yīfu bù héshì, wǒ xiǎng tuìhuò.",
+   "meaning": "The clothes don't fit, I'd like to return them.",
+   "topic": "Shopping",
+   "note": "เสื้อไม่พอดี ฉันอยากคืนสินค้า"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "现在买有什么优惠吗？",
+   "pron": "xiànzài mǎi yǒu shénme yōuhuì ma?",
+   "meaning": "Is there any discount if I buy now?",
+   "topic": "Shopping",
+   "note": "ซื้อตอนนี้มีส่วนลดอะไรไหม"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "买二送一。",
+   "pron": "mǎi èr sòng yī.",
+   "meaning": "Buy two, get one free.",
+   "topic": "Shopping",
+   "note": "ซื้อสองแถมหนึ่ง"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "这家店的东西质量很好。",
+   "pron": "zhè jiā diàn de dōngxi zhìliàng hěn hǎo.",
+   "meaning": "This shop's things are good quality.",
+   "topic": "Shopping",
+   "note": "ของร้านนี้คุณภาพดีมาก"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我想换一个大一号的。",
+   "pron": "wǒ xiǎng huàn yí ge dà yí hào de.",
+   "meaning": "I'd like to change it for one size bigger.",
+   "topic": "Shopping",
+   "note": "ฉันอยากเปลี่ยนเป็นไซซ์ใหญ่ขึ้นหนึ่งไซซ์"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "收银台在哪儿？",
+   "pron": "shōuyíntái zài nǎr?",
+   "meaning": "Where's the checkout?",
+   "topic": "Shopping",
+   "note": "แคชเชียร์อยู่ที่ไหน"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "可以分期付款吗？",
+   "pron": "kěyǐ fēnqī fùkuǎn ma?",
+   "meaning": "Can I pay in instalments?",
+   "topic": "Shopping",
+   "note": "ผ่อนชำระได้ไหม"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "这个手机比那个贵三百块。",
+   "pron": "zhège shǒujī bǐ nàge guì sānbǎi kuài.",
+   "meaning": "This phone is 300 yuan more than that one.",
+   "topic": "Shopping",
+   "note": "มือถือเครื่องนี้แพงกว่าเครื่องนั้นสามร้อยหยวน"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "你帮我看看哪个更好。",
+   "pron": "nǐ bāng wǒ kànkan nǎge gèng hǎo.",
+   "meaning": "Help me see which one is better.",
+   "topic": "Shopping",
+   "note": "ช่วยดูหน่อยว่าอันไหนดีกว่า"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "快递今天能寄出去吗？",
+   "pron": "kuàidì jīntiān néng jì chūqu ma?",
+   "meaning": "Can the parcel be sent out today?",
+   "topic": "Shopping",
+   "note": "พัสดุส่งออกวันนี้ได้ไหม"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "这个月我花钱花得太多了。",
+   "pron": "zhège yuè wǒ huā qián huā de tài duō le.",
+   "meaning": "I've spent too much money this month.",
+   "topic": "Shopping",
+   "note": "เดือนนี้ฉันใช้เงินเยอะเกินไป"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我要把这个寄回泰国。",
+   "pron": "wǒ yào bǎ zhège jì huí Tàiguó.",
+   "meaning": "I want to send this back to Thailand.",
+   "topic": "Shopping",
+   "note": "ฉันจะส่งของนี้กลับไปประเทศไทย"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "你们几点关门？",
+   "pron": "nǐmen jǐ diǎn guānmén?",
+   "meaning": "What time do you close?",
+   "topic": "Shopping",
+   "note": "ร้านปิดกี่โมง"
   },
   {
    "lang": "zh",
@@ -512,6 +1052,141 @@
   {
    "lang": "zh",
    "kind": "sentence",
+   "text": "国庆节我们去哪儿玩儿？",
+   "pron": "Guóqìng Jié wǒmen qù nǎr wánr?",
+   "meaning": "Where shall we go for National Day?",
+   "topic": "Travel",
+   "note": "วันชาติจีนเราไปเที่ยวไหนดี"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "高铁票已经卖完了。",
+   "pron": "gāotiě piào yǐjīng mài wán le.",
+   "meaning": "The high-speed train tickets are sold out.",
+   "topic": "Travel",
+   "note": "ตั๋วรถไฟความเร็วสูงขายหมดแล้ว"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我想把票改到明天。",
+   "pron": "wǒ xiǎng bǎ piào gǎi dào míngtiān.",
+   "meaning": "I'd like to change my ticket to tomorrow.",
+   "topic": "Travel",
+   "note": "ฉันอยากเปลี่ยนตั๋วเป็นพรุ่งนี้"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "坐火车去要八个小时。",
+   "pron": "zuò huǒchē qù yào bā ge xiǎoshí.",
+   "meaning": "It takes eight hours by train.",
+   "topic": "Travel",
+   "note": "นั่งรถไฟไปใช้เวลาแปดชั่วโมง"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "你去过上海吗？",
+   "pron": "nǐ qù guo Shànghǎi ma?",
+   "meaning": "Have you been to Shanghai?",
+   "topic": "Travel",
+   "note": "คุณเคยไปเซี่ยงไฮ้ไหม"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "那儿的风景非常漂亮。",
+   "pron": "nàr de fēngjǐng fēicháng piàoliang.",
+   "meaning": "The scenery there is really beautiful.",
+   "topic": "Travel",
+   "note": "วิวที่นั่นสวยมาก"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我们在酒店门口集合。",
+   "pron": "wǒmen zài jiǔdiàn ménkǒu jíhé.",
+   "meaning": "We'll meet at the hotel entrance.",
+   "topic": "Travel",
+   "note": "เรารวมตัวกันที่หน้าโรงแรม"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "请问，退房是几点？",
+   "pron": "qǐngwèn, tuìfáng shì jǐ diǎn?",
+   "meaning": "Excuse me, what time is checkout?",
+   "topic": "Travel",
+   "note": "ขอโทษนะ เช็กเอาต์กี่โมง"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我可以把行李放在这儿吗？",
+   "pron": "wǒ kěyǐ bǎ xíngli fàng zài zhèr ma?",
+   "meaning": "Can I leave my luggage here?",
+   "topic": "Travel",
+   "note": "ฝากกระเป๋าไว้ที่นี่ได้ไหม"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "飞机晚点了一个小时。",
+   "pron": "fēijī wǎndiǎn le yí ge xiǎoshí.",
+   "meaning": "The plane is an hour late.",
+   "topic": "Travel",
+   "note": "เครื่องบินดีเลย์หนึ่งชั่วโมง"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "登机口在哪儿？",
+   "pron": "dēngjīkǒu zài nǎr?",
+   "meaning": "Where is the boarding gate?",
+   "topic": "Travel",
+   "note": "ประตูขึ้นเครื่องอยู่ที่ไหน"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我要托运一个箱子。",
+   "pron": "wǒ yào tuōyùn yí ge xiāngzi.",
+   "meaning": "I'd like to check in one suitcase.",
+   "topic": "Travel",
+   "note": "ฉันจะโหลดกระเป๋าหนึ่งใบ"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "出门旅游别忘了带护照。",
+   "pron": "chūmén lǚyóu bié wàng le dài hùzhào.",
+   "meaning": "Don't forget your passport when you travel.",
+   "topic": "Travel",
+   "note": "ไปเที่ยวอย่าลืมพกหนังสือเดินทาง"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "这个地方离市中心有点儿远。",
+   "pron": "zhège dìfang lí shì zhōngxīn yǒudiǎnr yuǎn.",
+   "meaning": "This place is a bit far from the city centre.",
+   "topic": "Travel",
+   "note": "ที่นี่ไกลจากใจกลางเมืองนิดหน่อย"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "你能帮我们拍张照吗？",
+   "pron": "nǐ néng bāng wǒmen pāi zhāng zhào ma?",
+   "meaning": "Could you take a photo of us?",
+   "topic": "Travel",
+   "note": "ช่วยถ่ายรูปให้เราหน่อยได้ไหม"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
    "text": "我感冒了，一直咳嗽。",
    "pron": "wǒ gǎnmào le, yìzhí késou.",
    "meaning": "I've caught a cold and keep coughing.",
@@ -602,6 +1277,141 @@
   {
    "lang": "zh",
    "kind": "sentence",
+   "text": "我嗓子疼，说话很难受。",
+   "pron": "wǒ sǎngzi téng, shuōhuà hěn nánshòu.",
+   "meaning": "My throat hurts, it's painful to talk.",
+   "topic": "Health & emergency",
+   "note": "ฉันเจ็บคอ พูดแล้วเจ็บมาก"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我晚上睡不好觉。",
+   "pron": "wǒ wǎnshang shuì bu hǎo jiào.",
+   "meaning": "I don't sleep well at night.",
+   "topic": "Health & emergency",
+   "note": "ฉันนอนไม่ค่อยหลับตอนกลางคืน"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "医生说我需要休息几天。",
+   "pron": "yīshēng shuō wǒ xūyào xiūxi jǐ tiān.",
+   "meaning": "The doctor says I need a few days' rest.",
+   "topic": "Health & emergency",
+   "note": "หมอบอกว่าฉันต้องพักผ่อนสองสามวัน"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "这个药饭前吃还是饭后吃？",
+   "pron": "zhège yào fàn qián chī háishi fàn hòu chī?",
+   "meaning": "Should I take this medicine before or after meals?",
+   "topic": "Health & emergency",
+   "note": "ยานี้กินก่อนหรือหลังอาหาร"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我对青霉素过敏。",
+   "pron": "wǒ duì qīngméisù guòmǐn.",
+   "meaning": "I'm allergic to penicillin.",
+   "topic": "Health & emergency",
+   "note": "ฉันแพ้เพนิซิลลิน"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我需要开一张病假条。",
+   "pron": "wǒ xūyào kāi yì zhāng bìngjiàtiáo.",
+   "meaning": "I need a sick note.",
+   "topic": "Health & emergency",
+   "note": "ฉันต้องการใบรับรองแพทย์สำหรับลาป่วย"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我的腿摔伤了。",
+   "pron": "wǒ de tuǐ shuāi shāng le.",
+   "meaning": "I fell and hurt my leg.",
+   "topic": "Health & emergency",
+   "note": "ฉันล้มขาเจ็บ"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "最近我经常头疼。",
+   "pron": "zuìjìn wǒ jīngcháng tóuténg.",
+   "meaning": "I've often had headaches lately.",
+   "topic": "Health & emergency",
+   "note": "ช่วงนี้ฉันปวดหัวบ่อย"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "你最好去医院看看。",
+   "pron": "nǐ zuìhǎo qù yīyuàn kànkan.",
+   "meaning": "You'd better get it checked at the hospital.",
+   "topic": "Health & emergency",
+   "note": "ไปให้หมอที่โรงพยาบาลดูดีกว่า"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "看病要带护照吗？",
+   "pron": "kànbìng yào dài hùzhào ma?",
+   "meaning": "Do I need my passport to see a doctor?",
+   "topic": "Health & emergency",
+   "note": "ไปหาหมอต้องเอาหนังสือเดินทางไปไหม"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "校医院几点开门？",
+   "pron": "xiào yīyuàn jǐ diǎn kāimén?",
+   "meaning": "What time does the campus clinic open?",
+   "topic": "Health & emergency",
+   "note": "คลินิกของมหาวิทยาลัยเปิดกี่โมง"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我的钱包被偷了，我要报警。",
+   "pron": "wǒ de qiánbāo bèi tōu le, wǒ yào bàojǐng.",
+   "meaning": "My wallet was stolen, I want to report it to the police.",
+   "topic": "Health & emergency",
+   "note": "กระเป๋าสตางค์ถูกขโมย ฉันจะแจ้งตำรวจ"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "附近有没有药店？",
+   "pron": "fùjìn yǒu méiyǒu yàodiàn?",
+   "meaning": "Is there a pharmacy nearby?",
+   "topic": "Health & emergency",
+   "note": "แถวนี้มีร้านขายยาไหม"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "天气变冷了，小心感冒。",
+   "pron": "tiānqì biàn lěng le, xiǎoxīn gǎnmào.",
+   "meaning": "It's getting cold, be careful not to catch a cold.",
+   "topic": "Health & emergency",
+   "note": "อากาศเย็นลงแล้ว ระวังเป็นหวัดนะ"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我已经好多了，谢谢关心。",
+   "pron": "wǒ yǐjīng hǎo duō le, xièxie guānxīn.",
+   "meaning": "I'm much better now, thanks for asking.",
+   "topic": "Health & emergency",
+   "note": "ฉันดีขึ้นมากแล้ว ขอบคุณที่เป็นห่วง"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
    "text": "房租每个月多少钱？",
    "pron": "fángzū měi ge yuè duōshao qián?",
    "meaning": "How much is the rent per month?",
@@ -674,6 +1484,141 @@
   {
    "lang": "zh",
    "kind": "sentence",
+   "text": "我想找一个离学校近的房子。",
+   "pron": "wǒ xiǎng zhǎo yí ge lí xuéxiào jìn de fángzi.",
+   "meaning": "I want to find a flat close to school.",
+   "topic": "Home",
+   "note": "ฉันอยากหาห้องที่ใกล้มหาวิทยาลัย"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "房子是几室几厅？",
+   "pron": "fángzi shì jǐ shì jǐ tīng?",
+   "meaning": "How many bedrooms and living rooms does it have?",
+   "topic": "Home",
+   "note": "ห้องมีกี่ห้องนอนกี่ห้องนั่งเล่น"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "合同签一年还是半年？",
+   "pron": "hétong qiān yì nián háishi bàn nián?",
+   "meaning": "Is the contract for a year or half a year?",
+   "topic": "Home",
+   "note": "สัญญาเซ็นหนึ่งปีหรือครึ่งปี"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "押金是一个月的房租。",
+   "pron": "yājīn shì yí ge yuè de fángzū.",
+   "meaning": "The deposit is one month's rent.",
+   "topic": "Home",
+   "note": "เงินมัดจำเท่ากับค่าเช่าหนึ่งเดือน"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "洗衣机好像坏了。",
+   "pron": "xǐyījī hǎoxiàng huài le.",
+   "meaning": "The washing machine seems to be broken.",
+   "topic": "Home",
+   "note": "เครื่องซักผ้าน่าจะเสีย"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "卫生间的水龙头一直漏水。",
+   "pron": "wèishēngjiān de shuǐlóngtóu yìzhí lòu shuǐ.",
+   "meaning": "The bathroom tap keeps leaking.",
+   "topic": "Home",
+   "note": "ก๊อกน้ำในห้องน้ำรั่วตลอด"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "电费怎么交？",
+   "pron": "diànfèi zěnme jiāo?",
+   "meaning": "How do I pay the electricity bill?",
+   "topic": "Home",
+   "note": "จ่ายค่าไฟยังไง"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我的室友很爱干净。",
+   "pron": "wǒ de shìyǒu hěn ài gānjìng.",
+   "meaning": "My roommate is very tidy.",
+   "topic": "Home",
+   "note": "รูมเมทของฉันรักความสะอาดมาก"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我们轮流打扫房间吧。",
+   "pron": "wǒmen lúnliú dǎsǎo fángjiān ba.",
+   "meaning": "Let's take turns cleaning the room.",
+   "topic": "Home",
+   "note": "เราผลัดกันทำความสะอาดห้องเถอะ"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "楼里有电梯吗？",
+   "pron": "lóu li yǒu diàntī ma?",
+   "meaning": "Is there a lift in the building?",
+   "topic": "Home",
+   "note": "ตึกนี้มีลิฟต์ไหม"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "晚上十一点以后宿舍关门。",
+   "pron": "wǎnshang shíyī diǎn yǐhòu sùshè guānmén.",
+   "meaning": "The dorm closes after 11 pm.",
+   "topic": "Home",
+   "note": "หอพักปิดหลังห้าทุ่ม"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我忘了带钥匙，进不去了。",
+   "pron": "wǒ wàng le dài yàoshi, jìn bu qù le.",
+   "meaning": "I forgot my key and can't get in.",
+   "topic": "Home",
+   "note": "ฉันลืมกุญแจ เข้าไปไม่ได้"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "房东同意我们养猫吗？",
+   "pron": "fángdōng tóngyì wǒmen yǎng māo ma?",
+   "meaning": "Does the landlord let us keep a cat?",
+   "topic": "Home",
+   "note": "เจ้าของห้องอนุญาตให้เลี้ยงแมวไหม"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "这个房间阳光很好。",
+   "pron": "zhège fángjiān yángguāng hěn hǎo.",
+   "meaning": "This room gets lots of sunlight.",
+   "topic": "Home",
+   "note": "ห้องนี้แดดส่องดีมาก"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "搬家的时候你能来帮忙吗？",
+   "pron": "bānjiā de shíhou nǐ néng lái bāngmáng ma?",
+   "meaning": "Can you come and help when I move?",
+   "topic": "Home",
+   "note": "ตอนย้ายบ้านมาช่วยได้ไหม"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
    "text": "我在一家咖啡馆打工。",
    "pron": "wǒ zài yì jiā kāfēiguǎn dǎgōng.",
    "meaning": "I have a part-time job at a café.",
@@ -742,6 +1687,141 @@
    "meaning": "This work experience is very helpful to me.",
    "topic": "Work",
    "note": "ประสบการณ์ทำงานนี้มีประโยชน์กับฉันมาก"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我在找实习的机会。",
+   "pron": "wǒ zài zhǎo shíxí de jīhuì.",
+   "meaning": "I'm looking for an internship.",
+   "topic": "Work",
+   "note": "ฉันกำลังหาโอกาสฝึกงาน"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "这份工作要求会说汉语。",
+   "pron": "zhè fèn gōngzuò yāoqiú huì shuō Hànyǔ.",
+   "meaning": "This job requires speaking Chinese.",
+   "topic": "Work",
+   "note": "งานนี้ต้องพูดภาษาจีนได้"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我把简历发给你了。",
+   "pron": "wǒ bǎ jiǎnlì fā gěi nǐ le.",
+   "meaning": "I've sent you my CV.",
+   "topic": "Work",
+   "note": "ฉันส่งเรซูเม่ให้คุณแล้ว"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "面试的时候我很紧张。",
+   "pron": "miànshì de shíhou wǒ hěn jǐnzhāng.",
+   "meaning": "I was very nervous at the interview.",
+   "topic": "Work",
+   "note": "ตอนสัมภาษณ์ฉันตื่นเต้นมาก"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "你们公司周末上班吗？",
+   "pron": "nǐmen gōngsī zhōumò shàngbān ma?",
+   "meaning": "Does your company work at weekends?",
+   "topic": "Work",
+   "note": "บริษัทของคุณทำงานวันเสาร์อาทิตย์ไหม"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我每天工作八个小时。",
+   "pron": "wǒ měitiān gōngzuò bā ge xiǎoshí.",
+   "meaning": "I work eight hours a day.",
+   "topic": "Work",
+   "note": "ฉันทำงานวันละแปดชั่วโมง"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "经理让我明天早点儿来。",
+   "pron": "jīnglǐ ràng wǒ míngtiān zǎo diǎnr lái.",
+   "meaning": "The manager asked me to come early tomorrow.",
+   "topic": "Work",
+   "note": "ผู้จัดการให้ฉันมาเช้าหน่อยพรุ่งนี้"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "这件事我需要跟同事商量一下。",
+   "pron": "zhè jiàn shì wǒ xūyào gēn tóngshì shāngliang yíxià.",
+   "meaning": "I need to discuss this with my colleagues.",
+   "topic": "Work",
+   "note": "เรื่องนี้ฉันต้องปรึกษาเพื่อนร่วมงานก่อน"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我下班以后去健身房。",
+   "pron": "wǒ xiàbān yǐhòu qù jiànshēnfáng.",
+   "meaning": "I go to the gym after work.",
+   "topic": "Work",
+   "note": "เลิกงานแล้วฉันไปฟิตเนส"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "留学生可以在这儿打工吗？",
+   "pron": "liúxuéshēng kěyǐ zài zhèr dǎgōng ma?",
+   "meaning": "Can international students work part-time here?",
+   "topic": "Work",
+   "note": "นักศึกษาต่างชาติทำงานพาร์ทไทม์ที่นี่ได้ไหม"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "工资每个月十号发。",
+   "pron": "gōngzī měi ge yuè shí hào fā.",
+   "meaning": "Wages are paid on the 10th of every month.",
+   "topic": "Work",
+   "note": "เงินเดือนออกทุกวันที่ 10"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我想请一天假。",
+   "pron": "wǒ xiǎng qǐng yì tiān jià.",
+   "meaning": "I'd like to take a day off.",
+   "topic": "Work",
+   "note": "ฉันขอลาหนึ่งวัน"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "这个项目下个月要完成。",
+   "pron": "zhège xiàngmù xià ge yuè yào wánchéng.",
+   "meaning": "This project has to be finished next month.",
+   "topic": "Work",
+   "note": "โปรเจกต์นี้ต้องเสร็จเดือนหน้า"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我的工作主要是翻译。",
+   "pron": "wǒ de gōngzuò zhǔyào shì fānyì.",
+   "meaning": "My job is mainly translating.",
+   "topic": "Work",
+   "note": "งานของฉันส่วนใหญ่เป็นงานแปล"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我以后想在中国工作。",
+   "pron": "wǒ yǐhòu xiǎng zài Zhōngguó gōngzuò.",
+   "meaning": "In the future I want to work in China.",
+   "topic": "Work",
+   "note": "อนาคตฉันอยากทำงานที่จีน"
   },
   {
    "lang": "zh",
@@ -836,6 +1916,141 @@
   {
    "lang": "zh",
    "kind": "sentence",
+   "text": "我真为你高兴！",
+   "pron": "wǒ zhēn wèi nǐ gāoxìng!",
+   "meaning": "I'm really happy for you!",
+   "topic": "Feelings",
+   "note": "ฉันดีใจด้วยจริง ๆ"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "这件事让我很失望。",
+   "pron": "zhè jiàn shì ràng wǒ hěn shīwàng.",
+   "meaning": "This really disappointed me.",
+   "topic": "Feelings",
+   "note": "เรื่องนี้ทำให้ฉันผิดหวังมาก"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "你别生气了。",
+   "pron": "nǐ bié shēngqì le.",
+   "meaning": "Please don't be angry.",
+   "topic": "Feelings",
+   "note": "อย่าโกรธเลยนะ"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我对这儿的生活很满意。",
+   "pron": "wǒ duì zhèr de shēnghuó hěn mǎnyì.",
+   "meaning": "I'm very happy with my life here.",
+   "topic": "Feelings",
+   "note": "ฉันพอใจกับชีวิตที่นี่มาก"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "刚来的时候我有点儿孤独。",
+   "pron": "gāng lái de shíhou wǒ yǒudiǎnr gūdú.",
+   "meaning": "When I first came I was a bit lonely.",
+   "topic": "Feelings",
+   "note": "ตอนมาใหม่ ๆ ฉันเหงานิดหน่อย"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我越来越喜欢这个城市了。",
+   "pron": "wǒ yuè lái yuè xǐhuan zhège chéngshì le.",
+   "meaning": "I like this city more and more.",
+   "topic": "Feelings",
+   "note": "ฉันชอบเมืองนี้มากขึ้นเรื่อย ๆ"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "这个电影太感人了。",
+   "pron": "zhège diànyǐng tài gǎnrén le.",
+   "meaning": "This film is so moving.",
+   "topic": "Feelings",
+   "note": "หนังเรื่องนี้ซึ้งมาก"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我觉得你应该试试。",
+   "pron": "wǒ juéde nǐ yīnggāi shìshi.",
+   "meaning": "I think you should give it a try.",
+   "topic": "Feelings",
+   "note": "ฉันว่าคุณควรลองดู"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我不是故意的。",
+   "pron": "wǒ bú shì gùyì de.",
+   "meaning": "I didn't mean to.",
+   "topic": "Feelings",
+   "note": "ฉันไม่ได้ตั้งใจ"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "没想到你也在这儿！",
+   "pron": "méi xiǎng dào nǐ yě zài zhèr!",
+   "meaning": "I didn't expect you to be here too!",
+   "topic": "Feelings",
+   "note": "ไม่คิดเลยว่าคุณก็อยู่ที่นี่"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "他这个人很热情。",
+   "pron": "tā zhège rén hěn rèqíng.",
+   "meaning": "He's a very warm person.",
+   "topic": "Feelings",
+   "note": "เขาเป็นคนอัธยาศัยดีมาก"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我有点儿担心明天的考试。",
+   "pron": "wǒ yǒudiǎnr dānxīn míngtiān de kǎoshì.",
+   "meaning": "I'm a bit worried about tomorrow's exam.",
+   "topic": "Feelings",
+   "note": "ฉันกังวลเรื่องสอบพรุ่งนี้นิดหน่อย"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "你放心吧，我会照顾好自己的。",
+   "pron": "nǐ fàngxīn ba, wǒ huì zhàogù hǎo zìjǐ de.",
+   "meaning": "Don't worry, I'll take good care of myself.",
+   "topic": "Feelings",
+   "note": "วางใจเถอะ ฉันจะดูแลตัวเองให้ดี"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "能认识你我很开心。",
+   "pron": "néng rènshi nǐ wǒ hěn kāixīn.",
+   "meaning": "I'm really glad to know you.",
+   "topic": "Feelings",
+   "note": "ดีใจมากที่ได้รู้จักคุณ"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "这个主意听起来不错。",
+   "pron": "zhège zhǔyi tīng qǐlai búcuò.",
+   "meaning": "That idea sounds good.",
+   "topic": "Feelings",
+   "note": "ไอเดียนี้ฟังดูดีนะ"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
    "text": "这里有无线网吗？",
    "pron": "zhèlǐ yǒu wúxiànwǎng ma?",
    "meaning": "Is there Wi-Fi here?",
@@ -904,6 +2119,141 @@
    "meaning": "The connection is bad, I can't hear clearly.",
    "topic": "Technology",
    "note": "เน็ตไม่ค่อยดี ฉันฟังไม่ชัด"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我的手机屏幕摔坏了。",
+   "pron": "wǒ de shǒujī píngmù shuāi huài le.",
+   "meaning": "I dropped my phone and broke the screen.",
+   "topic": "Technology",
+   "note": "จอมือถือของฉันตกแตก"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "附近哪儿可以修手机？",
+   "pron": "fùjìn nǎr kěyǐ xiū shǒujī?",
+   "meaning": "Where can I get my phone fixed nearby?",
+   "topic": "Technology",
+   "note": "แถวนี้ซ่อมมือถือได้ที่ไหน"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我想办一张电话卡。",
+   "pron": "wǒ xiǎng bàn yì zhāng diànhuàkǎ.",
+   "meaning": "I'd like to get a SIM card.",
+   "topic": "Technology",
+   "note": "ฉันอยากทำซิมการ์ด"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "这个套餐每个月多少流量？",
+   "pron": "zhège tàocān měi ge yuè duōshao liúliàng?",
+   "meaning": "How much data does this plan have per month?",
+   "topic": "Technology",
+   "note": "แพ็กเกจนี้ได้เน็ตเดือนละเท่าไหร่"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我的流量用完了。",
+   "pron": "wǒ de liúliàng yòng wán le.",
+   "meaning": "I've used up my data.",
+   "topic": "Technology",
+   "note": "เน็ตของฉันหมดแล้ว"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "你把那个网址发给我吧。",
+   "pron": "nǐ bǎ nàge wǎngzhǐ fā gěi wǒ ba.",
+   "meaning": "Send me that link.",
+   "topic": "Technology",
+   "note": "ส่งลิงก์นั้นมาให้ฉันหน่อย"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我们开视频会议吧。",
+   "pron": "wǒmen kāi shìpín huìyì ba.",
+   "meaning": "Let's have a video meeting.",
+   "topic": "Technology",
+   "note": "เราประชุมทางวิดีโอกันเถอะ"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "这个软件需要用中国的手机号注册。",
+   "pron": "zhège ruǎnjiàn xūyào yòng Zhōngguó de shǒujīhào zhùcè.",
+   "meaning": "This app needs a Chinese phone number to sign up.",
+   "topic": "Technology",
+   "note": "แอปนี้ต้องใช้เบอร์จีนสมัคร"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我忘了密码，怎么找回？",
+   "pron": "wǒ wàng le mìmǎ, zěnme zhǎohuí?",
+   "meaning": "I forgot my password, how do I get it back?",
+   "topic": "Technology",
+   "note": "ฉันลืมรหัสผ่าน จะกู้คืนยังไง"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "电脑太慢了，需要重启一下。",
+   "pron": "diànnǎo tài màn le, xūyào chóngqǐ yíxià.",
+   "meaning": "The computer is too slow, it needs a restart.",
+   "topic": "Technology",
+   "note": "คอมช้ามาก ต้องรีสตาร์ทหน่อย"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "你能帮我下载这个软件吗？",
+   "pron": "nǐ néng bāng wǒ xiàzài zhège ruǎnjiàn ma?",
+   "meaning": "Can you help me download this app?",
+   "topic": "Technology",
+   "note": "ช่วยดาวน์โหลดแอปนี้ให้หน่อยได้ไหม"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我在网上查了一下地址。",
+   "pron": "wǒ zài wǎngshang chá le yíxià dìzhǐ.",
+   "meaning": "I looked up the address online.",
+   "topic": "Technology",
+   "note": "ฉันค้นที่อยู่ในเน็ตแล้ว"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "你收到我的消息了吗？",
+   "pron": "nǐ shōu dào wǒ de xiāoxi le ma?",
+   "meaning": "Did you get my message?",
+   "topic": "Technology",
+   "note": "ได้รับข้อความของฉันไหม"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我把你拉进群里了。",
+   "pron": "wǒ bǎ nǐ lā jìn qún li le.",
+   "meaning": "I've added you to the group chat.",
+   "topic": "Technology",
+   "note": "ฉันดึงคุณเข้ากลุ่มแชทแล้ว"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "手机快没电了，我先挂了。",
+   "pron": "shǒujī kuài méi diàn le, wǒ xiān guà le.",
+   "meaning": "My battery's almost dead, I'll hang up now.",
+   "topic": "Technology",
+   "note": "มือถือแบตจะหมดแล้ว วางสายก่อนนะ"
   }
  ]
 }

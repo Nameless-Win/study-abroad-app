@@ -3,7 +3,7 @@
  "version": 1,
  "lang": "zh",
  "language": "Chinese (Mandarin)",
- "exportedAt": "2026-10-17T03:38:27+00:00",
+ "exportedAt": "2026-10-17T04:17:45+00:00",
  "words": [
   {
    "lang": "zh",
@@ -143,6 +143,114 @@
   {
    "lang": "zh",
    "kind": "sentence",
+   "text": "晚上好！",
+   "pron": "wǎnshang hǎo!",
+   "meaning": "Good evening!",
+   "topic": "Greetings",
+   "note": "สวัสดีตอนเย็น"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "晚安！",
+   "pron": "wǎn'ān!",
+   "meaning": "Good night!",
+   "topic": "Greetings",
+   "note": "ราตรีสวัสดิ์"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "你最近怎么样？",
+   "pron": "nǐ zuìjìn zěnmeyàng?",
+   "meaning": "How have you been lately?",
+   "topic": "Greetings",
+   "note": "ช่วงนี้เป็นยังไงบ้าง"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "还可以。",
+   "pron": "hái kěyǐ.",
+   "meaning": "Not bad.",
+   "topic": "Greetings",
+   "note": "ก็ดี, พอใช้ได้"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "欢迎你！",
+   "pron": "huānyíng nǐ!",
+   "meaning": "Welcome!",
+   "topic": "Greetings",
+   "note": "ยินดีต้อนรับ"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "请进！",
+   "pron": "qǐng jìn!",
+   "meaning": "Please come in!",
+   "topic": "Greetings",
+   "note": "เชิญเข้ามา"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "请坐。",
+   "pron": "qǐng zuò.",
+   "meaning": "Please sit down.",
+   "topic": "Greetings",
+   "note": "เชิญนั่ง"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "请喝茶。",
+   "pron": "qǐng hē chá.",
+   "meaning": "Please have some tea.",
+   "topic": "Greetings",
+   "note": "เชิญดื่มชา"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "下次见！",
+   "pron": "xià cì jiàn!",
+   "meaning": "See you next time!",
+   "topic": "Greetings",
+   "note": "แล้วเจอกันคราวหน้า"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "一路平安！",
+   "pron": "yílù píng'ān!",
+   "meaning": "Have a safe trip!",
+   "topic": "Greetings",
+   "note": "เดินทางปลอดภัยนะ"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "新年快乐！",
+   "pron": "xīnnián kuàilè!",
+   "meaning": "Happy New Year!",
+   "topic": "Greetings",
+   "note": "สวัสดีปีใหม่"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "祝你好运！",
+   "pron": "zhù nǐ hǎo yùn!",
+   "meaning": "Good luck!",
+   "topic": "Greetings",
+   "note": "ขอให้โชคดี"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
    "text": "你叫什么名字？",
    "pron": "nǐ jiào shénme míngzi?",
    "meaning": "What's your name?",
@@ -247,6 +355,141 @@
    "meaning": "Let's add each other on WeChat.",
    "topic": "About me",
    "note": "แอดวีแชทกันเถอะ"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我叫安娜。",
+   "pron": "wǒ jiào Ānnà.",
+   "meaning": "My name is Anna.",
+   "topic": "About me",
+   "note": "ฉันชื่อแอนนา"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我从泰国来。",
+   "pron": "wǒ cóng Tàiguó lái.",
+   "meaning": "I'm from Thailand.",
+   "topic": "About me",
+   "note": "ฉันมาจากประเทศไทย"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我是大学生。",
+   "pron": "wǒ shì dàxuéshēng.",
+   "meaning": "I'm a university student.",
+   "topic": "About me",
+   "note": "ฉันเป็นนักศึกษามหาวิทยาลัย"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我学习汉语一年了。",
+   "pron": "wǒ xuéxí Hànyǔ yì nián le.",
+   "meaning": "I've been studying Chinese for a year.",
+   "topic": "About me",
+   "note": "ฉันเรียนภาษาจีนมาหนึ่งปีแล้ว"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我家有四口人。",
+   "pron": "wǒ jiā yǒu sì kǒu rén.",
+   "meaning": "There are four people in my family.",
+   "topic": "About me",
+   "note": "บ้านฉันมีสี่คน"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我有一个哥哥。",
+   "pron": "wǒ yǒu yí ge gēge.",
+   "meaning": "I have an older brother.",
+   "topic": "About me",
+   "note": "ฉันมีพี่ชายหนึ่งคน"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我喜欢看电影。",
+   "pron": "wǒ xǐhuan kàn diànyǐng.",
+   "meaning": "I like watching films.",
+   "topic": "About me",
+   "note": "ฉันชอบดูหนัง"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我不会做饭。",
+   "pron": "wǒ bú huì zuòfàn.",
+   "meaning": "I can't cook.",
+   "topic": "About me",
+   "note": "ฉันทำอาหารไม่เป็น"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我的生日是五月十号。",
+   "pron": "wǒ de shēngrì shì wǔ yuè shí hào.",
+   "meaning": "My birthday is on May 10th.",
+   "topic": "About me",
+   "note": "วันเกิดของฉันคือวันที่ 10 พฤษภาคม"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我第一次来中国。",
+   "pron": "wǒ dì yī cì lái Zhōngguó.",
+   "meaning": "It's my first time in China.",
+   "topic": "About me",
+   "note": "ฉันมาจีนเป็นครั้งแรก"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我想当老师。",
+   "pron": "wǒ xiǎng dāng lǎoshī.",
+   "meaning": "I want to be a teacher.",
+   "topic": "About me",
+   "note": "ฉันอยากเป็นครู"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "你会说英语吗？",
+   "pron": "nǐ huì shuō Yīngyǔ ma?",
+   "meaning": "Can you speak English?",
+   "topic": "About me",
+   "note": "คุณพูดภาษาอังกฤษได้ไหม"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "这是我的朋友。",
+   "pron": "zhè shì wǒ de péngyou.",
+   "meaning": "This is my friend.",
+   "topic": "About me",
+   "note": "นี่คือเพื่อนของฉัน"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "你住在哪儿？",
+   "pron": "nǐ zhù zài nǎr?",
+   "meaning": "Where do you live?",
+   "topic": "About me",
+   "note": "คุณพักอยู่ที่ไหน"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "你的电话号码是多少？",
+   "pron": "nǐ de diànhuà hàomǎ shì duōshao?",
+   "meaning": "What's your phone number?",
+   "topic": "About me",
+   "note": "เบอร์โทรของคุณคืออะไร"
   },
   {
    "lang": "zh",
@@ -377,6 +620,168 @@
   {
    "lang": "zh",
    "kind": "sentence",
+   "text": "我想喝咖啡。",
+   "pron": "wǒ xiǎng hē kāfēi.",
+   "meaning": "I'd like some coffee.",
+   "topic": "Food & ordering",
+   "note": "ฉันอยากดื่มกาแฟ"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "这个是什么？",
+   "pron": "zhège shì shénme?",
+   "meaning": "What is this?",
+   "topic": "Food & ordering",
+   "note": "นี่คืออะไร"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "这个辣吗？",
+   "pron": "zhège là ma?",
+   "meaning": "Is this spicy?",
+   "topic": "Food & ordering",
+   "note": "อันนี้เผ็ดไหม"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我不能吃辣的。",
+   "pron": "wǒ bù néng chī là de.",
+   "meaning": "I can't eat spicy food.",
+   "topic": "Food & ordering",
+   "note": "ฉันกินเผ็ดไม่ได้"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我吃素。",
+   "pron": "wǒ chī sù.",
+   "meaning": "I'm vegetarian.",
+   "topic": "Food & ordering",
+   "note": "ฉันกินมังสวิรัติ"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "有没有米饭？",
+   "pron": "yǒu méiyǒu mǐfàn?",
+   "meaning": "Is there any rice?",
+   "topic": "Food & ordering",
+   "note": "มีข้าวไหม"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我们两个人。",
+   "pron": "wǒmen liǎng ge rén.",
+   "meaning": "There are two of us.",
+   "topic": "Food & ordering",
+   "note": "เรามาสองคน"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "请给我筷子。",
+   "pron": "qǐng gěi wǒ kuàizi.",
+   "meaning": "Chopsticks, please.",
+   "topic": "Food & ordering",
+   "note": "ขอตะเกียบหน่อย"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "再来一瓶啤酒。",
+   "pron": "zài lái yì píng píjiǔ.",
+   "meaning": "One more bottle of beer, please.",
+   "topic": "Food & ordering",
+   "note": "ขอเบียร์อีกหนึ่งขวด"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我们一起吃饭吧。",
+   "pron": "wǒmen yìqǐ chīfàn ba.",
+   "meaning": "Let's eat together.",
+   "topic": "Food & ordering",
+   "note": "กินข้าวด้วยกันเถอะ"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "你吃饭了吗？",
+   "pron": "nǐ chīfàn le ma?",
+   "meaning": "Have you eaten?",
+   "topic": "Food & ordering",
+   "note": "กินข้าวหรือยัง"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我还没吃。",
+   "pron": "wǒ hái méi chī.",
+   "meaning": "I haven't eaten yet.",
+   "topic": "Food & ordering",
+   "note": "ฉันยังไม่ได้กิน"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "这个菜太咸了。",
+   "pron": "zhège cài tài xián le.",
+   "meaning": "This dish is too salty.",
+   "topic": "Food & ordering",
+   "note": "จานนี้เค็มเกินไป"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我要一杯热水。",
+   "pron": "wǒ yào yì bēi rè shuǐ.",
+   "meaning": "A glass of hot water, please.",
+   "topic": "Food & ordering",
+   "note": "ขอน้ำร้อนหนึ่งแก้ว"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "能少放点儿盐吗？",
+   "pron": "néng shǎo fàng diǎnr yán ma?",
+   "meaning": "Could you use less salt?",
+   "topic": "Food & ordering",
+   "note": "ใส่เกลือน้อยหน่อยได้ไหม"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我要带走。",
+   "pron": "wǒ yào dàizǒu.",
+   "meaning": "I'll take it away.",
+   "topic": "Food & ordering",
+   "note": "ฉันจะเอากลับไป"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "在这儿吃。",
+   "pron": "zài zhèr chī.",
+   "meaning": "I'll eat here.",
+   "topic": "Food & ordering",
+   "note": "กินที่นี่"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "今天我请你吃饭。",
+   "pron": "jīntiān wǒ qǐng nǐ chīfàn.",
+   "meaning": "Today the meal is on me.",
+   "topic": "Food & ordering",
+   "note": "วันนี้ฉันเลี้ยงข้าวเอง"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
    "text": "这个多少钱？",
    "pron": "zhège duōshao qián?",
    "meaning": "How much is this?",
@@ -454,6 +859,150 @@
    "meaning": "Where do I pay?",
    "topic": "Shopping",
    "note": "จ่ายเงินที่ไหน"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "有没有小一点儿的？",
+   "pron": "yǒu méiyǒu xiǎo yìdiǎnr de?",
+   "meaning": "Do you have a smaller one?",
+   "topic": "Shopping",
+   "note": "มีเล็กกว่านี้ไหม"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我要这件。",
+   "pron": "wǒ yào zhè jiàn.",
+   "meaning": "I'll take this one (clothes).",
+   "topic": "Shopping",
+   "note": "ฉันเอาตัวนี้"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "一共多少钱？",
+   "pron": "yígòng duōshao qián?",
+   "meaning": "How much altogether?",
+   "topic": "Shopping",
+   "note": "ทั้งหมดเท่าไหร่"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "有别的颜色吗？",
+   "pron": "yǒu bié de yánsè ma?",
+   "meaning": "Do you have other colours?",
+   "topic": "Shopping",
+   "note": "มีสีอื่นไหม"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "这个很好看。",
+   "pron": "zhège hěn hǎokàn.",
+   "meaning": "This looks nice.",
+   "topic": "Shopping",
+   "note": "อันนี้สวยดี"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我不要了。",
+   "pron": "wǒ bú yào le.",
+   "meaning": "I don't want it any more.",
+   "topic": "Shopping",
+   "note": "ไม่เอาแล้ว"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "给你钱。",
+   "pron": "gěi nǐ qián.",
+   "meaning": "Here's the money.",
+   "topic": "Shopping",
+   "note": "นี่เงินค่ะ/ครับ"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "找你五块。",
+   "pron": "zhǎo nǐ wǔ kuài.",
+   "meaning": "Here's five yuan change.",
+   "topic": "Shopping",
+   "note": "ทอนให้ห้าหยวน"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "可以用支付宝吗？",
+   "pron": "kěyǐ yòng Zhīfùbǎo ma?",
+   "meaning": "Can I use Alipay?",
+   "topic": "Shopping",
+   "note": "ใช้อาลีเพย์ได้ไหม"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "超市几点开门？",
+   "pron": "chāoshì jǐ diǎn kāimén?",
+   "meaning": "What time does the supermarket open?",
+   "topic": "Shopping",
+   "note": "ซูเปอร์มาร์เก็ตเปิดกี่โมง"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "苹果怎么卖？",
+   "pron": "píngguǒ zěnme mài?",
+   "meaning": "How much are the apples?",
+   "topic": "Shopping",
+   "note": "แอปเปิลขายยังไง"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "一斤多少钱？",
+   "pron": "yì jīn duōshao qián?",
+   "meaning": "How much for a jin (half a kilo)?",
+   "topic": "Shopping",
+   "note": "ครึ่งกิโลเท่าไหร่"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我要买一个新手机。",
+   "pron": "wǒ yào mǎi yí ge xīn shǒujī.",
+   "meaning": "I want to buy a new phone.",
+   "topic": "Shopping",
+   "note": "ฉันจะซื้อมือถือใหม่"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "这件衣服太小了。",
+   "pron": "zhè jiàn yīfu tài xiǎo le.",
+   "meaning": "This is too small (clothes).",
+   "topic": "Shopping",
+   "note": "เสื้อตัวนี้เล็กเกินไป"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "有袋子吗？",
+   "pron": "yǒu dàizi ma?",
+   "meaning": "Do you have a bag?",
+   "topic": "Shopping",
+   "note": "มีถุงไหม"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我没有现金。",
+   "pron": "wǒ méiyǒu xiànjīn.",
+   "meaning": "I don't have cash.",
+   "topic": "Shopping",
+   "note": "ฉันไม่มีเงินสด"
   },
   {
    "lang": "zh",
@@ -557,6 +1106,168 @@
   {
    "lang": "zh",
    "kind": "sentence",
+   "text": "打车去吧。",
+   "pron": "dǎchē qù ba.",
+   "meaning": "Let's take a taxi.",
+   "topic": "Transport",
+   "note": "นั่งแท็กซี่ไปเถอะ"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "去火车站多少钱？",
+   "pron": "qù huǒchēzhàn duōshao qián?",
+   "meaning": "How much to the train station?",
+   "topic": "Transport",
+   "note": "ไปสถานีรถไฟเท่าไหร่"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "请开慢一点儿。",
+   "pron": "qǐng kāi màn yìdiǎnr.",
+   "meaning": "Please drive more slowly.",
+   "topic": "Transport",
+   "note": "ช่วยขับช้าลงหน่อย"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我在这儿下车。",
+   "pron": "wǒ zài zhèr xiàchē.",
+   "meaning": "I'll get off here.",
+   "topic": "Transport",
+   "note": "ฉันลงตรงนี้"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "最后一班地铁是几点？",
+   "pron": "zuìhòu yì bān dìtiě shì jǐ diǎn?",
+   "meaning": "What time is the last metro?",
+   "topic": "Transport",
+   "note": "รถไฟใต้ดินเที่ยวสุดท้ายกี่โมง"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "这儿离学校远吗？",
+   "pron": "zhèr lí xuéxiào yuǎn ma?",
+   "meaning": "Is it far from here to the school?",
+   "topic": "Transport",
+   "note": "ที่นี่ไกลจากโรงเรียนไหม"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "走路十分钟。",
+   "pron": "zǒulù shí fēnzhōng.",
+   "meaning": "Ten minutes on foot.",
+   "topic": "Transport",
+   "note": "เดินสิบนาที"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "往左拐。",
+   "pron": "wǎng zuǒ guǎi.",
+   "meaning": "Turn left.",
+   "topic": "Transport",
+   "note": "เลี้ยวซ้าย"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "一直往前走。",
+   "pron": "yìzhí wǎng qián zǒu.",
+   "meaning": "Go straight ahead.",
+   "topic": "Transport",
+   "note": "เดินตรงไปเรื่อย ๆ"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "在红绿灯那儿右拐。",
+   "pron": "zài hónglǜdēng nàr yòu guǎi.",
+   "meaning": "Turn right at the traffic lights.",
+   "topic": "Transport",
+   "note": "เลี้ยวขวาที่ไฟแดง"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我坐公交车去学校。",
+   "pron": "wǒ zuò gōngjiāochē qù xuéxiào.",
+   "meaning": "I take the bus to school.",
+   "topic": "Transport",
+   "note": "ฉันนั่งรถเมล์ไปโรงเรียน"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "车票多少钱？",
+   "pron": "chēpiào duōshao qián?",
+   "meaning": "How much is the ticket?",
+   "topic": "Transport",
+   "note": "ตั๋วรถราคาเท่าไหร่"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我要买一张去北京的票。",
+   "pron": "wǒ yào mǎi yì zhāng qù Běijīng de piào.",
+   "meaning": "I'd like a ticket to Beijing.",
+   "topic": "Transport",
+   "note": "ฉันจะซื้อตั๋วไปปักกิ่งหนึ่งใบ"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "火车几点出发？",
+   "pron": "huǒchē jǐ diǎn chūfā?",
+   "meaning": "What time does the train leave?",
+   "topic": "Transport",
+   "note": "รถไฟออกกี่โมง"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "请问，这是几号线？",
+   "pron": "qǐngwèn, zhè shì jǐ hào xiàn?",
+   "meaning": "Excuse me, which metro line is this?",
+   "topic": "Transport",
+   "note": "ขอโทษนะ นี่สายอะไร"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我到了。",
+   "pron": "wǒ dào le.",
+   "meaning": "I've arrived.",
+   "topic": "Transport",
+   "note": "ฉันถึงแล้ว"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "你在哪儿？",
+   "pron": "nǐ zài nǎr?",
+   "meaning": "Where are you?",
+   "topic": "Transport",
+   "note": "คุณอยู่ที่ไหน"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我在门口等你。",
+   "pron": "wǒ zài ménkǒu děng nǐ.",
+   "meaning": "I'll wait for you at the entrance.",
+   "topic": "Transport",
+   "note": "ฉันรอคุณที่หน้าประตู"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
    "text": "现在几点？",
    "pron": "xiànzài jǐ diǎn?",
    "meaning": "What time is it now?",
@@ -643,6 +1354,132 @@
    "meaning": "Hurry up!",
    "topic": "Time",
    "note": "เร็ว ๆ หน่อย"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "现在八点半。",
+   "pron": "xiànzài bā diǎn bàn.",
+   "meaning": "It's half past eight now.",
+   "topic": "Time",
+   "note": "ตอนนี้แปดโมงครึ่ง"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我每天六点半起床。",
+   "pron": "wǒ měitiān liù diǎn bàn qǐchuáng.",
+   "meaning": "I get up at 6:30 every day.",
+   "topic": "Time",
+   "note": "ฉันตื่นหกโมงครึ่งทุกวัน"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "明天是星期六。",
+   "pron": "míngtiān shì xīngqīliù.",
+   "meaning": "Tomorrow is Saturday.",
+   "topic": "Time",
+   "note": "พรุ่งนี้วันเสาร์"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我周末有空。",
+   "pron": "wǒ zhōumò yǒu kòng.",
+   "meaning": "I'm free at the weekend.",
+   "topic": "Time",
+   "note": "สุดสัปดาห์ฉันว่าง"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "你几点下课？",
+   "pron": "nǐ jǐ diǎn xiàkè?",
+   "meaning": "What time does your class finish?",
+   "topic": "Time",
+   "note": "คุณเลิกเรียนกี่โมง"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我们明天上午见。",
+   "pron": "wǒmen míngtiān shàngwǔ jiàn.",
+   "meaning": "See you tomorrow morning.",
+   "topic": "Time",
+   "note": "เจอกันพรุ่งนี้เช้า"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "还有五分钟。",
+   "pron": "hái yǒu wǔ fēnzhōng.",
+   "meaning": "Five more minutes.",
+   "topic": "Time",
+   "note": "อีกห้านาที"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我等了很长时间。",
+   "pron": "wǒ děng le hěn cháng shíjiān.",
+   "meaning": "I waited a long time.",
+   "topic": "Time",
+   "note": "ฉันรอนานมาก"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "你什么时候回国？",
+   "pron": "nǐ shénme shíhou huí guó?",
+   "meaning": "When are you going back to your country?",
+   "topic": "Time",
+   "note": "คุณจะกลับประเทศเมื่อไหร่"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我下个月回家。",
+   "pron": "wǒ xià ge yuè huí jiā.",
+   "meaning": "I'm going home next month.",
+   "topic": "Time",
+   "note": "ฉันจะกลับบ้านเดือนหน้า"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "今天是我的生日。",
+   "pron": "jīntiān shì wǒ de shēngrì.",
+   "meaning": "Today is my birthday.",
+   "topic": "Time",
+   "note": "วันนี้วันเกิดฉัน"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "已经很晚了。",
+   "pron": "yǐjīng hěn wǎn le.",
+   "meaning": "It's already very late.",
+   "topic": "Time",
+   "note": "ดึกมากแล้ว"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "时间不早了。",
+   "pron": "shíjiān bù zǎo le.",
+   "meaning": "It's getting late.",
+   "topic": "Time",
+   "note": "ไม่เช้าแล้วนะ"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我们准时出发。",
+   "pron": "wǒmen zhǔnshí chūfā.",
+   "meaning": "We'll leave on time.",
+   "topic": "Time",
+   "note": "เราออกเดินทางตรงเวลา"
   },
   {
    "lang": "zh",
@@ -737,6 +1574,150 @@
   {
    "lang": "zh",
    "kind": "sentence",
+   "text": "我听懂了。",
+   "pron": "wǒ tīng dǒng le.",
+   "meaning": "I understood (what I heard).",
+   "topic": "School",
+   "note": "ฉันฟังเข้าใจแล้ว"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "这个字怎么写？",
+   "pron": "zhège zì zěnme xiě?",
+   "meaning": "How do you write this character?",
+   "topic": "School",
+   "note": "ตัวนี้เขียนยังไง"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我忘了带书。",
+   "pron": "wǒ wàng le dài shū.",
+   "meaning": "I forgot to bring my book.",
+   "topic": "School",
+   "note": "ฉันลืมเอาหนังสือมา"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "今天的课很有意思。",
+   "pron": "jīntiān de kè hěn yǒu yìsi.",
+   "meaning": "Today's class was interesting.",
+   "topic": "School",
+   "note": "วันนี้เรียนสนุกมาก"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我们几点上课？",
+   "pron": "wǒmen jǐ diǎn shàngkè?",
+   "meaning": "What time is our class?",
+   "topic": "School",
+   "note": "เราเข้าเรียนกี่โมง"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "教室在几楼？",
+   "pron": "jiàoshì zài jǐ lóu?",
+   "meaning": "Which floor is the classroom on?",
+   "topic": "School",
+   "note": "ห้องเรียนอยู่ชั้นไหน"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我可以用一下你的笔吗？",
+   "pron": "wǒ kěyǐ yòng yíxià nǐ de bǐ ma?",
+   "meaning": "Can I use your pen for a moment?",
+   "topic": "School",
+   "note": "ขอยืมปากกาหน่อยได้ไหม"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "你学了多长时间汉语？",
+   "pron": "nǐ xué le duō cháng shíjiān Hànyǔ?",
+   "meaning": "How long have you studied Chinese?",
+   "topic": "School",
+   "note": "คุณเรียนภาษาจีนมานานแค่ไหน"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "汉语很难，但是很有意思。",
+   "pron": "Hànyǔ hěn nán, dànshì hěn yǒu yìsi.",
+   "meaning": "Chinese is hard but interesting.",
+   "topic": "School",
+   "note": "ภาษาจีนยากแต่สนุก"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "作业写完了吗？",
+   "pron": "zuòyè xiě wán le ma?",
+   "meaning": "Have you finished your homework?",
+   "topic": "School",
+   "note": "ทำการบ้านเสร็จหรือยัง"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我考得很好。",
+   "pron": "wǒ kǎo de hěn hǎo.",
+   "meaning": "I did well in the exam.",
+   "topic": "School",
+   "note": "ฉันสอบได้ดี"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "下课了！",
+   "pron": "xiàkè le!",
+   "meaning": "Class is over!",
+   "topic": "School",
+   "note": "เลิกเรียนแล้ว"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我们去图书馆吧。",
+   "pron": "wǒmen qù túshūguǎn ba.",
+   "meaning": "Let's go to the library.",
+   "topic": "School",
+   "note": "ไปห้องสมุดกันเถอะ"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "你的老师是谁？",
+   "pron": "nǐ de lǎoshī shì shéi?",
+   "meaning": "Who is your teacher?",
+   "topic": "School",
+   "note": "อาจารย์ของคุณคือใคร"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我明天不能来上课。",
+   "pron": "wǒ míngtiān bù néng lái shàngkè.",
+   "meaning": "I can't come to class tomorrow.",
+   "topic": "School",
+   "note": "พรุ่งนี้ฉันมาเรียนไม่ได้"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "请大家看黑板。",
+   "pron": "qǐng dàjiā kàn hēibǎn.",
+   "meaning": "Everyone, please look at the board.",
+   "topic": "School",
+   "note": "ทุกคนดูกระดาน"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
    "text": "我不舒服。",
    "pron": "wǒ bù shūfu.",
    "meaning": "I don't feel well.",
@@ -827,6 +1808,96 @@
   {
    "lang": "zh",
    "kind": "sentence",
+   "text": "我肚子疼。",
+   "pron": "wǒ dùzi téng.",
+   "meaning": "I have a stomach ache.",
+   "topic": "Health & emergency",
+   "note": "ฉันปวดท้อง"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我感冒了。",
+   "pron": "wǒ gǎnmào le.",
+   "meaning": "I've caught a cold.",
+   "topic": "Health & emergency",
+   "note": "ฉันเป็นหวัด"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我很累。",
+   "pron": "wǒ hěn lèi.",
+   "meaning": "I'm very tired.",
+   "topic": "Health & emergency",
+   "note": "ฉันเหนื่อยมาก"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "你哪儿不舒服？",
+   "pron": "nǐ nǎr bù shūfu?",
+   "meaning": "What's wrong? / Where does it hurt?",
+   "topic": "Health & emergency",
+   "note": "คุณไม่สบายตรงไหน"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我需要吃药吗？",
+   "pron": "wǒ xūyào chī yào ma?",
+   "meaning": "Do I need to take medicine?",
+   "topic": "Health & emergency",
+   "note": "ฉันต้องกินยาไหม"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "药店在哪儿？",
+   "pron": "yàodiàn zài nǎr?",
+   "meaning": "Where is the pharmacy?",
+   "topic": "Health & emergency",
+   "note": "ร้านขายยาอยู่ที่ไหน"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "多喝热水。",
+   "pron": "duō hē rè shuǐ.",
+   "meaning": "Drink plenty of hot water.",
+   "topic": "Health & emergency",
+   "note": "ดื่มน้ำอุ่นเยอะ ๆ"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我好多了。",
+   "pron": "wǒ hǎo duō le.",
+   "meaning": "I feel much better.",
+   "topic": "Health & emergency",
+   "note": "ฉันดีขึ้นมากแล้ว"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "快叫警察！",
+   "pron": "kuài jiào jǐngchá!",
+   "meaning": "Call the police, quick!",
+   "topic": "Health & emergency",
+   "note": "รีบเรียกตำรวจ"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我的钱包丢了。",
+   "pron": "wǒ de qiánbāo diū le.",
+   "meaning": "I've lost my wallet.",
+   "topic": "Health & emergency",
+   "note": "กระเป๋าสตางค์ของฉันหาย"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
    "text": "你在做什么？",
    "pron": "nǐ zài zuò shénme?",
    "meaning": "What are you doing?",
@@ -904,6 +1975,285 @@
    "meaning": "It's cold today.",
    "topic": "Daily life",
    "note": "วันนี้หนาวมาก"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我去洗澡。",
+   "pron": "wǒ qù xǐzǎo.",
+   "meaning": "I'm going to take a shower.",
+   "topic": "Daily life",
+   "note": "ฉันไปอาบน้ำ"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我要睡觉了。",
+   "pron": "wǒ yào shuìjiào le.",
+   "meaning": "I'm going to bed.",
+   "topic": "Daily life",
+   "note": "ฉันจะนอนแล้ว"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "你喜欢做什么？",
+   "pron": "nǐ xǐhuan zuò shénme?",
+   "meaning": "What do you like to do?",
+   "topic": "Daily life",
+   "note": "คุณชอบทำอะไร"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我们去看电影吧。",
+   "pron": "wǒmen qù kàn diànyǐng ba.",
+   "meaning": "Let's go and see a film.",
+   "topic": "Daily life",
+   "note": "ไปดูหนังกันเถอะ"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "你有时间吗？",
+   "pron": "nǐ yǒu shíjiān ma?",
+   "meaning": "Do you have time?",
+   "topic": "Daily life",
+   "note": "คุณมีเวลาไหม"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我很忙。",
+   "pron": "wǒ hěn máng.",
+   "meaning": "I'm very busy.",
+   "topic": "Daily life",
+   "note": "ฉันยุ่งมาก"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我想家了。",
+   "pron": "wǒ xiǎng jiā le.",
+   "meaning": "I miss home.",
+   "topic": "Daily life",
+   "note": "ฉันคิดถึงบ้าน"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我给妈妈打电话。",
+   "pron": "wǒ gěi māma dǎ diànhuà.",
+   "meaning": "I'm calling my mum.",
+   "topic": "Daily life",
+   "note": "ฉันโทรหาแม่"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "你在哪儿工作？",
+   "pron": "nǐ zài nǎr gōngzuò?",
+   "meaning": "Where do you work?",
+   "topic": "Daily life",
+   "note": "คุณทำงานที่ไหน"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我喜欢这儿。",
+   "pron": "wǒ xǐhuan zhèr.",
+   "meaning": "I like it here.",
+   "topic": "Daily life",
+   "note": "ฉันชอบที่นี่"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "这是谁的？",
+   "pron": "zhè shì shéi de?",
+   "meaning": "Whose is this?",
+   "topic": "Daily life",
+   "note": "อันนี้ของใคร"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我可以坐这儿吗？",
+   "pron": "wǒ kěyǐ zuò zhèr ma?",
+   "meaning": "Can I sit here?",
+   "topic": "Daily life",
+   "note": "ฉันนั่งตรงนี้ได้ไหม"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我们走吧。",
+   "pron": "wǒmen zǒu ba.",
+   "meaning": "Let's go.",
+   "topic": "Daily life",
+   "note": "ไปกันเถอะ"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "今天天气怎么样？",
+   "pron": "jīntiān tiānqì zěnmeyàng?",
+   "meaning": "What's the weather like today?",
+   "topic": "Weather",
+   "note": "วันนี้อากาศเป็นยังไง"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "明天会下雨吗？",
+   "pron": "míngtiān huì xià yǔ ma?",
+   "meaning": "Will it rain tomorrow?",
+   "topic": "Weather",
+   "note": "พรุ่งนี้ฝนจะตกไหม"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "外面很热。",
+   "pron": "wàimiàn hěn rè.",
+   "meaning": "It's hot outside.",
+   "topic": "Weather",
+   "note": "ข้างนอกร้อนมาก"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "下雪了！",
+   "pron": "xià xuě le!",
+   "meaning": "It's snowing!",
+   "topic": "Weather",
+   "note": "หิมะตกแล้ว"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "今天风很大。",
+   "pron": "jīntiān fēng hěn dà.",
+   "meaning": "It's very windy today.",
+   "topic": "Weather",
+   "note": "วันนี้ลมแรงมาก"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "天晴了。",
+   "pron": "tiān qíng le.",
+   "meaning": "It's cleared up.",
+   "topic": "Weather",
+   "note": "ฟ้าแจ่มใสแล้ว"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "别忘了带伞。",
+   "pron": "bié wàng le dài sǎn.",
+   "meaning": "Don't forget your umbrella.",
+   "topic": "Weather",
+   "note": "อย่าลืมพกร่ม"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "今天比昨天冷。",
+   "pron": "jīntiān bǐ zuótiān lěng.",
+   "meaning": "Today is colder than yesterday.",
+   "topic": "Weather",
+   "note": "วันนี้หนาวกว่าเมื่อวาน"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我喜欢秋天。",
+   "pron": "wǒ xǐhuan qiūtiān.",
+   "meaning": "I like autumn.",
+   "topic": "Weather",
+   "note": "ฉันชอบฤดูใบไม้ร่วง"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "多穿点儿衣服。",
+   "pron": "duō chuān diǎnr yīfu.",
+   "meaning": "Wear more clothes (keep warm).",
+   "topic": "Weather",
+   "note": "ใส่เสื้อผ้าเยอะ ๆ หน่อยนะ"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我很高兴。",
+   "pron": "wǒ hěn gāoxìng.",
+   "meaning": "I'm very happy.",
+   "topic": "Feelings",
+   "note": "ฉันดีใจมาก"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "太好了！",
+   "pron": "tài hǎo le!",
+   "meaning": "Great!",
+   "topic": "Feelings",
+   "note": "เยี่ยมเลย"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "真的吗？",
+   "pron": "zhēn de ma?",
+   "meaning": "Really?",
+   "topic": "Feelings",
+   "note": "จริงเหรอ"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我不知道。",
+   "pron": "wǒ bù zhīdào.",
+   "meaning": "I don't know.",
+   "topic": "Feelings",
+   "note": "ฉันไม่รู้"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我觉得很好。",
+   "pron": "wǒ juéde hěn hǎo.",
+   "meaning": "I think it's good.",
+   "topic": "Feelings",
+   "note": "ฉันว่าดีนะ"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我喜欢你的衣服。",
+   "pron": "wǒ xǐhuan nǐ de yīfu.",
+   "meaning": "I like your clothes.",
+   "topic": "Feelings",
+   "note": "ฉันชอบเสื้อผ้าของคุณ"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "别担心。",
+   "pron": "bié dānxīn.",
+   "meaning": "Don't worry.",
+   "topic": "Feelings",
+   "note": "ไม่ต้องห่วง"
+  },
+  {
+   "lang": "zh",
+   "kind": "sentence",
+   "text": "我有点儿累。",
+   "pron": "wǒ yǒudiǎnr lèi.",
+   "meaning": "I'm a bit tired.",
+   "topic": "Feelings",
+   "note": "ฉันเหนื่อยนิดหน่อย"
   }
  ]
 }
