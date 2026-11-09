@@ -3,7 +3,7 @@
  "version": 1,
  "lang": "zh",
  "language": "Chinese (Mandarin)",
- "exportedAt": "2026-10-17T03:36:44+00:00",
+ "exportedAt": "2026-11-09T08:08:05+00:00",
  "words": [
   {
    "lang": "zh",
@@ -418,6 +418,24 @@
    "meaning": "Fog",
    "topic": "Weather",
    "note": "หมอก"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "下雨天",
+   "pron": "xià yǔ tiān",
+   "meaning": "Rainy day",
+   "topic": "Weather",
+   "note": "วันฝนตก"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "下雪天",
+   "pron": "xià xuě tiān",
+   "meaning": "Snowy day",
+   "topic": "Weather",
+   "note": "วันหิมะตก"
   },
   {
    "lang": "zh",
@@ -1016,6 +1034,42 @@
   {
    "lang": "zh",
    "kind": "word",
+   "text": "好吃",
+   "pron": "hǎochī",
+   "meaning": "Tasty",
+   "topic": "Food & ordering",
+   "note": "อร่อย"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "盘子",
+   "pron": "pánzi",
+   "meaning": "Plate",
+   "topic": "Food & ordering",
+   "note": "จาน"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "菜",
+   "pron": "cài",
+   "meaning": "Dish / vegetable",
+   "topic": "Food & ordering",
+   "note": "อาหาร (กับข้าว), ผัก"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "饭",
+   "pron": "fàn",
+   "meaning": "Meal / cooked rice",
+   "topic": "Food & ordering",
+   "note": "ข้าว, มื้ออาหาร"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
    "text": "中国",
    "pron": "Zhōngguó",
    "meaning": "China",
@@ -1192,6 +1246,15 @@
    "meaning": "Thai person",
    "topic": "Countries",
    "note": "คนไทย"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "国",
+   "pron": "guó",
+   "meaning": "Country",
+   "topic": "Countries",
+   "note": "ประเทศ"
   },
   {
    "lang": "zh",
@@ -1457,6 +1520,33 @@
   {
    "lang": "zh",
    "kind": "word",
+   "text": "口",
+   "pron": "kǒu",
+   "meaning": "Mouth (in words like 入口, 人口)",
+   "topic": "Body",
+   "note": "ปาก"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "目",
+   "pron": "mù",
+   "meaning": "Eye (written / in words)",
+   "topic": "Body",
+   "note": "ตา"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "脑",
+   "pron": "nǎo",
+   "meaning": "Brain",
+   "topic": "Body",
+   "note": "สมอง"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
    "text": "今天",
    "pron": "jīntiān",
    "meaning": "Today",
@@ -1601,6 +1691,87 @@
   {
    "lang": "zh",
    "kind": "word",
+   "text": "今年",
+   "pron": "jīnnián",
+   "meaning": "This year",
+   "topic": "Time",
+   "note": "ปีนี้"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "号",
+   "pron": "hào",
+   "meaning": "Date (day of the month) / number",
+   "topic": "Time",
+   "note": "วันที่, เบอร์"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "星期三",
+   "pron": "xīngqīsān",
+   "meaning": "Wednesday",
+   "topic": "Time",
+   "note": "วันพุธ"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "星期日",
+   "pron": "xīngqīrì",
+   "meaning": "Sunday (written style of 星期天)",
+   "topic": "Time",
+   "note": "วันอาทิตย์"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "日历",
+   "pron": "rìlì",
+   "meaning": "Calendar",
+   "topic": "Time",
+   "note": "ปฏิทิน"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "生日",
+   "pron": "shēngrì",
+   "meaning": "Birthday",
+   "topic": "Time",
+   "note": "วันเกิด"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "时候",
+   "pron": "shíhou",
+   "meaning": "Time / moment (when…)",
+   "topic": "Time",
+   "note": "เวลา, ตอนที่"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "日",
+   "pron": "rì",
+   "meaning": "Sun / day",
+   "topic": "Time",
+   "note": "วัน, ดวงอาทิตย์"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "天",
+   "pron": "tiān",
+   "meaning": "Sky / day",
+   "topic": "Time",
+   "note": "ท้องฟ้า, วัน"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
    "text": "家",
    "pron": "jiā",
    "meaning": "Home",
@@ -1723,6 +1894,42 @@
    "meaning": "Train station",
    "topic": "Places",
    "note": "สถานีรถไฟ"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "山",
+   "pron": "shān",
+   "meaning": "Mountain",
+   "topic": "Places",
+   "note": "ภูเขา"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "公园",
+   "pron": "gōngyuán",
+   "meaning": "Park",
+   "topic": "Places",
+   "note": "สวนสาธารณะ"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "书店",
+   "pron": "shūdiàn",
+   "meaning": "Bookshop",
+   "topic": "Places",
+   "note": "ร้านหนังสือ"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "车站",
+   "pron": "chēzhàn",
+   "meaning": "Station / bus stop",
+   "topic": "Places",
+   "note": "สถานี, ป้ายรถ"
   },
   {
    "lang": "zh",
@@ -1894,6 +2101,1455 @@
    "meaning": "Mobile phone",
    "topic": "School",
    "note": "โทรศัพท์มือถือ"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "问题",
+   "pron": "wèntí",
+   "meaning": "Question / problem",
+   "topic": "School",
+   "note": "คำถาม, ปัญหา"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "学习",
+   "pron": "xuéxí",
+   "meaning": "Study / learn",
+   "topic": "School",
+   "note": "เรียน, ศึกษา"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "词典",
+   "pron": "cídiǎn",
+   "meaning": "Dictionary",
+   "topic": "School",
+   "note": "พจนานุกรม"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "留学生",
+   "pron": "liúxuéshēng",
+   "meaning": "International student",
+   "topic": "School",
+   "note": "นักศึกษาต่างชาติ"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "课",
+   "pron": "kè",
+   "meaning": "Class / lesson",
+   "topic": "School",
+   "note": "วิชา, บทเรียน"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "班",
+   "pron": "bān",
+   "meaning": "Class (group of students)",
+   "topic": "School",
+   "note": "ห้องเรียน, ชั้นเรียน"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "同学",
+   "pron": "tóngxué",
+   "meaning": "Classmate",
+   "topic": "School",
+   "note": "เพื่อนร่วมชั้น"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "字",
+   "pron": "zì",
+   "meaning": "Character / word",
+   "topic": "School",
+   "note": "ตัวอักษร"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "汉字",
+   "pron": "hànzì",
+   "meaning": "Chinese character",
+   "topic": "School",
+   "note": "อักษรจีน"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "语",
+   "pron": "yǔ",
+   "meaning": "Language (in 汉语, 英语)",
+   "topic": "School",
+   "note": "ภาษา"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "英语",
+   "pron": "Yīngyǔ",
+   "meaning": "English (language)",
+   "topic": "School",
+   "note": "ภาษาอังกฤษ"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "对不起",
+   "pron": "duìbuqǐ",
+   "meaning": "Sorry",
+   "topic": "Greetings",
+   "note": "ขอโทษ"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "没关系",
+   "pron": "méi guānxi",
+   "meaning": "It doesn't matter / that's OK",
+   "topic": "Greetings",
+   "note": "ไม่เป็นไร"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "谢谢",
+   "pron": "xièxie",
+   "meaning": "Thank you",
+   "topic": "Greetings",
+   "note": "ขอบคุณ"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "不客气",
+   "pron": "bú kèqi",
+   "meaning": "You're welcome",
+   "topic": "Greetings",
+   "note": "ไม่ต้องเกรงใจ, ยินดี"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "再见",
+   "pron": "zàijiàn",
+   "meaning": "Goodbye",
+   "topic": "Greetings",
+   "note": "ลาก่อน, แล้วพบกันใหม่"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "请",
+   "pron": "qǐng",
+   "meaning": "Please / invite",
+   "topic": "Greetings",
+   "note": "กรุณา, เชิญ"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "请问",
+   "pron": "qǐngwèn",
+   "meaning": "Excuse me, may I ask…",
+   "topic": "Greetings",
+   "note": "ขอถามหน่อย"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "没问题",
+   "pron": "méi wèntí",
+   "meaning": "No problem",
+   "topic": "Greetings",
+   "note": "ไม่มีปัญหา"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "姓",
+   "pron": "xìng",
+   "meaning": "Be surnamed / surname",
+   "topic": "Greetings",
+   "note": "นามสกุล, แซ่"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "贵姓",
+   "pron": "guìxìng",
+   "meaning": "Your (honourable) surname",
+   "topic": "Greetings",
+   "note": "นามสกุลของคุณ (สุภาพ)"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "叫",
+   "pron": "jiào",
+   "meaning": "Be called / call",
+   "topic": "Greetings",
+   "note": "ชื่อว่า, เรียก"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "名字",
+   "pron": "míngzi",
+   "meaning": "Name",
+   "topic": "Greetings",
+   "note": "ชื่อ"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "先生",
+   "pron": "xiānsheng",
+   "meaning": "Mr. / sir",
+   "topic": "Greetings",
+   "note": "คุณ (ผู้ชาย), นาย"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "小姐",
+   "pron": "xiǎojiě",
+   "meaning": "Ms. / Miss",
+   "topic": "Greetings",
+   "note": "คุณ (ผู้หญิง), นางสาว"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "几岁",
+   "pron": "jǐ suì",
+   "meaning": "How old (a child under 10)",
+   "topic": "Greetings",
+   "note": "อายุกี่ขวบ (ถามเด็ก)"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "多大",
+   "pron": "duō dà",
+   "meaning": "How old (an adult or friend) / how big",
+   "topic": "Greetings",
+   "note": "อายุเท่าไร, ใหญ่แค่ไหน"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "岁",
+   "pron": "suì",
+   "meaning": "Year(s) old",
+   "topic": "Greetings",
+   "note": "ขวบ, ปี (อายุ)"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "医生",
+   "pron": "yīshēng",
+   "meaning": "Doctor",
+   "topic": "People",
+   "note": "แพทย์, หมอ"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "我",
+   "pron": "wǒ",
+   "meaning": "I / me",
+   "topic": "People",
+   "note": "ฉัน, ผม"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "你",
+   "pron": "nǐ",
+   "meaning": "You",
+   "topic": "People",
+   "note": "คุณ, เธอ"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "您",
+   "pron": "nín",
+   "meaning": "You (polite)",
+   "topic": "People",
+   "note": "คุณ, ท่าน (สุภาพ)"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "他",
+   "pron": "tā",
+   "meaning": "He / him",
+   "topic": "People",
+   "note": "เขา (ผู้ชาย)"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "她",
+   "pron": "tā",
+   "meaning": "She / her",
+   "topic": "People",
+   "note": "เธอ, เขา (ผู้หญิง)"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "们",
+   "pron": "men",
+   "meaning": "Plural ending for people (我们, 你们)",
+   "topic": "People",
+   "note": "คำเติมท้ายบอกพหูพจน์"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "我们",
+   "pron": "wǒmen",
+   "meaning": "We / us",
+   "topic": "People",
+   "note": "พวกเรา"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "你们",
+   "pron": "nǐmen",
+   "meaning": "You (plural)",
+   "topic": "People",
+   "note": "พวกคุณ"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "人",
+   "pron": "rén",
+   "meaning": "Person / people",
+   "topic": "People",
+   "note": "คน"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "男",
+   "pron": "nán",
+   "meaning": "Male",
+   "topic": "People",
+   "note": "ผู้ชาย, เพศชาย"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "女",
+   "pron": "nǚ",
+   "meaning": "Female",
+   "topic": "People",
+   "note": "ผู้หญิง, เพศหญิง"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "工人",
+   "pron": "gōngrén",
+   "meaning": "Worker",
+   "topic": "People",
+   "note": "คนงาน"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "什么",
+   "pron": "shénme",
+   "meaning": "What",
+   "topic": "Question words",
+   "note": "อะไร"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "谁",
+   "pron": "shéi",
+   "meaning": "Who / whom",
+   "topic": "Question words",
+   "note": "ใคร"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "哪",
+   "pron": "nǎ",
+   "meaning": "Which",
+   "topic": "Question words",
+   "note": "ไหน, อันไหน"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "哪儿",
+   "pron": "nǎr",
+   "meaning": "Where",
+   "topic": "Question words",
+   "note": "ที่ไหน"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "几",
+   "pron": "jǐ",
+   "meaning": "How many (usually under 10)",
+   "topic": "Question words",
+   "note": "กี่ (จำนวนน้อย)"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "几点",
+   "pron": "jǐ diǎn",
+   "meaning": "What time",
+   "topic": "Question words",
+   "note": "กี่โมง"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "多少",
+   "pron": "duōshao",
+   "meaning": "How many / how much",
+   "topic": "Question words",
+   "note": "เท่าไร, กี่"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "怎么",
+   "pron": "zěnme",
+   "meaning": "How",
+   "topic": "Question words",
+   "note": "อย่างไร, ยังไง"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "怎么样",
+   "pron": "zěnmeyàng",
+   "meaning": "How is it? / how about…?",
+   "topic": "Question words",
+   "note": "เป็นอย่างไร"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "吗",
+   "pron": "ma",
+   "meaning": "Question particle (yes/no questions)",
+   "topic": "Question words",
+   "note": "คำลงท้ายประโยคคำถาม"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "呢",
+   "pron": "ne",
+   "meaning": "Question particle (…and you?)",
+   "topic": "Question words",
+   "note": "คำลงท้ายคำถาม (แล้ว…ล่ะ)"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "一起",
+   "pron": "yìqǐ",
+   "meaning": "Together",
+   "topic": "Little words",
+   "note": "ด้วยกัน"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "的",
+   "pron": "de",
+   "meaning": "Of / 's (links a description to a noun)",
+   "topic": "Little words",
+   "note": "ของ, ที่ (เชื่อมคำขยาย)"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "了",
+   "pron": "le",
+   "meaning": "Particle: done / something changed",
+   "topic": "Little words",
+   "note": "แสดงว่าเกิดขึ้นแล้ว"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "啊",
+   "pron": "a",
+   "meaning": "Particle (confirms, softens)",
+   "topic": "Little words",
+   "note": "คำลงท้ายแสดงอารมณ์"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "不",
+   "pron": "bù",
+   "meaning": "Not / no",
+   "topic": "Little words",
+   "note": "ไม่"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "没",
+   "pron": "méi",
+   "meaning": "Not (with 有, and for the past)",
+   "topic": "Little words",
+   "note": "ไม่ได้, ไม่มี"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "没有",
+   "pron": "méiyǒu",
+   "meaning": "Not have / didn't",
+   "topic": "Little words",
+   "note": "ไม่มี, ไม่ได้"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "是",
+   "pron": "shì",
+   "meaning": "Be (am / is / are)",
+   "topic": "Little words",
+   "note": "เป็น, คือ"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "有",
+   "pron": "yǒu",
+   "meaning": "Have / there is",
+   "topic": "Little words",
+   "note": "มี"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "在",
+   "pron": "zài",
+   "meaning": "Be at / in / on",
+   "topic": "Little words",
+   "note": "อยู่ที่"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "这",
+   "pron": "zhè",
+   "meaning": "This",
+   "topic": "Little words",
+   "note": "นี่, นี้"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "那",
+   "pron": "nà",
+   "meaning": "That",
+   "topic": "Little words",
+   "note": "นั่น, นั้น"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "这些",
+   "pron": "zhèxiē",
+   "meaning": "These",
+   "topic": "Little words",
+   "note": "เหล่านี้"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "也",
+   "pron": "yě",
+   "meaning": "Also / too",
+   "topic": "Little words",
+   "note": "ก็, ด้วย"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "都",
+   "pron": "dōu",
+   "meaning": "All / both",
+   "topic": "Little words",
+   "note": "ทั้งหมด, ล้วน"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "很",
+   "pron": "hěn",
+   "meaning": "Very",
+   "topic": "Little words",
+   "note": "มาก"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "太",
+   "pron": "tài",
+   "meaning": "Too (much) / extremely",
+   "topic": "Little words",
+   "note": "เกินไป, มากๆ"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "和",
+   "pron": "hé",
+   "meaning": "And / with",
+   "topic": "Little words",
+   "note": "และ, กับ"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "跟",
+   "pron": "gēn",
+   "meaning": "With / follow",
+   "topic": "Little words",
+   "note": "กับ, ตาม"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "再",
+   "pron": "zài",
+   "meaning": "Again",
+   "topic": "Little words",
+   "note": "อีก, อีกครั้ง"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "先",
+   "pron": "xiān",
+   "meaning": "First / before",
+   "topic": "Little words",
+   "note": "ก่อน"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "常常",
+   "pron": "chángcháng",
+   "meaning": "Often",
+   "topic": "Little words",
+   "note": "บ่อยๆ"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "一点儿",
+   "pron": "yìdiǎnr",
+   "meaning": "A little",
+   "topic": "Little words",
+   "note": "นิดหน่อย"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "多",
+   "pron": "duō",
+   "meaning": "Many / much",
+   "topic": "Little words",
+   "note": "มาก"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "少",
+   "pron": "shǎo",
+   "meaning": "Few / little",
+   "topic": "Little words",
+   "note": "น้อย"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "不少",
+   "pron": "bù shǎo",
+   "meaning": "Quite a lot",
+   "topic": "Little words",
+   "note": "ไม่น้อย, มากมาย"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "对",
+   "pron": "duì",
+   "meaning": "Right / correct",
+   "topic": "Little words",
+   "note": "ถูก, ใช่"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "会",
+   "pron": "huì",
+   "meaning": "Can (know how to) / will",
+   "topic": "Little words",
+   "note": "เป็น, ทำได้, จะ"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "能",
+   "pron": "néng",
+   "meaning": "Can / be able to",
+   "topic": "Little words",
+   "note": "สามารถ, ทำได้"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "可以",
+   "pron": "kěyǐ",
+   "meaning": "Can / may",
+   "topic": "Little words",
+   "note": "ได้, สามารถ"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "想",
+   "pron": "xiǎng",
+   "meaning": "Think / want to",
+   "topic": "Little words",
+   "note": "คิด, อยากจะ"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "休息",
+   "pron": "xiūxi",
+   "meaning": "Rest",
+   "topic": "Actions",
+   "note": "พักผ่อน"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "买",
+   "pron": "mǎi",
+   "meaning": "Buy",
+   "topic": "Actions",
+   "note": "ซื้อ"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "卖",
+   "pron": "mài",
+   "meaning": "Sell",
+   "topic": "Actions",
+   "note": "ขาย"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "工作",
+   "pron": "gōngzuò",
+   "meaning": "Job / to work",
+   "topic": "Actions",
+   "note": "งาน, ทำงาน"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "去",
+   "pron": "qù",
+   "meaning": "Go",
+   "topic": "Actions",
+   "note": "ไป"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "来",
+   "pron": "lái",
+   "meaning": "Come",
+   "topic": "Actions",
+   "note": "มา"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "回来",
+   "pron": "huílai",
+   "meaning": "Come back",
+   "topic": "Actions",
+   "note": "กลับมา"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "看",
+   "pron": "kàn",
+   "meaning": "Look / watch / read",
+   "topic": "Actions",
+   "note": "มอง, ดู"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "看见",
+   "pron": "kànjiàn",
+   "meaning": "See",
+   "topic": "Actions",
+   "note": "เห็น"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "见",
+   "pron": "jiàn",
+   "meaning": "See / meet",
+   "topic": "Actions",
+   "note": "เห็น, พบ"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "视",
+   "pron": "shì",
+   "meaning": "Look at / view (in words like 电视)",
+   "topic": "Actions",
+   "note": "ดู (ใช้ในคำ เช่น 电视)"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "读",
+   "pron": "dú",
+   "meaning": "Read (aloud)",
+   "topic": "Actions",
+   "note": "อ่าน"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "写",
+   "pron": "xiě",
+   "meaning": "Write",
+   "topic": "Actions",
+   "note": "เขียน"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "说",
+   "pron": "shuō",
+   "meaning": "Speak / say",
+   "topic": "Actions",
+   "note": "พูด"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "问",
+   "pron": "wèn",
+   "meaning": "Ask",
+   "topic": "Actions",
+   "note": "ถาม"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "吃",
+   "pron": "chī",
+   "meaning": "Eat",
+   "topic": "Actions",
+   "note": "กิน"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "喝",
+   "pron": "hē",
+   "meaning": "Drink",
+   "topic": "Actions",
+   "note": "ดื่ม"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "做",
+   "pron": "zuò",
+   "meaning": "Do / make",
+   "topic": "Actions",
+   "note": "ทำ"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "坐",
+   "pron": "zuò",
+   "meaning": "Sit / take (a bus, a plane)",
+   "topic": "Actions",
+   "note": "นั่ง"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "喜欢",
+   "pron": "xǐhuan",
+   "meaning": "Like",
+   "topic": "Actions",
+   "note": "ชอบ"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "学",
+   "pron": "xué",
+   "meaning": "Learn",
+   "topic": "Actions",
+   "note": "เรียน"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "开",
+   "pron": "kāi",
+   "meaning": "Open / drive / turn on",
+   "topic": "Actions",
+   "note": "เปิด, ขับ"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "开车",
+   "pron": "kāichē",
+   "meaning": "Drive (a car)",
+   "topic": "Actions",
+   "note": "ขับรถ"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "打开",
+   "pron": "dǎkāi",
+   "meaning": "Open / turn on",
+   "topic": "Actions",
+   "note": "เปิด"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "送",
+   "pron": "sòng",
+   "meaning": "Give (a gift) / deliver / see off",
+   "topic": "Actions",
+   "note": "ส่ง, ให้"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "起",
+   "pron": "qǐ",
+   "meaning": "Rise / get up",
+   "topic": "Actions",
+   "note": "ลุกขึ้น"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "祝",
+   "pron": "zhù",
+   "meaning": "Wish (e.g. 祝你生日快乐)",
+   "topic": "Actions",
+   "note": "อวยพร"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "生",
+   "pron": "shēng",
+   "meaning": "Give birth / be born",
+   "topic": "Actions",
+   "note": "เกิด, คลอด"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "漂亮",
+   "pron": "piàoliang",
+   "meaning": "Beautiful / pretty",
+   "topic": "Describing",
+   "note": "สวย"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "好",
+   "pron": "hǎo",
+   "meaning": "Good",
+   "topic": "Describing",
+   "note": "ดี"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "大",
+   "pron": "dà",
+   "meaning": "Big",
+   "topic": "Describing",
+   "note": "ใหญ่"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "小",
+   "pron": "xiǎo",
+   "meaning": "Small",
+   "topic": "Describing",
+   "note": "เล็ก"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "高",
+   "pron": "gāo",
+   "meaning": "High / tall",
+   "topic": "Describing",
+   "note": "สูง"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "上",
+   "pron": "shàng",
+   "meaning": "Up / on / above",
+   "topic": "Directions",
+   "note": "บน, ขึ้น"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "下",
+   "pron": "xià",
+   "meaning": "Down / below",
+   "topic": "Directions",
+   "note": "ล่าง, ลง"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "上面",
+   "pron": "shàngmian",
+   "meaning": "On top / above",
+   "topic": "Directions",
+   "note": "ข้างบน"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "下面",
+   "pron": "xiàmian",
+   "meaning": "Under / below",
+   "topic": "Directions",
+   "note": "ข้างล่าง"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "前",
+   "pron": "qián",
+   "meaning": "Front / before",
+   "topic": "Directions",
+   "note": "หน้า, ก่อน"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "后",
+   "pron": "hòu",
+   "meaning": "Back / after",
+   "topic": "Directions",
+   "note": "หลัง"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "前面",
+   "pron": "qiánmian",
+   "meaning": "In front",
+   "topic": "Directions",
+   "note": "ข้างหน้า"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "后面",
+   "pron": "hòumian",
+   "meaning": "Behind / at the back",
+   "topic": "Directions",
+   "note": "ข้างหลัง"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "左",
+   "pron": "zuǒ",
+   "meaning": "Left",
+   "topic": "Directions",
+   "note": "ซ้าย"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "右",
+   "pron": "yòu",
+   "meaning": "Right (side)",
+   "topic": "Directions",
+   "note": "ขวา"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "里",
+   "pron": "lǐ",
+   "meaning": "Inside / in",
+   "topic": "Directions",
+   "note": "ใน, ข้างใน"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "边",
+   "pron": "biān",
+   "meaning": "Side",
+   "topic": "Directions",
+   "note": "ข้าง, ด้าน"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "面",
+   "pron": "miàn",
+   "meaning": "Side / face / surface",
+   "topic": "Directions",
+   "note": "ด้าน, หน้า, ผิว"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "这儿",
+   "pron": "zhèr",
+   "meaning": "Here",
+   "topic": "Directions",
+   "note": "ที่นี่"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "那儿",
+   "pron": "nàr",
+   "meaning": "There",
+   "topic": "Directions",
+   "note": "ที่นั่น"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "地方",
+   "pron": "dìfang",
+   "meaning": "Place",
+   "topic": "Directions",
+   "note": "ที่, สถานที่"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "方向",
+   "pron": "fāngxiàng",
+   "meaning": "Direction",
+   "topic": "Directions",
+   "note": "ทิศทาง"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "方",
+   "pron": "fāng",
+   "meaning": "Square / side",
+   "topic": "Directions",
+   "note": "สี่เหลี่ยม, ด้าน"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "地",
+   "pron": "dì",
+   "meaning": "Earth / ground",
+   "topic": "Directions",
+   "note": "พื้นดิน, โลก"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "东",
+   "pron": "dōng",
+   "meaning": "East",
+   "topic": "Directions",
+   "note": "ตะวันออก"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "南",
+   "pron": "nán",
+   "meaning": "South",
+   "topic": "Directions",
+   "note": "ใต้"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "西",
+   "pron": "xī",
+   "meaning": "West",
+   "topic": "Directions",
+   "note": "ตะวันตก"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "北",
+   "pron": "běi",
+   "meaning": "North",
+   "topic": "Directions",
+   "note": "เหนือ"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "东北",
+   "pron": "dōngběi",
+   "meaning": "Northeast",
+   "topic": "Directions",
+   "note": "ตะวันออกเฉียงเหนือ"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "东南",
+   "pron": "dōngnán",
+   "meaning": "Southeast",
+   "topic": "Directions",
+   "note": "ตะวันออกเฉียงใต้"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "西北",
+   "pron": "xīběi",
+   "meaning": "Northwest",
+   "topic": "Directions",
+   "note": "ตะวันตกเฉียงเหนือ"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "西南",
+   "pron": "xīnán",
+   "meaning": "Southwest",
+   "topic": "Directions",
+   "note": "ตะวันตกเฉียงใต้"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "个",
+   "pron": "gè",
+   "meaning": "General measure word",
+   "topic": "Measure words",
+   "note": "ลักษณนามทั่วไป (อัน, คน, ชิ้น)"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "本",
+   "pron": "běn",
+   "meaning": "Measure word for books",
+   "topic": "Measure words",
+   "note": "เล่ม"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "块",
+   "pron": "kuài",
+   "meaning": "Yuan (spoken) / piece",
+   "topic": "Measure words",
+   "note": "หยวน (ภาษาพูด), ก้อน"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "把",
+   "pron": "bǎ",
+   "meaning": "Measure word for things with a handle (knife, chair)",
+   "topic": "Measure words",
+   "note": "ด้าม, ตัว (ของที่มีด้ามจับ)"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "间",
+   "pron": "jiān",
+   "meaning": "Measure word for rooms",
+   "topic": "Measure words",
+   "note": "ห้อง (ลักษณนาม)"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "一遍",
+   "pron": "yí biàn",
+   "meaning": "Once (all the way through)",
+   "topic": "Measure words",
+   "note": "หนึ่งรอบ, หนึ่งครั้ง (ตั้งแต่ต้นจนจบ)"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "衣服",
+   "pron": "yīfu",
+   "meaning": "Clothes",
+   "topic": "Things",
+   "note": "เสื้อผ้า"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "桌子",
+   "pron": "zhuōzi",
+   "meaning": "Table / desk",
+   "topic": "Things",
+   "note": "โต๊ะ"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "椅子",
+   "pron": "yǐzi",
+   "meaning": "Chair",
+   "topic": "Things",
+   "note": "เก้าอี้"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "东西",
+   "pron": "dōngxi",
+   "meaning": "Thing / stuff",
+   "topic": "Things",
+   "note": "ของ, สิ่งของ"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "钱",
+   "pron": "qián",
+   "meaning": "Money",
+   "topic": "Things",
+   "note": "เงิน"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "杯子",
+   "pron": "bēizi",
+   "meaning": "Cup / glass",
+   "topic": "Things",
+   "note": "แก้ว"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "门",
+   "pron": "mén",
+   "meaning": "Door / gate",
+   "topic": "Things",
+   "note": "ประตู"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "电话",
+   "pron": "diànhuà",
+   "meaning": "Telephone / phone call",
+   "topic": "Things",
+   "note": "โทรศัพท์"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "电",
+   "pron": "diàn",
+   "meaning": "Electricity",
+   "topic": "Things",
+   "note": "ไฟฟ้า"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "钟",
+   "pron": "zhōng",
+   "meaning": "Clock / bell",
+   "topic": "Things",
+   "note": "นาฬิกา, ระฆัง"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "车",
+   "pron": "chē",
+   "meaning": "Car / vehicle",
+   "topic": "Things",
+   "note": "รถ"
+  },
+  {
+   "lang": "zh",
+   "kind": "word",
+   "text": "声",
+   "pron": "shēng",
+   "meaning": "Sound / voice",
+   "topic": "Things",
+   "note": "เสียง"
   }
  ]
 }

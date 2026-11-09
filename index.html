@@ -517,7 +517,7 @@ input[readonly]{opacity:.85}
 .charrow .cm{font-size:.85rem}
 .bigshow .bigacts{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:22px}
 .bigshow .bigacts button{border:1px solid #ccc;background:#f4f4f4;color:#111;border-radius:999px;padding:8px 14px;font:inherit;font-weight:600;font-size:.92rem;cursor:pointer}
-.bigshow .bigacts #bigLearn[aria-pressed="true"]{background:#111;color:#fff;border-color:#111}
+.bigshow .bigacts #bigLearn[aria-pressed="true"],.bigshow .bigacts #bigLearning[aria-pressed="true"]{background:#111;color:#fff;border-color:#111}
 .gamebar.sent{display:grid;grid-template-columns:1fr 1fr;gap:8px}
 .gamebar.sent #gameBuildBtn{grid-column:1/-1;order:-1}
 .gamebar.sent button{width:100%}
@@ -997,7 +997,7 @@ button.dfield{padding:0 12px;color:var(--ink)}
 <script>
 (function(){
   // Bump on every publish (date + a letter for several in one day). "Check for updates" compares it with the website's copy.
-  const APP_VERSION = "2026-11-09b";
+  const APP_VERSION = "2026-11-09d";
   // Approximate starting rates (units per 1 US dollar). Students should replace them with real rates.
   const DEF = {USD:1, CNY:7.1, THB:33.6, JPY:150, KRW:1380, TWD:31, HKD:7.8, SGD:1.3, MYR:4.3, VND:25500, IDR:16000, PHP:57, INR:85, LAK:21500, KHR:4000, MMK:2100,
     AUD:1.5, NZD:1.7, CAD:1.38, GBP:0.76, EUR:0.88, CHF:0.82, SEK:9.6, NOK:10.3, DKK:6.6, CZK:21.5, PLN:3.7, HUF:350, RUB:85, TRY:40, AED:3.67, MXN:18.5, BRL:5.5};
@@ -1127,7 +1127,7 @@ button.dfield{padding:0 12px;color:var(--ink)}
       <p>The page opens on <b>Words</b> and <b>Sentences</b>. Tap one to see its topics and list; the <b>↩</b> button takes you back. Each entry is a word or a sentence: you choose when you add it, and it stays that way.</p>
       <p>To change or delete an entry, tap <b>Edit</b>, then tap it. In Edit mode you can also tick several entries and move them to another topic together.</p>
       <p><b>Manage topics</b> lets you rename a topic, move everything in it to another topic (to merge topics), or delete it. If a topic still has entries, you're asked to move them first; deleting the topic anyway deletes them too.</p>
-      <p><b>Download</b> saves this language's words to a file. Send it to a friend, or keep it as a copy. <b>Add from file</b> adds the words from such a file (or from a full backup). <b>Word lists</b> opens a page of lists you can download, like 210 basic Chinese words. Words you already have are skipped, never changed, and you'll see a list of what was skipped.</p>`,
+      <p><b>Download</b> saves this language's words to a file. Send it to a friend, or keep it as a copy. <b>Add from file</b> adds the words from such a file (or from a full backup). <b>Word lists</b> opens a page of lists you can download, like 394 basic Chinese words. Words you already have are skipped, never changed, and you'll see a list of what was skipped.</p>`,
     cards: `<p>Write addresses and places in the local language — your dorm, your university gate, a favourite restaurant. Copying the address from a map app works well.</p>
       <p>Tap a card to show it full screen in big text, ready to show a taxi driver or delivery rider. Tap again to close.</p>
       <p>To change or delete a card, tap <b>Edit</b>, then tap the card.</p>`,
@@ -1140,10 +1140,11 @@ button.dfield{padding:0 12px;color:var(--ink)}
       <p><b>Restore backup</b> loads that file on a new phone or browser. It replaces what's currently on this device.</p>
       <p>If you clear your browser data or uninstall the browser, your spending is gone unless you have a backup.</p>
       <p><b>Delete my data</b> removes data from this device for a fresh start. You choose which parts to delete and confirm twice. Download a backup first if you might want it back.</p>`,
-    writing: `<p>For learning to <b>write</b> characters. Mark the words you've practised writing: tap <b>Edit</b> in Words, tick them (<b>Select all</b> takes a whole topic), then <b>✍ Learned to write</b>. You can also tap a word to show it big and mark it there. Marked words show a ✍.</p>
+    writing: `<p>For learning to <b>write</b> characters. Words go in one of two lists: <b>✏️ Learning</b> for new words you're still getting right, and <b>✍ Learned</b> for words you know and want to keep. Tap <b>Edit</b> in Words, tick them (<b>Select all</b> takes a whole topic), then <b>✏️ Learning</b> or <b>✍ Learned</b>. You can also tap a word to show it big and mark it there. Marked words show ✏️ or ✍.</p>
+      <p>When you start, choose <b>Which list</b>: <b>✏️ Learning</b> to focus on new words only, <b>✍ Learned</b> to check you still remember, or <b>Both mixed</b> for a harder round. Learning words come back every day. You decide when one is ready: tap <b>✍ Move to Learned</b> after you've written it (the card shows how many times in a row you got it right).</p>
       <p><b>Writing cards</b> show the pinyin and meaning. Write the word with your finger on the grid (<b>Draw</b>) or on <b>Paper</b>, then tap <b>Show the answer</b> and be honest: <b>✓ Got it</b> or <b>✗ Again</b>. With <b>Check strokes</b> the app checks every stroke as you write — shape, order and direction. A wrong stroke doesn't stick; after 3 tries the right one is highlighted. At most 1 mistake per character counts as right. <b>▶ Stroke order</b> plays how each character is written. Missed words go to the back of the pile, so a round only ends when you've got them all.</p>
-      <p><b>Review due today</b> is the smart way: a word you get right comes back after 1, 3, 7, 14 and then 30 days; one you miss comes back tomorrow. So you spend time on the words you're forgetting. New words come up the day after you mark them.</p>
-      <p><b>Quick review</b> picks random words (from the topics you choose). <b>Write them all</b> goes through every learned word until none are left; you can stop and carry on later.</p>
+      <p><b>Review due today</b> is the smart way: a learned word you get right comes back after 1, 3, 7, 14 and then 30 days; one you miss comes back tomorrow. So you spend time on the words you're forgetting. Newly learned words come up the next day; learning words come up every day.</p>
+      <p><b>Quick review</b> picks random words (from the topics you choose). <b>Write them all</b> goes through every word in the list you chose until none are left; you can stop and carry on later.</p>
       <p><b>Which one is right?</b> shows the pinyin and meaning with 4 words that look alike or share a character; pick the right one. <b>One character, many words</b> lists every word you have with a character, to link new words to ones you know.</p>
       <p style="font-size:.85em">Stroke checking uses <b>Hanzi Writer</b> (MIT licence) and stroke data from <b>Make Me a Hanzi</b> (Arphic Public License). Each character's data (about 2 KB) is saved on the phone by itself whenever you're online — for every word you have, including ones you add yourself — so checking works offline.</p>`,
     progress: `<p>Every match game you finish is saved for that day: how many games, how many words you matched, and how many you got right first time.</p>
@@ -3431,19 +3432,24 @@ button.dfield{padding:0 12px;color:var(--ink)}
     const bar = document.createElement("div"); bar.className = "selbar"; bar.setAttribute("role","region"); bar.setAttribute("aria-label","Selected items");
     bar.innerHTML = '<b></b>'+topicSelect("selTopic")+
       '<button id="selMove">Move to topic</button><button class="link" id="selClear">Clear</button>'+
-      '<div class="selwrite"><button id="selLearn">✍ Learned to write</button><button class="link" id="selUnlearn" hidden>Unmark ✍</button><button class="link" id="selAll" hidden></button></div>';
+      '<div class="selwrite"><button id="selLearning">✏️ Learning</button><button id="selLearn">✍ Learned</button><button class="link" id="selUnlearn" hidden>Unmark</button><button class="link" id="selAll" hidden></button></div>';
     bar.querySelector("b").textContent = n+" selected";
     const pick = wireTopicSelect(bar, "selTopic");
     const chosen = ()=> state.words.filter(w=>wordSel.has(w.id));
-    // writing practice: mark the ticked entries as learned to write (or take the mark off)
-    const learned = chosen().filter(w=>state.write[w.id]).length;
+    // writing practice: put the ticked entries in ✏️ Learning or ✍ Learned (or take the mark off)
+    const marked = chosen().filter(w=>state.write[w.id]).length, learning = chosen().filter(w=>isLearning(w.id)).length, learned = marked - learning;
+    bar.querySelector("#selLearning").hidden = learning===n;
     bar.querySelector("#selLearn").hidden = learned===n;
-    bar.querySelector("#selUnlearn").hidden = !learned;
-    bar.querySelector("#selLearn").onclick = ()=>{
-      const k = n - learned; markWrite([...wordSel], true); wordSel.clear(); save(); renderWords();
-      toast("ok", cnt(k,"item","items")+" marked ✍ learned to write. "+(k===1 ? "It comes" : "They come")+" up for review from tomorrow — or play Quick review now.");
+    bar.querySelector("#selUnlearn").hidden = !marked;
+    bar.querySelector("#selLearning").onclick = ()=>{
+      const k = n - learning; markWrite([...wordSel], "learning"); wordSel.clear(); save(); renderWords();
+      toast("ok", cnt(k,"item","items")+" put in ✏️ Learning. "+(k===1 ? "It's" : "They're")+" ready to practise now and come back every day until you move "+(k===1 ? "it" : "them")+" to ✍ Learned.");
     };
-    bar.querySelector("#selUnlearn").onclick = ()=>{ markWrite([...wordSel], false); wordSel.clear(); save(); renderWords(); toast("ok", "Took the ✍ mark off "+cnt(learned,"item","items")+"."); };
+    bar.querySelector("#selLearn").onclick = ()=>{
+      const k = n - learned; markWrite([...wordSel], "learned"); wordSel.clear(); save(); renderWords();
+      toast("ok", cnt(k,"item","items")+" put in ✍ Learned. "+(k===1 ? "It comes" : "They come")+" up for review from tomorrow — or play Quick review now.");
+    };
+    bar.querySelector("#selUnlearn").onclick = ()=>{ markWrite([...wordSel], false); wordSel.clear(); save(); renderWords(); toast("ok", "Took the writing mark off "+cnt(marked,"item","items")+"."); };
     // tick everything shown (this topic and search) in one go
     const shown = kindWords().filter(w=>(!wordTopic || topicOf(w)===wordTopic) && (!wordQuery.trim() || [w.text,w.pron,w.meaning,w.note,w.topic].some(x=>String(x||"").toLowerCase().includes(wordQuery.trim().toLowerCase()))));
     const sa = bar.querySelector("#selAll");
@@ -3492,7 +3498,8 @@ button.dfield{padding:0 12px;color:var(--ink)}
         const r = document.createElement(listEdit.word ? "div" : "button"); r.className = "lrow"+(listEdit.word?" ed":"");
         r.innerHTML = '<div class="main"><div class="wtext" dir="auto"></div><small class="wsub"></small></div>';
         const tx = r.querySelector(".wtext"); tx.textContent = w.text; tx.lang = tag;
-        if (state.write[w.id]){ const m = document.createElement("span"); m.className = "wlearn"; m.textContent = "✍"; m.title = "Learned to write"; m.setAttribute("aria-label", "learned to write"); tx.appendChild(m); }
+        if (state.write[w.id]){ const lg = isLearning(w.id), m = document.createElement("span"); m.className = "wlearn"; m.textContent = lg ? "✏️" : "✍";
+          m.title = lg ? "Learning to write" : "Learned to write"; m.setAttribute("aria-label", m.title.toLowerCase()); tx.appendChild(m); }
         // pronunciation, meaning and note on one line, so each word takes two lines
         const sub = r.querySelector(".wsub");
         if (w.pron){ const pr = document.createElement("span"); pr.className = "wpron"; pr.textContent = w.pron; sub.append(pr, " · "); }
@@ -3928,21 +3935,36 @@ button.dfield{padding:0 12px;color:var(--ink)}
   }
 
   // ----- Writing practice (owner's idea): words marked "learned to write" come back as cards -----
-  // state.write[id] = {box, due, n, ok}. Smart review: right moves a word up a box, wrong puts it back in box 0;
-  // the box says how many days until it comes back (1, 1, 3, 7, 14, 30). Newly marked words come back tomorrow.
+  // state.write[id] = {box, due, n, ok, run, learning}. Two lists (owner's idea): ✏️ Learning (learning:true) for new words,
+  // ✍ Learned for words to keep. Learning words come back every day (a miss keeps it due today) until the owner moves
+  // them to Learned; run = right in a row, shown on the card to help decide. Learned words use smart review: right moves
+  // a word up a box, wrong puts it back in box 0; the box says how many days until it comes back (1, 1, 3, 7, 14, 30).
   const WRITE_DAYS = [1, 1, 3, 7, 14, 30];
   const addDays = (d, n)=>{ const x = new Date(d+"T12:00:00"); x.setDate(x.getDate()+n); return iso(x); };
-  const writeWords = ()=> langWords().filter(w=>state.write[w.id]);
-  const dueWords = ()=>{ const t = todayISO(); return writeWords().filter(w=>(state.write[w.id].due||t) <= t); };
-  function markWrite(ids, on){
-    ids.forEach(id=>{ if (!on) delete state.write[id]; else if (!state.write[id]) state.write[id] = {box:0, due:addDays(todayISO(), 1), n:0, ok:0}; });
+  const isLearning = id=> !!(state.write[id] && state.write[id].learning);
+  const inSet = (id, set)=> !!state.write[id] && (set==="mix" || (set==="learning")===isLearning(id));
+  const writeWords = ()=> langWords().filter(w=>state.write[w.id]);   // both lists
+  const setWords = set=> writeWords().filter(w=>inSet(w.id, set));
+  const wset = ()=>{ if (!["learning","learned","mix"].includes(gameOpts.wset)) gameOpts.wset = setWords("learned").length || !setWords("learning").length ? "learned" : "learning"; return gameOpts.wset; };
+  const WSET = {learning:"✏️ Learning", learned:"✍ Learned", mix:"Both mixed"};
+  const dueWords = set=>{ const t = todayISO(); return setWords(set||wset()).filter(w=>(state.write[w.id].due||t) <= t); };
+  const allProgress = ()=> state.writeAll && state.writeAll.left.length ? state.writeAll : null;   // Write them all, part way through
+  function markWrite(ids, stage){
+    const t = todayISO();
+    ids.forEach(id=>{ const s = state.write[id];
+      if (!stage) delete state.write[id];
+      else if (stage==="learning"){ if (!s) state.write[id] = {box:0, due:t, n:0, ok:0, run:0, learning:true}; else if (!s.learning) Object.assign(s, {learning:true, box:0, due:t, run:0}); }
+      else if (!s) state.write[id] = {box:0, due:addDays(t, 1), n:0, ok:0};
+      else if (s.learning){ delete s.learning; s.box = 0; s.due = addDays(t, 1); } });
     if (state.writeAll) state.writeAll.left = state.writeAll.left.filter(id=>state.write[id]);
   }
   function gradeWrite(id, ok){
     const s = state.write[id]; if (!s) return;
     s.n = (s.n||0) + 1; if (ok) s.ok = (s.ok||0) + 1;
+    s.run = ok ? (s.run||0) + 1 : 0; s.last = todayISO();
+    if (s.learning){ s.box = 0; s.due = ok ? addDays(todayISO(), 1) : todayISO(); return; }
     s.box = ok ? Math.min(5, (s.box||0) + 1) : 0;
-    s.due = addDays(todayISO(), WRITE_DAYS[s.box]); s.last = todayISO();
+    s.due = addDays(todayISO(), WRITE_DAYS[s.box]);
   }
   // one finished round of any game goes into today's results (Your progress)
   function recordDay(items, mistakes, ms){
@@ -3956,34 +3978,35 @@ button.dfield{padding:0 12px;color:var(--ink)}
   function writeSection(){
     const sec = document.createElement("div"); sec.className = "homesec"; sec.id = "wordWrite";
     sec.innerHTML = '<h3><span class="titlewrap">Writing practice<button class="help" data-help="writing" aria-label="About writing practice">?</button></span></h3><div data-helpbox="writing"></div>';
-    const all = writeWords(), due = dueWords().length, wa = state.writeAll && state.writeAll.left.length ? state.writeAll : null;
+    const all = writeWords(), due = dueWords("mix").length, wa = allProgress();
     const btn = (id, text, cls, fn, dis)=>{ const b = document.createElement("button"); b.className = cls||"secondary"; b.id = id; b.textContent = text; b.disabled = !!dis; b.onclick = fn; return b; };
     const grid = document.createElement("div"); grid.className = "wbtns";
     if (!all.length){
-      sec.insertAdjacentHTML("beforeend", '<p class="sectionnote">Mark the words you’ve practised writing. They come back here as cards: you see the '+esc((wordLang().pron||"pronunciation").toLowerCase())+' and meaning, write the word on paper or on the screen, then check.</p>');
-      grid.appendChild(btn("wChoose", "✍ Choose words I’ve learned", "secondary", ()=>{
+      sec.insertAdjacentHTML("beforeend", '<p class="sectionnote">Put the words you’re learning to write in <b>✏️ Learning</b>, and the ones you know in <b>✍ Learned</b>. They come back here as cards: you see the '+esc((wordLang().pron||"pronunciation").toLowerCase())+' and meaning, write the word on paper or on the screen, then check.</p>');
+      grid.appendChild(btn("wChoose", "✍ Choose words to practise", "secondary", ()=>{
         wordKind = "word"; wordTopic = null; wordsAll = false; listEdit.word = true; wordSel.clear(); renderWords();
         $("wordNav").scrollIntoView({block:"start"});
-        toast("ok", "Tick the words you’ve practised writing, then tap ✍ Learned to write.");
+        toast("ok", "Tick words, then tap ✏️ Learning (new to you) or ✍ Learned (you know them).");
       }));
       if (hasHan()) grid.appendChild(btn("wChars", "One character, many words", "secondary", ()=>showChars(null)));
       sec.appendChild(grid);
       return sec;
     }
     const tiles = document.createElement("div"); tiles.className = "tiles";
-    tiles.append(tile("Learned", cnt(all.length,"word","words"), "to write"),
-                 tile("Due today", String(due), due ? "ready to review" : "all caught up ✓"),
-                 tile("Write them all", wa ? wa.left.length+" left" : "—", wa ? "of "+wa.total+", in progress" : "go through every word"));
+    const nl = setWords("learning").length;
+    tiles.append(tile("✏️ Learning", cnt(nl,"word","words"), nl ? "every day" : "none right now"),
+                 tile("✍ Learned", cnt(all.length-nl,"word","words"), "smart review"),
+                 tile("Due today", String(due), due ? "ready to review" : "all caught up ✓"));
     sec.appendChild(tiles);
-    const go = (type, src)=>{ gameOpts.wsrc = src; openGameSetup(false, type); };
+    const go = (type, src)=>{ gameOpts.wsrc = src; if (src==="all" && wa) gameOpts.wset = wa.set||"learned"; openGameSetup(false, type); };
     grid.append(
-      btn("wDue", due ? "▶ Review "+due+" due today" : "Nothing due today ✓", "btn-yes wide", ()=>{ gameOpts.wsrc = "due"; startWriteGame(); }, !due),
+      btn("wDue", due ? "▶ Review "+due+" due today" : "Nothing due today ✓", "btn-yes wide", ()=>{ gameOpts.wsrc = "due"; gameOpts.wset = "mix"; startWriteGame(); }, !due),
       btn("wQuick", "Quick review", "secondary", ()=>go("write", "quick")),
       btn("wAll", wa ? "Continue writing ("+wa.left.length+")" : "Write them all", "secondary", ()=>go("write", "all")),
       btn("wPick", "Which one is right?", "secondary", ()=>openGameSetup(false, "pick")));
     if (hasHan()) grid.appendChild(btn("wChars", "One character, many words", "secondary", ()=>showChars(null)));
     sec.appendChild(grid);
-    sec.insertAdjacentHTML("beforeend", '<p class="sectionnote" style="margin-top:8px">To add words: open <b>Words</b>, tap <b>Edit</b>, tick them, then <b>✍ Learned to write</b>.</p>');
+    sec.insertAdjacentHTML("beforeend", '<p class="sectionnote" style="margin-top:8px">To add words: open <b>Words</b>, tap <b>Edit</b>, tick them, then <b>✏️ Learning</b> or <b>✍ Learned</b>.</p>');
     return sec;
   }
 
@@ -4005,8 +4028,9 @@ button.dfield{padding:0 12px;color:var(--ink)}
     btns.innerHTML = '<button class="btn-yes" id="gStart">Start</button><button class="secondary" id="gCancel">Cancel</button>';
     let ok = false;
     if (write){
-      const all = writeWords(), wa = state.writeAll && state.writeAll.left.length ? state.writeAll : null;
+      const set = wset(), all = setWords(set), wa0 = allProgress(), wa = wa0 && (wa0.set||"learned")===set ? wa0 : null;
       if (!["due","quick","all"].includes(gameOpts.wsrc)) gameOpts.wsrc = "quick";
+      chips("gWset", "Which list", ["learning","learned","mix"].map(v=>[v, WSET[v], setWords(v).length]), set, v=>{ gameOpts.wset = v; });
       chips("gWsrc", "Which words", [["due","Due today",dueWords().length], ["quick","Random",all.length], ["all", wa ? "Continue writing them all" : "Write them all", wa ? wa.left.length+" left" : all.length]], gameOpts.wsrc, v=>{ gameOpts.wsrc = v; });
       if (gameOpts.wsrc==="quick"){
         const used = topicList().filter(t=>all.some(w=>topicOf(w)===t));
@@ -4041,21 +4065,23 @@ button.dfield{padding:0 12px;color:var(--ink)}
       }
       const pool = writePool();
       ok = pool.length > 0;
-      note.textContent = gameOpts.wsrc==="due" ? (pool.length ? cnt(pool.length,"word is","words are")+" due today." : "Nothing is due today — try Random, or come back tomorrow.")
-        : gameOpts.wsrc==="all" ? (wa ? "You’re part way through: "+wa.left.length+" of "+wa.total+" left. Words you miss go to the back of the pile until you get them all." : "Every word you’ve learned ("+all.length+"), in random order. Words you miss go to the back of the pile until you get them all right. You can stop and carry on later.")
-        : "You’ll write "+Math.min(pool.length, gameOpts.wcount||10)+" random words"+(gameOpts.wtopics.length ? " from "+andList(gameOpts.wtopics) : "")+".";
+      const listName = {learning:"in ✏️ Learning", learned:"in ✍ Learned", mix:"in both lists"}[set];
+      note.textContent = !all.length ? (set==="learning" ? "No words in ✏️ Learning yet. In Words, tap Edit, tick the new words, then ✏️ Learning." : "No words in ✍ Learned yet. In Words, tap Edit, tick them, then ✍ Learned.")
+        : gameOpts.wsrc==="due" ? (pool.length ? cnt(pool.length,"word "+listName+" is","words "+listName+" are")+" due today." : "Nothing "+listName+" is due today — try Random, or come back tomorrow.")
+        : gameOpts.wsrc==="all" ? (wa ? "You’re part way through: "+wa.left.length+" of "+wa.total+" left. Words you miss go to the back of the pile until you get them all." : "Every word "+listName+" ("+all.length+"), in random order. Words you miss go to the back of the pile until you get them all right. You can stop and carry on later."+(wa0 ? " This replaces your unfinished round of "+WSET[wa0.set||"learned"]+"." : ""))
+        : "You’ll write "+Math.min(pool.length, gameOpts.wcount||10)+" random words "+listName+(gameOpts.wtopics.length ? " from "+andList(gameOpts.wtopics) : "")+".";
       if (gameOpts.wsrc==="all" && wa){
         const r = document.createElement("button"); r.className = "link"; r.id = "gRestart"; r.textContent = "Start over"; r.style.marginLeft = "auto";
         r.onclick = ()=>{ state.writeAll = null; save(); renderGame(); }; btns.appendChild(r);
       }
     } else {
       const learned = writeWords(), lw = langWords();
-      if (gameOpts.psrc!=="all" && gameOpts.psrc!=="learned") gameOpts.psrc = learned.length >= 1 ? "learned" : "all";
-      chips("gPsrc", "Which words", [["learned","Learned to write",learned.length], ["all","All my words",lw.length]], gameOpts.psrc, v=>{ gameOpts.psrc = v; });
+      if (!["all","learned","learning","mix"].includes(gameOpts.psrc)) gameOpts.psrc = learned.length >= 1 ? "mix" : "all";
+      chips("gPsrc", "Which words", [["learning",WSET.learning,setWords("learning").length], ["learned",WSET.learned,setWords("learned").length], ["mix","Both",learned.length], ["all","All my words",lw.length]], gameOpts.psrc, v=>{ gameOpts.psrc = v; });
       chips("gPcount", "How many", [5,6,7,8,9,10].map(k=>[k, String(k)]), gameOpts.pcount||5, v=>{ gameOpts.pcount = v; });
       const pool = pickPool();
       ok = pool.length >= 1 && lw.length >= 4;
-      note.textContent = !pool.length ? "No words learned to write yet — choose All my words, or mark some first."
+      note.textContent = !pool.length ? "No words in that list yet — choose All my words, or mark some first."
         : lw.length < 4 ? "You need at least 4 saved words for 4 choices."
         : "You’ll see the "+(L.pron||"pronunciation").toLowerCase()+" and meaning, then pick the right one of 4 that look alike. "+Math.min(pool.length, gameOpts.pcount||5)+" rounds.";
     }
@@ -4066,17 +4092,19 @@ button.dfield{padding:0 12px;color:var(--ink)}
   }
 
   function writePool(){
-    if (gameOpts.wsrc==="due") return dueWords();
-    if (gameOpts.wsrc==="all") return state.writeAll && state.writeAll.left.length ? writeWords().filter(w=>state.writeAll.left.includes(w.id)) : writeWords();
+    const set = wset(), wa = allProgress();
+    if (gameOpts.wsrc==="due") return dueWords(set);
+    if (gameOpts.wsrc==="all") return wa && (wa.set||"learned")===set ? setWords(set).filter(w=>wa.left.includes(w.id)) : setWords(set);
     const t = gameOpts.wtopics||[];
-    return writeWords().filter(w=>!t.length || t.includes(topicOf(w)));
+    return setWords(set).filter(w=>!t.length || t.includes(topicOf(w)));
   }
   function startWriteGame(){
     gameOpts.type = "write";
     const src = gameOpts.wsrc;
     let q = null;
     if (src==="all"){
-      if (!state.writeAll || !state.writeAll.left.length){ const ids = shuffle(writeWords().map(w=>w.id)); state.writeAll = {left:ids, total:ids.length}; }
+      const set = wset(), wa = allProgress();
+      if (!wa || (wa.set||"learned")!==set){ const ids = shuffle(setWords(set).map(w=>w.id)); state.writeAll = {left:ids, total:ids.length, set}; }
       state.writeAll.left = state.writeAll.left.filter(id=>state.write[id] && state.words.some(w=>w.id===id));
       if (!state.writeAll.left.length){ state.writeAll = null; return; }
       save();
@@ -4248,7 +4276,7 @@ button.dfield{padding:0 12px;color:var(--ink)}
   }
   function renderWriteGame(body){
     const q = writeQueue(), L = wordLang(), tag = L.tag;
-    $("gameTitle").textContent = "Writing cards · "+({due:"Due today", quick:"Quick review", all:"Write them all"}[game.src]);
+    $("gameTitle").textContent = "Writing cards · "+({due:"Due today", quick:"Quick review", all:"Write them all"}[game.src])+" · "+WSET[wset()];
     const left = game.src==="all" ? q.length : null, doneN = game.src==="all" ? game.total - q.length : game.right;
     if (game.finished || !q.length){
       const secs = Math.max(1, Math.round(((game.end||Date.now())-game.start)/1000));
@@ -4282,7 +4310,9 @@ button.dfield{padding:0 12px;color:var(--ink)}
     const card = el("div", "sgprompt wcard");
     if (w.pron){ const p = el("div", "wpin"); p.textContent = w.pron; card.appendChild(p); }
     const m = el("div", "en"); m.textContent = w.meaning; card.appendChild(m);
-    const t = el("small"); t.textContent = topicOf(w)+(state.write[w.id] && state.write[w.id].n ? " · written "+cnt(state.write[w.id].n,"time","times") : " · first review"); card.appendChild(t);
+    const sw = state.write[w.id] || {}, t = el("small");
+    t.textContent = topicOf(w)+(sw.learning ? " · ✏️ Learning"+(sw.n ? " · right "+cnt(sw.run||0,"time","times")+" in a row" : " · first try")
+      : sw.n ? " · written "+cnt(sw.n,"time","times") : " · first review"); card.appendChild(t);
     body.append(bar, stat, ask, modes, card);
     const chars = [...w.text], n = Math.max(1, Math.min(chars.length, 8)), hanN = chars.filter(c=>HAN.test(c)).length;
     if (mode==="check" && !game.q) game.q = {i:0, mistakes:0, done:false, gaveUp:false, error:null};
@@ -4301,6 +4331,13 @@ button.dfield{padding:0 12px;color:var(--ink)}
       body.append(pad.wrap, tools);
     }
     const foot = el("div", "sgfoot");
+    // a word in ✏️ Learning: the owner decides when it's ready for ✍ Learned
+    const promoteBtn = ()=>{
+      const d = el("div", "wtools"); if (!isLearning(w.id)) return d;
+      const b = el("button", "link"); b.id = "wPromote"; b.textContent = "✍ I know it — move to Learned";
+      b.onclick = ()=>{ markWrite([w.id], "learned"); save(); d.textContent = "Moved to ✍ Learned — it comes back for review tomorrow."; toast("ok", w.text+" moved to ✍ Learned."); };
+      d.appendChild(b); return d;
+    };
     // ▶ Stroke order: replays in the checker's squares, or swaps the plain answer for animated squares
     const strokeBtn = host=>{ const b = el("button", "link"); b.id = "wAnim"; b.textContent = "▶ Stroke order";
       b.onclick = ()=>{ const g = body.querySelector(".hwgrid"); if (g && g._writers) animateSeq(g._writers); else if (host){ const sg = strokeGrid(chars, null, "show"); host.replaceWith(sg.wrap); sg.start(); } }; return b; };
@@ -4322,7 +4359,7 @@ button.dfield{padding:0 12px;color:var(--ink)}
         const other = el("button", "secondary"); other.id = "wOverride"; other.textContent = ok ? "Count it as wrong" : "Count it as right"; other.onclick = ()=>answerWrite(!ok);
         const next = el("button", "btn-yes"); next.id = "wNext"; next.textContent = "Continue"; next.onclick = ()=>answerWrite(ok);
         row.append(other, next);
-        foot.append(tools, fb, row);
+        foot.append(tools, fb, row, promoteBtn());
       }
     } else if (!game.shown){
       const s = el("button", "btn-yes"); s.id = "wShow"; s.textContent = "Show the answer";
@@ -4347,7 +4384,7 @@ button.dfield{padding:0 12px;color:var(--ink)}
       row.append(no, yes);
       foot.append(ans);
       if (chars.length <= 8 && hanN && hasHan()){ const tools = el("div", "wtools"); tools.appendChild(strokeBtn(ans)); foot.appendChild(tools); }
-      foot.append(fb, row);
+      foot.append(fb, row, promoteBtn());
     }
     body.appendChild(foot);
     if (pad) pad.size();
@@ -4359,7 +4396,7 @@ button.dfield{padding:0 12px;color:var(--ink)}
   }
 
   // ----- Which one is right? 4 look-alikes (sharing a character, same length) -----
-  function pickPool(){ return gameOpts.psrc==="all" ? langWords() : writeWords(); }
+  function pickPool(){ return gameOpts.psrc==="all" ? langWords() : setWords(gameOpts.psrc==="learned" || gameOpts.psrc==="learning" ? gameOpts.psrc : "mix"); }
   function pickChoices(w){
     const mine = new Set([...w.text]), len = [...w.text].length, mean = String(w.meaning).trim().toLowerCase();
     const score = x=>{ const xs = [...x.text]; return xs.filter(c=>mine.has(c) && WORDCH.test(c)).length*3 + (xs.length===len ? 2 : 0) + (kindOf(x)===kindOf(w) ? 1 : 0) + Math.random(); };
@@ -4438,7 +4475,7 @@ button.dfield{padding:0 12px;color:var(--ink)}
       const order = []; src.forEach(w=>[...w.text].forEach(c=>{ if (HAN.test(c) && !order.includes(c)) order.push(c); }));
       order.sort((a,b)=>count[b]-count[a]);
       body.insertAdjacentHTML("beforeend", '<p class="sectionnote" style="margin:0 0 8px"></p><input type="search" id="charFind" placeholder="Find a character or word…" aria-label="Find a character" autocomplete="off"><div class="charsgrid"></div>');
-      body.querySelector(".sectionnote").textContent = "Characters in your "+(writeWords().length ? "words learned to write" : "words")+", most used first. Tap one to see every word you have with it.";
+      body.querySelector(".sectionnote").textContent = "Characters in your "+(writeWords().length ? "writing practice words" : "words")+", most used first. Tap one to see every word you have with it.";
       const grid = body.querySelector(".charsgrid");
       const fill = q=>{ grid.innerHTML = "";
         const list = q ? [...new Set([...q].filter(c=>HAN.test(c)))].filter(c=>count[c]) : order;
@@ -4459,7 +4496,7 @@ button.dfield{padding:0 12px;color:var(--ink)}
         r.innerHTML = '<span class="ct" dir="auto"></span><span class="cm"></span>';
         const ct = r.querySelector(".ct"); ct.lang = tag;
         [...w.text].forEach(x=>{ if (x===c){ const mk = document.createElement("mark"); mk.textContent = x; ct.appendChild(mk); } else ct.append(x); });
-        if (state.write[w.id]) ct.append(" ✍");
+        if (state.write[w.id]) ct.append(isLearning(w.id) ? " ✏️" : " ✍");
         r.querySelector(".cm").textContent = [w.pron, w.meaning].filter(Boolean).join(" · ");
         body.appendChild(r);
       });
@@ -4479,12 +4516,17 @@ button.dfield{padding:0 12px;color:var(--ink)}
     d.querySelector(".lt").textContent = w.text; d.querySelector(".lt").lang = wordLang().tag;
     if (w.pron) d.querySelector(".pr").textContent = w.pron; else d.querySelector(".pr").remove();
     d.querySelector(".en").textContent = w.meaning;
-    // mark it learned to write, and see other words with each of its characters
+    // put it in ✏️ Learning or ✍ Learned (tap the lit one again to take it off), and see other words with each of its characters
     const acts = d.querySelector(".bigacts");
+    const lg = document.createElement("button"); lg.id = "bigLearning";
     const lw = document.createElement("button"); lw.id = "bigLearn";
-    const paintLw = ()=>{ const on = !!state.write[w.id]; lw.textContent = on ? "✓ Learned to write" : "✍ Mark as learned to write"; lw.setAttribute("aria-pressed", on); };
-    lw.onclick = ev=>{ ev.stopPropagation(); markWrite([w.id], !state.write[w.id]); save(); paintLw(); };
-    paintLw(); acts.appendChild(lw);
+    const paintLw = ()=>{ const s = state.write[w.id], a = !!s && !!s.learning, b2 = !!s && !s.learning;
+      lg.textContent = a ? "✓ ✏️ Learning" : "✏️ Learning"; lg.setAttribute("aria-pressed", a);
+      lw.textContent = b2 ? "✓ ✍ Learned" : "✍ Learned"; lw.setAttribute("aria-pressed", b2); };
+    lg.onclick = ev=>{ ev.stopPropagation(); markWrite([w.id], isLearning(w.id) ? false : "learning"); save(); paintLw(); };
+    lw.onclick = ev=>{ ev.stopPropagation(); markWrite([w.id], state.write[w.id] && !isLearning(w.id) ? false : "learned"); save(); paintLw(); };
+    lg.title = "Still learning to write it"; lw.title = "Learned to write it";
+    paintLw(); acts.append(lg, lw);
     [...new Set([...w.text].filter(c=>HAN.test(c)))].slice(0, 6).forEach(c=>{
       const n = langWords().filter(x=>x.id!==w.id && x.text.includes(c)).length; if (!n) return;
       const b = document.createElement("button"); b.className = "bigch"; b.lang = wordLang().tag; b.textContent = c+" · "+n+" more";
