@@ -459,6 +459,30 @@ input[readonly]{opacity:.85}
 /* writing practice: home buttons, the card, the 田字格 pad and answer, grading, look-alike choices, characters sheet */
 .selbar .selwrite{flex:1 0 100%;display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding-top:8px;border-top:1px solid rgba(255,255,255,.18)}
 .selbar .selwrite [hidden]{display:none}
+/* dark mode: a raised dark bar with light buttons (the light-mode inverse would be a glaring white box) */
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]) .selbar{background:#26342F;color:var(--ink);box-shadow:0 0 0 1px #3A4B45}
+  :root:not([data-theme="light"]) .selbar button{background:var(--ink);color:var(--bg)}
+  :root:not([data-theme="light"]) .selbar .link{background:none;color:var(--ink)}
+  :root:not([data-theme="light"]) .selbar select{background:var(--bg);color:var(--ink)}
+}
+:root[data-theme="dark"] .selbar{background:#26342F;color:var(--ink);box-shadow:0 0 0 1px #3A4B45}
+:root[data-theme="dark"] .selbar button{background:var(--ink);color:var(--bg)}
+:root[data-theme="dark"] .selbar .link{background:none;color:var(--ink)}
+:root[data-theme="dark"] .selbar select{background:var(--bg);color:var(--ink)}
+/* Learning / Learned tiles open their word list */
+.tile.tap{cursor:pointer;font:inherit;text-align:left;border:0;color:var(--ink);width:100%}
+.tile.tap .s{color:var(--ok-text);font-weight:600}
+.wlist .wlseg{display:flex;gap:6px;margin-bottom:10px}
+.wlist .wlseg button{flex:1;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:10px;padding:8px;font:inherit;font-weight:600;cursor:pointer}
+.wlist .wlseg button[aria-pressed="true"]{background:var(--ink);color:var(--surface);border-color:var(--ink)}
+.wlist #wlFind{margin-bottom:8px}
+.wlist .charrow{width:100%;text-align:left;font:inherit;background:none;border:0;border-bottom:1px solid var(--line);cursor:pointer;color:inherit}
+.wlist .charrow .wst{display:block;font-size:.78rem;color:var(--muted);margin-top:2px}
+.wlist #wlPlay{width:100%;margin-top:12px}
+/* the big view is always black on white, so the stroke squares use light colours there */
+.bigshow{--ink:#000;--surface:#fff;--line:#ccc;--bad:#D23A2E;--ok:#2F8A5F}
+.bigshow .hwgrid{margin:0 auto;cursor:default}
 .lrow .main .wtext .wlearn{font-size:.78rem;margin-left:6px;opacity:.75}
 .wbtns{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px}
 .wbtns button{width:100%}
@@ -997,7 +1021,7 @@ button.dfield{padding:0 12px;color:var(--ink)}
 <script>
 (function(){
   // Bump on every publish (date + a letter for several in one day). "Check for updates" compares it with the website's copy.
-  const APP_VERSION = "2026-11-09d";
+  const APP_VERSION = "2026-11-09e";
   // Approximate starting rates (units per 1 US dollar). Students should replace them with real rates.
   const DEF = {USD:1, CNY:7.1, THB:33.6, JPY:150, KRW:1380, TWD:31, HKD:7.8, SGD:1.3, MYR:4.3, VND:25500, IDR:16000, PHP:57, INR:85, LAK:21500, KHR:4000, MMK:2100,
     AUD:1.5, NZD:1.7, CAD:1.38, GBP:0.76, EUR:0.88, CHF:0.82, SEK:9.6, NOK:10.3, DKK:6.6, CZK:21.5, PLN:3.7, HUF:350, RUB:85, TRY:40, AED:3.67, MXN:18.5, BRL:5.5};
@@ -3994,8 +4018,10 @@ button.dfield{padding:0 12px;color:var(--ink)}
     }
     const tiles = document.createElement("div"); tiles.className = "tiles";
     const nl = setWords("learning").length;
-    tiles.append(tile("✏️ Learning", cnt(nl,"word","words"), nl ? "every day" : "none right now"),
-                 tile("✍ Learned", cnt(all.length-nl,"word","words"), "smart review"),
+    const open = (t, set, n)=>{ if (!n) return t; const b2 = document.createElement("button"); b2.className = t.className+" tap"; b2.innerHTML = t.innerHTML; b2.querySelector(".s").textContent = "See words ›";
+      b2.id = set==="learning" ? "wTileLearning" : "wTileLearned"; b2.setAttribute("aria-label", "See the words in "+WSET[set]); b2.onclick = ()=>showWriteList(set); return b2; };
+    tiles.append(open(tile("✏️ Learning", cnt(nl,"word","words"), nl ? "every day" : "none right now"), "learning", nl),
+                 open(tile("✍ Learned", cnt(all.length-nl,"word","words"), "smart review"), "learned", all.length-nl),
                  tile("Due today", String(due), due ? "ready to review" : "all caught up ✓"));
     sec.appendChild(tiles);
     const go = (type, src)=>{ gameOpts.wsrc = src; if (src==="all" && wa) gameOpts.wset = wa.set||"learned"; openGameSetup(false, type); };
@@ -4246,7 +4272,7 @@ button.dfield{padding:0 12px;color:var(--ink)}
         return;
       }
       if (!document.body.contains(wrap)) return;   // the card changed meanwhile
-      const v = k=> getComputedStyle(document.documentElement).getPropertyValue(k).trim();
+      const v = k=> getComputedStyle(wrap).getPropertyValue(k).trim();   // from where it sits (the big view is always light)
       const writers = cells.map((cell, j)=>{
         if (!HAN.test(chars[j])) return null;
         const size = Math.max(60, Math.floor(cell.getBoundingClientRect().width));
@@ -4255,9 +4281,9 @@ button.dfield{padding:0 12px;color:var(--ink)}
           charDataLoader:(c, ok, bad)=>{ strokeData(c).then(ok, bad); }});
       });
       wrap._writers = writers;
-      const finished = !q || q.done || q.gaveUp;
+      const finished = mode!=="big" && (!q || q.done || q.gaveUp);
       if (finished) cells.forEach((cell, j)=>{ if (HAN.test(chars[j])){ cell.classList.add("tap"); cell.setAttribute("role","button"); cell.setAttribute("aria-label", chars[j]+" — see your words with it"); cell.onclick = ()=>showChars(chars[j]); } });
-      if (mode==="show" || q.gaveUp) return animateSeq(writers);
+      if (mode==="show" || mode==="big" || q.gaveUp) return animateSeq(writers);
       if (q.done){ writers.forEach(wr=>wr && wr.showCharacter()); return; }
       writers.forEach((wr, j)=>{ if (wr && j < q.i) wr.showCharacter(); });
       const at = j=>{
@@ -4462,6 +4488,48 @@ button.dfield{padding:0 12px;color:var(--ink)}
   }
 
   // ----- One character, many words: every saved word that uses a character -----
+  // the words in ✏️ Learning or ✍ Learned (owner's idea): switch lists, find, tap a word to show it big, or practise the list
+  function showWriteList(set){
+    const old = $("charSheet"); if (old) old.remove();
+    const host = document.createElement("div"); host.id = "charSheet";
+    host.innerHTML = '<div class="sheetbg"></div><div class="calc spendsheet charsheet wlist" role="dialog" aria-label="Writing practice words"><div class="bar2"><b></b><button class="link" data-x>Close</button></div><div class="ssbody"></div></div>';
+    const body = host.querySelector(".ssbody"), title = host.querySelector(".bar2 b"), tag = wordLang().tag, t0 = todayISO();
+    const close = ()=>host.remove();
+    let query = "";
+    const when = d=>{ if (!d || d <= t0) return "due today"; const n = Math.round((new Date(d+"T12:00:00") - new Date(t0+"T12:00:00"))/864e5); return n===1 ? "next review tomorrow" : "next review in "+n+" days"; };
+    const paint = ()=>{
+      const ws = setWords(set).sort((a,b)=>topicOf(a).localeCompare(topicOf(b)) || (b.t||0)-(a.t||0));
+      title.textContent = WSET[set]+" · "+cnt(ws.length,"word","words"); body.innerHTML = "";
+      const seg = document.createElement("div"); seg.className = "wlseg"; seg.setAttribute("role","group"); seg.setAttribute("aria-label","Which list");
+      ["learning","learned"].forEach(v=>{ const b = document.createElement("button"); b.dataset.v = v; b.textContent = WSET[v]+" "+setWords(v).length;
+        b.setAttribute("aria-pressed", v===set); b.onclick = ()=>{ set = v; paint(); }; seg.appendChild(b); });
+      body.appendChild(seg);
+      if (ws.length > 8){ const f = document.createElement("input"); f.type = "search"; f.id = "wlFind"; f.placeholder = "Find a word…"; f.setAttribute("aria-label","Find a word"); f.autocomplete = "off"; f.value = query;
+        f.oninput = ()=>{ query = f.value; fill(); }; body.appendChild(f); }
+      const list = document.createElement("div"); body.appendChild(list);
+      const fill = ()=>{ list.innerHTML = ""; const q = query.trim().toLowerCase();
+        const shown = ws.filter(w=>!q || [w.text,w.pron,w.meaning,w.note].some(x=>String(x||"").toLowerCase().includes(q)));
+        if (!shown.length){ list.innerHTML = '<p class="sectionnote"></p>'; list.firstChild.textContent = ws.length ? "Nothing matches." : set==="learning" ? "No words in ✏️ Learning. In Words, tap Edit, tick new words, then ✏️ Learning." : "No words in ✍ Learned yet."; return; }
+        shown.forEach(w=>{ const s = state.write[w.id] || {};
+          const r = document.createElement("button"); r.className = "ssrow charrow";
+          r.innerHTML = '<span class="ct" dir="auto"></span><span class="cm"></span>';
+          r.querySelector(".ct").textContent = w.text; r.querySelector(".ct").lang = tag;
+          const cm = r.querySelector(".cm"); cm.textContent = [w.pron, w.meaning].filter(Boolean).join(" · ");
+          const st = document.createElement("small"); st.className = "wst";
+          st.textContent = topicOf(w)+" · "+(set==="learning" ? (s.n ? "right "+cnt(s.run||0,"time","times")+" in a row" : "not written yet") : when(s.due)+(s.n ? " · written "+cnt(s.n,"time","times") : ""));
+          cm.appendChild(st);
+          r.onclick = ()=>{ close(); showWordBig(w); };
+          list.appendChild(r); }); };
+      fill();
+      if (ws.length){ const go = document.createElement("button"); go.className = "btn-yes"; go.id = "wlPlay"; go.textContent = "▶ Practise "+WSET[set];
+        go.onclick = ()=>{ close(); gameOpts.wset = set; gameOpts.wsrc = "quick"; gameOpts.wtopics = []; openGameSetup(false, "write"); }; body.appendChild(go); }
+    };
+    paint();
+    host.querySelector(".sheetbg").onclick = close; host.querySelector("[data-x]").onclick = close;
+    host.addEventListener("keydown", ev=>{ if (ev.key==="Escape") close(); });
+    document.body.appendChild(host);
+    host.querySelector("[data-x]").focus();
+  }
   function showChars(ch){
     const old = $("charSheet"); if (old) old.remove();
     const host = document.createElement("div"); host.id = "charSheet";
@@ -4527,6 +4595,17 @@ button.dfield{padding:0 12px;color:var(--ink)}
     lw.onclick = ev=>{ ev.stopPropagation(); markWrite([w.id], state.write[w.id] && !isLearning(w.id) ? false : "learned"); save(); paintLw(); };
     lg.title = "Still learning to write it"; lw.title = "Learned to write it";
     paintLw(); acts.append(lg, lw);
+    // ▶ Stroke order: the characters become 田字格 squares that draw themselves stroke by stroke (tap again to replay)
+    const hz = [...w.text];
+    if (hz.length <= 8 && hz.some(c=>HAN.test(c))){
+      const so = document.createElement("button"); so.id = "bigStroke"; so.textContent = "▶ Stroke order";
+      so.onclick = ev=>{ ev.stopPropagation();
+        const g = d.querySelector(".hwgrid"); if (g){ if (g._writers) animateSeq(g._writers); return; }
+        const sg = strokeGrid(hz, null, "big"); sg.wrap.style.maxWidth = Math.min(hz.length, 4)*(hz.length <= 2 ? 150 : 110)+"px";
+        sg.wrap.onclick = e=>e.stopPropagation();
+        d.querySelector(".lt").replaceWith(sg.wrap); sg.start(); };
+      acts.appendChild(so);
+    }
     [...new Set([...w.text].filter(c=>HAN.test(c)))].slice(0, 6).forEach(c=>{
       const n = langWords().filter(x=>x.id!==w.id && x.text.includes(c)).length; if (!n) return;
       const b = document.createElement("button"); b.className = "bigch"; b.lang = wordLang().tag; b.textContent = c+" · "+n+" more";
