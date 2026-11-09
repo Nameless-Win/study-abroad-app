@@ -456,6 +456,56 @@ input[readonly]{opacity:.85}
 .sgfeed.bad{border-color:var(--bad);background:color-mix(in srgb, var(--bad) 10%, var(--surface))}
 .sgfeed.bad > b{color:var(--bad-text)}
 .gamebar #gameNote[hidden]{display:none}
+/* writing practice: home buttons, the card, the 田字格 pad and answer, grading, look-alike choices, characters sheet */
+.selbar .selwrite{flex:1 0 100%;display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding-top:8px;border-top:1px solid rgba(255,255,255,.18)}
+.selbar .selwrite [hidden]{display:none}
+.lrow .main .wtext .wlearn{font-size:.78rem;margin-left:6px;opacity:.75}
+.wbtns{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px}
+.wbtns button{width:100%}
+.wbtns .wide,.wbtns button:only-child{grid-column:1/-1}
+.wtop{display:flex;justify-content:space-between;align-items:baseline;gap:10px;margin:12px 0 8px}
+.wtop .link{font-size:.86rem}
+.wcard{text-align:center}
+.wcard .wpin{font-size:1.6rem;font-weight:700;line-height:1.3}
+.wcard .en{font-size:1.02rem;font-weight:600;margin-top:2px}
+.wcard small{margin-top:4px}
+.wpad,.wans{position:relative;width:100%;margin:12px auto 0}
+.wpad svg,.wans svg{position:absolute;inset:0;width:100%;height:100%}
+.wpad .gbox,.wans .gbox{fill:var(--surface);stroke:var(--bad);stroke-opacity:.6;stroke-width:1.2;vector-effect:non-scaling-stroke}
+.wpad .gmid,.wans .gmid,.wpad .gdiag,.wans .gdiag{stroke:var(--bad);stroke-width:1;stroke-dasharray:4 4;opacity:.45;vector-effect:non-scaling-stroke}
+.wpad .gdiag,.wans .gdiag{opacity:.22}
+.wpad canvas{position:absolute;inset:0;width:100%;height:100%;touch-action:none;cursor:crosshair}
+.wtools{display:flex;justify-content:center;gap:22px;margin-top:6px}
+.wans{margin-top:0}
+.wans .wcells{position:absolute;inset:0;display:grid}
+.wans .wch{border:0;background:none;color:var(--ink);font:inherit;font-weight:500;line-height:1;cursor:pointer;padding:0;display:grid;place-items:center;aspect-ratio:1}
+.wans.long{border:1px solid var(--line);border-radius:12px;padding:12px;text-align:center}
+.wans .zh{font-size:1.4rem;font-weight:600}
+.wask{margin:10px 0 8px;font-size:.88rem;color:var(--muted);text-align:center}
+.wask b{color:var(--ink);display:block;font-size:.98rem}
+.wgrade{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.wgrade button{width:100%;padding:12px}
+.wgrade .wno{color:var(--bad-text)}
+.pickgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
+.pickopt{min-height:80px;border:2px solid var(--line);border-bottom-width:4px;background:var(--surface);border-radius:14px;font-size:1.9rem;font-weight:600;color:var(--ink);cursor:pointer;padding:6px;overflow-wrap:anywhere}
+.pickopt.long{font-size:1.2rem}
+.pickopt:disabled{cursor:default}
+.pickopt.ok{border-color:var(--ok);background:color-mix(in srgb, var(--ok) 14%, var(--surface))}
+.pickopt.bad{border-color:var(--bad);background:color-mix(in srgb, var(--bad) 12%, var(--surface))}
+.charsheet #charFind{margin-bottom:10px}
+.charsgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(58px,1fr));gap:6px}
+.charbtn{border:1px solid var(--line);background:var(--field);border-radius:10px;padding:6px 2px;display:flex;flex-direction:column;align-items:center;cursor:pointer;color:var(--ink)}
+.charbtn b{font-size:1.5rem;font-weight:600;line-height:1.2}
+.charbtn span{font-size:.72rem;color:var(--muted)}
+.charbig{font-size:4rem;font-weight:600;text-align:center;line-height:1.2}
+.charrow{flex-direction:column;gap:0;padding:6px 0}
+.charrow .ct{line-height:1.3}
+.charrow .ct{color:var(--ink);font-size:1.2rem;font-weight:600}
+.charrow .ct mark{background:color-mix(in srgb, var(--warn) 40%, transparent);color:inherit;border-radius:3px;padding:0 1px}
+.charrow .cm{font-size:.85rem}
+.bigshow .bigacts{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:22px}
+.bigshow .bigacts button{border:1px solid #ccc;background:#f4f4f4;color:#111;border-radius:999px;padding:8px 14px;font:inherit;font-weight:600;font-size:.92rem;cursor:pointer}
+.bigshow .bigacts #bigLearn[aria-pressed="true"]{background:#111;color:#fff;border-color:#111}
 .gamebar.sent{display:grid;grid-template-columns:1fr 1fr;gap:8px}
 .gamebar.sent #gameBuildBtn{grid-column:1/-1;order:-1}
 .gamebar.sent button{width:100%}
@@ -935,7 +985,7 @@ button.dfield{padding:0 12px;color:var(--ink)}
 <script>
 (function(){
   // Bump on every publish (date + a letter for several in one day). "Check for updates" compares it with the website's copy.
-  const APP_VERSION = "2026-10-17c";
+  const APP_VERSION = "2026-11-09a";
   // Approximate starting rates (units per 1 US dollar). Students should replace them with real rates.
   const DEF = {USD:1, CNY:7.1, THB:33.6, JPY:150, KRW:1380, TWD:31, HKD:7.8, SGD:1.3, MYR:4.3, VND:25500, IDR:16000, PHP:57, INR:85, LAK:21500, KHR:4000, MMK:2100,
     AUD:1.5, NZD:1.7, CAD:1.38, GBP:0.76, EUR:0.88, CHF:0.82, SEK:9.6, NOK:10.3, DKK:6.6, CZK:21.5, PLN:3.7, HUF:350, RUB:85, TRY:40, AED:3.67, MXN:18.5, BRL:5.5};
@@ -974,7 +1024,7 @@ button.dfield{padding:0 12px;color:var(--ink)}
   const catById = Object.fromEntries(CATS.map(c=>[c.id,c]));
 
   // rateLog: [{from:"YYYY-MM-DD", CNY, THB}] (per 1 USD), sorted by from
-  function blankState(){ return { rateLog:[{from:"2000-01-01", CNY:7.10, THB:33.6}], expenses:[], view:"CNY", lastCur:"CNY", budgets:{}, theme:"auto", dailyLimit:null, recurring:[], country:null, local:"CNY", home:"THB", showUSD:true, classes:[], breaks:[], tasks:[], docs:[], cards:[], contacts:[], words:[], wordLang:null, wordStats:{days:{}, miss:{}}, hiddenTopics:[], iou:[], alertsHiddenOn:null }; }
+  function blankState(){ return { rateLog:[{from:"2000-01-01", CNY:7.10, THB:33.6}], expenses:[], view:"CNY", lastCur:"CNY", budgets:{}, theme:"auto", dailyLimit:null, recurring:[], country:null, local:"CNY", home:"THB", showUSD:true, classes:[], breaks:[], tasks:[], docs:[], cards:[], contacts:[], words:[], wordLang:null, wordStats:{days:{}, miss:{}}, hiddenTopics:[], write:{}, writeAll:null, writePaper:false, iou:[], alertsHiddenOn:null }; }
   let state = blankState();
   let mainTab = "money";
   let page = "home", repScope = "month";
@@ -1078,6 +1128,11 @@ button.dfield{padding:0 12px;color:var(--ink)}
       <p><b>Restore backup</b> loads that file on a new phone or browser. It replaces what's currently on this device.</p>
       <p>If you clear your browser data or uninstall the browser, your spending is gone unless you have a backup.</p>
       <p><b>Delete my data</b> removes data from this device for a fresh start. You choose which parts to delete and confirm twice. Download a backup first if you might want it back.</p>`,
+    writing: `<p>For learning to <b>write</b> characters. Mark the words you've practised writing: tap <b>Edit</b> in Words, tick them (<b>Select all</b> takes a whole topic), then <b>✍ Learned to write</b>. You can also tap a word to show it big and mark it there. Marked words show a ✍.</p>
+      <p><b>Writing cards</b> show the pinyin and meaning. Write the word with your finger on the grid, or on paper (switch with <b>Write on paper</b>), then tap <b>Show the answer</b> and be honest: <b>✓ Got it</b> or <b>✗ Again</b>. Missed words go to the back of the pile, so a round only ends when you've got them all.</p>
+      <p><b>Review due today</b> is the smart way: a word you get right comes back after 1, 3, 7, 14 and then 30 days; one you miss comes back tomorrow. So you spend time on the words you're forgetting. New words come up the day after you mark them.</p>
+      <p><b>Quick review</b> picks random words (from the topics you choose). <b>Write them all</b> goes through every learned word until none are left; you can stop and carry on later.</p>
+      <p><b>Which one is right?</b> shows the pinyin and meaning with 4 words that look alike or share a character; pick the right one. <b>One character, many words</b> lists every word you have with a character, to link new words to ones you know.</p>`,
     progress: `<p>Every match game you finish is saved for that day: how many games, how many words you matched, and how many you got right first time.</p>
       <p><b>Streak</b> counts the days in a row you played. The bars show the words you matched on each of the last 14 days; tap a bar to see that day.</p>
       <p><b>Needs practice</b> lists words you got wrong. Each wrong match adds a dot (up to 3); each time you match it right first time takes one away, and at zero it leaves the list. <b>Practise these</b> starts a game with just those words.</p>`,
@@ -1172,7 +1227,7 @@ button.dfield{padding:0 12px;color:var(--ink)}
 
   // ---------- storage ----------
   let colRef = null;
-  function settings(){ return {v:2, updatedAt:state.updatedAt||0, rateLog:state.rateLog, view:state.view, lastCur:state.lastCur, budgets:state.budgets, theme:state.theme, dailyLimit:state.dailyLimit, recurring:state.recurring, classes:state.classes, breaks:state.breaks, tasks:state.tasks, docs:state.docs, cards:state.cards, contacts:state.contacts, words:state.words, wordLang:state.wordLang, wordStats:state.wordStats, hiddenTopics:state.hiddenTopics, iou:state.iou, alertsHiddenOn:state.alertsHiddenOn, country:state.country, local:state.local, home:state.home, showUSD:state.showUSD}; }
+  function settings(){ return {v:2, updatedAt:state.updatedAt||0, rateLog:state.rateLog, view:state.view, lastCur:state.lastCur, budgets:state.budgets, theme:state.theme, dailyLimit:state.dailyLimit, recurring:state.recurring, classes:state.classes, breaks:state.breaks, tasks:state.tasks, docs:state.docs, cards:state.cards, contacts:state.contacts, words:state.words, wordLang:state.wordLang, wordStats:state.wordStats, hiddenTopics:state.hiddenTopics, write:state.write, writeAll:state.writeAll, writePaper:state.writePaper, iou:state.iou, alertsHiddenOn:state.alertsHiddenOn, country:state.country, local:state.local, home:state.home, showUSD:state.showUSD}; }
   function snapshot(){ return Object.assign(settings(), {expenses:state.expenses}); }
   function monthDoc(m){ return {month:m, expenses:state.expenses.filter(e=>e.date && e.date.slice(0,7)===m)}; }
   // months: list of "YYYY-MM" whose spending changed
@@ -1268,6 +1323,10 @@ button.dfield{padding:0 12px;color:var(--ink)}
     { const wl = wordLang().id; state.words.forEach(w=>{ if (!w.lang) w.lang = wl; if (w.kind!=="word" && w.kind!=="sentence") w.kind = guessKind(w.text); }); }
     if (d.wordStats && typeof d.wordStats==="object") state.wordStats = {days:Object.assign({}, d.wordStats.days), miss:Object.assign({}, d.wordStats.miss)};
     if (Array.isArray(d.hiddenTopics)) state.hiddenTopics = d.hiddenTopics.filter(t=>typeof t==="string");
+    // writing practice: {wordId: {box, due, n, ok}} for words learned to write; the "write them all" round in progress
+    if (d.write && typeof d.write==="object") state.write = JSON.parse(JSON.stringify(d.write));
+    state.writeAll = d.writeAll && Array.isArray(d.writeAll.left) ? JSON.parse(JSON.stringify(d.writeAll)) : null;
+    if (typeof d.writePaper==="boolean") state.writePaper = d.writePaper;
     if (typeof d.alertsHiddenOn==="string") state.alertsHiddenOn = d.alertsHiddenOn;
     if (d.updatedAt) state.updatedAt = d.updatedAt;
     applyTheme();
@@ -3168,6 +3227,7 @@ button.dfield{padding:0 12px;color:var(--ink)}
     });
     host.appendChild(cards);
     if (!words.length) return;
+    host.appendChild(writeSection());
     host.appendChild(progressSection());
     host.appendChild(practiceSection());
   }
@@ -3337,7 +3397,7 @@ button.dfield{padding:0 12px;color:var(--ink)}
       p.querySelector("#tmGo").onclick = ()=>{
         const ids = new Set(items.map(w=>w.id));
         state.words = state.words.filter(w=>!ids.has(w.id));
-        ids.forEach(id=>{ delete state.wordStats.miss[id]; wordSel.delete(id); });
+        ids.forEach(id=>{ delete state.wordStats.miss[id]; delete state.write[id]; wordSel.delete(id); });
         if (TOPICS.includes(t) && !state.hiddenTopics.includes(t)) state.hiddenTopics.push(t);
         if (wordTopic===t) wordTopic = null;
         gameOpts.topics = gameOpts.topics.filter(x=>x!==t);
@@ -3356,10 +3416,24 @@ button.dfield{padding:0 12px;color:var(--ink)}
     const n = wordSel.size;   // entries stay a word or a sentence for good (owner's rule), so only topics can change here
     const bar = document.createElement("div"); bar.className = "selbar"; bar.setAttribute("role","region"); bar.setAttribute("aria-label","Selected items");
     bar.innerHTML = '<b></b>'+topicSelect("selTopic")+
-      '<button id="selMove">Move to topic</button><button class="link" id="selClear">Clear</button>';
+      '<button id="selMove">Move to topic</button><button class="link" id="selClear">Clear</button>'+
+      '<div class="selwrite"><button id="selLearn">✍ Learned to write</button><button class="link" id="selUnlearn" hidden>Unmark ✍</button><button class="link" id="selAll" hidden></button></div>';
     bar.querySelector("b").textContent = n+" selected";
     const pick = wireTopicSelect(bar, "selTopic");
     const chosen = ()=> state.words.filter(w=>wordSel.has(w.id));
+    // writing practice: mark the ticked entries as learned to write (or take the mark off)
+    const learned = chosen().filter(w=>state.write[w.id]).length;
+    bar.querySelector("#selLearn").hidden = learned===n;
+    bar.querySelector("#selUnlearn").hidden = !learned;
+    bar.querySelector("#selLearn").onclick = ()=>{
+      const k = n - learned; markWrite([...wordSel], true); wordSel.clear(); save(); renderWords();
+      toast("ok", cnt(k,"item","items")+" marked ✍ learned to write. "+(k===1 ? "It comes" : "They come")+" up for review from tomorrow — or play Quick review now.");
+    };
+    bar.querySelector("#selUnlearn").onclick = ()=>{ markWrite([...wordSel], false); wordSel.clear(); save(); renderWords(); toast("ok", "Took the ✍ mark off "+cnt(learned,"item","items")+"."); };
+    // tick everything shown (this topic and search) in one go
+    const shown = kindWords().filter(w=>(!wordTopic || topicOf(w)===wordTopic) && (!wordQuery.trim() || [w.text,w.pron,w.meaning,w.note,w.topic].some(x=>String(x||"").toLowerCase().includes(wordQuery.trim().toLowerCase()))));
+    const sa = bar.querySelector("#selAll");
+    if (shown.some(w=>!wordSel.has(w.id))){ sa.hidden = false; sa.textContent = "Select all "+shown.length+(wordTopic ? " in "+wordTopic : ""); sa.onclick = ()=>{ shown.forEach(w=>wordSel.add(w.id)); renderWords(); }; }
     bar.querySelector("#selMove").onclick = ()=>{
       const to = pick(); if (!to) return;
       chosen().forEach(w=>{ w.topic = to; }); state.hiddenTopics = state.hiddenTopics.filter(t=>t!==to);
@@ -3404,6 +3478,7 @@ button.dfield{padding:0 12px;color:var(--ink)}
         const r = document.createElement(listEdit.word ? "div" : "button"); r.className = "lrow"+(listEdit.word?" ed":"");
         r.innerHTML = '<div class="main"><div class="wtext" dir="auto"></div><small class="wsub"></small></div>';
         const tx = r.querySelector(".wtext"); tx.textContent = w.text; tx.lang = tag;
+        if (state.write[w.id]){ const m = document.createElement("span"); m.className = "wlearn"; m.textContent = "✍"; m.title = "Learned to write"; m.setAttribute("aria-label", "learned to write"); tx.appendChild(m); }
         // pronunciation, meaning and note on one line, so each word takes two lines
         const sub = r.querySelector(".wsub");
         if (w.pron){ const pr = document.createElement("span"); pr.className = "wpron"; pr.textContent = w.pron; sub.append(pr, " · "); }
@@ -3448,8 +3523,9 @@ button.dfield{padding:0 12px;color:var(--ink)}
   // kind: play Words or Sentences (whichever is open); practice: play the "Needs practice" list instead of topics
   // type: "match", or the sentence games "build" (put the tiles in order) and "gap" (pick the missing word);
   // dir (build only): "mt" = meaning → sentence tiles, "tm" = sentence → English tiles
-  let gameOpts = {topics:[], mode:"wm", hint:true, count:5, kind:null, practice:false, type:"match", dir:"mt"};
-  const GAME_NAMES = {match:"Match game", build:"Build the sentence", gap:"Fill the gap"};
+  // writing cards: wsrc "due" | "quick" | "all", wtopics and wcount for quick; "Which one is right?": psrc "learned" | "all", pcount
+  let gameOpts = {topics:[], mode:"wm", hint:true, count:5, kind:null, practice:false, type:"match", dir:"mt", wsrc:"due", wtopics:[], wcount:10, psrc:null, pcount:5};
+  const GAME_NAMES = {match:"Match game", build:"Build the sentence", gap:"Fill the gap", write:"Writing cards", pick:"Which one is right?"};
   const sentGame = ()=> gameOpts.type==="build" || gameOpts.type==="gap";
   const modeOf = id=> GAME_MODES.find(m=>m.id===id) || GAME_MODES[2];
   function modeName(m){ const p = wordLang().pron; return {text:"Word", pron:p, meaning:"Meaning"}[m.left]+" ↔ "+{text:"Word", pron:p, meaning:"Meaning"}[m.right]; }
@@ -3585,7 +3661,9 @@ button.dfield{padding:0 12px;color:var(--ink)}
     $("gameCard").hidden = !game;
     if (!game) return;
     const body = $("gameBody"); body.innerHTML = "";
-    if (game.phase==="setup") return renderGameSetup(body);
+    if (game.phase==="setup") return gameOpts.type==="write" || gameOpts.type==="pick" ? renderWSetup(body) : renderGameSetup(body);
+    if (game.type==="write") return renderWriteGame(body);
+    if (game.type==="pick") return renderPickGame(body);
     if (game.type!=="match") return renderSentGame(body);
     const n = game.pool.length, got = game.done.size;
     $("gameTitle").textContent = "Match game · "+(game.practice ? "Needs practice" : game.topics.length ? game.topics.join(", ") : "All topics");
@@ -3834,14 +3912,399 @@ button.dfield{padding:0 12px;color:var(--ink)}
     }
     body.appendChild(foot);
   }
+
+  // ----- Writing practice (owner's idea): words marked "learned to write" come back as cards -----
+  // state.write[id] = {box, due, n, ok}. Smart review: right moves a word up a box, wrong puts it back in box 0;
+  // the box says how many days until it comes back (1, 1, 3, 7, 14, 30). Newly marked words come back tomorrow.
+  const WRITE_DAYS = [1, 1, 3, 7, 14, 30];
+  const addDays = (d, n)=>{ const x = new Date(d+"T12:00:00"); x.setDate(x.getDate()+n); return iso(x); };
+  const writeWords = ()=> langWords().filter(w=>state.write[w.id]);
+  const dueWords = ()=>{ const t = todayISO(); return writeWords().filter(w=>(state.write[w.id].due||t) <= t); };
+  function markWrite(ids, on){
+    ids.forEach(id=>{ if (!on) delete state.write[id]; else if (!state.write[id]) state.write[id] = {box:0, due:addDays(todayISO(), 1), n:0, ok:0}; });
+    if (state.writeAll) state.writeAll.left = state.writeAll.left.filter(id=>state.write[id]);
+  }
+  function gradeWrite(id, ok){
+    const s = state.write[id]; if (!s) return;
+    s.n = (s.n||0) + 1; if (ok) s.ok = (s.ok||0) + 1;
+    s.box = ok ? Math.min(5, (s.box||0) + 1) : 0;
+    s.due = addDays(todayISO(), WRITE_DAYS[s.box]); s.last = todayISO();
+  }
+  // one finished round of any game goes into today's results (Your progress)
+  function recordDay(items, mistakes, ms){
+    const days = state.wordStats.days, k = todayISO(), d = days[k] = days[k] || {games:0, pairs:0, mistakes:0, secs:0};
+    d.games++; d.pairs += items; d.mistakes += mistakes; d.secs += Math.max(1, Math.round(ms/1000));
+    save();
+  }
+  const hasHan = ()=> wordLang().id==="zh" || wordLang().id==="yue" || wordLang().id==="ja" || langWords().some(w=>HAN.test(w.text));
+
+  // home section: how many words are learned, how many are due, and the ways to practise
+  function writeSection(){
+    const sec = document.createElement("div"); sec.className = "homesec"; sec.id = "wordWrite";
+    sec.innerHTML = '<h3><span class="titlewrap">Writing practice<button class="help" data-help="writing" aria-label="About writing practice">?</button></span></h3><div data-helpbox="writing"></div>';
+    const all = writeWords(), due = dueWords().length, wa = state.writeAll && state.writeAll.left.length ? state.writeAll : null;
+    const btn = (id, text, cls, fn, dis)=>{ const b = document.createElement("button"); b.className = cls||"secondary"; b.id = id; b.textContent = text; b.disabled = !!dis; b.onclick = fn; return b; };
+    const grid = document.createElement("div"); grid.className = "wbtns";
+    if (!all.length){
+      sec.insertAdjacentHTML("beforeend", '<p class="sectionnote">Mark the words you’ve practised writing. They come back here as cards: you see the '+esc((wordLang().pron||"pronunciation").toLowerCase())+' and meaning, write the word on paper or on the screen, then check.</p>');
+      grid.appendChild(btn("wChoose", "✍ Choose words I’ve learned", "secondary", ()=>{
+        wordKind = "word"; wordTopic = null; wordsAll = false; listEdit.word = true; wordSel.clear(); renderWords();
+        $("wordNav").scrollIntoView({block:"start"});
+        toast("ok", "Tick the words you’ve practised writing, then tap ✍ Learned to write.");
+      }));
+      if (hasHan()) grid.appendChild(btn("wChars", "One character, many words", "secondary", ()=>showChars(null)));
+      sec.appendChild(grid);
+      return sec;
+    }
+    const tiles = document.createElement("div"); tiles.className = "tiles";
+    tiles.append(tile("Learned", cnt(all.length,"word","words"), "to write"),
+                 tile("Due today", String(due), due ? "ready to review" : "all caught up ✓"),
+                 tile("Write them all", wa ? wa.left.length+" left" : "—", wa ? "of "+wa.total+", in progress" : "go through every word"));
+    sec.appendChild(tiles);
+    const go = (type, src)=>{ gameOpts.wsrc = src; openGameSetup(false, type); };
+    grid.append(
+      btn("wDue", due ? "▶ Review "+due+" due today" : "Nothing due today ✓", "btn-yes wide", ()=>{ gameOpts.wsrc = "due"; startWriteGame(); }, !due),
+      btn("wQuick", "Quick review", "secondary", ()=>go("write", "quick")),
+      btn("wAll", wa ? "Continue writing ("+wa.left.length+")" : "Write them all", "secondary", ()=>go("write", "all")),
+      btn("wPick", "Which one is right?", "secondary", ()=>openGameSetup(false, "pick")));
+    if (hasHan()) grid.appendChild(btn("wChars", "One character, many words", "secondary", ()=>showChars(null)));
+    sec.appendChild(grid);
+    sec.insertAdjacentHTML("beforeend", '<p class="sectionnote" style="margin-top:8px">To add words: open <b>Words</b>, tap <b>Edit</b>, tick them, then <b>✍ Learned to write</b>.</p>');
+    return sec;
+  }
+
+  // setup for the writing cards and for "Which one is right?"
+  function renderWSetup(body){
+    const L = wordLang(), write = gameOpts.type==="write";
+    $("gameTitle").textContent = write ? "Writing cards" : "Which one is right?";
+    const chips = (id, label, items, cur, set)=>{
+      const wrap = document.createElement("div");
+      wrap.innerHTML = '<div class="subl"></div><div class="tchips" role="group"></div>';
+      wrap.querySelector(".subl").textContent = label; const g = wrap.querySelector(".tchips"); g.id = id; g.setAttribute("aria-label", label);
+      items.forEach(([v, t, n])=>{ const b = document.createElement("button"); b.innerHTML = "<b></b><span></span>"; b.dataset.v = v;
+        b.querySelector("b").textContent = t; b.querySelector("span").textContent = n==null ? "" : n;
+        b.setAttribute("aria-pressed", cur===v); b.onclick = ()=>{ set(v); renderGame(); }; g.appendChild(b); });
+      body.appendChild(wrap); return wrap;
+    };
+    const note = document.createElement("p"); note.className = "sectionnote"; note.style.marginTop = "10px";
+    const btns = document.createElement("div"); btns.className = "btns"; btns.style.cssText = "display:flex;gap:8px;margin-top:6px";
+    btns.innerHTML = '<button class="btn-yes" id="gStart">Start</button><button class="secondary" id="gCancel">Cancel</button>';
+    let ok = false;
+    if (write){
+      const all = writeWords(), wa = state.writeAll && state.writeAll.left.length ? state.writeAll : null;
+      if (!["due","quick","all"].includes(gameOpts.wsrc)) gameOpts.wsrc = "quick";
+      chips("gWsrc", "Which words", [["due","Due today",dueWords().length], ["quick","Random",all.length], ["all", wa ? "Continue writing them all" : "Write them all", wa ? wa.left.length+" left" : all.length]], gameOpts.wsrc, v=>{ gameOpts.wsrc = v; });
+      if (gameOpts.wsrc==="quick"){
+        const used = topicList().filter(t=>all.some(w=>topicOf(w)===t));
+        gameOpts.wtopics = (gameOpts.wtopics||[]).filter(t=>used.includes(t));
+        const w = chips("gWtopics", "Topics", [["", "All topics", all.length]].concat(used.map(t=>[t, t, all.filter(x=>topicOf(x)===t).length])), null, ()=>{});
+        w.querySelectorAll("button").forEach(b=>{ const t = b.dataset.v;
+          b.setAttribute("aria-pressed", t ? gameOpts.wtopics.includes(t) : !gameOpts.wtopics.length);
+          b.onclick = ()=>{ gameOpts.wtopics = !t ? [] : gameOpts.wtopics.includes(t) ? gameOpts.wtopics.filter(x=>x!==t) : gameOpts.wtopics.concat(t); renderGame(); }; });
+        chips("gWcount", "How many", [5,10,15,20,30].map(k=>[k, String(k)]), gameOpts.wcount||10, v=>{ gameOpts.wcount = v; });
+      }
+      chips("gPaper", "Write on", [[false, "The screen"], [true, "Paper"]], !!state.writePaper, v=>{ state.writePaper = v; save(); });
+      const pool = writePool();
+      ok = pool.length > 0;
+      note.textContent = gameOpts.wsrc==="due" ? (pool.length ? cnt(pool.length,"word is","words are")+" due today." : "Nothing is due today — try Random, or come back tomorrow.")
+        : gameOpts.wsrc==="all" ? (wa ? "You’re part way through: "+wa.left.length+" of "+wa.total+" left. Words you miss go to the back of the pile until you get them all." : "Every word you’ve learned ("+all.length+"), in random order. Words you miss go to the back of the pile until you get them all right. You can stop and carry on later.")
+        : "You’ll write "+Math.min(pool.length, gameOpts.wcount||10)+" random words"+(gameOpts.wtopics.length ? " from "+andList(gameOpts.wtopics) : "")+".";
+      if (gameOpts.wsrc==="all" && wa){
+        const r = document.createElement("button"); r.className = "link"; r.id = "gRestart"; r.textContent = "Start over"; r.style.marginLeft = "auto";
+        r.onclick = ()=>{ state.writeAll = null; save(); renderGame(); }; btns.appendChild(r);
+      }
+    } else {
+      const learned = writeWords(), lw = langWords();
+      if (gameOpts.psrc!=="all" && gameOpts.psrc!=="learned") gameOpts.psrc = learned.length >= 1 ? "learned" : "all";
+      chips("gPsrc", "Which words", [["learned","Learned to write",learned.length], ["all","All my words",lw.length]], gameOpts.psrc, v=>{ gameOpts.psrc = v; });
+      chips("gPcount", "How many", [5,6,7,8,9,10].map(k=>[k, String(k)]), gameOpts.pcount||5, v=>{ gameOpts.pcount = v; });
+      const pool = pickPool();
+      ok = pool.length >= 1 && lw.length >= 4;
+      note.textContent = !pool.length ? "No words learned to write yet — choose All my words, or mark some first."
+        : lw.length < 4 ? "You need at least 4 saved words for 4 choices."
+        : "You’ll see the "+(L.pron||"pronunciation").toLowerCase()+" and meaning, then pick the right one of 4 that look alike. "+Math.min(pool.length, gameOpts.pcount||5)+" rounds.";
+    }
+    body.append(note, btns);
+    $("gStart").disabled = !ok;
+    $("gStart").onclick = write ? startWriteGame : startPickGame;
+    $("gCancel").onclick = ()=>{ game = null; renderGame(); };
+  }
+
+  function writePool(){
+    if (gameOpts.wsrc==="due") return dueWords();
+    if (gameOpts.wsrc==="all") return state.writeAll && state.writeAll.left.length ? writeWords().filter(w=>state.writeAll.left.includes(w.id)) : writeWords();
+    const t = gameOpts.wtopics||[];
+    return writeWords().filter(w=>!t.length || t.includes(topicOf(w)));
+  }
+  function startWriteGame(){
+    gameOpts.type = "write";
+    const src = gameOpts.wsrc;
+    let q = null;
+    if (src==="all"){
+      if (!state.writeAll || !state.writeAll.left.length){ const ids = shuffle(writeWords().map(w=>w.id)); state.writeAll = {left:ids, total:ids.length}; }
+      state.writeAll.left = state.writeAll.left.filter(id=>state.write[id] && state.words.some(w=>w.id===id));
+      if (!state.writeAll.left.length){ state.writeAll = null; return; }
+      save();
+    } else {
+      q = shuffle(writePool().map(w=>w.id)); if (src==="quick") q = q.slice(0, gameOpts.wcount||10);
+      if (!q.length) return;
+    }
+    game = {phase:"play", type:"write", src, queue:q, total: q ? q.length : state.writeAll.total, right:0, wrong:0, graded:new Set(), shown:false, strokes:[], start:Date.now(), end:0, finished:false};
+    renderGame(); $("gameCard").scrollIntoView({block:"start"});
+  }
+  const writeQueue = ()=> game.src==="all" ? (state.writeAll ? state.writeAll.left : []) : game.queue;
+  function answerWrite(ok){
+    const q = writeQueue(), id = q[0]; if (!id) return;
+    if (!game.graded.has(id)){ gradeWrite(id, ok); game.graded.add(id); }   // the first answer in a round sets when it comes back
+    q.shift();
+    if (ok) game.right++; else { game.wrong++; q.push(id); }   // missed: to the back of the pile
+    game.shown = false; game.strokes = [];
+    if (!q.length){ game.finished = true; game.end = Date.now(); if (game.src==="all") state.writeAll = null; recordDay(game.right, game.wrong, game.end-game.start); }
+    save(); renderGame();
+  }
+  // the 田字格 practice grid: n squares (up to 4 a row), each with dashed middle and diagonal lines
+  function gridSVG(n){
+    const cols = Math.min(n, 4), rows = Math.ceil(n/cols), W = cols*100, H = rows*100;
+    let g = "";
+    for (let i = 0; i < n; i++){
+      const x = (i%cols)*100, y = Math.floor(i/cols)*100;
+      g += '<rect x="'+(x+1)+'" y="'+(y+1)+'" width="98" height="98" rx="4" class="gbox"/>'+
+        '<path d="M'+(x+50)+' '+(y+3)+'V'+(y+97)+'M'+(x+3)+' '+(y+50)+'H'+(x+97)+'" class="gmid"/>'+
+        '<path d="M'+(x+3)+' '+(y+3)+'L'+(x+97)+' '+(y+97)+'M'+(x+97)+' '+(y+3)+'L'+(x+3)+' '+(y+97)+'" class="gdiag"/>';
+    }
+    return {cols, rows, svg:'<svg viewBox="0 0 '+W+' '+H+'" preserveAspectRatio="none" aria-hidden="true">'+g+'</svg>'};
+  }
+  // drawing pad over the grid; strokes are kept in game.strokes (0–1 coordinates) so they survive a redraw
+  function writePad(n){
+    const {cols, rows, svg} = gridSVG(n);
+    const wrap = document.createElement("div"); wrap.className = "wpad"; wrap.style.aspectRatio = cols+" / "+rows; wrap.style.maxWidth = (cols*150)+"px";
+    wrap.innerHTML = svg+'<canvas aria-label="Drawing pad: write the word here with your finger"></canvas>';
+    const cv = wrap.querySelector("canvas"), ctx = cv.getContext("2d");
+    let cur = null;
+    const size = ()=>{ const r = cv.getBoundingClientRect(), dpr = window.devicePixelRatio||1; cv.width = Math.round(r.width*dpr); cv.height = Math.round(r.height*dpr); draw(); };
+    const draw = ()=>{
+      ctx.clearRect(0, 0, cv.width, cv.height);
+      ctx.strokeStyle = getComputedStyle(document.body).color; ctx.lineCap = "round"; ctx.lineJoin = "round";
+      ctx.lineWidth = Math.max(3, cv.width/cols*0.055);
+      game.strokes.forEach(s=>{ ctx.beginPath(); s.forEach(([x,y],i)=>{ const X = x*cv.width, Y = y*cv.height; if (i) ctx.lineTo(X,Y); else { ctx.moveTo(X,Y); ctx.lineTo(X+.1,Y+.1); } }); ctx.stroke(); });
+    };
+    const pt = ev=>{ const r = cv.getBoundingClientRect(); return [(ev.clientX-r.left)/r.width, (ev.clientY-r.top)/r.height]; };
+    cv.addEventListener("pointerdown", ev=>{ ev.preventDefault(); cv.setPointerCapture(ev.pointerId); cur = [pt(ev)]; game.strokes.push(cur); draw(); });
+    cv.addEventListener("pointermove", ev=>{ if (!cur) return; ev.preventDefault(); cur.push(pt(ev)); draw(); });
+    const end = ()=>{ cur = null; };
+    cv.addEventListener("pointerup", end); cv.addEventListener("pointercancel", end);
+    return {wrap, size, draw};
+  }
+  function renderWriteGame(body){
+    const q = writeQueue(), L = wordLang(), tag = L.tag;
+    $("gameTitle").textContent = "Writing cards · "+({due:"Due today", quick:"Quick review", all:"Write them all"}[game.src]);
+    const left = game.src==="all" ? q.length : null, doneN = game.src==="all" ? game.total - q.length : game.right;
+    if (game.finished || !q.length){
+      const secs = Math.max(1, Math.round(((game.end||Date.now())-game.start)/1000));
+      body.innerHTML = '<div class="gamedone"><h3></h3><p class="gamestat"></p><div class="btns"><button class="btn-yes" id="gameAgain">Again</button><button class="secondary" id="gameChange">Change</button><button class="secondary" id="gameDone">Close</button></div></div>';
+      body.querySelector("h3").textContent = game.src==="all" ? "You wrote them all! ✍" : game.wrong ? "All written!" : "Perfect! All right first time.";
+      body.querySelector(".gamestat").textContent = cnt(game.right,"word","words")+" · "+(game.wrong===1 ? "1 to write again" : game.wrong+" to write again")+" · "+secs+" s"+
+        (game.src==="due" ? " · next reviews are scheduled" : "");
+      $("gameAgain").onclick = ()=>{ if (game.src==="due" && !dueWords().length) gameOpts.wsrc = "quick"; game = {phase:"setup"}; renderGame(); };
+      $("gameChange").onclick = ()=>{ game = {phase:"setup"}; renderGame(); };
+      $("gameDone").onclick = ()=>{ game = null; renderWords(); };
+      return;
+    }
+    const w = state.words.find(x=>x.id===q[0]);
+    if (!w){ q.shift(); return renderGame(); }   // deleted meanwhile
+    const el = (t, c)=>{ const e = document.createElement(t); if (c) e.className = c; return e; };
+    const total = game.src==="all" ? game.total : game.total;
+    const bar = el("div", "sgbar"); bar.setAttribute("role","progressbar"); bar.setAttribute("aria-label","Words written");
+    bar.setAttribute("aria-valuemin", 0); bar.setAttribute("aria-valuemax", total); bar.setAttribute("aria-valuenow", doneN);
+    bar.innerHTML = "<i></i>"; bar.firstChild.style.width = Math.min(100, doneN/Math.max(1,total)*100)+"%";
+    const stat = el("p", "gamestat");
+    stat.textContent = (game.src==="all" ? doneN+" of "+total+" written · "+left+" left" : game.right+" of "+total+" done") + (game.wrong ? " · "+game.wrong+" to write again" : "");
+    const top = el("div", "wtop"); const ask = el("p", "sgask"); ask.textContent = "Write this word"; ask.style.margin = "0";
+    const sw = el("button", "link"); sw.id = "wPaperSw"; sw.textContent = state.writePaper ? "✎ Use the screen" : "Write on paper";
+    sw.onclick = ()=>{ state.writePaper = !state.writePaper; save(); renderGame(); };
+    top.append(ask, sw);
+    const card = el("div", "sgprompt wcard");
+    if (w.pron){ const p = el("div", "wpin"); p.textContent = w.pron; card.appendChild(p); }
+    const m = el("div", "en"); m.textContent = w.meaning; card.appendChild(m);
+    const t = el("small"); t.textContent = topicOf(w)+(state.write[w.id] && state.write[w.id].n ? " · written "+cnt(state.write[w.id].n,"time","times") : " · first review"); card.appendChild(t);
+    body.append(bar, stat, top, card);
+    const chars = [...w.text], n = Math.max(1, Math.min(chars.length, 8));
+    let pad = null;
+    if (!state.writePaper){
+      pad = writePad(n);
+      const tools = el("div", "wtools");
+      const u = el("button", "link"); u.textContent = "↶ Undo"; u.onclick = ()=>{ game.strokes.pop(); pad.draw(); };
+      const c = el("button", "link"); c.textContent = "Clear"; c.onclick = ()=>{ game.strokes = []; pad.draw(); };
+      tools.append(u, c);
+      body.append(pad.wrap, tools);
+    }
+    const foot = el("div", "sgfoot");
+    if (!game.shown){
+      const s = el("button", "btn-yes"); s.id = "wShow"; s.textContent = "Show the answer";
+      s.onclick = ()=>{ game.shown = true; renderGame(); }; foot.appendChild(s);
+    } else {
+      // the answer in the same grid, so it's easy to compare stroke by stroke; tap a character to see your other words with it
+      const ans = el("div", "wans"); ans.setAttribute("role","group"); ans.setAttribute("aria-label","The answer");
+      if (chars.length <= 8){
+        const {cols, rows, svg} = gridSVG(chars.length);
+        ans.style.aspectRatio = cols+" / "+rows; ans.style.maxWidth = (cols*150)+"px"; ans.innerHTML = svg;
+        const cells = el("div", "wcells"); cells.style.gridTemplateColumns = "repeat("+cols+", 1fr)";
+        chars.forEach(ch=>{ const b = el("button", "wch"); b.textContent = ch; b.lang = tag;
+          if (HAN.test(ch)){ b.setAttribute("aria-label", ch+" — see your words with it"); b.onclick = ()=>showChars(ch); } else b.disabled = true;
+          cells.appendChild(b); });
+        ans.appendChild(cells);
+      } else { const d = el("div", "zh"); d.lang = tag; d.textContent = w.text; ans.classList.add("long"); ans.appendChild(d); }
+      const fb = el("p", "wask"); fb.setAttribute("role","status");
+      fb.innerHTML = "<b>Did you write it right?</b>"+(chars.length <= 8 && chars.some(ch=>HAN.test(ch)) ? " <span>Tap a character to see your other words with it.</span>" : "");
+      const row = el("div", "wgrade");
+      const no = el("button", "secondary wno"); no.id = "wAgain"; no.textContent = "✗ Again"; no.onclick = ()=>answerWrite(false);
+      const yes = el("button", "btn-yes"); yes.id = "wGot"; yes.textContent = "✓ Got it"; yes.onclick = ()=>answerWrite(true);
+      row.append(no, yes);
+      foot.append(ans, fb, row);
+    }
+    body.appendChild(foot);
+    if (pad) pad.size();
+    const a = body.querySelector(".wans .wcells");
+    if (a){ const cw = a.getBoundingClientRect().width / (+a.style.gridTemplateColumns.match(/\d+/)[0]); a.style.fontSize = Math.round(cw*0.66)+"px"; }
+    // after Show, bring the answer and the two grading buttons into view (above the tab bar)
+    if (game.shown){ const g = body.querySelector(".wgrade"); if (g){ const nav = document.querySelector("nav"), navH = nav ? nav.getBoundingClientRect().height : 0, r = g.getBoundingClientRect(), over = r.bottom - (window.innerHeight - navH - 12); if (over > 0) window.scrollBy({top:over, behavior:"smooth"}); } }
+  }
+
+  // ----- Which one is right? 4 look-alikes (sharing a character, same length) -----
+  function pickPool(){ return gameOpts.psrc==="all" ? langWords() : writeWords(); }
+  function pickChoices(w){
+    const mine = new Set([...w.text]), len = [...w.text].length, mean = String(w.meaning).trim().toLowerCase();
+    const score = x=>{ const xs = [...x.text]; return xs.filter(c=>mine.has(c) && WORDCH.test(c)).length*3 + (xs.length===len ? 2 : 0) + (kindOf(x)===kindOf(w) ? 1 : 0) + Math.random(); };
+    return langWords().filter(x=>x.id!==w.id && x.text.trim()!==w.text.trim() && String(x.meaning).trim().toLowerCase()!==mean)
+      .map(x=>[score(x), x]).sort((a,b)=>b[0]-a[0]).slice(0, 3).map(x=>x[1]);
+  }
+  function startPickGame(){
+    gameOpts.type = "pick";
+    const pool = shuffle(pickPool().slice()).slice(0, gameOpts.pcount||5);
+    if (!pool.length || langWords().length < 4) return;
+    game = {phase:"play", type:"pick", queue:pool.map(w=>w.id), total:pool.length, right:0, wrong:0, missed:new Set(), round:null, start:Date.now(), end:0};
+    pickNext(); renderGame(); $("gameCard").scrollIntoView({block:"start"});
+  }
+  function pickNext(){
+    const id = game.queue[0], w = id && state.words.find(x=>x.id===id);
+    game.round = w ? {w, opts:shuffle([w].concat(pickChoices(w))), pick:null} : null;
+  }
+  function renderPickGame(body){
+    const L = wordLang(), tag = L.tag, r = game.round;
+    $("gameTitle").textContent = "Which one is right?";
+    if (!r){
+      const secs = Math.max(1, Math.round((game.end-game.start)/1000));
+      body.innerHTML = '<div class="gamedone"><h3></h3><p class="gamestat"></p><div class="btns"><button class="btn-yes" id="gameAgain">Play again</button><button class="secondary" id="gameChange">Change</button><button class="secondary" id="gameDone">Close</button></div></div>';
+      body.querySelector("h3").textContent = game.wrong ? "All done!" : "Perfect! No mistakes.";
+      body.querySelector(".gamestat").textContent = cnt(game.total,"word","words")+" · "+(game.wrong===1 ? "1 mistake" : game.wrong+" mistakes")+" · "+secs+" s";
+      $("gameAgain").onclick = startPickGame;
+      $("gameChange").onclick = ()=>{ game = {phase:"setup"}; renderGame(); };
+      $("gameDone").onclick = ()=>{ game = null; renderWords(); };
+      return;
+    }
+    const el = (t, c)=>{ const e = document.createElement(t); if (c) e.className = c; return e; };
+    const bar = el("div", "sgbar"); bar.innerHTML = "<i></i>"; bar.firstChild.style.width = (game.right/game.total*100)+"%";
+    bar.setAttribute("role","progressbar"); bar.setAttribute("aria-label","Words done"); bar.setAttribute("aria-valuemin",0); bar.setAttribute("aria-valuemax",game.total); bar.setAttribute("aria-valuenow",game.right);
+    const stat = el("p", "gamestat"); stat.textContent = game.right+" of "+game.total+" done"+(game.wrong ? " · "+(game.wrong===1 ? "1 mistake" : game.wrong+" mistakes") : "");
+    const ask = el("p", "sgask"); ask.textContent = "Which one is it?";
+    const card = el("div", "sgprompt wcard");
+    if (r.w.pron){ const p = el("div", "wpin"); p.textContent = r.w.pron; card.appendChild(p); }
+    const m = el("div", "en"); m.textContent = r.w.meaning; card.appendChild(m);
+    const grid = el("div", "pickgrid");
+    r.opts.forEach((x, i)=>{
+      const b = el("button", "pickopt"); b.lang = tag; b.textContent = x.text; if ([...x.text].length > 4) b.classList.add("long");
+      if (r.pick!=null){ b.disabled = true; if (x===r.w) b.classList.add("ok"); else if (i===r.pick) b.classList.add("bad"); }
+      b.onclick = ()=>{
+        if (r.pick!=null) return;
+        r.pick = i; const ok = x===r.w;
+        if (ok){ game.right++; game.queue.shift(); }
+        else { game.wrong++; game.queue.push(game.queue.shift()); game.missed.add(r.w.id); }   // it comes back at the end
+        renderGame(); const nx = $("pickNext"); if (nx) nx.focus();
+      };
+      grid.appendChild(b);
+    });
+    body.append(bar, stat, ask, card, grid);
+    if (r.pick!=null){
+      const ok = r.opts[r.pick]===r.w, chosen = r.opts[r.pick];
+      const fb = el("div", "sgfeed "+(ok ? "ok" : "bad")); fb.setAttribute("role","status");
+      const h = el("b"); h.textContent = ok ? "✓ Correct!" : "✗ Not quite. It’s:"; fb.appendChild(h);
+      const z = el("div", "zh"); z.lang = tag; z.textContent = r.w.text; fb.appendChild(z);
+      if (!ok) fb.appendChild(Object.assign(el("small"), {textContent:"You picked "+chosen.text+(chosen.pron ? " ("+chosen.pron+")" : "")+" — “"+chosen.meaning+"”."}));
+      const c = el("button", "btn-yes"); c.id = "pickNext"; c.textContent = "Continue";
+      c.onclick = ()=>{ pickNext(); if (!game.round){ game.end = Date.now(); recordDay(game.total, game.wrong, game.end-game.start); } renderGame(); };
+      const foot = el("div", "sgfoot"); foot.append(fb, c); body.appendChild(foot);
+    }
+  }
+
+  // ----- One character, many words: every saved word that uses a character -----
+  function showChars(ch){
+    const old = $("charSheet"); if (old) old.remove();
+    const host = document.createElement("div"); host.id = "charSheet";
+    host.innerHTML = '<div class="sheetbg"></div><div class="calc spendsheet charsheet" role="dialog" aria-label="One character, many words"><div class="bar2"><b></b><button class="link" data-x>Close</button></div><div class="ssbody"></div></div>';
+    const body = host.querySelector(".ssbody"), title = host.querySelector(".bar2 b"), tag = wordLang().tag, words = langWords();
+    const close = ()=>host.remove();
+    const paintList = ()=>{
+      title.textContent = "One character, many words"; body.innerHTML = "";
+      const src = writeWords().length ? writeWords() : words, count = {};
+      words.forEach(w=>new Set([...w.text].filter(c=>HAN.test(c))).forEach(c=>{ count[c] = (count[c]||0) + 1; }));
+      const order = []; src.forEach(w=>[...w.text].forEach(c=>{ if (HAN.test(c) && !order.includes(c)) order.push(c); }));
+      order.sort((a,b)=>count[b]-count[a]);
+      body.insertAdjacentHTML("beforeend", '<p class="sectionnote" style="margin:0 0 8px"></p><input type="search" id="charFind" placeholder="Find a character or word…" aria-label="Find a character" autocomplete="off"><div class="charsgrid"></div>');
+      body.querySelector(".sectionnote").textContent = "Characters in your "+(writeWords().length ? "words learned to write" : "words")+", most used first. Tap one to see every word you have with it.";
+      const grid = body.querySelector(".charsgrid");
+      const fill = q=>{ grid.innerHTML = "";
+        const list = q ? [...new Set([...q].filter(c=>HAN.test(c)))].filter(c=>count[c]) : order;
+        if (!list.length){ grid.innerHTML = '<p class="sectionnote">'+(q ? "None of your words use that." : "No characters yet.")+'</p>'; return; }
+        list.forEach(c=>{ const b = document.createElement("button"); b.className = "charbtn"; b.lang = tag; b.innerHTML = "<b></b><span></span>";
+          b.querySelector("b").textContent = c; b.querySelector("span").textContent = count[c]; b.setAttribute("aria-label", c+", in "+cnt(count[c],"word","words"));
+          b.onclick = ()=>paintChar(c, true); grid.appendChild(b); }); };
+      body.querySelector("#charFind").addEventListener("input", ev=>fill(ev.target.value.trim()));
+      fill("");
+    };
+    const paintChar = (c, back)=>{
+      title.textContent = "Words with "+c; body.innerHTML = "";
+      const list = words.filter(w=>w.text.includes(c)).sort((a,b)=>[...a.text].length-[...b.text].length || (b.t||0)-(a.t||0));
+      const big = document.createElement("div"); big.className = "charbig"; big.lang = tag; big.textContent = c; body.appendChild(big);
+      body.insertAdjacentHTML("beforeend", '<p class="sectionnote" style="text-align:center;margin:0 0 6px">In '+cnt(list.length,"of your words","of your words")+'</p>');
+      list.forEach(w=>{
+        const r = document.createElement("div"); r.className = "ssrow charrow";
+        r.innerHTML = '<span class="ct" dir="auto"></span><span class="cm"></span>';
+        const ct = r.querySelector(".ct"); ct.lang = tag;
+        [...w.text].forEach(x=>{ if (x===c){ const mk = document.createElement("mark"); mk.textContent = x; ct.appendChild(mk); } else ct.append(x); });
+        if (state.write[w.id]) ct.append(" ✍");
+        r.querySelector(".cm").textContent = [w.pron, w.meaning].filter(Boolean).join(" · ");
+        body.appendChild(r);
+      });
+      if (back){ const b = document.createElement("button"); b.className = "link"; b.textContent = "← All characters"; b.style.marginTop = "10px"; b.onclick = paintList; body.appendChild(b); }
+    };
+    if (ch) paintChar(ch, true); else paintList();
+    host.querySelector(".sheetbg").onclick = close; host.querySelector("[data-x]").onclick = close;
+    host.addEventListener("keydown", ev=>{ if (ev.key==="Escape") close(); });
+    document.body.appendChild(host);
+    host.querySelector("[data-x]").focus();
+  }
+
   function showWordBig(w){
     const h = $("bigHost"); h.innerHTML = "";
     const d = document.createElement("div"); d.className = "bigshow"+([...w.text].length<=6 ? " short" : ""); d.setAttribute("role","dialog"); d.setAttribute("aria-label", w.meaning);
-    d.innerHTML = '<div class="lt" dir="auto"></div><div class="pr"></div><div class="en"></div><div class="hint">Tap anywhere to close</div>';
+    d.innerHTML = '<div class="lt" dir="auto"></div><div class="pr"></div><div class="en"></div><div class="bigacts"></div><div class="hint">Tap anywhere to close</div>';
     d.querySelector(".lt").textContent = w.text; d.querySelector(".lt").lang = wordLang().tag;
     if (w.pron) d.querySelector(".pr").textContent = w.pron; else d.querySelector(".pr").remove();
     d.querySelector(".en").textContent = w.meaning;
-    d.onclick = ()=>{ h.innerHTML = ""; };
+    // mark it learned to write, and see other words with each of its characters
+    const acts = d.querySelector(".bigacts");
+    const lw = document.createElement("button"); lw.id = "bigLearn";
+    const paintLw = ()=>{ const on = !!state.write[w.id]; lw.textContent = on ? "✓ Learned to write" : "✍ Mark as learned to write"; lw.setAttribute("aria-pressed", on); };
+    lw.onclick = ev=>{ ev.stopPropagation(); markWrite([w.id], !state.write[w.id]); save(); paintLw(); };
+    paintLw(); acts.appendChild(lw);
+    [...new Set([...w.text].filter(c=>HAN.test(c)))].slice(0, 6).forEach(c=>{
+      const n = langWords().filter(x=>x.id!==w.id && x.text.includes(c)).length; if (!n) return;
+      const b = document.createElement("button"); b.className = "bigch"; b.lang = wordLang().tag; b.textContent = c+" · "+n+" more";
+      b.setAttribute("aria-label", "Your other words with "+c);
+      b.onclick = ev=>{ ev.stopPropagation(); h.innerHTML = ""; showChars(c); };
+      acts.appendChild(b);
+    });
+    d.onclick = ()=>{ h.innerHTML = ""; renderWords(); };
     h.appendChild(d);
   }
   function renderWordForm(){
@@ -3872,7 +4335,7 @@ button.dfield{padding:0 12px;color:var(--ink)}
     $("wfTopic").onchange = ()=>{ $("wfNewWrap").hidden = $("wfTopic").value!=="__new"; if (!$("wfNewWrap").hidden) $("wfNew").focus(); };
     $("wfCancel").onclick = ()=>{ formOpen.word = null; delPending = null; renderWords(); };
     if (editing) $("wfDel").onclick = ()=>{ if (delPending!=="word"+w.id){ delPending = "word"+w.id; $("wfDel").textContent = "Tap again to delete"; return; }
-      state.words = state.words.filter(x=>x.id!==w.id); formOpen.word = null; delPending = null; save(); render(); };
+      state.words = state.words.filter(x=>x.id!==w.id); delete state.write[w.id]; formOpen.word = null; delPending = null; save(); render(); };
     $("wfSave").onclick = ()=>{
       const sel = $("wfTopic").value;
       const n = {id: editing ? w.id : uid(), t: editing ? (w.t||Date.now()) : Date.now(), text:$("wfText").value.trim(), pron: $("wfPron") ? $("wfPron").value.trim() : "",
@@ -4504,7 +4967,7 @@ button.dfield{padding:0 12px;color:var(--ink)}
         state.rateLog = [base];
       }
       if (has("classes")){ state.classes = []; state.tasks = []; state.breaks = []; }
-      if (has("words")){ state.words = []; state.wordLang = null; state.wordStats = {days:{}, miss:{}}; state.hiddenTopics = []; }
+      if (has("words")){ state.words = []; state.wordLang = null; state.wordStats = {days:{}, miss:{}}; state.hiddenTopics = []; state.write = {}; state.writeAll = null; }
       if (has("docs")){ state.docs.forEach(d=>(d.photos||[]).forEach(id=>photoDel(id))); state.docs = []; }
       if (has("help")){ state.cards = []; state.contacts = []; }
       if (has("profile")){ profile = {name:"", photo:"", updatedAt:0}; saveProfile(); }
