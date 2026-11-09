@@ -2,10 +2,11 @@
 // Pages are served from that copy straight away, and a fresh copy is fetched in the background,
 // so an update shows the next time the app is opened. Bump VERSION when files are added or removed
 // or when this file's logic changes.
-const VERSION = "v5";   // v5: always ask the server for a fresh copy (GitHub Pages lets browsers reuse files for 10 min)
+const VERSION = "v6";   // v5: always ask the server for a fresh copy (GitHub Pages lets browsers reuse files for 10 min); v6: + stroke checker library
 const CACHE = "study-abroad-" + VERSION;
 const FILES = ["./", "./index.html", "./manifest.webmanifest",
-  "./icons/icon-192.png", "./icons/icon-512.png", "./icons/icon-maskable-512.png", "./icons/apple-touch-icon.png"];
+  "./icons/icon-192.png", "./icons/icon-512.png", "./icons/icon-maskable-512.png", "./icons/apple-touch-icon.png",
+  "./vendor/hanzi-writer/hanzi-writer.min.js"];
 const APP_PAGES = ["./", "./index.html"].map(p=>new URL(p, self.registration.scope).pathname);
 
 self.addEventListener("install", e=>{

@@ -471,11 +471,23 @@ input[readonly]{opacity:.85}
 .wcard small{margin-top:4px}
 .wpad,.wans{position:relative;width:100%;margin:12px auto 0}
 .wpad svg,.wans svg{position:absolute;inset:0;width:100%;height:100%}
-.wpad .gbox,.wans .gbox{fill:var(--surface);stroke:var(--bad);stroke-opacity:.6;stroke-width:1.2;vector-effect:non-scaling-stroke}
-.wpad .gmid,.wans .gmid,.wpad .gdiag,.wans .gdiag{stroke:var(--bad);stroke-width:1;stroke-dasharray:4 4;opacity:.45;vector-effect:non-scaling-stroke}
-.wpad .gdiag,.wans .gdiag{opacity:.22}
+.wpad .gbox,.wans .gbox,.hwcell .gbox{fill:var(--surface);stroke:var(--bad);stroke-opacity:.6;stroke-width:1.2;vector-effect:non-scaling-stroke}
+.wpad .gmid,.wans .gmid,.wpad .gdiag,.wans .gdiag,.hwcell .gmid,.hwcell .gdiag{stroke:var(--bad);stroke-width:1;stroke-dasharray:4 4;opacity:.45;vector-effect:non-scaling-stroke}
+.wpad .gdiag,.wans .gdiag,.hwcell .gdiag{opacity:.22}
 .wpad canvas{position:absolute;inset:0;width:100%;height:100%;touch-action:none;cursor:crosshair}
 .wtools{display:flex;justify-content:center;gap:22px;margin-top:6px}
+.wmodes{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:4px;background:var(--field);border:1px solid var(--line);border-radius:12px;padding:3px;margin-bottom:10px}
+.wmodes button{border:0;background:none;border-radius:9px;padding:7px 4px;font:inherit;font-size:.82rem;white-space:nowrap;font-weight:600;color:var(--muted);cursor:pointer}
+.wmodes button[aria-pressed="true"]{background:var(--surface);color:var(--ink);box-shadow:0 1px 3px rgba(0,0,0,.15)}
+.wnote{text-align:center;margin:10px 0 0}
+.hwgrid{display:grid;gap:0;width:100%;margin:12px auto 0}
+.hwcell{position:relative;aspect-ratio:1}
+.hwcell svg{position:absolute;inset:0;width:100%;height:100%}
+.hwcell .hwt{position:absolute;inset:0;touch-action:none}
+.hwcell .hwt svg{position:static}
+.hwcell.plain .hwt{display:grid;place-items:center;font-size:2.4rem;font-weight:500}
+.hwcell.on .gbox{stroke:var(--ok);stroke-opacity:1;stroke-width:2.5}
+.hwcell.tap{cursor:pointer}
 .wans{margin-top:0}
 .wans .wcells{position:absolute;inset:0;display:grid}
 .wans .wch{border:0;background:none;color:var(--ink);font:inherit;font-weight:500;line-height:1;cursor:pointer;padding:0;display:grid;place-items:center;aspect-ratio:1}
@@ -985,7 +997,7 @@ button.dfield{padding:0 12px;color:var(--ink)}
 <script>
 (function(){
   // Bump on every publish (date + a letter for several in one day). "Check for updates" compares it with the website's copy.
-  const APP_VERSION = "2026-11-09a";
+  const APP_VERSION = "2026-11-09b";
   // Approximate starting rates (units per 1 US dollar). Students should replace them with real rates.
   const DEF = {USD:1, CNY:7.1, THB:33.6, JPY:150, KRW:1380, TWD:31, HKD:7.8, SGD:1.3, MYR:4.3, VND:25500, IDR:16000, PHP:57, INR:85, LAK:21500, KHR:4000, MMK:2100,
     AUD:1.5, NZD:1.7, CAD:1.38, GBP:0.76, EUR:0.88, CHF:0.82, SEK:9.6, NOK:10.3, DKK:6.6, CZK:21.5, PLN:3.7, HUF:350, RUB:85, TRY:40, AED:3.67, MXN:18.5, BRL:5.5};
@@ -1024,7 +1036,7 @@ button.dfield{padding:0 12px;color:var(--ink)}
   const catById = Object.fromEntries(CATS.map(c=>[c.id,c]));
 
   // rateLog: [{from:"YYYY-MM-DD", CNY, THB}] (per 1 USD), sorted by from
-  function blankState(){ return { rateLog:[{from:"2000-01-01", CNY:7.10, THB:33.6}], expenses:[], view:"CNY", lastCur:"CNY", budgets:{}, theme:"auto", dailyLimit:null, recurring:[], country:null, local:"CNY", home:"THB", showUSD:true, classes:[], breaks:[], tasks:[], docs:[], cards:[], contacts:[], words:[], wordLang:null, wordStats:{days:{}, miss:{}}, hiddenTopics:[], write:{}, writeAll:null, writePaper:false, iou:[], alertsHiddenOn:null }; }
+  function blankState(){ return { rateLog:[{from:"2000-01-01", CNY:7.10, THB:33.6}], expenses:[], view:"CNY", lastCur:"CNY", budgets:{}, theme:"auto", dailyLimit:null, recurring:[], country:null, local:"CNY", home:"THB", showUSD:true, classes:[], breaks:[], tasks:[], docs:[], cards:[], contacts:[], words:[], wordLang:null, wordStats:{days:{}, miss:{}}, hiddenTopics:[], write:{}, writeAll:null, writeMode:"free", iou:[], alertsHiddenOn:null }; }
   let state = blankState();
   let mainTab = "money";
   let page = "home", repScope = "month";
@@ -1129,10 +1141,11 @@ button.dfield{padding:0 12px;color:var(--ink)}
       <p>If you clear your browser data or uninstall the browser, your spending is gone unless you have a backup.</p>
       <p><b>Delete my data</b> removes data from this device for a fresh start. You choose which parts to delete and confirm twice. Download a backup first if you might want it back.</p>`,
     writing: `<p>For learning to <b>write</b> characters. Mark the words you've practised writing: tap <b>Edit</b> in Words, tick them (<b>Select all</b> takes a whole topic), then <b>✍ Learned to write</b>. You can also tap a word to show it big and mark it there. Marked words show a ✍.</p>
-      <p><b>Writing cards</b> show the pinyin and meaning. Write the word with your finger on the grid, or on paper (switch with <b>Write on paper</b>), then tap <b>Show the answer</b> and be honest: <b>✓ Got it</b> or <b>✗ Again</b>. Missed words go to the back of the pile, so a round only ends when you've got them all.</p>
+      <p><b>Writing cards</b> show the pinyin and meaning. Write the word with your finger on the grid (<b>Draw</b>) or on <b>Paper</b>, then tap <b>Show the answer</b> and be honest: <b>✓ Got it</b> or <b>✗ Again</b>. With <b>Check strokes</b> the app checks every stroke as you write — shape, order and direction. A wrong stroke doesn't stick; after 3 tries the right one is highlighted. At most 1 mistake per character counts as right. <b>▶ Stroke order</b> plays how each character is written. Missed words go to the back of the pile, so a round only ends when you've got them all.</p>
       <p><b>Review due today</b> is the smart way: a word you get right comes back after 1, 3, 7, 14 and then 30 days; one you miss comes back tomorrow. So you spend time on the words you're forgetting. New words come up the day after you mark them.</p>
       <p><b>Quick review</b> picks random words (from the topics you choose). <b>Write them all</b> goes through every learned word until none are left; you can stop and carry on later.</p>
-      <p><b>Which one is right?</b> shows the pinyin and meaning with 4 words that look alike or share a character; pick the right one. <b>One character, many words</b> lists every word you have with a character, to link new words to ones you know.</p>`,
+      <p><b>Which one is right?</b> shows the pinyin and meaning with 4 words that look alike or share a character; pick the right one. <b>One character, many words</b> lists every word you have with a character, to link new words to ones you know.</p>
+      <p style="font-size:.85em">Stroke checking uses <b>Hanzi Writer</b> (MIT licence) and stroke data from <b>Make Me a Hanzi</b> (Arphic Public License). Each character's data (about 2 KB) is saved on the phone by itself whenever you're online — for every word you have, including ones you add yourself — so checking works offline.</p>`,
     progress: `<p>Every match game you finish is saved for that day: how many games, how many words you matched, and how many you got right first time.</p>
       <p><b>Streak</b> counts the days in a row you played. The bars show the words you matched on each of the last 14 days; tap a bar to see that day.</p>
       <p><b>Needs practice</b> lists words you got wrong. Each wrong match adds a dot (up to 3); each time you match it right first time takes one away, and at zero it leaves the list. <b>Practise these</b> starts a game with just those words.</p>`,
@@ -1227,7 +1240,7 @@ button.dfield{padding:0 12px;color:var(--ink)}
 
   // ---------- storage ----------
   let colRef = null;
-  function settings(){ return {v:2, updatedAt:state.updatedAt||0, rateLog:state.rateLog, view:state.view, lastCur:state.lastCur, budgets:state.budgets, theme:state.theme, dailyLimit:state.dailyLimit, recurring:state.recurring, classes:state.classes, breaks:state.breaks, tasks:state.tasks, docs:state.docs, cards:state.cards, contacts:state.contacts, words:state.words, wordLang:state.wordLang, wordStats:state.wordStats, hiddenTopics:state.hiddenTopics, write:state.write, writeAll:state.writeAll, writePaper:state.writePaper, iou:state.iou, alertsHiddenOn:state.alertsHiddenOn, country:state.country, local:state.local, home:state.home, showUSD:state.showUSD}; }
+  function settings(){ return {v:2, updatedAt:state.updatedAt||0, rateLog:state.rateLog, view:state.view, lastCur:state.lastCur, budgets:state.budgets, theme:state.theme, dailyLimit:state.dailyLimit, recurring:state.recurring, classes:state.classes, breaks:state.breaks, tasks:state.tasks, docs:state.docs, cards:state.cards, contacts:state.contacts, words:state.words, wordLang:state.wordLang, wordStats:state.wordStats, hiddenTopics:state.hiddenTopics, write:state.write, writeAll:state.writeAll, writeMode:state.writeMode, iou:state.iou, alertsHiddenOn:state.alertsHiddenOn, country:state.country, local:state.local, home:state.home, showUSD:state.showUSD}; }
   function snapshot(){ return Object.assign(settings(), {expenses:state.expenses}); }
   function monthDoc(m){ return {month:m, expenses:state.expenses.filter(e=>e.date && e.date.slice(0,7)===m)}; }
   // months: list of "YYYY-MM" whose spending changed
@@ -1326,7 +1339,7 @@ button.dfield{padding:0 12px;color:var(--ink)}
     // writing practice: {wordId: {box, due, n, ok}} for words learned to write; the "write them all" round in progress
     if (d.write && typeof d.write==="object") state.write = JSON.parse(JSON.stringify(d.write));
     state.writeAll = d.writeAll && Array.isArray(d.writeAll.left) ? JSON.parse(JSON.stringify(d.writeAll)) : null;
-    if (typeof d.writePaper==="boolean") state.writePaper = d.writePaper;
+    state.writeMode = ["free","check","paper"].includes(d.writeMode) ? d.writeMode : d.writePaper===true ? "paper" : "free";   // writePaper: saved before Check strokes existed
     if (typeof d.alertsHiddenOn==="string") state.alertsHiddenOn = d.alertsHiddenOn;
     if (d.updatedAt) state.updatedAt = d.updatedAt;
     applyTheme();
@@ -3205,6 +3218,7 @@ button.dfield{padding:0 12px;color:var(--ink)}
     $("wordDown").hidden = !langWords().length;
     renderWordImport();
     renderHelp();
+    if (!$("pgWords").hidden) syncStrokes();   // new words get their stroke data in the background
   }
   // ---- the two parents, then progress and words to practise ----
   const KIND_ICON = {
@@ -4003,7 +4017,28 @@ button.dfield{padding:0 12px;color:var(--ink)}
           b.onclick = ()=>{ gameOpts.wtopics = !t ? [] : gameOpts.wtopics.includes(t) ? gameOpts.wtopics.filter(x=>x!==t) : gameOpts.wtopics.concat(t); renderGame(); }; });
         chips("gWcount", "How many", [5,10,15,20,30].map(k=>[k, String(k)]), gameOpts.wcount||10, v=>{ gameOpts.wcount = v; });
       }
-      chips("gPaper", "Write on", [[false, "The screen"], [true, "Paper"]], !!state.writePaper, v=>{ state.writePaper = v; save(); });
+      chips("gMode", "How to write", [["free","Draw on the screen"]].concat(hasHan() ? [["check","Check my strokes"]] : [], [["paper","On paper"]]), writeMode(), v=>{ state.writeMode = v; save(); });
+      if (writeMode()==="check"){
+        // stroke data: how much is saved on the phone, and a button to save the rest now (needs internet once)
+        const info = document.createElement("p"); info.className = "sectionnote"; info.id = "gStrokeInfo"; info.style.marginTop = "8px";
+        info.textContent = "The app checks every stroke as you write: the shape, the order and the direction.";
+        const dl = document.createElement("button"); dl.className = "secondary"; dl.id = "gStrokeDl"; dl.hidden = true;
+        body.append(info, dl);
+        strokeKeys().then(have=>{
+          const all = allHan(), k = all.filter(c=>have.has(c)).length;
+          info.textContent += k===all.length ? " Stroke data for all "+all.length+" of your characters is saved on this phone, so it works offline."
+            : " Stroke data for "+k+" of your "+all.length+" characters is saved on this phone. The rest save by themselves whenever you’re online, or now:";
+          if (strokeDl) strokeProgress();   // already saving in the background
+          else if (k < all.length){ dl.hidden = false; dl.textContent = "Download "+(all.length-k)+" for offline (about "+Math.max(0.1, Math.round((all.length-k)*2.5/100)/10)+" MB)"; }
+        });
+        dl.onclick = async ()=>{
+          if (strokeDl) return;
+          dl.disabled = true;
+          const r = await downloadStrokes(6);
+          toast(r.total && r.failed===r.total ? "warn" : "ok", r.total && r.failed===r.total ? "Couldn’t download — check your internet and try again."
+            : "Saved stroke data for "+(r.total-r.failed)+" characters."+(r.failed ? " "+r.failed+" aren’t available." : ""));
+        };
+      }
       const pool = writePool();
       ok = pool.length > 0;
       note.textContent = gameOpts.wsrc==="due" ? (pool.length ? cnt(pool.length,"word is","words are")+" due today." : "Nothing is due today — try Random, or come back tomorrow.")
@@ -4058,7 +4093,7 @@ button.dfield{padding:0 12px;color:var(--ink)}
     if (!game.graded.has(id)){ gradeWrite(id, ok); game.graded.add(id); }   // the first answer in a round sets when it comes back
     q.shift();
     if (ok) game.right++; else { game.wrong++; q.push(id); }   // missed: to the back of the pile
-    game.shown = false; game.strokes = [];
+    game.shown = false; game.strokes = []; game.q = null;
     if (!q.length){ game.finished = true; game.end = Date.now(); if (game.src==="all") state.writeAll = null; recordDay(game.right, game.wrong, game.end-game.start); }
     save(); renderGame();
   }
@@ -4095,6 +4130,122 @@ button.dfield{padding:0 12px;color:var(--ink)}
     cv.addEventListener("pointerup", end); cv.addEventListener("pointercancel", end);
     return {wrap, size, draw};
   }
+  // ----- Checking strokes (owner's request): Hanzi Writer (MIT, bundled in vendor/) checks each stroke as it's drawn.
+  // Stroke data (Make Me a Hanzi, Arphic Public License) comes from jsDelivr, about 2 KB a character, and is kept on the
+  // phone in IndexedDB "study-abroad-strokes", so each character only needs the internet once (or all at once: Download).
+  const STROKE_CDN = "https://cdn.jsdelivr.net/npm/hanzi-writer-data@2.0.1/";
+  let hwLoad = null, strokeDB = null;
+  const strokeMem = {};
+  function loadHW(){
+    return hwLoad || (hwLoad = new Promise((res, rej)=>{
+      if (window.HanziWriter) return res(window.HanziWriter);
+      const s = document.createElement("script"); s.src = "vendor/hanzi-writer/hanzi-writer.min.js";
+      s.onload = ()=>res(window.HanziWriter); s.onerror = ()=>{ hwLoad = null; s.remove(); rej(new Error("lib")); };
+      document.head.appendChild(s);
+    }));
+  }
+  function strokeStore(){
+    return strokeDB || (strokeDB = new Promise((res, rej)=>{
+      const q = indexedDB.open("study-abroad-strokes", 1);
+      q.onupgradeneeded = ()=>q.result.createObjectStore("chars");
+      q.onsuccess = ()=>res(q.result); q.onerror = ()=>{ strokeDB = null; rej(q.error); };
+    }));
+  }
+  const strokeTx = (mode, fn)=> strokeStore().then(db=>new Promise(r=>{ const rq = fn(db.transaction("chars", mode).objectStore("chars")); rq.onsuccess = ()=>r(rq.result); rq.onerror = ()=>r(null); })).catch(()=>null);
+  async function strokeData(c){
+    if (strokeMem[c]) return strokeMem[c];
+    let d = await strokeTx("readonly", s=>s.get(c));
+    if (!d){
+      let r;
+      try{ r = await fetch(STROKE_CDN + encodeURIComponent(c) + ".json"); } catch(e){ throw new Error("net"); }
+      if (!r.ok) throw new Error(r.status===404 ? "missing" : "net");
+      d = await r.json(); strokeTx("readwrite", s=>s.put(d, c));
+    }
+    return strokeMem[c] = d;
+  }
+  const strokeKeys = async ()=> new Set((await strokeTx("readonly", s=>s.getAllKeys())) || []);
+  const allHan = ()=> [...new Set(langWords().flatMap(w=>[...w.text].filter(c=>HAN.test(c))))];
+  let strokeDl = null;   // {done, total, failed} while "Download" runs
+  const strokeNoData = new Set();   // characters the data set doesn't have (not asked again until the app reopens)
+  // the "Download" button in the writing setup shows the progress of whichever download is running
+  const strokeProgress = ()=>{ const b = $("gStrokeDl"); if (b && strokeDl){ b.hidden = false; b.disabled = true; b.textContent = "Saving stroke data… "+strokeDl.done+" of "+strokeDl.total; } };
+  async function downloadStrokes(workers){
+    const have = await strokeKeys(), need = allHan().filter(c=>!have.has(c) && !strokeNoData.has(c));
+    strokeDl = {done:0, total:need.length, failed:0}; strokeProgress();
+    let i = 0;
+    const worker = async ()=>{ while (i < need.length){ const c = need[i++]; try{ await strokeData(c); } catch(e){ strokeDl.failed++; if (e.message==="missing") strokeNoData.add(c); } strokeDl.done++; strokeProgress(); } };
+    await Promise.all(Array.from({length:workers||6}, worker));
+    const r = strokeDl; strokeDl = null;
+    if (game && game.phase==="setup" && gameOpts.type==="write") renderGame();   // refresh "saved on this phone"
+    return r;
+  }
+  // owner's request: save the strokes of every saved word by itself whenever there's internet — after adding a word,
+  // importing a list, opening Words, or coming back online — so cards work offline without pressing anything
+  let strokeSyncTimer = null, strokeSyncAgain = false;
+  // waits until things settle (1.5 s after the last change), so adding or importing many words starts one download
+  function syncStrokes(){ clearTimeout(strokeSyncTimer); strokeSyncTimer = setTimeout(runStrokeSync, 1500); }
+  async function runStrokeSync(){
+    if (!navigator.onLine || !hasHan()) return;
+    if (strokeDl){ strokeSyncAgain = true; return; }   // new words while downloading: check again after
+    const have = await strokeKeys();
+    if (strokeDl || !allHan().some(c=>!have.has(c) && !strokeNoData.has(c))) return;
+    await downloadStrokes(3);
+    if (strokeSyncAgain){ strokeSyncAgain = false; runStrokeSync(); }
+  }
+  window.addEventListener("online", runStrokeSync);
+  // how to write: "free" drawing pad, "check" (the app checks every stroke), or "paper"
+  const writeMode = ()=> state.writeMode==="paper" ? "paper" : state.writeMode==="check" && hasHan() ? "check" : "free";
+  function animateSeq(ws){
+    const list = ws.filter(Boolean); let k = 0;
+    const next = ()=>{ if (k < list.length) list[k++].animateCharacter({onComplete:next}); };
+    next();
+  }
+  // a row of 田字格 squares with a Hanzi Writer in each; mode "quiz" checks the strokes (progress kept in q), "show" plays the stroke order
+  function strokeGrid(chars, q, mode){
+    const {cols} = gridSVG(chars.length), tag = wordLang().tag;
+    const wrap = document.createElement("div"); wrap.className = "hwgrid"; wrap.style.gridTemplateColumns = "repeat("+cols+", 1fr)"; wrap.style.maxWidth = (cols*150)+"px";
+    const cells = chars.map(ch=>{
+      const c = document.createElement("div"); c.className = "hwcell"; c.innerHTML = gridSVG(1).svg+'<div class="hwt"></div>';
+      if (!HAN.test(ch)){ c.classList.add("plain"); c.querySelector(".hwt").textContent = ch; c.querySelector(".hwt").lang = tag; }
+      wrap.appendChild(c); return c;
+    });
+    const start = async ()=>{
+      let HW;
+      try{ HW = await loadHW(); await Promise.all(chars.filter(c=>HAN.test(c)).map(strokeData)); }
+      catch(e){
+        const msg = e.message==="missing" ? "The app has no stroke data for this word." : e.message==="lib" ? "The stroke checker couldn’t load." : "No internet, and the strokes for this word aren’t saved on the phone yet.";
+        if (q){ q.error = msg+" Draw it freely for now."; renderGame(); } else toast("warn", msg);
+        return;
+      }
+      if (!document.body.contains(wrap)) return;   // the card changed meanwhile
+      const v = k=> getComputedStyle(document.documentElement).getPropertyValue(k).trim();
+      const writers = cells.map((cell, j)=>{
+        if (!HAN.test(chars[j])) return null;
+        const size = Math.max(60, Math.floor(cell.getBoundingClientRect().width));
+        return HW.create(cell.querySelector(".hwt"), chars[j], {width:size, height:size, padding:Math.round(size*0.07), showOutline:false, showCharacter:false,
+          strokeColor:v("--ink"), drawingColor:v("--ink"), outlineColor:v("--line"), highlightColor:v("--ok"), drawingWidth:Math.max(4, Math.round(size/24)),
+          charDataLoader:(c, ok, bad)=>{ strokeData(c).then(ok, bad); }});
+      });
+      wrap._writers = writers;
+      const finished = !q || q.done || q.gaveUp;
+      if (finished) cells.forEach((cell, j)=>{ if (HAN.test(chars[j])){ cell.classList.add("tap"); cell.setAttribute("role","button"); cell.setAttribute("aria-label", chars[j]+" — see your words with it"); cell.onclick = ()=>showChars(chars[j]); } });
+      if (mode==="show" || q.gaveUp) return animateSeq(writers);
+      if (q.done){ writers.forEach(wr=>wr && wr.showCharacter()); return; }
+      writers.forEach((wr, j)=>{ if (wr && j < q.i) wr.showCharacter(); });
+      const at = j=>{
+        while (j < chars.length && !writers[j]) j++;
+        q.i = j; cells.forEach((c, k)=>c.classList.toggle("on", k===j));
+        if (j >= chars.length){ q.done = true; return renderGame(); }
+        const before = q.mistakes;
+        writers[j].quiz({
+          onMistake: s=>{ const st = $("wqStat"); if (st) st.textContent = cnt(before + s.totalMistakes, "mistake", "mistakes")+" so far"+(s.mistakesOnStroke >= 3 ? " · the next stroke is highlighted" : ""); },
+          onComplete: s=>{ q.mistakes = before + s.totalMistakes; setTimeout(()=>{ if (document.body.contains(wrap)) at(j+1); }, 350); }
+        });
+      };
+      at(q.i);
+    };
+    return {wrap, start};
+  }
   function renderWriteGame(body){
     const q = writeQueue(), L = wordLang(), tag = L.tag;
     $("gameTitle").textContent = "Writing cards · "+({due:"Due today", quick:"Quick review", all:"Write them all"}[game.src]);
@@ -4113,24 +4264,35 @@ button.dfield{padding:0 12px;color:var(--ink)}
     const w = state.words.find(x=>x.id===q[0]);
     if (!w){ q.shift(); return renderGame(); }   // deleted meanwhile
     const el = (t, c)=>{ const e = document.createElement(t); if (c) e.className = c; return e; };
-    const total = game.src==="all" ? game.total : game.total;
+    const total = game.total;
     const bar = el("div", "sgbar"); bar.setAttribute("role","progressbar"); bar.setAttribute("aria-label","Words written");
     bar.setAttribute("aria-valuemin", 0); bar.setAttribute("aria-valuemax", total); bar.setAttribute("aria-valuenow", doneN);
     bar.innerHTML = "<i></i>"; bar.firstChild.style.width = Math.min(100, doneN/Math.max(1,total)*100)+"%";
     const stat = el("p", "gamestat");
     stat.textContent = (game.src==="all" ? doneN+" of "+total+" written · "+left+" left" : game.right+" of "+total+" done") + (game.wrong ? " · "+game.wrong+" to write again" : "");
-    const top = el("div", "wtop"); const ask = el("p", "sgask"); ask.textContent = "Write this word"; ask.style.margin = "0";
-    const sw = el("button", "link"); sw.id = "wPaperSw"; sw.textContent = state.writePaper ? "✎ Use the screen" : "Write on paper";
-    sw.onclick = ()=>{ state.writePaper = !state.writePaper; save(); renderGame(); };
-    top.append(ask, sw);
+    const ask = el("p", "sgask"); ask.textContent = "Write this word"; ask.style.margin = "12px 0 6px";
+    // switch how to write right on the card
+    const mode = writeMode();
+    const modes = el("div", "wmodes"); modes.setAttribute("role","group"); modes.setAttribute("aria-label","How to write");
+    [["free","Draw"]].concat(hasHan() ? [["check","Check strokes"]] : [], [["paper","Paper"]]).forEach(([v, t])=>{
+      const b = el("button"); b.textContent = t; b.dataset.mode = v; b.setAttribute("aria-pressed", mode===v);
+      b.onclick = ()=>{ if (mode===v) return; state.writeMode = v; save(); game.strokes = []; game.q = null; game.shown = false; renderGame(); };
+      modes.appendChild(b);
+    });
     const card = el("div", "sgprompt wcard");
     if (w.pron){ const p = el("div", "wpin"); p.textContent = w.pron; card.appendChild(p); }
     const m = el("div", "en"); m.textContent = w.meaning; card.appendChild(m);
     const t = el("small"); t.textContent = topicOf(w)+(state.write[w.id] && state.write[w.id].n ? " · written "+cnt(state.write[w.id].n,"time","times") : " · first review"); card.appendChild(t);
-    body.append(bar, stat, top, card);
-    const chars = [...w.text], n = Math.max(1, Math.min(chars.length, 8));
-    let pad = null;
-    if (!state.writePaper){
+    body.append(bar, stat, ask, modes, card);
+    const chars = [...w.text], n = Math.max(1, Math.min(chars.length, 8)), hanN = chars.filter(c=>HAN.test(c)).length;
+    if (mode==="check" && !game.q) game.q = {i:0, mistakes:0, done:false, gaveUp:false, error:null};
+    const checking = mode==="check" && chars.length <= 8 && hanN > 0 && !game.q.error;
+    let pad = null, grid = null;
+    if (checking){
+      grid = strokeGrid(chars, game.q, "quiz");
+      body.appendChild(grid.wrap);
+    } else if (mode!=="paper"){
+      if (mode==="check"){ const nt = el("p", "sectionnote wnote"); nt.textContent = game.q.error || (hanN ? "This one is too long to check stroke by stroke. Draw it freely." : "Nothing to check here. Draw it freely."); body.appendChild(nt); }
       pad = writePad(n);
       const tools = el("div", "wtools");
       const u = el("button", "link"); u.textContent = "↶ Undo"; u.onclick = ()=>{ game.strokes.pop(); pad.draw(); };
@@ -4139,7 +4301,30 @@ button.dfield{padding:0 12px;color:var(--ink)}
       body.append(pad.wrap, tools);
     }
     const foot = el("div", "sgfoot");
-    if (!game.shown){
+    // ▶ Stroke order: replays in the checker's squares, or swaps the plain answer for animated squares
+    const strokeBtn = host=>{ const b = el("button", "link"); b.id = "wAnim"; b.textContent = "▶ Stroke order";
+      b.onclick = ()=>{ const g = body.querySelector(".hwgrid"); if (g && g._writers) animateSeq(g._writers); else if (host){ const sg = strokeGrid(chars, null, "show"); host.replaceWith(sg.wrap); sg.start(); } }; return b; };
+    if (checking){
+      const q2 = game.q;
+      if (!q2.done && !q2.gaveUp){
+        const st = el("p", "wask"); st.id = "wqStat"; st.setAttribute("aria-live","polite"); st.textContent = q2.mistakes ? cnt(q2.mistakes,"mistake","mistakes")+" so far" : "Write it stroke by stroke, in the right order. Each stroke is checked as you go.";
+        const g = el("button", "secondary"); g.id = "wGiveUp"; g.textContent = "I don’t remember — show me"; g.style.width = "100%";
+        g.onclick = ()=>{ q2.gaveUp = true; game.shown = true; renderGame(); };
+        foot.append(st, g);
+      } else {
+        // marked by the checker: at most 1 mistake per character counts as right
+        const ok = !q2.gaveUp && q2.mistakes <= hanN;
+        const fb = el("div", "sgfeed "+(ok ? "ok" : "bad")); fb.setAttribute("role","status");
+        const h = el("b"); h.textContent = ok ? (q2.mistakes ? "✓ Got it!" : "✓ Perfect — no mistakes!") : q2.gaveUp ? "✗ Watch how it’s written" : "✗ Needs more practice"; fb.appendChild(h);
+        const s = el("small"); s.textContent = (q2.gaveUp ? "It comes back at the end." : cnt(q2.mistakes,"mistake","mistakes")+(ok ? "." : " — more than 1 per character, so it comes back later."))+" Tap a character to see your other words with it."; fb.appendChild(s);
+        const tools = el("div", "wtools"); tools.appendChild(strokeBtn(null));
+        const row = el("div", "wgrade");
+        const other = el("button", "secondary"); other.id = "wOverride"; other.textContent = ok ? "Count it as wrong" : "Count it as right"; other.onclick = ()=>answerWrite(!ok);
+        const next = el("button", "btn-yes"); next.id = "wNext"; next.textContent = "Continue"; next.onclick = ()=>answerWrite(ok);
+        row.append(other, next);
+        foot.append(tools, fb, row);
+      }
+    } else if (!game.shown){
       const s = el("button", "btn-yes"); s.id = "wShow"; s.textContent = "Show the answer";
       s.onclick = ()=>{ game.shown = true; renderGame(); }; foot.appendChild(s);
     } else {
@@ -4155,19 +4340,22 @@ button.dfield{padding:0 12px;color:var(--ink)}
         ans.appendChild(cells);
       } else { const d = el("div", "zh"); d.lang = tag; d.textContent = w.text; ans.classList.add("long"); ans.appendChild(d); }
       const fb = el("p", "wask"); fb.setAttribute("role","status");
-      fb.innerHTML = "<b>Did you write it right?</b>"+(chars.length <= 8 && chars.some(ch=>HAN.test(ch)) ? " <span>Tap a character to see your other words with it.</span>" : "");
+      fb.innerHTML = "<b>Did you write it right?</b>"+(chars.length <= 8 && hanN ? " <span>Tap a character to see your other words with it.</span>" : "");
       const row = el("div", "wgrade");
       const no = el("button", "secondary wno"); no.id = "wAgain"; no.textContent = "✗ Again"; no.onclick = ()=>answerWrite(false);
       const yes = el("button", "btn-yes"); yes.id = "wGot"; yes.textContent = "✓ Got it"; yes.onclick = ()=>answerWrite(true);
       row.append(no, yes);
-      foot.append(ans, fb, row);
+      foot.append(ans);
+      if (chars.length <= 8 && hanN && hasHan()){ const tools = el("div", "wtools"); tools.appendChild(strokeBtn(ans)); foot.appendChild(tools); }
+      foot.append(fb, row);
     }
     body.appendChild(foot);
     if (pad) pad.size();
+    if (grid) grid.start();
     const a = body.querySelector(".wans .wcells");
     if (a){ const cw = a.getBoundingClientRect().width / (+a.style.gridTemplateColumns.match(/\d+/)[0]); a.style.fontSize = Math.round(cw*0.66)+"px"; }
-    // after Show, bring the answer and the two grading buttons into view (above the tab bar)
-    if (game.shown){ const g = body.querySelector(".wgrade"); if (g){ const nav = document.querySelector("nav"), navH = nav ? nav.getBoundingClientRect().height : 0, r = g.getBoundingClientRect(), over = r.bottom - (window.innerHeight - navH - 12); if (over > 0) window.scrollBy({top:over, behavior:"smooth"}); } }
+    // after Show (or when the checker is done), bring the grading buttons into view (above the tab bar)
+    if (game.shown || (game.q && game.q.done)){ const g = body.querySelector(".wgrade"); if (g){ const nav = document.querySelector("nav"), navH = nav ? nav.getBoundingClientRect().height : 0, r = g.getBoundingClientRect(), over = r.bottom - (window.innerHeight - navH - 12); if (over > 0) window.scrollBy({top:over, behavior:"smooth"}); } }
   }
 
   // ----- Which one is right? 4 look-alikes (sharing a character, same length) -----
